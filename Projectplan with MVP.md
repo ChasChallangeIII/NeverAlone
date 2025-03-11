@@ -1,4 +1,4 @@
-# Never Alone – Chas Challenge 2025: MVP (6-Week Focus, 3-Month Full Project)
+# Never Alone – Chas Challenge 2025: MVP
 
 ## Project Overview
 
