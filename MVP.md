@@ -1,128 +1,168 @@
-# Never Alone – Chas Challenge 2025: MVP
+# Never Alone – Chas Challenge 2025: MVP (6-Week Focus, 3-Month Full Project)
 
 ## Project Overview
 
-**Never Alone** is a smart safety solution designed to help individuals feel more secure in public spaces. The key feature is a discreet IoT button that, when pressed, simulates an incoming call, making users appear occupied. This can help them avoid unwanted attention in unsafe situations. The app collects user-reported data about these situations and shares anonymized insights with authorities/municipalities to help improve urban safety.
+**Never Alone** is a smart safety solution designed to increase personal security in public spaces. The system includes an **IoT button** that simulates an incoming call, making users appear occupied in unsafe situations. After using the button, users submit a survey describing their experience, and this anonymized data is made available to municipalities to help improve urban safety measures.
 
-## MVP Goal
-
-The MVP aims to build a **basic version** of the safety system that includes:
-1. A **simple user interface** for mobile devices.
-2. A **physical IoT button** to simulate an incoming call.
-3. A **survey system** to capture user experiences of unsafe situations.
-4. **Basic data storage** and **municipality access** for safety improvement insights.
-
-## Key Features for MVP
-
-### 1. **IoT Button Functionality**
-- **Press-to-Simulate Call:** When the user presses the IoT button, it triggers a simulated incoming call on their device (audio or vibration).
-- **Offline Mode:** The button works offline and sends data to the app when it reconnects to the internet.
-- **Haptic Feedback:** Provide feedback (vibration or sound) confirming that the button was pressed.
-
-### 2. **Mobile App (Frontend)**
-- **User Authentication:** Use Firebase Authentication for users to sign in or register.
-- **Main Interface:**
-  - A simple button that simulates an incoming call.
-  - Display a quick survey asking why the user felt unsafe.
-  - Basic notifications when surveys are submitted.
-- **Survey Interface:** A simple form where users can anonymously report why they felt unsafe.
-
-### 3. **Survey Submission**
-- **Survey:** A short, text-based survey after the button press that asks:
-  - "What made you feel unsafe?"
-  - Optionally, a rating for how unsafe they felt (e.g., 1-5 scale).
-- **Data Anonymity:** Data is anonymized before being stored.
-
-### 4. **Backend (API & Database)**
-- **Survey Data Storage:** Store survey responses and user data (e.g., location, time) in a PostgreSQL database.
-- **RESTful API:** Basic API to handle survey data submission and user authentication.
-- **Admin Panel (Basic):** A simple backend dashboard (or CSV exports) for municipalities to access aggregated, anonymized survey data.
-
-### 5. **Cross-Platform App**
-- **React Native App:** A cross-platform app that runs on both iOS and Android with basic functionality:
-  - Ability to pair the IoT button.
-  - Receive simulated calls.
-  - Submit surveys after each call simulation.
-  
-### 6. **Basic Data Insights**
-- **Municipal Data Access (MVP):**
-  - Provide municipalities with access to aggregated survey data (e.g., via downloadable CSV) for safety improvement.
-  - Basic report generation: total number of button presses, survey feedback summaries.
-
-### 7. **Tech Stack**
-#### Frontend (Mobile App)
-- **React Native** for cross-platform development.
-- **TypeScript** for type safety.
-- **Redux** for state management (user authentication, survey states).
-- **Firebase** for authentication and notifications.
-
-#### Backend (API & Database)
-- **Node.js & Express** for API development.
-- **PostgreSQL** for survey data storage.
-- **Firebase Authentication** for secure user authentication.
-- **RESTful API** for communication between the app and backend.
-
-#### IoT System (Button & Sensors)
-- **ESP32/Arduino** for button hardware.
-- **MQTT/Bluetooth Low Energy (BLE)** for communication between the button and app.
-- **C++** for embedded programming on the IoT button.
-- **Low-Power Mode** for extended battery life.
-- **Haptic Feedback** for user confirmation.
-
-## User Flow
-
-1. **User Registration & Sign-In:**
-   - The user signs up or logs into the app using Firebase Authentication.
-   - They are prompted to connect their IoT button via Bluetooth or Wi-Fi.
-
-2. **Button Press:**
-   - In an unsafe situation, the user presses the IoT button to simulate an incoming call.
-   - The button triggers haptic feedback to confirm the press.
-
-3. **Survey Submission:**
-   - After the button press, the app asks the user to complete a short survey (why did they feel unsafe?).
-   - The user submits the survey, and the data is stored in the backend.
-
-4. **Data Aggregation & Reporting:**
-   - The data is aggregated, anonymized, and stored in the database.
-   - Basic insights are available for municipalities, either via CSV download or simple report generation.
-
-## MVP Priorities
-1. **Core Safety Feature:** Ensure the IoT button works reliably, providing users with immediate feedback when pressed.
-2. **Simple & Intuitive App:** Build a basic but clean app interface for users to interact with the button and submit surveys.
-3. **Data Collection & Privacy:** Ensure survey data is collected in a privacy-preserving manner (anonymized), and provide basic access to municipalities.
-4. **Offline Capability:** Ensure the button works without internet access, syncing data when the device reconnects.
-
-## MVP Success Criteria
-- Users can successfully press the button, receive call simulation feedback, and complete a survey.
-- The app can store and display submitted survey data.
-- Basic, anonymized reports can be generated for municipalities.
-- Users have a smooth, intuitive experience on both Android and iOS.
-
-## Future Iterations (Beyond MVP)
-1. **Enhanced Reporting & Insights:** Create more detailed analytics dashboards for municipalities.
-2. **Real-Time Data Updates:** Implement real-time updates via WebSockets to give municipalities up-to-date information on unsafe areas.
-3. **Advanced Features:**
-   - Geolocation tagging to report unsafe areas.
-   - Emergency contact notification (send alerts to a designated contact).
-   - Integration with other safety systems (e.g., local emergency services).
-   
-## Tech Timeline (MVP Development)
-### **Phase 1: Setup & Core Development (1-2 months)**
-- Set up the IoT button and ensure communication between the device and app.
-- Build out the mobile app interface for basic functionality (sign-up, button press, survey submission).
-- Develop the backend API to handle survey data storage.
-
-### **Phase 2: Testing & Feedback (1 month)**
-- Test button functionality and survey submission process.
-- Collect feedback from a small group of users to ensure the system works as expected.
-- Adjust user interface and UX based on feedback.
-
-### **Phase 3: Launch MVP (1 month)**
-- Final testing of IoT button and mobile app interaction.
-- Deploy the app on the App Store and Google Play Store.
-- Provide municipalities with access to basic data (via CSV download).
+For the **MVP**, the focus is on the **B2B functionality**: providing municipalities with **statistical insights** about unsafe areas based on user-submitted survey data. The app and button will be developed with basic functionality to collect and report data, and user-facing features will be secondary during this phase.
 
 ---
 
-By keeping the MVP simple and focused on key features, you’ll be able to quickly test the core concept and gather feedback for future iterations.
+## MVP Goals (6 Weeks Focus)
+
+The **primary goal** of the MVP is to develop the features that allow municipalities to access **anonymized statistical reports** and **survey data** submitted by users. This will help demonstrate the value of the system to authorities, allowing them to identify unsafe areas and take action.
+
+### Core Features for MVP
+
+1. **IoT Button Functionality**
+   - **Button Press Simulation:** When the button is pressed, it triggers a simulated incoming call on the user’s mobile device.
+   - **Offline Capability:** The button stores data offline and syncs with the app when connected to the internet.
+   - **Haptic Feedback:** The button provides vibration feedback upon pressing.
+
+2. **Mobile App (Frontend)**
+   - **Survey Submission:** After pressing the IoT button, users are prompted to fill out a short survey describing why they felt unsafe.
+   - **Anonymized Data Submission:** Ensure survey data is anonymized to protect user privacy.
+   - **User Authentication:** Simple sign-up/login using **Firebase Authentication**.
+
+3. **Backend (API & Database)**
+   - **Survey Data Collection:** Store survey responses in **PostgreSQL** and ensure they are anonymized.
+   - **CSV Export for Municipalities:** Allow authorities to export **anonymized survey data** in **CSV format**.
+   - **Basic Reporting System:** Provide simple reporting functionality (e.g., total survey submissions, geographic hotspots).
+
+4. **B2B Reporting Interface**
+   - **CSV Export:** Municipalities can download aggregated data (survey counts, geographical trends) in CSV format.
+   - **Simple Statistical Insights:** Create basic statistics such as the number of reported unsafe areas and the reasons for unsafe situations.
+
+---
+
+## Full Project Timeline (3-Month Plan)
+
+The full project spans **3 months**, with the MVP delivered in **6 weeks** and the remaining time used to refine the product, enhance the user interface, and improve the system's scalability. 
+
+### **Month 1: MVP Development (6 Weeks)**
+
+#### **Focus:**
+- Develop the IoT button, mobile app, backend, and the statistical reporting system for municipalities.
+- Ensure that municipalities can access basic aggregated survey data in CSV format.
+
+#### **Deliverables:**
+1. **IoT Button (Prototype)**:
+   - Build the IoT button with **ESP32/Arduino** or similar hardware.
+   - Implement **offline functionality** and Bluetooth/Wi-Fi connectivity with the mobile app.
+   - Provide **haptic feedback** on button press.
+
+2. **Mobile App (Frontend - Phase 1)**:
+   - **Survey System**: After pressing the button, prompt users to fill out a short survey describing their unsafe experience.
+   - **User Authentication**: Implement Firebase Authentication for sign-up/login.
+   - **Survey Data Submission**: Store data securely, ensuring **anonymization** of responses.
+
+3. **Backend Development (Phase 1)**:
+   - Set up **PostgreSQL** for survey data storage.
+   - Create a **RESTful API** to handle survey submissions and export requests.
+   - Implement **CSV export functionality** for municipalities to download anonymized data.
+
+4. **B2B Reporting System**:
+   - Build **basic reporting functionality** for authorities, allowing them to export anonymized data in CSV format.
+   - Provide **simple statistics** on the number of reported incidents and any identified hotspots.
+
+#### **Week 1-6 Timeline:**
+- **Week 1-2:** Develop IoT button prototype and basic mobile app features (survey, button integration).
+- **Week 3-4:** Set up the backend, survey data submission, and CSV export functionality.
+- **Week 5-6:** Implement B2B reporting system (CSV export) and initial statistical insights.
+
+---
+
+### **Month 2: Refinement and Feedback (Weeks 7-8)**
+
+#### **Focus:**
+- Test the MVP features with internal users and initial B2B clients.
+- Refine statistical insights and reporting based on feedback.
+- Ensure data syncing works reliably when the IoT button is offline and then reconnects to the internet.
+
+#### **Deliverables:**
+1. **Bug Fixes and Refinements**:
+   - Address issues identified during MVP testing (app functionality, button reliability, survey submission).
+   - Improve **offline data syncing** between the IoT button and the app.
+   
+2. **Enhanced Reporting**:
+   - Improve the **B2B reporting interface**, including more detailed insights and basic visualizations (e.g., charts showing hotspots).
+   - Continue providing **CSV export** functionality for municipal authorities.
+
+3. **Testing and Feedback**:
+   - Conduct user testing with both **internal testers** and **municipal partners** to ensure smooth data collection and reporting.
+   - Gather feedback on the user interface and statistical insights.
+
+---
+
+### **Month 3: Final Enhancements and Deployment (Weeks 9-12)**
+
+#### **Focus:**
+- Finalize the app for public release.
+- Implement additional features based on feedback from MVP users.
+- Enhance scalability and performance of the system.
+- Provide municipalities with access to more advanced reports.
+
+#### **Deliverables:**
+1. **App Enhancements**:
+   - Improve **UI/UX** for both the mobile app and B2B reporting interface.
+   - Implement **notification system** to alert users when surveys are successfully submitted.
+   - **Scalability improvements** to ensure the system can handle a growing user base.
+
+2. **Advanced B2B Reporting**:
+   - Create more detailed and advanced **statistical reports** for municipalities.
+   - Consider adding **heatmaps** or **geographic mapping** to visualize unsafe areas (future enhancement after initial feedback).
+   
+3. **Public Launch Preparation**:
+   - Final testing of the entire system (IoT button → app → survey → data export).
+   - Prepare the system for a **wider public launch** with scalability in mind.
+
+4. **Deployment**:
+   - Deploy the mobile app to **App Store** and **Google Play Store** (if applicable).
+   - Deploy backend to production (e.g., **AWS**, **Heroku**) for scaling.
+
+#### **Week 9-12 Timeline:**
+- **Week 9-10:** Finalize statistical reports and improve user interface.
+- **Week 11:** Final testing and bug fixes.
+- **Week 12:** Deployment and preparation for public launch.
+
+---
+
+## MVP Success Criteria
+
+1. **IoT Button Functionality**: Button reliably triggers a simulated call and stores data offline.
+2. **Survey Submission**: Users can submit a survey describing their experience after pressing the IoT button.
+3. **Anonymized Data**: Survey data is anonymized and stored securely.
+4. **CSV Export**: Municipalities can download anonymized survey data in CSV format.
+5. **Basic Statistical Insights**: Provide simple insights into unsafe areas (e.g., number of reports, areas with the most incidents).
+
+---
+
+## Tech Stack
+
+### **Frontend (Mobile App)**:
+- **React Native** for cross-platform development.
+- **TypeScript** for type safety and better maintainability.
+- **Firebase Authentication** for user authentication.
+
+### **Backend (API & Database)**:
+- **Node.js** with **Express** for building the API.
+- **PostgreSQL** for data storage.
+- **RESTful API** for survey submission and report generation.
+- **CSV export** for data download.
+
+### **IoT System (Button & Sensors)**:
+- **ESP32/Arduino** for IoT button hardware.
+- **Bluetooth** for communication with the mobile app.
+- **C++** for embedded programming on the IoT button.
+
+---
+
+## Timeline Summary
+
+| **Phase**       | **Key Goals & Deliverables**                                    | **Duration**    |
+|-----------------|------------------------------------------------------------------|-----------------|
+| **Month 1**     | MVP Development: Focus on IoT button, mobile app, backend, and CSV export for municipalities | 6 weeks         |
+| **Month 2**     | Refinement: Bug fixing, enhanced reporting, and user testing     | 4 weeks         |
+| **Month 3**     | Final enhancements, scalability, and deployment preparation      | 4 weeks         |
+
+---
