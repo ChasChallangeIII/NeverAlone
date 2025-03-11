@@ -35,7 +35,4 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 - Low-power Bluetooth/WiFi connectivity
 - Haptic feedback for button press confirmation
 
-## **License**
-This project is licensed under the MIT License.
----
 
