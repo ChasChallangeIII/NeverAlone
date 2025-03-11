@@ -113,13 +113,5 @@ We welcome contributions! To contribute:
 
 ## **License**
 This project is licensed under the MIT License.
-
-## **Contact**
-For inquiries or support, please reach out to:
-- **Project Lead:** (*Your Name*)
-- **Email:** support@neveralone.com
-- **GitHub:** [Never Alone Repository](https://github.com/your-repo/never-alone)
-
 ---
 
-Let us know if you'd like any more enhancements!
