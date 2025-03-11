@@ -29,7 +29,7 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 - WebSockets for real-time updates
 
 ### **IoT System (Button & Sensors)**
-- Arduino / Raspberry Pi
+- Arduino / Raspberry Pi / ESP32
 - MQTT for communication
 - C++ for embedded programming
 - Low-power Bluetooth/WiFi connectivity
