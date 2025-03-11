@@ -1,4 +1,4 @@
-# Never Alone – Chas Challenge 2025: MVP
+# Never Alone – Chas Challenge 2025
 
 ## Project Overview
 
