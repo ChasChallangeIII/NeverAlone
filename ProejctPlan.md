@@ -32,14 +32,40 @@ The app aims to map potential risk zones for the general population. Municipalit
 All project members are collectively responsible for ensuring the delivery of a high-quality final product. The team is divided into three groups: **Frontend, Backend, and IoT.** However, cross-functional collaboration will occur when necessary.  
 
 ### **FWMX (Frontend Team)**  
-- Create Figma sketches for the mobile application and possibly a web application.  
-- Develop a mobile app that allows users to:  
-  - Create accounts and log in.  
-  - Manage settings and contacts.  
-  - Request fake calls.  
-  - Record incidents.  
-  - Notify contacts of unsafe situations with location updates.  
-- Develop an admin panel for initial data visualization and statistics related to safety (potentially expanding to a web application for admin users).  
+# Project Tasks  
+
+## Preliminary Study and Design  
+- Conduct a preliminary study, create user personas, get inspired by websites and apps, and start sketching in Figma.  
+
+## User Authentication and Profile Management  
+- Implement login, logout, and account creation features.  
+- **Settings:** Define necessary user settings.  
+- **Profile:** Allow users to manage their profile.  
+- **Add Contacts:** Enable users to add emergency contacts.  
+
+## Mobile Application Functionality  
+- The mobile application should simulate a **fake call** when the user presses the wearable button or a button within the app.  
+- This action should trigger the system to send **time and location data** to the server.  
+
+## Recording Feature  
+- Implement a **recording function** that starts both when:  
+  - A button is pressed in the app.  
+  - The wearable button is activated.  
+
+## Notification System  
+- **Survey Notification:**  
+  - Users receive a notification after a set time, prompting them to answer follow-up questions about the incident.  
+  - This helps gain deeper insights into what caused their feeling of insecurity, allowing for more detailed data analysis for business clients (B2B).  
+- **Safety Alert Notification:**  
+  - Users receive notifications when one of their contacts is in danger, including **their location**.  
+
+## Admin Panel  
+- Develop an **admin panel** that allows administrators to log in and view all collected data.  
+
+## Documentation  
+- Documentation will be created continuously throughout the project.  
+- It should describe different components of the mobile application, ensuring a **clear development process** and an **overview of its functionalities**.  
+ 
 
 ### **FJSX (Backend Team)**  
 - Receive and store user-reported data (date, time, location).  
