@@ -3,7 +3,7 @@
 ## Purpose:
 This group contract has been created collectively to ensure a good working environment where we collaborate effectively, respect each other, and achieve our goal.
 
-## Group Name: 
+## Group Name: GitPushPray
 
 ## Rules and Values  
 - We respect each other's opinions and actively listen to one another.  
