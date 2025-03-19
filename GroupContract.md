@@ -26,17 +26,32 @@ This group contract has been created collectively to ensure a good working envir
 
 ## Group Members  
 
-### FWMX:  
-- Neriman Abduljalel  
+### FWMX (Frontend-development):  
+- Neriman Abduljalel
+  https://github.com/neriiman
 
-### FJSX:  
-- Tobias Engvall  
-- Oscar Burman  
-- Robin Andersson  
+### FJSX (Backend- & Fullstack-development):  
+- Tobias Engvall
+  https://github.com/Tibitoe
+  
+- Oscar Burman
+  https://github.com/Ozzodev
+  
+- Robin Andersson
+  https://github.com/Burtarn
 
-### SUVX:  
-- Markus Reutervik  
-- Jacob Hakimi  
-- David Reyes  
-- Mario Doka  
-- Fredrik Rappich (Mårtensson)  
+### SUVX (System-development):  
+- Markus Reutervik
+  https://github.com/MarkusReutervik
+  
+- Jacob Hakimi
+  https://github.com/Jalis00
+  
+- David Reyes
+  https://github.com/DavidReyes88
+  
+- Mario Doka
+  https://github.com/burekMancer
+  
+- Fredrik Rappich (Mårtensson)
+  https://github.com/Rappich
