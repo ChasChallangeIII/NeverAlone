@@ -29,7 +29,7 @@ The app aims to map potential risk zones for the general population. Municipalit
 
 ## Team Structure and Responsibilities  
 
-All project members are collectively responsible for ensuring the delivery of a high-quality final product. The team is divided into three groups: **Frontend, Backend, and IoT.** However, cross-functional collaboration will occur when necessary.  
+All project members are collectively responsible for ensuring the delivery of a high-quality final product. The team is divided into three groups: **Frontend, Backend, and IoT.** (**See GroupContract.md for further information**) However, cross-functional collaboration will occur when necessary.  
 
 ### **FWMX (Frontend Team)**  
 # Project Tasks  
