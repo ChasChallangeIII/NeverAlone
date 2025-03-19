@@ -31,7 +31,7 @@ The app aims to map potential risk zones for the general population. Municipalit
 
 All project members are collectively responsible for ensuring the delivery of a high-quality final product. The team is divided into three groups: **Frontend, Backend, and IoT.** (**See GroupContract.md for further information**) However, cross-functional collaboration will occur when necessary.  
 
-### **FWMX (Frontend Team)**  
+### **FWMX (Frontend Team: Neriman Abduljalel)**  
 # Project Tasks  
 
 ## Preliminary Study and Design  
@@ -67,13 +67,13 @@ All project members are collectively responsible for ensuring the delivery of a 
 - It should describe different components of the mobile application, ensuring a **clear development process** and an **overview of its functionalities**.  
  
 
-### **FJSX (Backend Team)**  
+### **FJSX (Backend Team: Tobias Engvall, Oscar Burman & Robin Andersson)**  
 - Receive and store user-reported data (date, time, location).  
 - Aggregate and present stored data in a simple format.  
 - Implement secure authentication with user and admin access levels.  
 - Determine whether to launch the API and database live for app-server communication.  
 
-### **SUVX (IoT Team)**  
+### **SUVX (IoT Team: Markus Reutervik, Jacob Hakimi, David Reyes, Mario Doka & Fredrik Rappich (Mårtensson))**  
 - Select hardware and develop a compact, responsive button that:  
   - Sends wireless signals to the mobile app.  
   - Provides immediate haptic feedback.  
