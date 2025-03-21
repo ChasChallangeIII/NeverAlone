@@ -18,12 +18,10 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 - React Native
 - Javascript
 - Context API for state management
-- Firebase for authentication and notifications
 
 ### **Backend (API & Database)**
 - Node.js with Express
 - PostgreSQL
-- Firebase Authentication
 - RESTful API for communication
 - WebSockets for real-time updates
 
