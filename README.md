@@ -16,9 +16,8 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 ## **Tech Stack**
 ### **Frontend (Mobile App)**
 - React Native
-- TypeScript
-- Expo
-- Redux for state management
+- Javascript
+- Context API for state management
 - Firebase for authentication and notifications
 
 ### **Backend (API & Database)**
