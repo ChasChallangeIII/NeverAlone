@@ -22,7 +22,7 @@ The app aims to map potential risk zones for the general population. Municipalit
 - **Backend:** JavaScript, Node.js, Express, and PostgreSQL  
 
 ### Overview of System Architecture  
-*(Diagram to be included showing how frontend, backend, and IoT components interact.)*  
+![Diagram](https://raw.githubusercontent.com/ChasChallangeIII/NeverAlone/main/nerveralone.drawio.svg) 
 
 ### Decisions on Database and API Structure  
 - **Backend:** Node.js (Express.js) and PostgreSQL  
