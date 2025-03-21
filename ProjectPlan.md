@@ -117,7 +117,8 @@ By implementing these features, we aim to create an effective admin panel and ac
 We will use **GitHub Projects** to define different sprint goals.  
 
 ### **Expected Completion Dates:**  
-- **First MVP:** Week 17  
+- **First Prototype:** Week 17 (See [MVP.md](https://github.com/ChasChallangeIII/NeverAlone/edit/main/Prototype.md))
+- **MVP:** Week 21 (See [Prototype.md](https://github.com/ChasChallangeIII/NeverAlone/edit/main/MVP.md))
 - **Implementation of Core Features:** Included in MVP  
 - **Testing & Optimization:** Ongoing, with standups every Tuesday at 09:00  
 
@@ -149,8 +150,15 @@ We recognize that problems will arise, especially in terms of time constraints. 
 
 ### **Team Deliverables**  
 
+#### **Whole Team**  
+As a team, we will conduct **preliminary research** not only for frontend design but also for backend and IoT aspects. This includes:  
+- Studying security concerns and user behavior to understand risks and solutions.  
+- Reviewing existing security apps and safety data collection methods.  
+- Investigating technologies and APIs that can improve security app functionality.  
+- Ensuring that both technical implementation and user experience align with our core mission.  
+
 #### **Frontend**  
-- Preliminary research, user persona creation, and Figma design.  
+- User persona creation, Figma design, and UI/UX research.
 - Fake call simulation for unsafe situations.  
 - Survey feature to collect more detailed safety incident data.  
 - Admin panel for viewing aggregated data.  
