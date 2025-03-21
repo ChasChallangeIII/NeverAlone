@@ -117,8 +117,8 @@ By implementing these features, we aim to create an effective admin panel and ac
 We will use **GitHub Projects** to define different sprint goals.  
 
 ### **Expected Completion Dates:**  
-- **First Prototype:** Week 17 (See [MVP.md](https://github.com/ChasChallangeIII/NeverAlone/edit/main/Prototype.md))
-- **MVP:** Week 21 (See [Prototype.md](https://github.com/ChasChallangeIII/NeverAlone/edit/main/MVP.md))
+- **First Prototype:** Week 17 (See [Prototype.md](https://github.com/ChasChallangeIII/NeverAlone/blob/main/Prototype.md))
+- **MVP:** Week 21 (See [MVP.md](https://github.com/ChasChallangeIII/NeverAlone/blob/main/MVP.md))
 - **Implementation of Core Features:** Included in MVP  
 - **Testing & Optimization:** Ongoing, with standups every Tuesday at 09:00  
 
