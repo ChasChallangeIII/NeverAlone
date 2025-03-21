@@ -18,6 +18,7 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 - React Native
 - Javascript
 - Context API for state management
+- Figma
 
 ### **Backend (API & Database)**
 - Node.js with Express
