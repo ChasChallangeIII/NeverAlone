@@ -60,13 +60,33 @@ All project members are collectively responsible for ensuring the delivery of a 
   - Users receive notifications when one of their contacts is in danger, including **their location**.  
 
 ## Admin Panel  
-- Develop an **admin panel** that allows administrators to log in and view all collected data.  
+The objective of this project is to develop a comprehensive admin panel that facilitates secure access for administrators to log in and access all collected data. This mobile application will implement a robust role-based permission system, ensuring that administrators can view and manage the data to which they have been granted access.
+
+To enhance data accessibility and usability, we will also create a dedicated website that provides administrators with an alternative method of viewing this data. This platform will offer a more detailed presentation of the information, featuring various diagrams and metrics that will aid in data analysis and decision-making.
+
+### Secure Login System
+- Implement a secure authentication mechanism for administrators to log in safely.
+
+### Role-Based Access Control
+- Establish a role-based permission framework that allows for differentiated access levels.  
+- Enable administrators to view only the data they are authorized to access.
+
+### Comprehensive Data Visualization
+- Develop a user-friendly website that presents data in a visually appealing manner.  
+- Utilize diverse diagrams and metrics to provide insights and facilitate in-depth analysis.
+
+### Enhanced Data Management
+- Equip administrators with tools to efficiently manage the collected data.  
+- Ensure that administrators can extract meaningful information to inform their decisions.
+
+### **Conclusion of Admin Panel**
+
+By implementing these features, we aim to create an effective admin panel and accompanying website that not only ensures secure access to data but also enhances the ability of administrators to analyze and utilize this information effectively.
 
 ## Documentation  
 - Documentation will be created continuously throughout the project.  
 - It should describe different components of the mobile application, ensuring a **clear development process** and an **overview of its functionalities**.  
  
-
 ### **FJSX (Backend Team: Tobias Engvall, Oscar Burman & Robin Andersson)**  
 - Receive and store user-reported data (date, time, location).  
 - Aggregate and present stored data in a simple format.  
