@@ -58,25 +58,43 @@
 - Develop a working hardware prototype  
 - Establish communication between the device and the mobile app  
 
-### Timeline & Tasks  
+### Project Timeline & Tasks
 
-#### **Week 14 – Basic Functionality**  
-- Set up **Arduino environment** and select a suitable microcontroller  
-- Connect a **tactile button** and read button presses  
-- Implement **haptic feedback** with a vibration motor on button press  
-- Create **basic serial logging** to verify button press detection  
+#### **Week 14 – Research, Planning & Simulated Build**
 
-#### **Week 15 – Mobile App Communication**  
-- Implement **Bluetooth communication** between the IoT device and the mobile app  
-- Send a **dummy signal** from the button to the mobile app upon press  
-- Test **signal reception** in the app and display a log/notification  
+* **Research & Planning:**
+    * [ ] Define the essential features and functionality for the initial prototype.
+    * [ ] Research suitable components, considering both virtual simulation and physical parts.
+    * [ ] Create a preliminary circuit diagram and outline the basic program logic.
+    * [ ] Inventory check: Confirm availability of necessary physical components at home for future stages.
+* **Simulated Prototype Construction (e.g., Tinkercad):**
+    * [ ] Build the complete circuit virtually based on the plan.
+    * [ ] Write and test the initial code for the virtual microcontroller.
+    * [ ] Simulate the core interactions (e.g., button press triggers a simulated output like an LED or vibration motor).
+    * [ ] Debug and refine the simulation until basic functionality is achieved.
 
-#### **Week 16 – Offline Functionality & Data Management**  
-- Implement a **buffer function** to store button presses if no Bluetooth connection is available  
-- Test **data transmission** upon next connection  
-- Simulate **different user scenarios** to test robustness  
+#### **Week 15 – Physical Build & Mobile App Communication**
 
-#### **Week 17 – Evaluation and Preparation for MVP**  
-- Document **code, schematics, and test results**  
-- Identify **strengths and areas for improvement**  
-- Sketch **design refinements** for the next prototype iteration  
+* [ ] Set up the **Arduino development environment** and select a suitable microcontroller board.
+* [ ] Physically connect a **tactile button** to the microcontroller and write code to read button presses reliably.
+* [ ] Implement **haptic feedback** by connecting and controlling a vibration motor triggered by the button press.
+* [ ] Implement **basic serial logging** via the Arduino IDE to monitor button presses and system status.
+* [ ] Integrate **Bluetooth communication** (e.g., using an HC-05/HC-06 module or ESP32 built-in Bluetooth).
+* [ ] Program the device to send a **signal/message** via Bluetooth when the button is pressed.
+* [ ] Develop a basic mobile app (or use a Bluetooth serial terminal app) to **receive and display** the signal, confirming communication.
+
+#### **Week 16 – Offline Functionality & Data Management**
+
+* [ ] Implement a **data buffering mechanism** on the device to store timestamped button presses when the Bluetooth connection is unavailable.
+* [ ] Program the device to automatically **transmit stored data** when the Bluetooth connection is re-established.
+* [ ] Test **data integrity and transmission** reliability after periods of disconnection.
+* [ ] Simulate **various user scenarios** (e.g., frequent presses while disconnected, long disconnection periods) to test system robustness and buffer limits.
+
+#### **Week 17 – Evaluation and MVP Preparation**
+
+* [ ] Thoroughly **document the code**, providing comments and explanations.
+* [ ] Create clear **hardware schematics** (wiring diagrams).
+* [ ] Compile detailed **test results**, including successes, failures, and bug fixes.
+* [ ] Critically evaluate the prototype: Identify **strengths, weaknesses, and areas for improvement**.
+* [ ] Sketch potential **design refinements** (hardware casing, component choices, user interface) for the Minimum Viable Product (MVP).
+* [ ] Plan the next steps for developing the MVP based on the evaluation.
