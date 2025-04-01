@@ -7,14 +7,14 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Använd Roboto som standard */
+  font-family: 'Poppins', sans-serif; 
 }
 
 .sidebar, .sidebar-icons, .footer {
-  font-family: 'Roboto', sans-serif; /* Se till att använda Roboto här också */
+  font-family: 'Poppins', sans-serif; 
 }
 
-/* Resten av din CSS */
+
 .company-name {
   color: white;
   text-align: center;
@@ -23,5 +23,5 @@ body {
 }
 
 .toggle-button, .close-button {
-  font-family: 'Roboto', sans-serif; /* Använd Roboto för knappar */
+  font-family: 'Roboto', sans-serif; 
 }

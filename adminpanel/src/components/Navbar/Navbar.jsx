@@ -17,17 +17,17 @@ const Sidebar = () => {
     return (
         <div>
             <button onClick={toggleSidebar} className="toggle-button">
-                {isOpen ? 'Stäng' : 'Öppna'} Meny
+                {isOpen ? 'Close' : 'Open'} Menu
             </button>
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <button className="close-button" onClick={closeSidebar}>✖</button>
                 {isOpen && <h2 className="company-name">NeverAlone</h2>}
                 <ul>
-                    <li><Link to="/" onClick={closeSidebar}><FaHome /> Hem</Link></li>
-                    <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Användare</Link></li>
-                    <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Inställningar</Link></li>
-                    <li><Link to="/reports" onClick={closeSidebar}><FaChartBar /> Rapporter</Link></li>
-                    <li><Link to="/help" onClick={closeSidebar}><FaQuestionCircle /> Hjälp</Link></li>
+                    <li><Link to="/" onClick={closeSidebar}><FaHome />Home</Link></li>
+                    <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Users</Link></li>
+                    <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Settings</Link></li>
+                    <li><Link to="/reports" onClick={closeSidebar}><FaChartBar /> Reports</Link></li>
+                    <li><Link to="/help" onClick={closeSidebar}><FaQuestionCircle /> Help</Link></li>
                 </ul>
                 {!isOpen && (
                     <div className="toggle-arrow" onClick={toggleSidebar}>
