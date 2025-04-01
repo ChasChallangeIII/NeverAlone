@@ -1,0 +1,24 @@
+{
+  "name": "server-neveralone",
+  "version": "1.0.0",
+  "description": "Simple express-server to recieve and store userdata from reports and handle authentication",
+  "homepage": "https://github.com/ChasChallangeIII/NeverAlone#readme",
+  "bugs": {
+    "url": "https://github.com/ChasChallangeIII/NeverAlone/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChasChallangeIII/NeverAlone.git"
+  },
+  "license": "ISC",
+  "author": "Oscar, Robin, Tobias",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
