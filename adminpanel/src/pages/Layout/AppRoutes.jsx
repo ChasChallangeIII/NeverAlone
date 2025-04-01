@@ -8,6 +8,7 @@ const Users = lazy(() => import('../Mainpages/Users'));
 const Settings = lazy(() => import('../Mainpages/Settings'));
 const Reports = lazy(() => import('../Mainpages/Reports'));
 const Help = lazy(() => import('../Mainpages/Help'));
+const Profile = lazy(() => import('../Mainpages/Profile'));
 const NotFound = lazy(() => import('../Mainpages/NotFound'));
 
 const AppRoutes = () => {
@@ -20,6 +21,7 @@ const AppRoutes = () => {
                     <Route path="settings" element={<Settings />} />
                     <Route path="reports" element={<Reports />} />
                     <Route path="help" element={<Help />} />
+                    <Route path="profile" element={<Profile />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>
