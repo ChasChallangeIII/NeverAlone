@@ -9,7 +9,6 @@
     right: 15px;
 }
 
-
 .toggle-arrow {
     cursor: pointer;
     color: white;
@@ -64,6 +63,29 @@
     margin: 10px 0;
 }
 
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center; 
+    padding: 10px 15px; 
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center; 
+    padding: 10px 15px; 
+}
+
+.sidebar li a svg { /* Utrymme mellan ikon och text */
+    margin-right: 10px; /* Justera detta värde för mer eller mindre utrymme */
+}
+
 .close-button {
     background: none;
     border: none;
@@ -95,22 +117,6 @@
 
 .toggle-button:active {
     transform: translateY(1px);
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar li {
-    margin: 15px 0;
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
 }
 
 .sidebar a:hover {
