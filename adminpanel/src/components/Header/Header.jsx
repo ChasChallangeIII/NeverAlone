@@ -1,9 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom'; 
 import { FaBell } from 'react-icons/fa';
+import { useAuth } from '../../pages/AuthContext/AuthContext'; // Importera useAuth
 import '../../components/Header/Header.css';
 
 const Header = () => {
+    const { logout } = useAuth(); // Hämta logout-funktionen
+    const navigate = useNavigate(); // För att navigera efter utloggning
+
+    const handleLogout = () => {
+        logout(); // Anropa logout-funktionen
+        navigate('/login'); // Omdirigera till inloggningssidan
+    };
+
     return (
         <div className="header">
             <div className="header-icons">
@@ -15,6 +24,9 @@ const Header = () => {
                         className="profile-image"
                     />
                 </Link>
+                <button onClick={handleLogout} className="logout-button">
+                    Logga ut
+                </button>
             </div>
         </div>
     );
