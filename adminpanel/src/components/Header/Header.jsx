@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
 import { FaBell } from 'react-icons/fa';
-import { useAuth } from '../../pages/AuthContext/AuthContext'; // Importera useAuth
+import { useAuth } from '../../pages/AuthContext/AuthContext'; 
 import '../../components/Header/Header.css';
 
 const Header = () => {
-    const { logout } = useAuth(); // Hämta logout-funktionen
-    const navigate = useNavigate(); // För att navigera efter utloggning
+    const { logout } = useAuth(); 
+    const navigate = useNavigate(); 
 
     const handleLogout = () => {
-        logout(); // Anropa logout-funktionen
-        navigate('/login'); // Omdirigera till inloggningssidan
+        logout(); 
+        navigate('/login'); 
     };
 
     return (
