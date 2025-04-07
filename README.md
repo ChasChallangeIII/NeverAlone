@@ -5,8 +5,8 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 
 ## **Features**
 - **One-Tap Safety** – Press the button to receive a simulated call and appear busy.
-- **Survey Submission** – Users can describe their experience in a quick survey via the app.
-- **Data Insights** – Anonymous reports help municipalities identify unsafe areas.
+- **Survey Submission** – Users will fill in surveys at a later time explaining why they pressed the button.
+- **Data Insights** – The survey reports help municipalities identify unsafe areas.
 - **Cross-Platform App** – Available on mobile devices with a clean and intuitive UI.
 - **IoT-Enabled Button** – Physical hardware integration for seamless interaction.
 - **Real-Time Data Sharing** – Municipalities and organizations can access statistical reports on unsafe areas.
