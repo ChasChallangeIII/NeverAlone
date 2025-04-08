@@ -6,6 +6,7 @@ import '../../styles/Login.css'
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMsg, setErrorMsg] = useState('')
     const { login } = useAuth();
     const navigate = useNavigate();
 
@@ -28,7 +29,7 @@ const Login = () => {
                 login(); 
                 navigate('/'); 
             } else {
-                alert(data.message || 'Inloggning misslyckades');
+                    setErrorMsg('Felaktigt användarnamn eller lösenord')
             }
         } catch (error) {
             console.error('Fel vid inloggning:', error);
@@ -60,6 +61,7 @@ const Login = () => {
                         autoComplete="current-password" 
                     />
                 </div>
+                <p className='errMsg'>{errorMsg}</p>
                 <button className='loginBtn' type="submit">Logga in</button>
             </form>
         </div>

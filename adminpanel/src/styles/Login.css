@@ -30,6 +30,10 @@ h2 {
     color: #555;
 }
 
+.errMsg {
+    color: red;
+}
+
 
 form {
     background: white;
