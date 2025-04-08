@@ -9,13 +9,29 @@ const Login = () => {
     const { login } = useAuth();
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (username === 'admin' && password === 'admin') {
-            login(); 
-            navigate('/'); 
-        } else {
-            alert('Felaktigt användarnamn eller lösenord');
+    
+        try {
+            const res = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+                credentials: 'include',  
+            });
+    
+            const data = await res.json();
+    
+            if (res.ok) {
+                login(); 
+                navigate('/'); 
+            } else {
+                alert(data.message || 'Inloggning misslyckades');
+            }
+        } catch (error) {
+            console.error('Fel vid inloggning:', error);
         }
     };
 
@@ -31,6 +47,7 @@ const Login = () => {
                         value={username} 
                         onChange={(e) => setUsername(e.target.value)} 
                         required 
+                        autoComplete="username" 
                     />
                 </div>
                 <div>
@@ -40,6 +57,7 @@ const Login = () => {
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
                         required 
+                        autoComplete="current-password" 
                     />
                 </div>
                 <button className='loginBtn' type="submit">Logga in</button>
