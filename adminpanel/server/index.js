@@ -19,7 +19,6 @@ app.get('/api/hello', (req, res) => {
 });
 
 
-
 const users = [
     {username: 'admin', password: 'admin'},
 ];
