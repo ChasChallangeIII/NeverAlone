@@ -1,17 +1,15 @@
 import express from "express";
-import { NotFoundError } from "../utils/errors/appErrors.js";
+import {
+  addRecord,
+  getRecord,
+  getRecords,
+} from "../controllers/RecordsController.js";
 const router = express.Router();
 
-router.post("/records", (req, res, next) => {
-  try {
-    const data = null;
-    if (!data) {
-      throw new NotFoundError("Inget innehåll hittades");
-    }
-    res.json(data);
-  } catch (err) {
-    next(err);
-  }
-});
+router.post("/records", addRecord);
+
+router.get("/records", getRecords);
+
+router.get("/records/:recordid", getRecord);
 
 export default router;

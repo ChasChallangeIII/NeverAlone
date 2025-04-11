@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import notFound from "./middleware/notFound.js";
 import errorHandler from "./middleware/errorHandler.js";
 import "./config/postgres.js";
+import { authenticate } from "./middleware/auth.js";
 
 dotenv.config();
 
@@ -19,7 +20,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Express server of the NeverAlone project");
 });
 
-app.use("/api", ApiRouter);
+app.use("/api", authenticate, ApiRouter);
 app.use("/auth", AuthRouter);
 
 app.listen(PORT, () => {
