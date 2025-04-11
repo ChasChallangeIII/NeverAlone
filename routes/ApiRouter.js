@@ -1,14 +1,17 @@
-import express from "express";
-
+const express = require("express");
 const router = express.Router();
+const { BadRequestError, NotFoundError } = require("../utils/errors");
 
-const records = [];
-
-router.post("/record", (req, res) => {
-  const recordData = req.body;
-  records.push(records);
-
-  res.status(200).json({ recordData });
+router.post("/records", (req, res, next) => {
+  try {
+    const data = null;
+    if (!data) {
+      throw new NotFoundError("Inget innehåll hittades");
+    }
+    res.json(data);
+  } catch (err) {
+    next(err);
+  }
 });
 
-export default router;
+module.exports = router;

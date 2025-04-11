@@ -3,6 +3,9 @@ import { logging } from "./middleware/logging.js";
 import ApiRouter from "./routes/ApiRouter.js";
 import dotenv from "dotenv";
 
+const notFound = require("./middleware/notFound");
+const errorHandler = require("./middleware/errorHandler.js");
+
 dotenv.config();
 
 const app = express();
@@ -17,3 +20,6 @@ app.use("/api", logging, ApiRouter);
 app.listen(PORT, () => {
   console.log(`Server is very running at http://localhost:${PORT}`);
 });
+
+app.use(notFound);
+app.use(errorHandler);
