@@ -1,11 +1,9 @@
-const logger = require("../utils/logger");
-const { AppError } = require("../utils/errors");
+import { AppError } from "../utils/errors/errors.js";
+import logger from "../utils/logger.js";
 
-function errorHandler(err, req, res, next) {
-  // Logga alltid felet
+const errorHandler = (err, req, res, next) => {
   logger.error(err.stack || err.message || err);
 
-  // Om det är ett "känt" fel, använd dess statuskod och meddelande
   if (err instanceof AppError) {
     return res.status(err.statusCode).json({
       error: err.constructor.name,
@@ -13,11 +11,10 @@ function errorHandler(err, req, res, next) {
     });
   }
 
-  // Hantera övriga (okända) fel som 500
   res.status(500).json({
-    error: "Serverfel",
-    message: "Ett oväntat fel uppstod.",
+    error: "Internal server error",
+    message: "An unknown error occurred",
   });
-}
+};
 
-module.exports = errorHandler;
+export default errorHandler;

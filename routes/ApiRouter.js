@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
+import { NotFoundError } from "../utils/errors/appErrors.js";
 const router = express.Router();
-const { BadRequestError, NotFoundError } = require("../utils/errors");
 
 router.post("/records", (req, res, next) => {
   try {
@@ -14,4 +14,4 @@ router.post("/records", (req, res, next) => {
   }
 });
 
-module.exports = router;
+export default router;

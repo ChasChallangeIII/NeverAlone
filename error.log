@@ -1,0 +1,37 @@
+2025-04-11T08:50:01.297Z [ERROR] Error: Kan inte hitta /api/record
+    at notFound (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/middleware/notFound.js:5:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:60:12)
+2025-04-11T08:51:04.282Z [ERROR] Error: Inget innehåll hittades
+    at file:///C:/Users/oscar/Documents/FJSX24/neverAlone/routes/ApiRouter.js:9:13
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:186:3)
+2025-04-11T09:04:10.841Z [ERROR] Error: Inget innehåll hittades
+    at file:///C:/Users/oscar/Documents/FJSX24/neverAlone/routes/ApiRouter.js:9:13
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:186:3)
+2025-04-11T09:26:28.695Z [ERROR] Error: Incorrect error
+    at signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:77:13)
+2025-04-11T09:27:03.734Z [ERROR] Error: Incorrect password
+    at signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:77:13)

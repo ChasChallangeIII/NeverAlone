@@ -1,10 +1,21 @@
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
+import {
+  DuplicateUserError,
+  PasswordError,
+  UserNotFoundError,
+} from "../utils/errors/authErrors.js";
 
 dotenv.config();
 
-const users = [{ username: "admin", password: "admin" }];
+const users = [
+  {
+    username: "admin",
+    password: "$2b$10$eVc60AJUyt0Ref64k.xzMOnNryaGRRxLPHK9305jEvqC.V7Q.tdgC",
+  },
+];
+
 const JWT_SECRET = process.env.JWT_SECRET;
 
 const isProd = process.env.NODE_ENV;
@@ -19,9 +30,7 @@ export const signup = async (req, res, next) => {
     );
 
     if (existingUser) {
-      return res
-        .status(400)
-        .json({ message: "Username already exists", success: false });
+      throw new DuplicateUserError();
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -59,17 +68,13 @@ export const signin = async (req, res, next) => {
     );
 
     if (!user) {
-      return res
-        .status(404)
-        .json({ message: "User not found", success: false });
+      throw new UserNotFoundError();
     }
 
-    const unhashedPassword = await bcrypt.compare(user.password, password);
+    const unhashedPassword = await bcrypt.compare(password, user.password);
 
     if (!unhashedPassword) {
-      return res
-        .status(400)
-        .json({ message: "Incorrect password", success: false });
+      throw new PasswordError();
     }
 
     const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: "1h" });

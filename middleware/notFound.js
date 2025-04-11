@@ -1,8 +1,7 @@
-const { NotFoundError } = require("../utils/errors");
+import { NotFoundError } from "../utils/errors/appErrors.js";
 
-function notFound(req, res, next) {
-  // Skapa ett 404-fel för ej matchade routes
-  next(new NotFoundError(`Kan inte hitta ${req.originalUrl}`));
-}
+const notFound = (req, _, next) => {
+  next(new NotFoundError(`Could not find ${req.originalUrl}`));
+};
 
-module.exports = notFound;
+export default notFound;

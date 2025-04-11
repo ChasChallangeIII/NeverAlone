@@ -1,12 +1,11 @@
-import express, { json } from "express";
+import express from "express";
 import cookieParser from "cookie-parser";
-import { logging } from "./middleware/logging.js";
 import ApiRouter from "./routes/ApiRouter.js";
 import AuthRouter from "./routes/AuthRouter.js";
 import dotenv from "dotenv";
-
-const notFound = require("./middleware/notFound");
-const errorHandler = require("./middleware/errorHandler.js");
+import notFound from "./middleware/notFound.js";
+import errorHandler from "./middleware/errorHandler.js";
+import "./config/postgres.js";
 
 dotenv.config();
 
@@ -20,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Express server of the NeverAlone project");
 });
 
-app.use("/api", logging, ApiRouter);
+app.use("/api", ApiRouter);
 app.use("/auth", AuthRouter);
 
 app.listen(PORT, () => {
