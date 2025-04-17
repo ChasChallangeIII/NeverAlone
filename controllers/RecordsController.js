@@ -4,7 +4,7 @@ import { generateId } from "../utils/helpers.js";
 const records = [];
 
 export const getRecords = (_, res) => {
-  res.status(200).json({ records, message: "Record added successfully", success: true });
+  res.status(200).json({ records, success: true });
 };
 
 export const getRecord = (req, res) => {
@@ -16,7 +16,7 @@ export const getRecord = (req, res) => {
     throw new RecordNotFoundError();
   }
 
-  res.status(200).json({ record, message: "Record added successfully", success: true });
+  res.status(200).json({ record, success: true });
 };
 
 export const addRecord = (req, res) => {
@@ -26,5 +26,5 @@ export const addRecord = (req, res) => {
 
   records.push(newRecord);
 
-  res.status(200).json({ message: "Record added successfully", success: true });
+  res.status(201).json({ message: "Record added successfully", success: true });
 };

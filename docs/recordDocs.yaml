@@ -1,0 +1,101 @@
+paths:
+  /api/records:
+    post:
+      summary: Add a new record
+      tags:
+        - Records
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time:
+                  type: string
+                  format: date-time
+                location:
+                  type: object
+                  properties:
+                    lat:
+                      type: string
+                    long:
+                      type: string
+      responses:
+        201:
+          description: Record added successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  message:
+                    type: string
+              example:
+                id: "12345"
+                message: "Record added successfully"
+
+    get:
+      summary: Get all available records reported by users
+      tags:
+        - Records
+      responses:
+        200:
+          description: Records retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    message:
+                      type: string
+              example:
+                - id: "12345"
+                  message: "This is a record."
+                - id: "67890"
+                  message: "Another record retrieved."
+
+  /api/records/{id}:
+    get:
+      summary: Get a record by ID
+      tags:
+        - Records
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The ID of the record to retrieve
+          schema:
+            type: string
+      responses:
+        200:
+          description: Record retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  message:
+                    type: string
+              example:
+                id: "12345"
+                message: "Record retrieved successfully"
+        404:
+          description: Record not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: "Record not found"

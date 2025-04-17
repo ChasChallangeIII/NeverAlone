@@ -1,9 +1,5 @@
 import express from "express";
-import {
-  addRecord,
-  getRecord,
-  getRecords,
-} from "../controllers/RecordsController.js";
+import { addRecord, getRecord, getRecords } from "../controllers/RecordsController.js";
 const router = express.Router();
 
 router.post("/records", addRecord);
