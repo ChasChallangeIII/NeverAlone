@@ -1,12 +1,10 @@
-import { RecordNotFoundError } from "../utils/errors/recordErrors";
-import { generateId } from "../utils/helpers";
+import { RecordNotFoundError } from "../utils/errors/recordErrors.js";
+import { generateId } from "../utils/helpers.js";
 
 const records = [];
 
 export const getRecords = (_, res) => {
-  res
-    .status(200)
-    .json({ records, message: "Record added successfully", success: true });
+  res.status(200).json({ records, message: "Record added successfully", success: true });
 };
 
 export const getRecord = (req, res) => {
@@ -18,9 +16,7 @@ export const getRecord = (req, res) => {
     throw new RecordNotFoundError();
   }
 
-  res
-    .status(200)
-    .json({ record, message: "Record added successfully", success: true });
+  res.status(200).json({ record, message: "Record added successfully", success: true });
 };
 
 export const addRecord = (req, res) => {
