@@ -1,6 +1,6 @@
 import { ReportNotFoundError } from "../utils/errors/reportErrors.js";
 import { generateId } from "../utils/helpers.js";
-import { reportSchema } from "../validations/reportSchema.js";
+import { reportSchema } from "../validators/reportSchema.js";
 
 const reports = [];
 
