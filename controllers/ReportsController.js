@@ -1,5 +1,6 @@
 import { ReportNotFoundError } from "../utils/errors/reportErrors.js";
 import { generateId } from "../utils/helpers.js";
+import { reportSchema } from "../validations/reportSchema.js";
 
 const reports = [];
 
@@ -19,12 +20,23 @@ export const getReport = (req, res) => {
   res.status(200).json({ report, success: true });
 };
 
-export const addReport = (req, res) => {
-  const { time, location } = req.body;
+export const addReport = (req, res, next) => {
+  try {
+    const parsed = reportSchema.parse(req.body);
 
-  const newReport = { id: generateId(), time, location };
+    const newReport = {
+      id: generateId(),
+      time: parsed.time,
+      location: parsed.location,
+    };
 
-  reports.push(newReport);
+    reports.push(newReport);
 
-  res.status(201).json({ message: "Report added successfully", success: true });
+    res.status(201).json({
+      message: "Report added successfully",
+      success: true,
+    });
+  } catch (err) {
+    next(err);
+  }
 };
