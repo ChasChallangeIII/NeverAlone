@@ -1,11 +1,15 @@
 import express from "express";
-import { addRecord, getRecord, getRecords } from "../controllers/RecordsController.js";
+import {
+  addReport,
+  getReport,
+  getReports,
+} from "../controllers/ReportsController.js";
 const router = express.Router();
 
-router.post("/records", addRecord);
+router.post("/reports", addReport);
 
-router.get("/records", getRecords);
+router.get("/reports", getReports);
 
-router.get("/records/:recordid", getRecord);
+router.get("/reports/:reportid", getReport);
 
 export default router;

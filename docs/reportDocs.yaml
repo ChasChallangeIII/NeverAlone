@@ -1,9 +1,9 @@
 paths:
-  /api/records:
+  /api/reports:
     post:
-      summary: Add a new record
+      summary: Add a new report
       tags:
-        - Records
+        - reports
       requestBody:
         required: true
         content:
@@ -23,7 +23,7 @@ paths:
                       type: string
       responses:
         201:
-          description: Record added successfully
+          description: report added successfully
           content:
             application/json:
               schema:
@@ -35,15 +35,15 @@ paths:
                     type: string
               example:
                 id: "12345"
-                message: "Record added successfully"
+                message: "report added successfully"
 
     get:
-      summary: Get all available records reported by users
+      summary: Get all available reports reported by users
       tags:
-        - Records
+        - reports
       responses:
         200:
-          description: Records retrieved successfully
+          description: reports retrieved successfully
           content:
             application/json:
               schema:
@@ -57,25 +57,25 @@ paths:
                       type: string
               example:
                 - id: "12345"
-                  message: "This is a record."
+                  message: "This is a report."
                 - id: "67890"
-                  message: "Another record retrieved."
+                  message: "Another report retrieved."
 
-  /api/records/{id}:
+  /api/reports/{id}:
     get:
-      summary: Get a record by ID
+      summary: Get a report by ID
       tags:
-        - Records
+        - reports
       parameters:
         - name: id
           in: path
           required: true
-          description: The ID of the record to retrieve
+          description: The ID of the report to retrieve
           schema:
             type: string
       responses:
         200:
-          description: Record retrieved successfully
+          description: report retrieved successfully
           content:
             application/json:
               schema:
@@ -87,9 +87,9 @@ paths:
                     type: string
               example:
                 id: "12345"
-                message: "Record retrieved successfully"
+                message: "report retrieved successfully"
         404:
-          description: Record not found
+          description: report not found
           content:
             application/json:
               schema:
@@ -98,4 +98,4 @@ paths:
                   message:
                     type: string
               example:
-                message: "Record not found"
+                message: "report not found"
