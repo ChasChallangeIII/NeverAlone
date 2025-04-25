@@ -1,39 +1,42 @@
-import { ReportNotFoundError } from "../utils/errors/reportErrors.js";
+import {
+  findReport,
+  findReports,
+  insertReport,
+} from "../services/db/reportServices.js";
 import { generateId } from "../utils/helpers.js";
 import { reportSchema } from "../validators/reportSchema.js";
 
-const reports = [];
+// const reports = [];
 
-export const getReports = (_, res) => {
-  res.status(200).json({ reports, success: true });
-};
-
-export const getReport = (req, res) => {
-  const { reportid: reportId } = req.params;
-
-  const report = reports.find((rep) => rep.id == reportId);
-
-  if (!report) {
-    throw new ReportNotFoundError();
-  }
-
-  res.status(200).json({ report, success: true });
-};
-
-export const addReport = (req, res, next) => {
+export const getReports = async (_, res, next) => {
   try {
-    const parsed = reportSchema.parse(req.body);
+    const reports = await findReports();
+    res.status(200).json({ reports, success: true });
+  } catch (err) {
+    next(err);
+  }
+};
 
-    const newReport = {
-      id: generateId(),
-      time: parsed.time,
-      location: parsed.location,
-    };
+export const getReport = async (req, res, next) => {
+  try {
+    const { reportid: reportId } = req.params;
 
-    reports.push(newReport);
+    const report = await findReport(reportId);
+
+    res.status(200).json({ report, success: true });
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const addReport = async (req, res, next) => {
+  try {
+    // const parsed = reportSchema.parse(req.body);
+
+    const reportId = await insertReport(req.body);
 
     res.status(201).json({
-      message: "Report added successfully",
+      message: `New report ${reportId} added successfully`,
       success: true,
     });
   } catch (err) {

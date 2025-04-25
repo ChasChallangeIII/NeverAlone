@@ -25,7 +25,8 @@ app.get("/", (_, res) => {
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-app.use("/api", authenticate, ApiRouter);
+// app.use("/api", authenticate, ApiRouter);
+app.use("/api", ApiRouter);
 app.use("/auth", AuthRouter);
 
 app.use(notFound);

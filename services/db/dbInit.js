@@ -27,7 +27,9 @@ const ensureReportsTable = async () => {
             id BIGSERIAL PRIMARY KEY, 
             time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             location JSON NOT NULL, 
-            is_read BOOLEAN DEFAULT false
+            cause VARCHAR(200) NOT NULL,
+            text TEXT NOT NULL,
+            is_handled BOOLEAN DEFAULT false
         );
     `;
 

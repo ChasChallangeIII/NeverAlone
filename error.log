@@ -57,3 +57,68 @@
     at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
     at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
     at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-04-25T09:15:39.569Z [ERROR] RangeError: Maximum call stack size exceeded
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:7:27)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+2025-04-25T09:16:43.683Z [ERROR] ReferenceError: findReportsReports is not defined
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:12:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:186:3)
+2025-04-25T09:16:59.937Z [ERROR] error: syntax error at or near "reports"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/dbInit.js:13:22)
+    at async findReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:18:10)
+    at async getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:12:19)
+2025-04-25T09:18:14.819Z [ERROR] error: syntax error at or near "reports"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/dbInit.js:13:22)
+    at async findReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:18:10)
+    at async getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:12:19)
+2025-04-25T09:20:25.682Z [ERROR] error: syntax error at or near "reports"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/dbInit.js:13:22)
+    at async findReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:10:10)
+    at async getReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:19:18)
+2025-04-25T09:20:37.066Z [ERROR] error: syntax error at or near "reports"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/dbInit.js:13:22)
+    at async findReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:10:10)
+    at async getReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:19:18)
+2025-04-25T09:21:00.281Z [ERROR] Error: Report not found
+    at findReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:13:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:19:18)
+2025-04-25T09:21:49.439Z [ERROR] Error: Report not found
+    at findReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:13:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:19:18)
+2025-04-25T09:26:11.442Z [ERROR] SyntaxError: Expected ',' or '}' after property value in JSON at position 66 (line 3 column 5)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
