@@ -1,10 +1,11 @@
 import React from 'react'
 import '../../App.css'
+import Reports from '../../components/HandleReports/HandleReports'
 
 const reports = () => {
   return (
     <div className="flex justify-center items-center h-screen">
-      <h1 className="text-4xl font-bold fade-in">Reports</h1>
+      < Reports />
     </div>
   )
 }
