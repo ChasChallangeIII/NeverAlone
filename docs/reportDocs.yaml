@@ -3,7 +3,7 @@ paths:
     post:
       summary: Add a new report
       tags:
-        - reports
+        - Reports
       requestBody:
         required: true
         content:
@@ -37,10 +37,11 @@ paths:
                 id: "12345"
                 message: "report added successfully"
 
+  /admin/reports:
     get:
-      summary: Get all available reports reported by users
+      summary: Get all available reports reported by users, only available for admins
       tags:
-        - reports
+        - Reports
       responses:
         200:
           description: reports retrieved successfully
@@ -61,11 +62,11 @@ paths:
                 - id: "67890"
                   message: "Another report retrieved."
 
-  /api/reports/{id}:
+  /admin/reports/{id}:
     get:
-      summary: Get a report by ID
+      summary: Get a report by ID, only available for admins
       tags:
-        - reports
+        - Reports
       parameters:
         - name: id
           in: path
