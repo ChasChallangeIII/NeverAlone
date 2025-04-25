@@ -1,0 +1,101 @@
+paths:
+  /api/reports:
+    post:
+      summary: Add a new report
+      tags:
+        - reports
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time:
+                  type: string
+                  format: date-time
+                location:
+                  type: object
+                  properties:
+                    lat:
+                      type: string
+                    long:
+                      type: string
+      responses:
+        201:
+          description: report added successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  message:
+                    type: string
+              example:
+                id: "12345"
+                message: "report added successfully"
+
+    get:
+      summary: Get all available reports reported by users
+      tags:
+        - reports
+      responses:
+        200:
+          description: reports retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    message:
+                      type: string
+              example:
+                - id: "12345"
+                  message: "This is a report."
+                - id: "67890"
+                  message: "Another report retrieved."
+
+  /api/reports/{id}:
+    get:
+      summary: Get a report by ID
+      tags:
+        - reports
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The ID of the report to retrieve
+          schema:
+            type: string
+      responses:
+        200:
+          description: report retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  message:
+                    type: string
+              example:
+                id: "12345"
+                message: "report retrieved successfully"
+        404:
+          description: report not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: "report not found"

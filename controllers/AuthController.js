@@ -87,7 +87,7 @@ export const signin = async (req, res, next) => {
     });
 
     res.status(200).json({
-      message: "Login successfully",
+      message: "Login successful",
       success: true,
     });
   } catch (error) {
