@@ -33,11 +33,7 @@ export const insertReport = async (data) => {
     RETURNING id;
   `;
 
-  const result = await executeQuery(query, [
-    JSON.stringify(location),
-    cause,
-    text,
-  ]);
+  const result = await executeQuery(query, [JSON.stringify(location), cause, text]);
 
   if (result.length === 0) {
     throw new ReportNotFoundError();

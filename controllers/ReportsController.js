@@ -1,9 +1,4 @@
-import {
-  findReport,
-  findReports,
-  insertReport,
-} from "../services/db/ReportServices.js";
-import { reportSchema } from "../validators/reportSchema.js";
+import { findReport, findReports, insertReport } from "../services/db/reportsService";
 
 export const getReports = async (_, res, next) => {
   try {
@@ -28,8 +23,6 @@ export const getReport = async (req, res, next) => {
 
 export const addReport = async (req, res, next) => {
   try {
-    // const parsed = reportSchema.parse(req.body);
-
     const reportId = await insertReport(req.body);
 
     res.status(201).json({
