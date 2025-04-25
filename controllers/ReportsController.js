@@ -1,4 +1,4 @@
-import { findReport, findReports, insertReport } from "../services/db/reportsService";
+import { findReport, findReports, insertReport } from "../services/db/reportsService.js";
 
 export const getReports = async (_, res, next) => {
   try {

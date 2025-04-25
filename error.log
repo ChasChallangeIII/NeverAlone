@@ -126,3 +126,110 @@
     at findReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/ReportServices.js:24:18)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:10:21)
+2025-04-25T13:01:43.932Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+    at get error [as error] (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:663:22)
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:29:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+2025-04-25T13:03:09.251Z [ERROR] Error: Required
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:33:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:03:33.912Z [ERROR] Error: Required
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:05:53.719Z [ERROR] Error: Required
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:06:21.625Z [ERROR] Error: Required
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:07:38.792Z [ERROR] SyntaxError: Expected property name or '}' in JSON at position 29
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-25T13:07:47.461Z [ERROR] SyntaxError: Expected property name or '}' in JSON at position 29
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-25T13:08:44.915Z [ERROR] Error: Cause must be a string, Unrecognized key(s) in object: 'causes'
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:09:30.447Z [ERROR] Error: Cause must be a string, Unrecognized key(s) in object: 'causes'
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)

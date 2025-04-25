@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import pkg from "pg";
-import { createTables } from "../services/db/dbInit.js";
+import { createTables } from "../services/db/db.js";
 const { Pool } = pkg;
 
 dotenv.config();
