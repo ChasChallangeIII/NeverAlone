@@ -4,6 +4,7 @@ import {
   getRecord,
   getRecords,
 } from "../controllers/RecordsController.js";
+
 const router = express.Router();
 
 router.post("/records", addRecord);
