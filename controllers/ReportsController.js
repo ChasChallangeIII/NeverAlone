@@ -2,11 +2,8 @@ import {
   findReport,
   findReports,
   insertReport,
-} from "../services/db/reportServices.js";
-import { generateId } from "../utils/helpers.js";
+} from "../services/db/ReportServices.js";
 import { reportSchema } from "../validators/reportSchema.js";
-
-// const reports = [];
 
 export const getReports = async (_, res, next) => {
   try {
