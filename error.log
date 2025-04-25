@@ -122,3 +122,7 @@
     at IncomingMessage.emit (node:events:518:28)
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-04-25T09:57:52.445Z [ERROR] ReferenceError: result is not defined
+    at findReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/ReportServices.js:24:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:10:21)

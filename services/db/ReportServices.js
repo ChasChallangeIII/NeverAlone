@@ -21,7 +21,7 @@ export const findReports = async () => {
     SELECT * FROM reports;
   `;
 
-  return (result = await executeQuery(query));
+  return await executeQuery(query);
 };
 
 export const insertReport = async (data) => {
