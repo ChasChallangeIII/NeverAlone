@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import pkg from "pg";
+import { createTables } from "../services/db/dbInit.js";
 const { Pool } = pkg;
 
 dotenv.config();
@@ -15,21 +16,16 @@ const pool = new Pool({
 
 (async () => {
   try {
-    await pool.query("SELECT NOW()");
-    console.log("✅ PostgreSQL DB connected!");
+    const client = await pool.connect();
+    console.log("✅ Connected to Postgres");
 
-    const createTableQuery = `
-      CREATE TABLE IF NOT EXISTS users (
-        id BIGSERIAL PRIMARY KEY,
-        username TEXT NOT NULL UNIQUE,
-        password TEXT NOT NULL
-      );
-    `;
+    client.release();
 
-    await pool.query(createTableQuery);
-    console.log("✅ 'users' table ensured.");
+    await createTables();
+
+    console.log("✅ All tables ensured successfully");
   } catch (err) {
-    console.error("❌ PostgreSQL setup error:", err.message);
+    console.error("❌ Error connecting to Postgres", err);
   }
 })();
 
