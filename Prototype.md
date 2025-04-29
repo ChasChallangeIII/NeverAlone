@@ -76,18 +76,18 @@
 
 #### **Week 15 – Physical Build & Mobile App Communication**
 
-* [ ] Set up the **Arduino development environment** and select a suitable microcontroller board.
-* [ ] Physically connect a **tactile button** to the microcontroller and write code to read button presses reliably.
+* [x] Set up the **Arduino development environment** and select a suitable microcontroller board.
+* [x] Physically connect a **tactile button** to the microcontroller and write code to read button presses reliably.
 * [ ] Implement **haptic feedback** by connecting and controlling a vibration motor triggered by the button press.
-* [ ] Implement **basic serial logging** via the Arduino IDE to monitor button presses and system status.
-* [ ] Integrate **Bluetooth communication** (e.g., using an HC-05/HC-06 module or ESP32 built-in Bluetooth).
-* [ ] Program the device to send a **signal/message** via Bluetooth when the button is pressed.
-* [ ] Develop a basic mobile app (or use a Bluetooth serial terminal app) to **receive and display** the signal, confirming communication.
+* [x] Implement **basic serial logging** via the Arduino IDE to monitor button presses and system status.
+* [x] Integrate **Bluetooth communication** (e.g., using an HC-05/HC-06 module or ESP32 built-in Bluetooth).
+* [x] Program the device to send a **signal/message** via Bluetooth when the button is pressed.
+* [x] Develop a basic mobile app (or use a Bluetooth serial terminal app) to **receive and display** the signal, confirming communication.
 
 #### **Week 16 – Offline Functionality & Data Management**
 
-* [ ] Implement a **data buffering mechanism** on the device to store timestamped button presses when the Bluetooth connection is unavailable.
-* [ ] Program the device to automatically **transmit stored data** when the Bluetooth connection is re-established.
+* [x] Implement a **data buffering mechanism** on the device to store timestamped button presses when the Bluetooth connection is unavailable.
+* [x] Program the device to automatically **transmit stored data** when the Bluetooth connection is re-established.
 * [ ] Test **data integrity and transmission** reliability after periods of disconnection.
 * [ ] Simulate **various user scenarios** (e.g., frequent presses while disconnected, long disconnection periods) to test system robustness and buffer limits.
 
