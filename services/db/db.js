@@ -2,7 +2,7 @@ import pool from "../../config/postgres.js";
 import { sanitizeValues } from "../../utils/helpers.js";
 
 export const createTables = async () => {
-  await Promise.all([ensureReportsTable()]);
+  await ensureReportsTable();
 };
 
 export const executeQuery = async (query, values = []) => {
@@ -22,18 +22,18 @@ export const executeQuery = async (query, values = []) => {
 
 const ensureReportsTable = async () => {
   try {
-    const query = `
-        CREATE TABLE IF NOT EXISTS reports(
-            id BIGSERIAL PRIMARY KEY, 
-            time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            location JSON NOT NULL, 
-            cause VARCHAR(200) NOT NULL,
-            text TEXT NOT NULL,
-            is_handled BOOLEAN DEFAULT false
-        );
-    `;
+    // const query = `
+    //     CREATE TABLE IF NOT EXISTS reports(
+    //         id BIGSERIAL PRIMARY KEY,
+    //         time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    //         location JSON NOT NULL,
+    //         cause VARCHAR(200) NOT NULL,
+    //         text TEXT NOT NULL,
+    //         is_handled BOOLEAN DEFAULT false
+    //     );
+    // `;
 
-    await executeQuery(query);
+    // await executeQuery(query);
 
     console.log("✅ Reports table ensured.");
   } catch (err) {
