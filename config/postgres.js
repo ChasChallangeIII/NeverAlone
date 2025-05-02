@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import pkg from "pg";
-import { createTables } from "../services/db/db.js";
+import { createTables, createIndexes } from "../services/db/db.js";
 const { Pool } = pkg;
 
 dotenv.config();
@@ -22,6 +22,7 @@ const pool = new Pool({
     client.release();
 
     await createTables();
+    await createIndexes();
 
     console.log("✅ All tables ensured successfully");
   } catch (err) {
