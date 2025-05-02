@@ -29,7 +29,9 @@ const ensureReportsTable = async () => {
     //         location JSON NOT NULL,
     //         cause VARCHAR(200) NOT NULL,
     //         text TEXT NOT NULL,
+    //         user_id
     //         is_handled BOOLEAN DEFAULT false
+    //          FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
     //     );
     // `;
 

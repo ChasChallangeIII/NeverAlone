@@ -1,45 +1,18 @@
-import bcrypt from "bcrypt";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
-import {
-  DuplicateUserError,
-  PasswordError,
-  UserNotFoundError,
-} from "../utils/errors/authErrors.js";
+import { addUser, performAdminLogin, performLogin } from "../services/db/authService.js";
 
 dotenv.config();
-
-const users = [
-  {
-    username: "admin",
-    password: "$2b$10$eVc60AJUyt0Ref64k.xzMOnNryaGRRxLPHK9305jEvqC.V7Q.tdgC",
-  },
-];
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
 const isProd = process.env.NODE_ENV;
 
 export const signup = async (req, res, next) => {
-  const { username, password } = req.body;
-
   try {
-    const existingUser = users.find(
-      (user) =>
-        user.username.trim().toLowerCase() === username.trim().toLowerCase()
-    );
+    const newUser = await addUser(req.body);
 
-    if (existingUser) {
-      throw new DuplicateUserError();
-    }
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    const newUser = { username, password: hashedPassword };
-
-    users.push(newUser);
-
-    const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: "1h" });
+    const token = jwt.sign({ ...newUser }, JWT_SECRET, { expiresIn: "1h" });
 
     res.cookie("token", token, {
       httpOnly: true,
@@ -59,25 +32,18 @@ export const signup = async (req, res, next) => {
 };
 
 export const signin = async (req, res, next) => {
-  const { username, password } = req.body;
+  const { admin: isAdmin } = req.query;
 
   try {
-    const user = users.find(
-      (user) =>
-        user.username.trim().toLowerCase() === username.trim().toLowerCase()
-    );
+    let token;
 
-    if (!user) {
-      throw new UserNotFoundError();
+    if (isAdmin) {
+      const admin = await performAdminLogin(req.body);
+      token = jwt.sign({ ...admin, isAdmin: true }, JWT_SECRET, { expiresIn: "1h" });
+    } else {
+      const user = await performLogin(req.body);
+      token = jwt.sign({ ...user }, JWT_SECRET, { expiresIn: "1h" });
     }
-
-    const unhashedPassword = await bcrypt.compare(password, user.password);
-
-    if (!unhashedPassword) {
-      throw new PasswordError();
-    }
-
-    const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: "1h" });
 
     res.cookie("token", token, {
       httpOnly: true,

@@ -1,0 +1,99 @@
+import bcrypt from "bcryptjs";
+import { executeQuery } from "./db.js";
+import {
+  AdminNotFoundError,
+  DuplicateUserError,
+  PasswordError,
+  UserNotFoundError,
+} from "../../utils/errors/authErrors.js";
+
+export const addUser = async (userData) => {
+  const { username, email, password, gender, birthDate } = userData;
+
+  const isUniqueUser = await ensureUniqueUser(username, email);
+
+  if (isUniqueUser) {
+    throw new DuplicateUserError();
+  }
+
+  const query = `
+    INSERT INTO users (username, email, password, gender, birthDate)
+    VALUES ($1, $2, $3, $4, $5)
+    RETURNING id, username, email
+  `;
+
+  const hashedPassword = await bcrypt(password, 10);
+
+  return await executeQuery(query, [username, email, hashedPassword, gender, birthDate]);
+};
+
+export const performLogin = async (userData) => {
+  const { username, email, password } = userData;
+
+  const query = `
+    SELECT 
+        id, 
+        username, 
+        email, 
+        password
+    FROM users
+    WHERE LOWER(username) = TRIM(LOWER($1)) OR LOWER(email) = TRIM(LOWER($2));
+  `;
+
+  const result = await executeQuery(query, [username, email]);
+
+  if (result.length === 0) {
+    throw new UserNotFoundError();
+  }
+
+  const user = result[0];
+
+  const isPasswordMatch = await bcrypt.compare(password, user.password);
+
+  if (!isPasswordMatch) {
+    throw new PasswordError();
+  }
+
+  return user;
+};
+
+export const performAdminLogin = async (adminData) => {
+  const { username, password } = adminData;
+
+  const query = `
+    SELECT 
+        id, 
+        username, 
+        email, 
+        password
+    FROM admins
+    WHERE LOWER(username) = TRIM(LOWER($1));
+  `;
+
+  const result = await executeQuery(query, [username]);
+
+  if (result.length === 0) {
+    throw new AdminNotFoundError();
+  }
+
+  const admin = result[0];
+
+  const isPasswordMatch = await bcrypt.compare(password, admin.password);
+
+  if (!isPasswordMatch) {
+    throw new PasswordError();
+  }
+
+  return admin;
+};
+
+export const ensureUniqueUser = async (username, email) => {
+  const query = `
+    SELECT * FROM users
+    WHERE LOWER(username) = TRIM(LOWER($1)) OR LOWER(email) = TRIM(LOWER($2)); 
+  `;
+
+  const result = await executeQuery(query, [username, email]);
+
+  return result.length === 0;
+};

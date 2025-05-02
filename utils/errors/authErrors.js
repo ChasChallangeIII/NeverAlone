@@ -1,14 +1,20 @@
 import { AppError } from "./errors.js";
 
 export class DuplicateUserError extends AppError {
-  constructor(message = "Username already exsits") {
+  constructor(message = "Username or email already exsits") {
     super(message, 400);
   }
 }
 
 export class UserNotFoundError extends AppError {
   constructor(message = "User not found") {
-    super(message, 400);
+    super(message, 404);
+  }
+}
+
+export class AdminNotFoundError extends AppError {
+  constructor(message = "Admin not found") {
+    super(message, 404);
   }
 }
 
