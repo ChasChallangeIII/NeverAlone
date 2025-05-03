@@ -23,3 +23,9 @@ export class PasswordError extends AppError {
     super(message, 400);
   }
 }
+
+export class DeleteUserError extends AppError {
+  constructor(message = "Account could not be deleted") {
+    super(message, 400);
+  }
+}

@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 import {
   addUser,
+  deleteAccount,
   performAdminLogin,
   performLogin,
 } from "../services/db/authService.js";
@@ -67,7 +68,21 @@ export const signin = async (req, res, next) => {
   }
 };
 
-export const signout = async () => {
+export const signout = async (req, res) => {
   res.clearCookie("token");
   res.status(200).json({ message: "Logout successful" });
+};
+
+export const removeAccount = async (req, res, next) => {
+  const { deletecommand: deleteCommand } = req.params;
+  const { id: userId } = req.user;
+
+  try {
+    await deleteAccount(userId, deleteCommand);
+
+    res.clearCookie("token");
+    res.status(200).json({ message: "Account deleted successfully" });
+  } catch (err) {
+    next(err);
+  }
 };

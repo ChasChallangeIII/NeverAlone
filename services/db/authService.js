@@ -2,6 +2,7 @@ import bcrypt from "bcryptjs";
 import { executeQuery } from "./db.js";
 import {
   AdminNotFoundError,
+  DeleteUserError,
   DuplicateUserError,
   PasswordError,
   UserNotFoundError,
@@ -91,6 +92,34 @@ export const performAdminLogin = async (adminData) => {
   }
 
   return admin;
+};
+
+export const deleteAccount = async (userId, deleteCommand = "") => {
+  const findQuery = `
+    SELECT * FROM users
+    WHERE id = $1
+  `;
+
+  const findResult = await executeQuery(findQuery, [userId]);
+
+  if (findResult.length === 0) {
+    throw new UserNotFoundError();
+  }
+
+  const user = findResult[0];
+
+  const [key, username] = deleteCommand.toLowerCase().split("delete");
+
+  if (key !== "delete" || user.username.toLowerCase() !== username) {
+    throw new DeleteUserError();
+  }
+
+  const deleteQuery = `
+    DELETE FROM users
+    WHERE id = $1
+  `;
+
+  await executeQuery(deleteQuery, [userId]);
 };
 
 export const ensureUniqueUser = async (username, email) => {
