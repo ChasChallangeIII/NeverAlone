@@ -24,7 +24,13 @@ export const addUser = async (userData) => {
 
   const hashedPassword = await bcrypt(password, 10);
 
-  return await executeQuery(query, [username, email, hashedPassword, gender, birthDate]);
+  return await executeQuery(query, [
+    username,
+    email,
+    hashedPassword,
+    gender,
+    birthDate,
+  ]);
 };
 
 export const performLogin = async (userData) => {
