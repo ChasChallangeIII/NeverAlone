@@ -273,3 +273,156 @@
     at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
     at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
     at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-03T09:08:59.475Z [ERROR] Error: Username or email already exsits
+    at addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:14:44.861Z [ERROR] ZodError: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "gender",
+      "birthDate"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'gender', 'birthDate'"
+  }
+]
+    at get error (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/validators/authValidator.js:56:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-03T09:14:55.479Z [ERROR] error: column "password" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async performLogin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:50:18)
+    at async signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:51:20)
+2025-05-03T09:17:05.151Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:53:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:51:20)
+2025-05-03T09:17:43.571Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:53:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:51:20)
+2025-05-03T09:18:40.210Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:59:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:51:20)
+2025-05-03T09:20:47.956Z [ERROR] TypeError: bcrypt is not a function
+    at addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:26:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:21:02.797Z [ERROR] error: column "password" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:21:20.912Z [ERROR] error: column "birthdate" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:21:42.451Z [ERROR] error: column "birth_date" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:23:07.147Z [ERROR] error: syntax error at or near ";"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:23:36.974Z [ERROR] error: syntax error at or near ";"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:24:39.554Z [ERROR] error: column "brith_date" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:26:14.725Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "brithDay"
+    ],
+    "message": "BrithDay must be a string or date"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "brithDate"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'brithDate'"
+  }
+]
+    at get error (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/validators/authValidator.js:47:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-03T09:26:26.463Z [ERROR] error: column "brith_day" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:29:14.191Z [ERROR] error: invalid input syntax for type integer: "05-10-27"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:35:15.993Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "birthDay"
+    ],
+    "message": "BirthDate must be a string or date"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "birthDate"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'birthDate'"
+  }
+]
+    at get error (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/validators/authValidator.js:47:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)

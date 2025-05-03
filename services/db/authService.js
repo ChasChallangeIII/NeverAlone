@@ -13,36 +13,44 @@ export const addUser = async (userData) => {
 
   const isUniqueUser = await ensureUniqueUser(username, email);
 
-  if (isUniqueUser) {
+  if (!isUniqueUser) {
     throw new DuplicateUserError();
   }
 
   const query = `
-    INSERT INTO users (username, email, password, gender, birthDate)
+    INSERT INTO users (username, email, password_hash, gender, birth_date)
     VALUES ($1, $2, $3, $4, $5)
-    RETURNING id, username, email
+    RETURNING id, username, email;
   `;
 
-  const hashedPassword = await bcrypt(password, 10);
+  const hashedPassword = await bcrypt.hash(password, 10);
 
-  return await executeQuery(query, [
+  const newUser = await executeQuery(query, [
     username,
     email,
     hashedPassword,
     gender,
     birthDate,
   ]);
+
+  return newUser[0];
 };
 
 export const performLogin = async (userData) => {
   const { username, email, password } = userData;
+
+  // console.log(username, email);
+
+  // const users = await executeQuery("SELECT * FROM users");
+
+  // console.log(users);
 
   const query = `
     SELECT 
         id, 
         username, 
         email, 
-        password
+        password_hash
     FROM users
     WHERE LOWER(username) = TRIM(LOWER($1)) OR LOWER(email) = TRIM(LOWER($2));
   `;
@@ -55,7 +63,7 @@ export const performLogin = async (userData) => {
 
   const user = result[0];
 
-  const isPasswordMatch = await bcrypt.compare(password, user.password);
+  const isPasswordMatch = await bcrypt.compare(password, user.password_hash);
 
   if (!isPasswordMatch) {
     throw new PasswordError();
@@ -72,7 +80,7 @@ export const performAdminLogin = async (adminData) => {
         id, 
         username, 
         email, 
-        password
+        password_hash
     FROM admins
     WHERE LOWER(username) = TRIM(LOWER($1));
   `;
@@ -85,7 +93,7 @@ export const performAdminLogin = async (adminData) => {
 
   const admin = result[0];
 
-  const isPasswordMatch = await bcrypt.compare(password, admin.password);
+  const isPasswordMatch = await bcrypt.compare(password, admin.password_hash);
 
   if (!isPasswordMatch) {
     throw new PasswordError();

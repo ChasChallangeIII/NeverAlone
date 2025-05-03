@@ -61,7 +61,7 @@ const ensureUsersTable = async () => {
         email VARCHAR(150) UNIQUE NOT NULL,
         password_hash TEXT NOT NULL,
         gender VARCHAR(25) NOT NULL,
-        birth_day INTEGER NOT NULL,
+        birth_date DATE NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );`;
 
