@@ -36,13 +36,13 @@ export const executeQuery = async (query, values = []) => {
 const ensureAdminsTable = async () => {
   try {
     const query = `
-CREATE TABLE IF NOT EXISTS admins (
-  id SERIAL PRIMARY KEY,
-  username VARCHAR(100) UNIQUE NOT NULL,
-  password_hash TEXT NOT NULL,
-  city VARCHAR(100) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);`;
+      CREATE TABLE IF NOT EXISTS admins (
+        id SERIAL PRIMARY KEY,
+        username VARCHAR(100) UNIQUE NOT NULL,
+        password_hash TEXT NOT NULL,
+        city VARCHAR(100) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );`;
 
     await executeQuery(query);
 
@@ -55,15 +55,15 @@ CREATE TABLE IF NOT EXISTS admins (
 const ensureUsersTable = async () => {
   try {
     const query = `
-CREATE TABLE IF NOT EXISTS users (
-  id SERIAL PRIMARY KEY,
-  username VARCHAR(100) UNIQUE NOT NULL,
-  email VARCHAR(150) UNIQUE NOT NULL,
-  password_hash TEXT NOT NULL,
-  gender VARCHAR(25) NOT NULL,
-  birth_day INTEGER NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);`;
+      CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        username VARCHAR(100) UNIQUE NOT NULL,
+        email VARCHAR(150) UNIQUE NOT NULL,
+        password_hash TEXT NOT NULL,
+        gender VARCHAR(25) NOT NULL,
+        birth_day INTEGER NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );`;
 
     await executeQuery(query);
 
@@ -76,11 +76,11 @@ CREATE TABLE IF NOT EXISTS users (
 const ensureGroupsTable = async () => {
   try {
     const query = `
-CREATE TABLE IF NOT EXISTS groups (
-  id SERIAL PRIMARY KEY,
-  group_name VARCHAR(100) UNIQUE NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);`;
+      CREATE TABLE IF NOT EXISTS groups (
+        id SERIAL PRIMARY KEY,
+        group_name VARCHAR(100) UNIQUE NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );`;
 
     await executeQuery(query);
 
@@ -93,14 +93,14 @@ CREATE TABLE IF NOT EXISTS groups (
 const ensureGroupMembersTable = async () => {
   try {
     const query = `
-CREATE TABLE IF NOT EXISTS group_members (
-  id SERIAL PRIMARY KEY,
-  group_id INTEGER NOT NULL,
-  user_id INTEGER NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (group_id) REFERENCES groups(id) ON DELETE CASCADE,
-  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);`;
+      CREATE TABLE IF NOT EXISTS group_members (
+        id SERIAL PRIMARY KEY,
+        group_id INTEGER NOT NULL,
+        user_id INTEGER NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (group_id) REFERENCES groups(id) ON DELETE CASCADE,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    );`;
 
     await executeQuery(query);
 
@@ -113,14 +113,14 @@ CREATE TABLE IF NOT EXISTS group_members (
 const ensureGroupAdminsTable = async () => {
   try {
     const query = `
-CREATE TABLE IF NOT EXISTS group_admins (
-  id SERIAL PRIMARY KEY,
-  group_id INTEGER NOT NULL,
-  user_id INTEGER NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (group_id) REFERENCES groups(id) ON DELETE CASCADE,
-  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);`;
+      CREATE TABLE IF NOT EXISTS group_admins (
+        id SERIAL PRIMARY KEY,
+        group_id INTEGER NOT NULL,
+        user_id INTEGER NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (group_id) REFERENCES groups(id) ON DELETE CASCADE,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    );`;
 
     await executeQuery(query);
 
@@ -133,15 +133,15 @@ CREATE TABLE IF NOT EXISTS group_admins (
 const ensureContactsTable = async () => {
   try {
     const query = `
-CREATE TABLE IF NOT EXISTS contacts (
-  id SERIAL PRIMARY KEY,
-  user_id INTEGER NOT NULL,
-  contact_id INTEGER NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-  FOREIGN KEY (contact_id) REFERENCES users(id) ON DELETE CASCADE,
-  CONSTRAINT unique_user_contact_pair UNIQUE (user_id, contact_id)
-);`;
+      CREATE TABLE IF NOT EXISTS contacts (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER NOT NULL,
+        contact_id INTEGER NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+        FOREIGN KEY (contact_id) REFERENCES users(id) ON DELETE CASCADE,
+        CONSTRAINT unique_user_contact_pair UNIQUE (user_id, contact_id)
+    );`;
 
     await executeQuery(query);
 
@@ -154,16 +154,16 @@ CREATE TABLE IF NOT EXISTS contacts (
 const ensureReportsTable = async () => {
   try {
     const query = `
-CREATE TABLE IF NOT EXISTS reports (
-  id SERIAL PRIMARY KEY,
-  user_id INTEGER REFERENCES users(id),
-  location JSON NOT NULL,
-  city VARCHAR(50) NOT NULL,
-  time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  cause VARCHAR(200) NOT NULL,
-  message TEXT NOT NULL,
-  status VARCHAR(50) NOT NULL
-);`;
+      CREATE TABLE IF NOT EXISTS reports (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER REFERENCES users(id),
+        location JSON NOT NULL,
+        city VARCHAR(50) NOT NULL,
+        time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        cause VARCHAR(200) NOT NULL,
+        message TEXT NOT NULL,
+        status VARCHAR(50) NOT NULL
+    );`;
 
     await executeQuery(query);
 
@@ -176,15 +176,15 @@ CREATE TABLE IF NOT EXISTS reports (
 const ensureReportCommentsTable = async () => {
   try {
     const query = `
-CREATE TABLE IF NOT EXISTS report_comments (
-  id SERIAL PRIMARY KEY,
-  report_id INTEGER NOT NULL,
-  admin_id INTEGER NOT NULL,
-  comment TEXT NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (report_id) REFERENCES reports(id) ON DELETE CASCADE,
-  FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE CASCADE
-);`;
+      CREATE TABLE IF NOT EXISTS report_comments (
+        id SERIAL PRIMARY KEY,
+        report_id INTEGER NOT NULL,
+        admin_id INTEGER NOT NULL,
+        comment TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (report_id) REFERENCES reports(id) ON DELETE CASCADE,
+        FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE CASCADE
+    );`;
 
     await executeQuery(query);
 
@@ -196,8 +196,7 @@ CREATE TABLE IF NOT EXISTS report_comments (
 
 const ensureIndexReportsCity = async () => {
   try {
-    const query = `
-      CREATE INDEX IF NOT EXISTS idx_reports_city ON reports(city);`;
+    const query = `CREATE INDEX IF NOT EXISTS idx_reports_city ON reports(city);`;
 
     await executeQuery(query);
 
@@ -209,8 +208,7 @@ const ensureIndexReportsCity = async () => {
 
 const ensureIndexContactsUserId = async () => {
   try {
-    const query = `
-      CREATE INDEX IF NOT EXISTS idx_contacts_user_id ON contacts(user_id);`;
+    const query = `CREATE INDEX IF NOT EXISTS idx_contacts_user_id ON contacts(user_id);`;
 
     await executeQuery(query);
 
@@ -222,8 +220,7 @@ const ensureIndexContactsUserId = async () => {
 
 const ensureIndexReportsStatusCity = async () => {
   try {
-    const query = `
-      CREATE INDEX IF NOT EXISTS idx_reports_status_city ON reports(status, city);`;
+    const query = `CREATE INDEX IF NOT EXISTS idx_reports_status_city ON reports(status, city);`;
 
     await executeQuery(query);
 

@@ -1,6 +1,10 @@
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
-import { addUser, performAdminLogin, performLogin } from "../services/db/authService.js";
+import {
+  addUser,
+  performAdminLogin,
+  performLogin,
+} from "../services/db/authService.js";
 
 dotenv.config();
 
@@ -39,7 +43,9 @@ export const signin = async (req, res, next) => {
 
     if (isAdmin) {
       const admin = await performAdminLogin(req.body);
-      token = jwt.sign({ ...admin, isAdmin: true }, JWT_SECRET, { expiresIn: "1h" });
+      token = jwt.sign({ ...admin, isAdmin: true }, JWT_SECRET, {
+        expiresIn: "1h",
+      });
     } else {
       const user = await performLogin(req.body);
       token = jwt.sign({ ...user }, JWT_SECRET, { expiresIn: "1h" });
@@ -59,4 +65,9 @@ export const signin = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+};
+
+export const signout = async () => {
+  res.clearCookie("token");
+  res.status(200).json({ message: "Logout successful" });
 };

@@ -3,9 +3,9 @@ import { executeQuery } from "./db.js";
 
 export const findReport = async (reportId) => {
   const query = `
-        SELECT * FROM reports
-        WHERE id = $1;
-    `;
+    SELECT * FROM reports
+    WHERE id = $1;
+  `;
 
   const result = await executeQuery(query, [parseInt(reportId)]);
 
@@ -33,7 +33,11 @@ export const insertReport = async (data) => {
     RETURNING id;
   `;
 
-  const result = await executeQuery(query, [JSON.stringify(location), cause, text]);
+  const result = await executeQuery(query, [
+    JSON.stringify(location),
+    cause,
+    text,
+  ]);
 
   if (result.length === 0) {
     throw new ReportNotFoundError();
