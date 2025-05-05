@@ -19,4 +19,9 @@ export const swaggerDocs = {
     ...pathDoc.paths,
     ...contactDoc.paths,
   },
+  components: {
+    ...(mainDoc.components || {}),
+    ...(pathDoc.components || {}),
+    ...(contactDoc.components || {}),
+  },
 };

@@ -1,12 +1,8 @@
-openapi: 3.0.0
-info:
-  title: Contacts API
-  version: 1.0.0
-  description: API for managing user contacts
-
 paths:
   /api/contacts:
     post:
+      tags:
+        - Contacts
       summary: Add a new contact
       requestBody:
         required: true
@@ -40,6 +36,8 @@ paths:
 
   /api/contacts/{userId}/{contactId}:
     delete:
+      tags:
+        - Contacts
       summary: Remove a contact
       parameters:
         - name: userId
@@ -60,6 +58,8 @@ paths:
 
   /api/contacts/{userId}:
     get:
+      tags:
+        - Contacts
       summary: Get all contacts for a user
       parameters:
         - name: userId
@@ -81,6 +81,8 @@ paths:
 
   /api/contacts/{userId}/search:
     get:
+      tags:
+        - Contacts
       summary: Search contacts by name or email
       parameters:
         - name: userId

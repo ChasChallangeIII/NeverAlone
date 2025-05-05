@@ -5,7 +5,7 @@ import {
   deleteAccount,
   performAdminLogin,
   performLogin,
-} from "../services/db/authService.js";
+} from "../services/authService.js";
 
 dotenv.config();
 
