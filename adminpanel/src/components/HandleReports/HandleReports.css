@@ -49,21 +49,29 @@
         text-align: center;
         cursor: pointer;
         }
-        
         .status-icon {
             display: inline-block;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-        }
+            padding: 5px 10px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: bold;
+            text-transform: capitalize;
+            }
+            .status-icon.active {
+                background-color: #3498db; 
+                }
+            .status-icon.pending {
+                background-color: #f1c40f; 
+            }
+            
+            .status-icon.handled {
+                background-color: #2ecc71; 
+            }
+            
+            .status-icon.closed {
+                background-color: #e74c3c; 
+            }
         
-        .status-icon.handled {
-            background-color: #4caf50; /* Grön */
-        }
-        
-        .status-icon.not-handled {
-            background-color: #f44336; /* Röd */
-        }
         
         .message-row {
             background-color: #fafafa;

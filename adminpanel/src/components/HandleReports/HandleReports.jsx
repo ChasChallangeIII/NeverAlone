@@ -54,7 +54,9 @@ const Reports = () => {
                                 onClick={() => handleStatusClick(report.id, report.is_handled)}
                                 title={report.is_handled ? 'Hanterad' : 'Inte hanterad – klicka för att markera'}
                             >
-                                <span className={`status-icon ${report.is_handled ? 'handled' : 'not-handled'}`} />
+                                <span className={`status-icon ${report.status || 'pending'}`}>
+                                {report.status || 'Pending'}
+                                </span>
                             </td>
                         </tr>
                     ))}
