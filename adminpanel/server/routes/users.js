@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const router = express.Router();
 const { Pool } = require('pg');
 
-// Skapa anslutning till databasen (anpassa efter din setup)
 const pool = new Pool({
     user: 'your_db_user',
     host: 'localhost',

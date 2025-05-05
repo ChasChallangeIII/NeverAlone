@@ -1,11 +1,17 @@
 import React from 'react'
-import '../../App.css'
+import ContactForm from '../../components/ContactForm/ContactForm'
+import '../../styles/Help.css';
 
 const Help = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
-    <h1 className="text-4xl font-bold fade-in">Help</h1>
-  </div>
+    <main className="help-page">
+      <section className="help-section">
+        <h1>Behöver du hjälp?</h1>
+        <p>Fyll i formuläret till vår support</p>
+        <p>Vi ämnar att återkoppla inom 24h.</p>
+        <ContactForm />
+      </section>
+    </main>
   )
 }
 
