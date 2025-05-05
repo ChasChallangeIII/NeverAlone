@@ -25,13 +25,7 @@ export const addUser = async (userData) => {
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  const newUser = await executeQuery(query, [
-    username,
-    email,
-    hashedPassword,
-    gender,
-    birthDate,
-  ]);
+  const newUser = await executeQuery(query, [username, email, hashedPassword, gender, birthDate]);
 
   return newUser[0];
 };
@@ -79,7 +73,6 @@ export const performAdminLogin = async (adminData) => {
     SELECT 
         id, 
         username, 
-        email, 
         password_hash
     FROM admins
     WHERE LOWER(username) = TRIM(LOWER($1));
