@@ -1,12 +1,15 @@
-import React from 'react'
-import '../../App.css'
+import React from 'react';
+import '../../App.css';
+import '../../styles/Users.css'
+import ReportChart from '../../components/ReportChart/ReportCharts';
 
 const Users = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
-    <h1 className="text-4xl font-bold fade-in">Users</h1>
-  </div>
-  )
-}
+    <div className="users-page">
+      <h1 className="users-title">Statistik över rapporter</h1>
+      <ReportChart />
+    </div>
+  );
+};
 
-export default Users
+export default Users;
