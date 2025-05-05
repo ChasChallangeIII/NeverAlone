@@ -8,11 +8,15 @@ const mainDoc = yaml.load(
 const pathDoc = yaml.load(
   fs.readFileSync(path.resolve("docs/reportDocs.yaml"), "utf8")
 );
+const contactDoc = yaml.load(
+  fs.readFileSync(path.resolve("docs/contactDocs.yaml"), "utf8")
+);
 
 export const swaggerDocs = {
   ...mainDoc,
   paths: {
     ...mainDoc.paths,
     ...pathDoc.paths,
+    ...contactDoc.paths,
   },
 };

@@ -1,12 +1,12 @@
 import bcrypt from "bcryptjs";
-import { executeQuery } from "./db.js";
+import { executeQuery } from "./db/db.js";
 import {
   AdminNotFoundError,
   DeleteUserError,
   DuplicateUserError,
   PasswordError,
   UserNotFoundError,
-} from "../../utils/errors/authErrors.js";
+} from "../utils/errors/authErrors.js";
 
 export const addUser = async (userData) => {
   const { username, email, password, gender, birthDate } = userData;
