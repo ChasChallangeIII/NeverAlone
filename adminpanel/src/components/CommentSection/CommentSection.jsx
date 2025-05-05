@@ -20,7 +20,7 @@ const CommentSection = ({ reportId, adminId }) => {
 
     return (
         <div>
-        <h4>Kommentarer</h4>
+        <h4>Noteringar</h4>
         <ul>
             {comments.map((c, i) => (
             <li key={i}>{c.comment} - {new Date(c.created_at).toLocaleString()}</li>
@@ -33,7 +33,7 @@ const CommentSection = ({ reportId, adminId }) => {
             onChange={(e) => setText(e.target.value)}
             placeholder="Skriv kommentar..."
         />
-        <button className="comment-button" onClick={handlePost}>Skicka kommentar</button>
+        <button className="comment-button" onClick={handlePost}>Skicka notering</button>
                 </div>
     );
 };
