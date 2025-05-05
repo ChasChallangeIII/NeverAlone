@@ -80,12 +80,37 @@
         .comment-row {
             background-color: #f9f9f9;
             padding: 10px;
-          }
-          
+        }
         textarea {
             width: 100%;
             resize: vertical;
             min-height: 60px;
             margin-bottom: 5px;
             }
+
+
+            .report-button {
+                background-color: #007bff; /* blå */
+                color: white;
+                border: none;
+                padding: 6px 15px;
+                margin: 4px 0;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background-color 0.2s ease;
+                }
+                
+                .report-button:hover {
+                    background-color: #0056b3;
+                }
+                
+                .report-button.secondary {
+                    background-color: #28a745; /* grön */
+                }
+                
+                .report-button.secondary:hover {
+                    background-color: #1e7e34;
+                }
+                
             

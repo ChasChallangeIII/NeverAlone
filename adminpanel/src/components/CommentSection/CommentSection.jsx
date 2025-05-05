@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCommentsByReportId, postComment } from '../../store/slices/CommentsSlice';
+import '../../components/CommentSection/CommentSection.css'
 
 const CommentSection = ({ reportId, adminId }) => {
     const dispatch = useDispatch();
@@ -27,12 +28,13 @@ const CommentSection = ({ reportId, adminId }) => {
         </ul>
 
         <textarea
+            className="comment-textarea"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Skriv kommentar..."
         />
-        <button onClick={handlePost}>Skicka kommentar</button>
-        </div>
+        <button className="comment-button" onClick={handlePost}>Skicka kommentar</button>
+                </div>
     );
 };
 

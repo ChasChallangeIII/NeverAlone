@@ -57,13 +57,13 @@ const Reports = () => {
                                 <td>{new Date(report.time).toLocaleString()}</td>
                                 <td>{report.cause}</td>
                                 <td>
-                                    <button onClick={() => toggleMessage(report.id)}>
-                                        {openMessages[report.id] ? 'Dölj meddelande' : 'Visa meddelande'}
-                                    </button>
-                                    <br />
-                                    <button onClick={() => toggleComment(report.id)}>
-                                        {openComments[report.id] ? 'Dölj kommentar' : 'Kommentera'}
-                                    </button>
+                                <button className="report-button" onClick={() => toggleMessage(report.id)}>
+                                    {openMessages[report.id] ? 'Dölj meddelande' : 'Visa meddelande'}
+                                </button>
+                                <br />
+                                <button className="report-button secondary" onClick={() => toggleComment(report.id)}>
+                                    {openComments[report.id] ? 'Dölj kommentar' : 'Kommentera'}
+                                </button>
                                 </td>
                                 <td
                                     className="status-cell"

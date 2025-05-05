@@ -1,0 +1,44 @@
+.comment-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100px;
+    }
+    
+
+.comment-button {
+    background-color: #007bff; /* Blå knapp */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    }
+    
+    .comment-button:hover {
+        background-color: #0056b3;
+    }
+    
+
+    .comment-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .comment-section li {
+        margin-bottom: 10px;
+    }
+    
+    .comment-section li span {
+        color: #888;
+        font-size: 12px;
+    }
+    

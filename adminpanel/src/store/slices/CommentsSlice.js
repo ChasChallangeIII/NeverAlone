@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const API_URL = 'https://neveralone.onrender.com/admin/report_comments';
 
-// Hämta alla kommentarer för en specifik rapport
+
 export const fetchCommentsByReportId = createAsyncThunk(
     'reportComments/fetchByReportId',
     async (reportId) => {
