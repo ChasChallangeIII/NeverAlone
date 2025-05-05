@@ -5,10 +5,9 @@
 #include <BLE2902.h>
 #include <vector>
 
-/// GPIO pin for the tactile button
-const int buttonPin = 2; // GPIO2 on ESP32
+const int buttonPin = 2; // GPIO2 (Button pin)
+const int ledPin = 3;   // GPIO3 (LED pin for feedback)
 
-// BLE core variables
 BLEServer *pServer = nullptr;
 BLECharacteristic *pTxCharacteristic = nullptr;
 bool deviceConnected = false;
@@ -16,34 +15,27 @@ bool deviceConnected = false;
 #define SERVICE_UUID "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
 #define CHARACTERISTIC_UUID "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
 
-/// Enum representing the type of button press
 enum ButtonEventType
 {
   NONE,
   SHORT_PRESS,
   LONG_PRESS
 };
-
-/// Struct to store button events with press type and timestamp
+// Struct to store button events with press type and timestamp
 struct ButtonEvent
 {
-  ButtonEventType type;    ///< Type of button press (short/long)
-  unsigned long timestamp; ///< Time in milliseconds since device started
+  ButtonEventType type;
+  unsigned long timestamp;
 };
 
-/// Queue to buffer events while BLE is disconnected
 std::vector<ButtonEvent> eventQueue;
 
-/// Interrupt service routine flags and state
 volatile bool buttonInterruptTriggered = false;
 volatile unsigned long buttonPressTime = 0;
 volatile bool buttonHeld = false;
 volatile ButtonEventType detectedEvent = NONE;
 
-/**
- * @brief BLE Server Callbacks
- * Handles BLE connection events and flushes queued messages.
- */
+// BLE Server Callbacks
 class MyServerCallbacks : public BLEServerCallbacks
 {
   void onConnect(BLEServer *pServer) override
@@ -53,7 +45,7 @@ class MyServerCallbacks : public BLEServerCallbacks
 
     unsigned long currentMillis = millis();
 
-    // Send all buffered events with time offset
+    // Send buffered events
     for (const ButtonEvent &e : eventQueue)
     {
       unsigned long ageSeconds = (currentMillis - e.timestamp) / 1000;
@@ -73,48 +65,41 @@ class MyServerCallbacks : public BLEServerCallbacks
 
       pTxCharacteristic->setValue(msg.c_str());
       pTxCharacteristic->notify();
-      delay(50); // Prevent BLE overflow
+      delay(50);
       Serial.println("Sent buffered message: " + msg);
     }
 
-    eventQueue.clear(); // Clear the queue after flushing
+    eventQueue.clear();
   }
 
   void onDisconnect(BLEServer *pServer) override
   {
     deviceConnected = false;
     Serial.println("BLE Client Disconnected.");
-    BLEDevice::startAdvertising(); // Re-enable advertising for new connections
+    BLEDevice::startAdvertising();
   }
 };
 
-/**
- * @brief Interrupt Service Routine for handling button press/release
- * Debounces and determines if the press is short or long.
- */
+// Button Interrupt Service Routine (ISR)
 void IRAM_ATTR handleButtonInterrupt()
 {
   static unsigned long lastInterruptTime = 0;
   unsigned long currentTime = millis();
 
-  // Debounce: ignore if too close to last interrupt
   if (currentTime - lastInterruptTime < 50)
-    return;
+    return; // Debounce
   lastInterruptTime = currentTime;
 
   if (digitalRead(buttonPin) == LOW)
   {
-    // Button pressed
     buttonPressTime = currentTime;
     buttonHeld = true;
   }
   else
   {
-    // Button released
     if (buttonHeld)
     {
       unsigned long duration = currentTime - buttonPressTime;
-
       if (duration > 2000)
       {
         detectedEvent = LONG_PRESS;
@@ -123,39 +108,35 @@ void IRAM_ATTR handleButtonInterrupt()
       {
         detectedEvent = SHORT_PRESS;
       }
-
       buttonHeld = false;
-      buttonInterruptTriggered = true; // Notify main loop to process
+      buttonInterruptTriggered = true;
     }
   }
 }
 
+// Setup function
 void setup()
 {
   Serial.begin(115200);
-  delay(1000); // Wait for serial to initialize
+  delay(1000);
   Serial.println("Starting BLE Button with Interrupt...");
 
-  // Button setup
   pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(ledPin, OUTPUT); // Set LED pin as output
   attachInterrupt(digitalPinToInterrupt(buttonPin), handleButtonInterrupt, CHANGE);
 
-  // Initialize BLE
+  // BLE Setup
   BLEDevice::init("ESP32C3_Button");
   pServer = BLEDevice::createServer();
   pServer->setCallbacks(new MyServerCallbacks());
 
   BLEService *pService = pServer->createService(SERVICE_UUID);
-
-  // Create a characteristic for sending notifications to client
   pTxCharacteristic = pService->createCharacteristic(
       CHARACTERISTIC_UUID,
       BLECharacteristic::PROPERTY_NOTIFY);
   pTxCharacteristic->addDescriptor(new BLE2902());
-
   pService->start();
 
-  // Start advertising BLE service
   BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
   pAdvertising->addServiceUUID(SERVICE_UUID);
   pAdvertising->start();
@@ -163,7 +144,7 @@ void setup()
   Serial.println("BLE Advertising started...");
 }
 
-// Processes detected button events and sends them via BLE or queues them if offline.
+// Loop function
 void loop()
 {
   if (buttonInterruptTriggered)
@@ -175,33 +156,41 @@ void loop()
     // Create event and handle it
     ButtonEvent newEvent = {detectedEvent, now};
 
+    if (detectedEvent == SHORT_PRESS)
+    {
+      // Short press: LED on for 1 second
+      digitalWrite(ledPin, HIGH);
+      delay(1000); // LED stays on for 1 second
+      digitalWrite(ledPin, LOW);
+      message = "Short_Button_Press at " + String(now) + " ms";
+    }
+    else if (detectedEvent == LONG_PRESS)
+    {
+      // Long press: LED on for 3 seconds
+      digitalWrite(ledPin, HIGH);
+      delay(3000); // LED stays on for 3 seconds
+      digitalWrite(ledPin, LOW);
+      message = "Long_Button_Press at " + String(now) + " ms";
+    }
+
+    Serial.println("Detected: " + message);
+
     if (deviceConnected)
     {
-      // Format message for immediate send
-      switch (detectedEvent)
-      {
-      case SHORT_PRESS:
-        message = "Short_Button_Press at " + String(now) + " ms";
-        break;
-      case LONG_PRESS:
-        message = "Long_Button_Press at " + String(now) + " ms";
-        break;
-      default:
-        break;
-      }
-
+      // Send message if device is connected
       pTxCharacteristic->setValue(message.c_str());
       pTxCharacteristic->notify();
-      Serial.println("BLE notification sent: " + message);
+      Serial.println("BLE notification sent!");
     }
     else
     {
-      // Save event to queue for later transmission
+      // Store offline event if not connected
       eventQueue.push_back(newEvent);
       Serial.println("Stored offline event.");
     }
 
-    detectedEvent = NONE; // Reset state
+    detectedEvent = NONE; // Reset the event
   }
-  delay(10);
+
+  delay(10); // Small delay to avoid CPU overload
 }
