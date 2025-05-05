@@ -76,3 +76,16 @@
             border: 1px solid #ccc;
             text-align: left;
         }
+
+        .comment-row {
+            background-color: #f9f9f9;
+            padding: 10px;
+          }
+          
+        textarea {
+            width: 100%;
+            resize: vertical;
+            min-height: 60px;
+            margin-bottom: 5px;
+            }
+            
