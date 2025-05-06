@@ -4,6 +4,7 @@ import { fetchReports, markReportAsHandled } from '../../store/slices/reportSlic
 import '../../components/HandleReports/HandleReports.css';
 import CommentSection from '../CommentSection/CommentSection';
 import Modal from '../../components/Modal/Modal';
+import Spinner from '../../components/Spinner/Spinner'
 
 const Reports = () => {
     const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Reports = () => {
         }
     };
 
-    if (loading) return <p>Laddar rapporter...</p>;
+    if (loading) return <div><Spinner/></div>
     if (error) return <p>Ett fel inträffade: {error}</p>;
 
     return (
