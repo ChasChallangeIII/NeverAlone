@@ -2,9 +2,11 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import {
   InvalidRefreshTokenError,
+  NotAdminError,
   NoTokenError,
   UnauthorizedError,
 } from "../utils/errors/authErrors";
+import { ensureAdmin } from "../services/authService";
 
 dotenv.config();
 
@@ -12,23 +14,24 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const isProd = process.env.NODE_ENV;
 
 export const authenticate = (req, res, next) => {
-  const accessToken = req.cookies.access_token;
-  const refreshToken = req.cookies.refresh_token;
+  // const accessToken = req.cookies.access_token;
+  // const refreshToken = req.cookies.refresh_token;
 
-  if (!accessToken) {
-    return handleRefreshToken(req, res, next, refreshToken);
-  }
+  // if (!accessToken) {
+  //   return handleRefreshToken(req, res, next, refreshToken);
+  // }
 
-  try {
-    const user = jwt.verify(accessToken, JWT_SECRET);
-    req.user = user;
-    next();
-  } catch (err) {
-    if (err.name === "TokenExpiredError" || err.name === "JsonWebTokenError") {
-      return handleRefreshToken(req, res, next, refreshToken);
-    }
-    next(new UnauthorizedError());
-  }
+  // try {
+  //   const user = jwt.verify(accessToken, JWT_SECRET);
+  //   req.user = user;
+  //   next();
+  // } catch (err) {
+  //   if (err.name === "TokenExpiredError" || err.name === "JsonWebTokenError") {
+  //     return handleRefreshToken(req, res, next, refreshToken);
+  //   }
+  //   next(new UnauthorizedError());
+  // }
+  next();
 };
 
 export const handleRefreshToken = (req, res, next, refreshToken) => {
@@ -37,11 +40,11 @@ export const handleRefreshToken = (req, res, next, refreshToken) => {
   try {
     const user = jwt.verify(refreshToken, JWT_SECRET);
 
-    const newAccessToken = jwt.sign({ id: user.id }, JWT_SECRET, {
+    const newAccessToken = jwt.sign({ ...user }, JWT_SECRET, {
       expiresIn: "15m",
     });
 
-    const newRefreshToken = jwt.sign({ id: user.id }, JWT_SECRET, {
+    const newRefreshToken = jwt.sign({ ...user }, JWT_SECRET, {
       expiresIn: "30d",
     });
 
@@ -66,7 +69,30 @@ export const handleRefreshToken = (req, res, next, refreshToken) => {
   }
 };
 
-export const authorizeAdmin = (req, res, next) => {
-  //check for admin permission in jwt
+export const authorizeAdmin = async (req, res, next) => {
+  // const accessToken = req.cookies.access_token;
+
+  // if (!accessToken) {
+  //   return next(new NoTokenError());
+  // }
+
+  // try {
+  //   const user = jwt.verify(accessToken, JWT_SECRET);
+
+  //   if (!user || !user.admin) {
+  //     return next(new NotAdminError());
+  //   }
+
+  //   const isAdmin = await ensureAdmin(user.id);
+
+  //   if (!isAdmin) {
+  //     return next(new NotAdminError());
+  //   }
+
+  //   next();
+  // } catch (err) {
+  //   next(err);
+  // }
+
   next();
 };

@@ -127,3 +127,14 @@ export const ensureUniqueUser = async (username, email) => {
 
   return result.length === 0;
 };
+
+export const ensureAdmin = async (userId) => {
+  const query = `
+    SELECT id FROM admins
+    WHERE id = $1
+  `;
+
+  const result = await executeQuery(query, [parseInt(userId)]);
+
+  return result.length !== 0;
+};

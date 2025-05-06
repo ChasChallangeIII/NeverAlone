@@ -53,3 +53,9 @@ export class InvalidRefreshTokenError extends AppError {
     super(message, 401);
   }
 }
+
+export class NotAdminError extends AppError {
+  constructor(message = "Not Admin, access denied") {
+    super(message, 403);
+  }
+}
