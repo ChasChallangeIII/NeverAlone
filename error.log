@@ -455,3 +455,6 @@
     at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:26:22)
     at async performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/authService.js:88:18)
     at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:46:21)
+2025-05-05T08:40:39.841Z [ERROR] Error: Incorrect password
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/authService.js:92:11)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:46:21)

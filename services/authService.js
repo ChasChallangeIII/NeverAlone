@@ -33,12 +33,6 @@ export const addUser = async (userData) => {
 export const performLogin = async (userData) => {
   const { username, email, password } = userData;
 
-  // console.log(username, email);
-
-  // const users = await executeQuery("SELECT * FROM users");
-
-  // console.log(users);
-
   const query = `
     SELECT 
         id, 
