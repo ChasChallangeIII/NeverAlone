@@ -24,10 +24,10 @@ const Sidebar = () => {
                 {isOpen && <h2 className="company-name">NeverAlone</h2>}
                 <ul>
                     <li><Link to="/" onClick={closeSidebar}><FaHome /> Home</Link></li>
-                    <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Users</Link></li>
-                    <li><Link to="/profile" onClick={closeSidebar}><FaUser /> Profile</Link></li> {/* Ny länk för Profile */}
-                    <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Settings</Link></li>
+                    <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Statistics</Link></li>
                     <li><Link to="/reports" onClick={closeSidebar}><FaChartBar /> Reports</Link></li>
+                    <li><Link to="/profile" onClick={closeSidebar}><FaUser /> Profile</Link></li> 
+                    <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Settings</Link></li>
                     <li><Link to="/help" onClick={closeSidebar}><FaQuestionCircle /> Help</Link></li>
                 </ul>
                 {!isOpen && (
@@ -39,9 +39,9 @@ const Sidebar = () => {
             <div className={`sidebar-icons ${isOpen ? 'hidden' : ''}`}>
                 <Link to="/" onClick={closeSidebar}><FaHome /></Link>
                 <Link to="/users" onClick={closeSidebar}><FaUsers /></Link>
-                <Link to="/profile" onClick={closeSidebar}><FaUser /></Link> {/* Ny ikon för Profile */}
-                <Link to="/settings" onClick={closeSidebar}><FaCog /></Link>
                 <Link to="/reports" onClick={closeSidebar}><FaChartBar /></Link>
+                <Link to="/profile" onClick={closeSidebar}><FaUser /></Link> 
+                <Link to="/settings" onClick={closeSidebar}><FaCog /></Link>
                 <Link to="/help" onClick={closeSidebar}><FaQuestionCircle /></Link>
             </div>
         </div>

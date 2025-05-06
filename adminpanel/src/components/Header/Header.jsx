@@ -21,8 +21,12 @@ const Header = () => {
         <div className="header">
             <div className="header-icons">
             <div className="notification-wrapper">
-                <FaBell className="notification-icon" />
-                {unreadCount > 0 && <span className="notification-badge">{unreadCount}</span>}
+                <Link to="/reports">
+                    <FaBell className="notification-icon" />
+                </Link>
+                {unreadCount > 0 && (
+                    <span className="notification-badge">{unreadCount}</span>
+                )}
             </div>
                 <Link to="/profile" className="profile-container"> 
                     <img 
