@@ -5,8 +5,8 @@ import {
   NotAdminError,
   NoTokenError,
   UnauthorizedError,
-} from "../utils/errors/authErrors";
-import { ensureAdmin } from "../services/authService";
+} from "../utils/errors/authErrors.js";
+import { ensureAdmin } from "../services/authService.js";
 
 dotenv.config();
 
