@@ -49,6 +49,11 @@
         flex-direction: column;
         gap: 10px;
     }
+
+    .notes-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
     
     .comment-textarea {
         width: 100%;
@@ -69,3 +74,4 @@
         cursor: pointer;
     }
     
+

@@ -1,64 +1,71 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_URL = 'https://neveralone.onrender.com/admin/report_comments';
-
-
 export const fetchCommentsByReportId = createAsyncThunk(
-    'reportComments/fetchByReportId',
+    'comments/fetchByReportId',
     async (reportId) => {
-    const response = await fetch(`${API_URL}?report_id=${reportId}`);
-    const data = await response.json();
-    return { reportId, comments: data.comments };
+    const res = await fetch(`/api/comments`);
+    const data = await res.json();
+
+    // Filtrera på report_id
+    return { reportId, comments: data.filter(c => c.report_id === reportId) };
     }
 );
 
 
 export const postComment = createAsyncThunk(
-    'reportComments/postComment',
-    async ({ report_id, admin_id, comment }) => {
-        const response = await fetch(API_URL, {
+    'comments/postComment',
+    async (commentData, { dispatch }) => {
+    const res = await fetch('/api/comments', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ report_id, admin_id, comment }),
-        });
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(commentData),
+    });
 
-        const data = await response.json();
-        return { report_id, comment: data.comment }; 
-    }
+    const newComment = await res.json();
+
+
+    dispatch(fetchCommentsByReportId(commentData.report_id));
+    return newComment;
+        }
 );
 
-const reportCommentsSlice = createSlice({
+const commentsSlice = createSlice({
     name: 'reportComments',
     initialState: {
         commentsByReport: {}, 
-        loading: false,
-        error: null,
+        status: 'idle', 
+        error: null, 
     },
     reducers: {},
     extraReducers: (builder) => {
-        builder
+    builder
+
         .addCase(fetchCommentsByReportId.pending, (state) => {
-            state.loading = true;
+            state.status = 'loading';
         })
         .addCase(fetchCommentsByReportId.fulfilled, (state, action) => {
-            const { reportId, comments } = action.payload;
-            state.commentsByReport[reportId] = comments;
-            state.loading = false;
+            state.status = 'succeeded';
+
+            state.commentsByReport[action.payload.reportId] = action.payload.comments;
         })
         .addCase(fetchCommentsByReportId.rejected, (state, action) => {
-            state.loading = false;
+            state.status = 'failed';
             state.error = action.error.message;
         })
+        
+
         .addCase(postComment.fulfilled, (state, action) => {
-            const { report_id, comment } = action.payload;
-            if (!state.commentsByReport[report_id]) {
-            state.commentsByReport[report_id] = [];
+            const newComment = action.payload;
+            const reportId = newComment.report_id;
+
+
+            if (!state.commentsByReport[reportId]) {
+            state.commentsByReport[reportId] = [];
             }
-            state.commentsByReport[report_id].push(comment);
+
+        state.commentsByReport[reportId].push(newComment);
         });
     },
 });
 
-export default reportCommentsSlice.reducer;
+export default commentsSlice.reducer;

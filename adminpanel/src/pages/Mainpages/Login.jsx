@@ -20,19 +20,25 @@ const Login = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ username, password }),
-                credentials: 'include',  
+                credentials: 'include',
             });
     
-            const data = await res.json();
+            let data;
+            try {
+                data = await res.json();
+            } catch (jsonErr) {
+                console.error("Svar kunde inte tolkas som JSON:", jsonErr);
+            }
     
             if (res.ok) {
-                login(); 
-                navigate('/'); 
+                login(); // Din AuthContext login-funktion
+                navigate('/');
             } else {
-                    setErrorMsg('Felaktigt användarnamn eller lösenord')
+                setErrorMsg(data?.message || 'Inloggning misslyckades');
             }
         } catch (error) {
             console.error('Fel vid inloggning:', error);
+            setErrorMsg('Kunde inte kontakta servern');
         }
     };
 

@@ -4,25 +4,30 @@ import { fetchReports, markReportAsHandled } from '../../store/slices/reportSlic
 import '../../components/HandleReports/HandleReports.css';
 import CommentSection from '../CommentSection/CommentSection';
 import Modal from '../../components/Modal/Modal';
-import Spinner from '../../components/Spinner/Spinner'
+import Spinner from '../../components/Spinner/Spinner';
 
 const Reports = () => {
     const dispatch = useDispatch();
     const { items, loading, error } = useSelector(state => state.reports);
-
     const [activeReport, setActiveReport] = useState(null);
 
     useEffect(() => {
         dispatch(fetchReports());
     }, [dispatch]);
 
-    const handleStatusClick = (id, isHandled) => {
-        if (!isHandled) {
-            dispatch(markReportAsHandled(id));
-        }
+    const handleStatusClick = (reportId, currentStatus) => {
+        const statusCycle = ['pending', 'handled', 'closed'];
+        const currentIndex = statusCycle.indexOf(currentStatus || 'pending');
+        const nextStatus = statusCycle[(currentIndex + 1) % statusCycle.length];
+
+        dispatch(markReportAsHandled(reportId, nextStatus));
     };
 
-    if (loading) return <div><Spinner/></div>
+    const closeModal = () => {
+        setActiveReport(null);
+    };
+
+    if (loading) return <div><Spinner /></div>;
     if (error) return <p>Ett fel inträffade: {error}</p>;
 
     return (
@@ -34,45 +39,53 @@ const Reports = () => {
                         <th>Tid</th>
                         <th>Orsak</th>
                         <th>Detaljer</th>
-                        <th>Hanterad</th>
+                        <th>Ärendestatus</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {items.map(report => (
-                        <tr key={report.id}>
-                            <td>{new Date(report.time).toLocaleString()}</td>
-                            <td>{report.cause}</td>
-                            <td>
-                                <button
-                                    className="report-button"
-                                    onClick={() => setActiveReport(report)}
+                    {items.map(report => {
+                        const status = report.status || 'pending';
+
+                        return (
+                            <tr key={report.id}>
+                                <td>{new Date(report.time).toLocaleString()}</td>
+                                <td>{report.cause}</td>
+                                <td>
+                                    <button
+                                        className="report-button"
+                                        onClick={() => setActiveReport(report)}
+                                    >
+                                        Visa detaljer
+                                    </button>
+                                </td>
+                                <td
+                                    className="status-cell"
+                                    onClick={() => handleStatusClick(report.id, status)}
+                                    title="Klicka för att ändra status"
                                 >
-                                    Visa detaljer
-                                </button>
-                            </td>
-                            <td
-                                className="status-cell"
-                                onClick={() => handleStatusClick(report.id, report.is_handled)}
-                                title={report.is_handled ? 'Hanterad' : 'Inte hanterad – klicka för att markera'}
-                            >
-                                <span className={`status-icon ${report.status || 'pending'}`}>
-                                {report.status || 'Pending'}
-                                </span>
-                            </td>
-                        </tr>
-                    ))}
+                                    <span className={`status-icon ${status}`}>
+                                        {status.charAt(0).toUpperCase() + status.slice(1)}
+                                    </span>
+                                </td>
+                            </tr>
+                        );
+                    })}
                 </tbody>
             </table>
 
             {activeReport && (
-                <Modal isOpen={!!activeReport} onClose={() => setActiveReport(null)}>
+                <Modal isOpen={!!activeReport} onClose={closeModal}>
                     <h3>Rapportdetaljer</h3>
                     <p><strong>Tid:</strong> {new Date(activeReport.time).toLocaleString()}</p>
                     <p><strong>Orsak:</strong> {activeReport.cause}</p>
                     <p><strong>Meddelande:</strong> {activeReport.message}</p>
 
                     <div style={{ marginTop: '20px' }}>
-                        <CommentSection reportId={activeReport.id} adminId={1} />
+                        <CommentSection 
+                            reportId={activeReport.id} 
+                            adminId={1} 
+                            closeModal={closeModal} 
+                        />
                     </div>
                 </Modal>
             )}
