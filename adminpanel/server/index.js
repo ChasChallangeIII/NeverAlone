@@ -1,62 +1,31 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+import express from 'express';
+import cors from 'cors';
 
-const express = require('express');
-const cors = require('cors');
+import commentsRoutes from './routes/commentsRoute.js';
+import usersRoutes from './routes/usersRoutes.js';
+
+dotenv.config();
+
 const app = express();
-
-const { getComments, getUsers } = require('./db');
-
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({
-    origin: 'http://localhost:5173',
-}));
-
-
+app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
 
-console.log("CORS middleware konfigurerad med origin: http://localhost:5173");
-
-
 app.get('/api/hello', (req, res) => {
-    console.log('Servern är igång!');
     res.json({ message: 'Servern är igång!' });
 });
 
-const users = [
-    { username: 'admin', password: 'admin' },
-];
-
-app.get('/api/comments', async (req, res) => {
-    try {
-        const comments = await getComments();
-        res.json(comments);
-    } catch (error) {
-        console.error("Fel vid hämtning av kommentarer i API:", error);
-        res.status(500).json({ message: 'Fel vid hämtning av kommentarer' });
-    }
-});
-
-app.get('/api/users', async (req, res) => {
-    try {
-        const users = await getUsers();
-        res.json(users);
-        console.log(users);
-    } catch (error) {
-        console.error("Fel vid hämtning av users i API:", error);
-        res.status(500).json({ message: 'Fel vid hämtning av users' });
-    }
-});
+app.use('/api/comments', commentsRoutes);
+app.use('/api/users', usersRoutes);
 
 app.post('/api/login', (req, res) => {
-    console.log("Inkommande förfrågan till /api/login:", req.body);
-
     const { username, password } = req.body;
-
     if (username === 'admin' && password === 'admin') {
-        return res.json({ message: 'Inloggning lyckades' });
+        res.json({ message: 'Inloggning lyckades' });
     } else {
-        return res.status(401).json({ message: 'Fel användarnamn eller lösenord' });
+        res.status(401).json({ message: 'Fel användarnamn eller lösenord' });
     }
 });
 
