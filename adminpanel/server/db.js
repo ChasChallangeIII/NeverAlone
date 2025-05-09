@@ -35,4 +35,17 @@ async function getComments() {
     }
 }
 
-module.exports = { getComments }; 
+async function getUsers() {
+    try {
+        const users = await executeQuery("SELECT * FROM users");
+        console.log("users", users);
+        return users;
+        
+    } catch (error) {
+        console.error("Fel vid hämtning av users:", error);
+        return []; 
+        
+    }
+}
+
+module.exports = { getComments, getUsers }; 

@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-const { getComments } = require('./db');
+const { getComments, getUsers } = require('./db');
 
 const PORT = process.env.PORT || 3000;
 
@@ -34,6 +34,17 @@ app.get('/api/comments', async (req, res) => {
     } catch (error) {
         console.error("Fel vid hämtning av kommentarer i API:", error);
         res.status(500).json({ message: 'Fel vid hämtning av kommentarer' });
+    }
+});
+
+app.get('/api/users', async (req, res) => {
+    try {
+        const users = await getUsers();
+        res.json(users);
+        console.log(users);
+    } catch (error) {
+        console.error("Fel vid hämtning av users i API:", error);
+        res.status(500).json({ message: 'Fel vid hämtning av users' });
     }
 });
 
