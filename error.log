@@ -591,3 +591,121 @@
     at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
     at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
     at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-09T09:51:40.007Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "number",
+    "path": [
+      "password"
+    ],
+    "message": "Password must be a string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "birthDate"
+    ],
+    "message": "BirthDate must be a string or date"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "birth_date"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'birth_date'"
+  }
+]
+    at get error (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-09T09:51:54.234Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "birthDate"
+    ],
+    "message": "BirthDate must be a string or date"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "birth_date"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'birth_date'"
+  }
+]
+    at get error (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-09T09:52:25.804Z [ERROR] error: date/time field value out of range: "25-03-2001"
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/authService.js:28:19)
+    at async signup (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/AuthController.js:16:21)
+2025-05-09T09:52:47.845Z [ERROR] error: date/time field value out of range: "2001-25-03"
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/authService.js:28:19)
+    at async signup (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/AuthController.js:16:21)
+2025-05-09T09:57:41.050Z [ERROR] ReferenceError: accessToken is not defined
+    at authenticate (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/middleware/auth.js:18:29)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+2025-05-09T09:58:01.046Z [ERROR] ReferenceError: accessToken is not defined
+    at authenticate (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/middleware/auth.js:18:29)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+2025-05-09T09:58:09.032Z [ERROR] ReferenceError: accessToken is not defined
+    at authenticate (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/middleware/auth.js:18:29)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+2025-05-09T09:58:54.016Z [ERROR] error: null value in column "city" of relation "reports" violates not-null constraint
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
+    at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:32:22)

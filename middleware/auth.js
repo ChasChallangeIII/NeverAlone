@@ -15,7 +15,7 @@ export const authenticate = (req, res, next) => {
   }
 
   try {
-    const user = jwt.verify(accessToken, JWT_SECRET);
+    const user = jwt.verify(token, JWT_SECRET);
 
     req.user = user;
     next();
@@ -32,7 +32,7 @@ export const authorizeAdmin = async (req, res, next) => {
   }
 
   try {
-    const user = jwt.verify(accessToken, JWT_SECRET);
+    const user = jwt.verify(token, JWT_SECRET);
 
     if (!user || !user.admin) {
       return next(new NotAdminError());

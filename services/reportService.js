@@ -35,18 +35,18 @@ export const insertReport = async (data, userId) => {
   const city = await getLocation(location.latitude, location.longitude);
 
   const query = `
-    INSERT INTO reports (user_id, location, city, status, cause, message)
+    INSERT INTO reports (location, city, status, cause, message, user_id)
     VALUES ($1, $2, $3, $4, $5, $6)
     RETURNING id;
   `;
 
   const result = await executeQuery(query, [
-    userId,
     JSON.stringify(location),
     city,
+    "pending",
     cause,
     message,
-    "pending",
+    userId,
   ]);
 
   if (result.length === 0) {
