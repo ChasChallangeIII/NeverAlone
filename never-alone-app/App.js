@@ -1,8 +1,8 @@
-import Navigation from './navigation/Navigation'
+import AppNavigation from './app/navigation/AppNavigation'
 
 export default function App() {
   return (
-    <Navigation/>
+    <AppNavigation/>
   )
 }
 
