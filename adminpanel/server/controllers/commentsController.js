@@ -1,4 +1,4 @@
-import { executeQuery } from '../db/index.js';
+import { executeQuery } from '../db/db.js';
 
 export async function getComments(req, res) {
     try {

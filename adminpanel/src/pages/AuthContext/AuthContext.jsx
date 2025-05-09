@@ -1,34 +1,36 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import Cookies from 'js-cookie';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [token, setToken] = useState(localStorage.getItem('token') || '');
+  const [isAuthenticated, setIsAuthenticated] = useState(!!token);
 
-    useEffect(() => {
-        const token = Cookies.get('token');  
-        if (token) {
-            setIsAuthenticated(true);
-        }
-    }, []);
+  const login = (newToken) => {
+    localStorage.setItem('token', newToken);
+    setToken(newToken);
+    setIsAuthenticated(true);
+  };
 
-    const login = () => {
-        setIsAuthenticated(true);
-    };
+  const logout = () => {
+    localStorage.removeItem('token');
+    setToken('');
+    setIsAuthenticated(false);
+  };
 
-    const logout = () => {
-        Cookies.remove('token');  
-        setIsAuthenticated(false);
-    };
+  useEffect(() => {
+    const storedToken = localStorage.getItem('token');
+    if (storedToken) {
+      setToken(storedToken);
+      setIsAuthenticated(true);
+    }
+  }, []);
 
-    return (
-        <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
-            {children}
-        </AuthContext.Provider>
-    );
+  return (
+    <AuthContext.Provider value={{ token, isAuthenticated, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
-export const useAuth = () => {
-    return useContext(AuthContext);
-};
+export const useAuth = () => useContext(AuthContext);

@@ -1,8 +1,8 @@
-import { executeQuery } from '../db/index.js';
+import { executeQuery } from '../db/db.js';
 
 export async function getUsers(req, res) {
     try {
-        const users = await executeQuery("SELECT * FROM users");
+        const users = await executeQuery("SELECT id, gender, birth_date FROM users");
         res.json(users);
     } catch (error) {
         console.error("Fel vid hämtning av users:", error);

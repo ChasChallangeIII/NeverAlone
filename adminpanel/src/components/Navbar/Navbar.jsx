@@ -26,7 +26,7 @@ const Sidebar = () => {
                     <li><Link to="/" onClick={closeSidebar}><FaHome /> Home</Link></li>
                     <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Statistics</Link></li>
                     <li><Link to="/reports" onClick={closeSidebar}><FaChartBar /> Reports</Link></li>
-                    <li><Link to="/profile" onClick={closeSidebar}><FaUser /> Profile</Link></li> 
+                    <li><Link to="/profile" onClick={closeSidebar}><FaUser /> Users</Link></li> 
                     <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Settings</Link></li>
                     <li><Link to="/help" onClick={closeSidebar}><FaQuestionCircle /> Help</Link></li>
                 </ul>

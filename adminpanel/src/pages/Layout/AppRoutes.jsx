@@ -16,6 +16,7 @@ const Login = lazy(() => import('../Mainpages/Login'));
 
 const AppRoutes = () => {
     const { isAuthenticated } = useAuth();
+    
 
     return (
         <Suspense fallback={<div><Spinner /></div>}>
