@@ -5,7 +5,11 @@ info:
   version: 1.0.0
 
 tags:
+  - name: Reports
+    description: Endpoints for managing reports
   - name: Contacts
     description: Endpoints for managing user contacts
+  - name: Auth
+    description: Endpoints for handling user authentication and account management
 
 paths: {}

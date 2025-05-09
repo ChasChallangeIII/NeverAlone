@@ -1,7 +1,3 @@
-tags:
-  - name: Auth
-    description: Endpoints for handling user authentication and account management
-
 paths:
   /auth/signup:
     post:
