@@ -566,3 +566,23 @@
     at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
     at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
     at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:30:22)
+2025-05-09T09:34:55.297Z [ERROR] ZodError: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "user_id"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'user_id'"
+  }
+]
+    at get error (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateReportReqBody (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/validators/reportValidator.js:29:18)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
