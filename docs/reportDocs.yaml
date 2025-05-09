@@ -1,102 +1,155 @@
 paths:
   /api/reports:
     post:
-      summary: Add a new report
-      tags:
-        - Reports
+      summary: Create a new report
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReportInput"
+      responses:
+        "201":
+          description: Report created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Report"
+        "400":
+          description: Invalid input
+        "500":
+          description: Server error
+    get:
+      summary: Get all reports
+      responses:
+        "200":
+          description: List of all reports
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Report"
+        "500":
+          description: Server error
+
+  /api/reports/{id}:
+    get:
+      summary: Get report by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Report found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Report"
+        "404":
+          description: Report not found
+        "500":
+          description: Server error
+
+    put:
+      summary: Update report status
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
+              required:
+                - status
               properties:
-                time:
+                status:
                   type: string
-                  format: date-time
-                location:
-                  type: object
-                  properties:
-                    lat:
-                      type: string
-                    long:
-                      type: string
+                  example: resolved
       responses:
-        201:
-          description: report added successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  message:
-                    type: string
-              example:
-                id: "12345"
-                message: "report added successfully"
+        "200":
+          description: Report status updated
+        "404":
+          description: Report not found
+        "500":
+          description: Server error
 
-  /admin/reports:
-    get:
-      summary: Get all available reports reported by users, only available for admins
-      tags:
-        - Reports
-      responses:
-        200:
-          description: reports retrieved successfully
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: string
-                    message:
-                      type: string
-              example:
-                - id: "12345"
-                  message: "This is a report."
-                - id: "67890"
-                  message: "Another report retrieved."
-
-  /admin/reports/{id}:
-    get:
-      summary: Get a report by ID, only available for admins
-      tags:
-        - Reports
+    delete:
+      summary: Delete a report
       parameters:
-        - name: id
-          in: path
+        - in: path
+          name: id
           required: true
-          description: The ID of the report to retrieve
           schema:
-            type: string
+            type: integer
       responses:
-        200:
-          description: report retrieved successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  message:
-                    type: string
-              example:
-                id: "12345"
-                message: "report retrieved successfully"
-        404:
-          description: report not found
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-              example:
-                message: "report not found"
+        "204":
+          description: Report deleted
+        "404":
+          description: Report not found
+        "500":
+          description: Server error
+
+components:
+  schemas:
+    Report:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        location:
+          type: object
+          example: { "latitude": 59.3293, "longitude": 18.0686 }
+        city:
+          type: string
+        time:
+          type: string
+          format: date-time
+        cause:
+          type: string
+        message:
+          type: string
+        status:
+          type: string
+
+    ReportInput:
+      type: object
+      required:
+        - location
+        - city
+        - cause
+        - message
+        - status
+      properties:
+        user_id:
+          type: integer
+        location:
+          type: object
+          required:
+            - latitude
+            - longitude
+          properties:
+            latitude:
+              type: number
+              example: 59.3293
+            longitude:
+              type: number
+              example: 18.0686
+        city:
+          type: string
+        cause:
+          type: string
+        message:
+          type: string
+        status:
+          type: string
