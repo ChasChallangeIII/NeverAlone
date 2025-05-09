@@ -426,3 +426,28 @@
     at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
     at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
     at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-03T09:36:17.983Z [ERROR] Error: Username or email already exsits
+    at addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:36:25.359Z [ERROR] ZodError: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "gender",
+      "birthDate"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'gender', 'birthDate'"
+  }
+]
+    at get error (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/validators/authValidator.js:56:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
