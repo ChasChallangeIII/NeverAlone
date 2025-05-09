@@ -25,7 +25,7 @@ export const findReports = async () => {
   return await executeQuery(query);
 };
 
-export const insertReport = async (data) => {
+export const insertReport = async (data, userId) => {
   const { location, cause, message } = data;
 
   if (!location?.latitude || !location?.longitude) {
@@ -35,12 +35,13 @@ export const insertReport = async (data) => {
   const city = await getLocation(location.latitude, location.longitude);
 
   const query = `
-    INSERT INTO reports (location, city, status, cause, message)
-    VALUES ($1, $2, $3, $4, $5)
+    INSERT INTO reports (user_id, location, city, status, cause, message)
+    VALUES ($1, $2, $3, $4, $5, $6)
     RETURNING id;
   `;
 
   const result = await executeQuery(query, [
+    userId,
     JSON.stringify(location),
     city,
     cause,

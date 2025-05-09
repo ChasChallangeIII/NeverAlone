@@ -26,8 +26,10 @@ export const getReport = async (req, res, next) => {
 };
 
 export const addReport = async (req, res, next) => {
+  const { id: userId } = req.user;
+
   try {
-    const reportId = await insertReport(req.body);
+    const reportId = await insertReport(req.body, userId);
 
     res.status(201).json({
       message: `New report ${reportId} added successfully`,
