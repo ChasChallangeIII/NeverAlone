@@ -2,7 +2,7 @@ import {
   findReport,
   findReports,
   insertReport,
-} from "../services/db/reportService.js";
+} from "../services/reportService.js";
 
 export const getReports = async (_, res, next) => {
   try {

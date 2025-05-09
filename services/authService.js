@@ -1,12 +1,12 @@
 import bcrypt from "bcryptjs";
-import { executeQuery } from "./db.js";
+import { executeQuery } from "./db/db.js";
 import {
   AdminNotFoundError,
   DeleteUserError,
   DuplicateUserError,
   PasswordError,
   UserNotFoundError,
-} from "../../utils/errors/authErrors.js";
+} from "../utils/errors/authErrors.js";
 
 export const addUser = async (userData) => {
   const { username, email, password, gender, birthDate } = userData;
@@ -25,25 +25,13 @@ export const addUser = async (userData) => {
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  const newUser = await executeQuery(query, [
-    username,
-    email,
-    hashedPassword,
-    gender,
-    birthDate,
-  ]);
+  const newUser = await executeQuery(query, [username, email, hashedPassword, gender, birthDate]);
 
   return newUser[0];
 };
 
 export const performLogin = async (userData) => {
   const { username, email, password } = userData;
-
-  // console.log(username, email);
-
-  // const users = await executeQuery("SELECT * FROM users");
-
-  // console.log(users);
 
   const query = `
     SELECT 
@@ -79,7 +67,6 @@ export const performAdminLogin = async (adminData) => {
     SELECT 
         id, 
         username, 
-        email, 
         password_hash
     FROM admins
     WHERE LOWER(username) = TRIM(LOWER($1));
@@ -139,4 +126,15 @@ export const ensureUniqueUser = async (username, email) => {
   const result = await executeQuery(query, [username, email]);
 
   return result.length === 0;
+};
+
+export const ensureAdmin = async (userId) => {
+  const query = `
+    SELECT id FROM admins
+    WHERE id = $1
+  `;
+
+  const result = await executeQuery(query, [parseInt(userId)]);
+
+  return result.length !== 0;
 };

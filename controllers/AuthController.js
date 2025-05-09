@@ -5,7 +5,7 @@ import {
   deleteAccount,
   performAdminLogin,
   performLogin,
-} from "../services/db/authService.js";
+} from "../services/authService.js";
 
 dotenv.config();
 
@@ -17,12 +17,25 @@ export const signup = async (req, res, next) => {
   try {
     const newUser = await addUser(req.body);
 
-    const token = jwt.sign({ ...newUser }, JWT_SECRET, { expiresIn: "1h" });
+    const accessToken = jwt.sign({ ...newUser }, JWT_SECRET, {
+      expiresIn: "15m",
+    });
 
-    res.cookie("token", token, {
+    const refreshToken = jwt.sign({ ...newUser }, JWT_SECRET, {
+      expiresIn: "30d",
+    });
+
+    res.cookie("access_token", accessToken, {
       httpOnly: true,
       secure: isProd,
-      maxAge: 3600000,
+      maxAge: 15 * 60 * 1000,
+      sameSite: "Strict",
+    });
+
+    res.cookie("refresh_token", refreshToken, {
+      httpOnly: true,
+      secure: isProd,
+      maxAge: 30 * 24 * 60 * 60 * 1000,
       sameSite: "Strict",
     });
 
@@ -40,22 +53,33 @@ export const signin = async (req, res, next) => {
   const { admin: isAdmin } = req.query;
 
   try {
-    let token;
+    let user;
 
     if (isAdmin) {
-      const admin = await performAdminLogin(req.body);
-      token = jwt.sign({ ...admin, isAdmin: true }, JWT_SECRET, {
-        expiresIn: "1h",
-      });
+      user = await performAdminLogin(req.body);
     } else {
-      const user = await performLogin(req.body);
-      token = jwt.sign({ ...user }, JWT_SECRET, { expiresIn: "1h" });
+      user = await performLogin(req.body);
     }
 
-    res.cookie("token", token, {
+    const accessToken = jwt.sign({ ...user, isAdmin: !!isAdmin }, JWT_SECRET, {
+      expiresIn: "15m",
+    });
+
+    const refreshToken = jwt.sign({ ...user, isAdmin: !!isAdmin }, JWT_SECRET, {
+      expiresIn: "30d",
+    });
+
+    res.cookie("access_token", accessToken, {
       httpOnly: true,
       secure: isProd,
-      maxAge: 3600000,
+      maxAge: 15 * 60 * 1000,
+      sameSite: "Strict",
+    });
+
+    res.cookie("refresh_token", refreshToken, {
+      httpOnly: true,
+      secure: isProd,
+      maxAge: 30 * 24 * 60 * 60 * 1000,
       sameSite: "Strict",
     });
 
@@ -69,7 +93,8 @@ export const signin = async (req, res, next) => {
 };
 
 export const signout = async (req, res) => {
-  res.clearCookie("token");
+  res.clearCookie("refresh_token");
+  res.clearCookie("access_token");
   res.status(200).json({ message: "Logout successful" });
 };
 
@@ -80,7 +105,9 @@ export const removeAccount = async (req, res, next) => {
   try {
     await deleteAccount(userId, deleteCommand);
 
-    res.clearCookie("token");
+    res.clearCookie("refresh_token");
+    res.clearCookie("access_token");
+
     res.status(200).json({ message: "Account deleted successfully" });
   } catch (err) {
     next(err);

@@ -426,6 +426,38 @@
     at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
     at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
     at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-05T08:38:52.301Z [ERROR] ZodError: [
+  {
+    "code": "too_small",
+    "minimum": 8,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "Password must be at least 8 characters long",
+    "path": [
+      "password"
+    ]
+  }
+]
+    at get error [as error] (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/authValidator.js:56:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+2025-05-05T08:39:47.856Z [ERROR] error: column "email" does not exist
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:26:22)
+    at async performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/authService.js:88:18)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:46:21)
+2025-05-05T08:40:39.841Z [ERROR] Error: Incorrect password
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/authService.js:92:11)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:46:21)
 2025-05-03T09:36:17.983Z [ERROR] Error: Username or email already exsits
     at addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:17:11)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

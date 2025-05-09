@@ -10,8 +10,7 @@ const signupSchema = z
       .nonempty({ message: "Email is required" }),
     password: z
       .string({ message: "Password must be a string" })
-      .nonempty({ message: "Password is required" })
-      .min(8, { message: "Password must be at least 8 characters long" }),
+      .nonempty({ message: "Password is required" }),
     gender: z
       .string({ message: "Gender must be a string" })
       .nonempty({ message: "Gender is required" }),
@@ -33,8 +32,7 @@ const signinSchema = z
       .optional(),
     password: z
       .string({ message: "Password must be a string" })
-      .nonempty({ message: "Password is required" })
-      .min(8, { message: "Password must be at least 8 characters long" }),
+      .nonempty({ message: "Password is required" }),
   })
   .strict()
   .refine((data) => data.username || data.email, {

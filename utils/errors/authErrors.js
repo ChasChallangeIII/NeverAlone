@@ -29,3 +29,33 @@ export class DeleteUserError extends AppError {
     super(message, 400);
   }
 }
+
+export class UnauthorizedError extends AppError {
+  constructor(message = "Unauthorized") {
+    super(message, 401);
+  }
+}
+
+export class NoTokenError extends AppError {
+  constructor(message = "No token, access denied") {
+    super(message, 401);
+  }
+}
+
+export class AccessError extends AppError {
+  constructor(message = "Access denied") {
+    super(message, 403);
+  }
+}
+
+export class InvalidRefreshTokenError extends AppError {
+  constructor(message = "Invalid refresh token") {
+    super(message, 401);
+  }
+}
+
+export class NotAdminError extends AppError {
+  constructor(message = "Not Admin, access denied") {
+    super(message, 403);
+  }
+}

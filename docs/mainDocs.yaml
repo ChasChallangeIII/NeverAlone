@@ -3,4 +3,9 @@ info:
   title: Never Alone RESTful API
   description: API documentation using Swagger
   version: 1.0.0
+
+tags:
+  - name: Contacts
+    description: Endpoints for managing user contacts
+
 paths: {}

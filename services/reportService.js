@@ -1,5 +1,5 @@
-import { ReportNotFoundError } from "../../utils/errors/reportErrors.js";
-import { executeQuery } from "./db.js";
+import { ReportNotFoundError } from "../utils/errors/reportErrors.js";
+import { executeQuery } from "./db/db.js";
 
 export const findReport = async (reportId) => {
   const query = `
