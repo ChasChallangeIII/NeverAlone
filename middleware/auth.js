@@ -16,6 +16,7 @@ export const authenticate = (req, res, next) => {
 
   try {
     const user = jwt.verify(accessToken, JWT_SECRET);
+
     req.user = user;
     next();
   } catch (err) {
@@ -43,6 +44,7 @@ export const authorizeAdmin = async (req, res, next) => {
       return next(new NotAdminError());
     }
 
+    req.user = user;
     next();
   } catch (err) {
     next(err);
