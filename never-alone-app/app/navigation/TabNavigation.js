@@ -9,6 +9,7 @@ import * as Location from "expo-location";
 import SearchScreen from "../screens/SearchScreen";
 import { handleFakeCall } from "../services/fakeCall";
 import PhoneCall from "../components/PhoneCall";
+import NotificationsScreen from "../screens/NotificationsScreen";
 
 const Tab = createBottomTabNavigator();
 const TabNavigation = ({ }) => {
@@ -43,7 +44,7 @@ const TabNavigation = ({ }) => {
       />
       <Tab.Screen
         name="Notifications"
-        component={HomeScreen}
+        component={NotificationsScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="notifications" size={size} color={color} />
