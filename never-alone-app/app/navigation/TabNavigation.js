@@ -10,11 +10,12 @@ import SearchScreen from "../screens/SearchScreen";
 import { handleFakeCall } from "../services/fakeCall";
 import PhoneCall from "../components/PhoneCall";
 import NotificationsScreen from "../screens/NotificationsScreen";
+import MyText from "../components/textwrappers/MyText";
+import CallMeButton from "../components/textwrappers/CallMeButton";
 
 const Tab = createBottomTabNavigator();
 const TabNavigation = ({ }) => {
   
-  const[isModalShown, setIsModalShown] = useState(false)
   
 
   return (
@@ -55,27 +56,7 @@ const TabNavigation = ({ }) => {
         name="Fake call"
         component={HomeScreen}
         options={{
-          tabBarButton: (props) => (
-            <>
-              <Pressable
-                {...props}
-                onPress={() => {
-                  // handleFakeCall();
-                  setIsModalShown(true)
-                }}
-              >
-                <MaterialIcons name="phone" size={24} color={"hotpink"} />
-                <Text>RING MIG</Text>
-              </Pressable>
-              <PhoneCall visible={isModalShown} onClose={()=>setIsModalShown(false)}/>
-              {/* <Modal visible={isModalShown}>
-                        <Text>Hej!!</Text>
-                <Button onPress={() => setIsModalShown(false)}
-                  title="hejdå" />
-                
-                    </Modal> */}
-            </>
-          ),
+          tabBarButton: (props) => <CallMeButton props={props} />,
         }}
       />
 
