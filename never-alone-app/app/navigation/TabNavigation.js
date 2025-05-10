@@ -1,35 +1,21 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import HomeScreen from "../screens/HomeScreen";
-import React from "react";
+import React, { useState } from "react";
 import CommunityScreen from "../screens/CommunityScreen";
-import { Pressable, Text } from "react-native";
+import { Button, Modal, Pressable, Text } from "react-native";
 import ReportScreen from "../screens/ReportScreen";
 import * as Location from "expo-location";
 import SearchScreen from "../screens/SearchScreen";
-
-const handleFakeCall = () => {
-  alert("Fake samta på g");
-  alertLocation();
-};
-const alertLocation = async () => {
-  try {
-    let { status } = await Location.requestForegroundPermissionsAsync();
-    if (status !== "granted") {
-      alert(status);
-      return;
-    }
-    const location = await Location.getCurrentPositionAsync();
-    const { latitude, longitude } = location;
-
-    alert(latitude);
-  } catch (error) {
-    alert(error);
-  }
-};
+import { handleFakeCall } from "../services/fakeCall";
+import PhoneCall from "../components/PhoneCall";
 
 const Tab = createBottomTabNavigator();
-const TabNavigation = ({}) => {
+const TabNavigation = ({ }) => {
+  
+  const[isModalShown, setIsModalShown] = useState(false)
+  
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -69,10 +55,25 @@ const TabNavigation = ({}) => {
         component={HomeScreen}
         options={{
           tabBarButton: (props) => (
-            <Pressable {...props} onPress={() => handleFakeCall()}>
-              <MaterialIcons name="phone" size={24} color={"hotpink"} />
-              <Text>RING MIG</Text>
-            </Pressable>
+            <>
+              <Pressable
+                {...props}
+                onPress={() => {
+                  // handleFakeCall();
+                  setIsModalShown(true)
+                }}
+              >
+                <MaterialIcons name="phone" size={24} color={"hotpink"} />
+                <Text>RING MIG</Text>
+              </Pressable>
+              <PhoneCall visible={isModalShown} onClose={()=>setIsModalShown(false)}/>
+              {/* <Modal visible={isModalShown}>
+                        <Text>Hej!!</Text>
+                <Button onPress={() => setIsModalShown(false)}
+                  title="hejdå" />
+                
+                    </Modal> */}
+            </>
           ),
         }}
       />
