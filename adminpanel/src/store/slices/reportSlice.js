@@ -3,11 +3,26 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const API_URL = 'https://neveralone.onrender.com/admin/reports';
 
-export const fetchReports = createAsyncThunk('reports/fetchReports', async () => {
-    const response = await fetch(API_URL);
+    export const fetchReports = createAsyncThunk('reports/fetchReports', async () => {
+    const token = localStorage.getItem('token'); 
+
+    const response = await fetch(API_URL, {
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+        },
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Kunde inte hämta rapporter');
+    }
+
     const data = await response.json();
     return data.reports;
     });
+
+
 
     const reportsSlice = createSlice({
     name: 'reports',
