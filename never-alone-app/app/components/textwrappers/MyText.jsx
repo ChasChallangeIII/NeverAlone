@@ -17,6 +17,7 @@ export default MyText
 const createStyles = (theme) => StyleSheet.create({
     text: {
         fontFamily: theme.fonts.regular.fontFamily,
-        fontSize: theme.fonts.regular.fontSize
+        fontSize: theme.fonts.regular.fontSize,
+        color: theme.colors.text,
     }
 })

@@ -9,8 +9,8 @@ import { useTheme } from '../../context/ThemeContext';
 
 const CallMeButton = ({ props }) => {
     const [isModalShown, setIsModalShown] = useState(false)
-    const { customTheme } = useTheme()
-    const styles = createStyles(customTheme)
+    const { customTheme, isDark } = useTheme()
+    const styles = createStyles(customTheme, isDark)
     return (
         <>
 
@@ -23,8 +23,8 @@ const CallMeButton = ({ props }) => {
                 }}
                 style={styles.button}
             >
-                <MaterialIcons name="phone" size={24} color={customTheme.colors.text} />
-                {/* <BigText style={{ fontSize: 13, color: customTheme.colors.text }}>RING MIG</BigText> */}
+                <MaterialIcons name="phone" size={24} color={customTheme.colors.accent900} style={styles.icon} />
+                
             </Pressable>
 
             <PhoneCall visible={isModalShown} onClose={() => setIsModalShown(false)} />
@@ -34,10 +34,10 @@ const CallMeButton = ({ props }) => {
 
 export default CallMeButton
 
-const createStyles = (theme) => StyleSheet.create({
+const createStyles = (theme, isDark) => StyleSheet.create({
     button: {
-        backgroundColor: theme.colors.accent200,
-        borderRadius: '80%',
+        backgroundColor: isDark ? theme.colors.accent700 : theme.colors.accent300, 
+        borderRadius: 35,
         justifyContent: 'center',
         alignItems: 'center',
         height: '70',
@@ -45,6 +45,10 @@ const createStyles = (theme) => StyleSheet.create({
         padding: '10',
         position: 'absolute',
         bottom: '9',
-        left: '9'
+        left: '9',
+        overflow: 'visible'
+    },
+    icon: {
+        color: isDark ? theme.colors.accent100 : theme.colors.text
     }
 })

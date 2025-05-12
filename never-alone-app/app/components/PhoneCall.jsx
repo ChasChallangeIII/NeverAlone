@@ -1,6 +1,8 @@
 import { Button, Image, Modal, Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useRef, useState } from 'react'
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { useTheme } from '../context/ThemeContext';
+import MyText from './textwrappers/MyText';
 
 
 
@@ -8,6 +10,8 @@ const PhoneCall = ({ visible, onClose }) => {
     const [elapsedTime, setElapsedTime] = useState(0)
     const intervalIdRef = useRef(null)
     const startTimeRef = useRef(null)
+    const { customTheme, isDark } = useTheme()
+    const styles = createStyles(customTheme, isDark)
     const hangUp = () => {
         clearInterval(intervalIdRef.current)
         setElapsedTime(0)
@@ -45,7 +49,7 @@ const PhoneCall = ({ visible, onClose }) => {
             visible={visible}
             onRequestClose={hangUp}
             animationType='slide'
-            presentationStyle='pageSheet'
+            presentationStyle='overFullScreen'
 
         >
             <View
@@ -54,18 +58,18 @@ const PhoneCall = ({ visible, onClose }) => {
                     style={styles.image}
 
                     source={require('../assets/images/person.jpg')} />
-                <Text>Bestie<MaterialIcons name="heart-broken" size={24} color={"hotpink"} /></Text>
+                <MyText style={styles.text}>Bestie<MaterialIcons name="heart-broken" size={24} color={"hotpink"} /></MyText>
 
 
                 <View>
-                    <Text>{formatTime()}</Text>
+                    <MyText style={styles.text}>{formatTime()}</MyText>
                 </View>
 
                 {/* <Pressable onPress={hangUp}
 
                 >
                     <MaterialIcons name='phone' size={24} color={'red'} />
-                    <Text>hejdå</Text>
+                    <MyText>hejdå</MyText>
                 </Pressable> */}
                 <Button
                     onPress={hangUp}
@@ -80,10 +84,10 @@ const PhoneCall = ({ visible, onClose }) => {
 
 export default PhoneCall
 
-const styles = StyleSheet.create({
+const createStyles = (theme, isDark) => StyleSheet.create({
     modal: {
         flex: 1,
-        backgroundColor: 'plum',
+        backgroundColor: isDark ? theme.colors.background : theme.colors.background900,
         justifyContent: 'flex-start',
         alignItems: 'center',
         paddingTop: "20%"
@@ -91,7 +95,10 @@ const styles = StyleSheet.create({
     image: {
         width: 120,
         height: 120,
-        borderRadius: "50%",
+        borderRadius: 60,
         resizeMode: 'cover'
+    },
+    text: {
+        color: isDark ? theme.colors.text : theme.colors.primary50
     }
 })

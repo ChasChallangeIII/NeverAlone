@@ -74,7 +74,7 @@ export const buildCustomTheme = (chosenTheme, isDark) => ({
     },
     semibold: {
       fontFamily: "Poppins-SemiBold",
-      fontSize: 30,
+      fontSize: 20,
     },
   },
 });
