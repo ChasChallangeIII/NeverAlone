@@ -70,10 +70,11 @@ export const buildCustomTheme = (chosenTheme, isDark) => ({
   fonts: {
     regular: {
       fontFamily: "Poppins-Regular",
-     
+      fontSize: 14,
     },
     semibold: {
       fontFamily: "Poppins-SemiBold",
+      fontSize: 30,
     },
   },
 });

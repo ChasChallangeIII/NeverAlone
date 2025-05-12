@@ -17,6 +17,7 @@ export default BigText
  const createStyles = (theme) => StyleSheet.create({
      text: {
          fontFamily: theme.fonts.semibold.fontFamily,
-         fontSize: 30
+         fontSize: theme.fonts.semibold.fontSize
+
      }
  })
