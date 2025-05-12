@@ -153,22 +153,19 @@ void loop()
     unsigned long now = millis();
     String message;
 
-    // Create event and handle it
     ButtonEvent newEvent = {detectedEvent, now};
 
     if (detectedEvent == SHORT_PRESS)
     {
-      // Short press: LED on for 1 second
       digitalWrite(ledPin, HIGH);
-      delay(1000); // LED stays on for 1 second
+      delay(1000); 
       digitalWrite(ledPin, LOW);
       message = "Short_Button_Press at " + String(now) + " ms";
     }
     else if (detectedEvent == LONG_PRESS)
     {
-      // Long press: LED on for 3 seconds
       digitalWrite(ledPin, HIGH);
-      delay(3000); // LED stays on for 3 seconds
+      delay(3000);
       digitalWrite(ledPin, LOW);
       message = "Long_Button_Press at " + String(now) + " ms";
     }
