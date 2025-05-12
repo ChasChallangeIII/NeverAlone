@@ -19,6 +19,7 @@ app.get('/api/hello', (req, res) => {
     res.json({ message: 'Servern är igång!' });
 });
 
+
 app.use("/api/auth", authRoutes);
 app.use('/api/comments', commentsRoutes);
 app.use('/api/users', usersRoutes);

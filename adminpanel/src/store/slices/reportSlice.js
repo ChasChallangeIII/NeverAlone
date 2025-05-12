@@ -5,6 +5,7 @@ const API_URL = 'https://neveralone.onrender.com/admin/reports';
 
     export const fetchReports = createAsyncThunk('reports/fetchReports', async () => {
     const token = localStorage.getItem('token'); 
+    console.log("Token:", token);
 
     const response = await fetch(API_URL, {
         headers: {
@@ -12,6 +13,10 @@ const API_URL = 'https://neveralone.onrender.com/admin/reports';
             'Content-Type': 'application/json',
         },
     });
+
+
+    console.log("API Response:", response); 
+
 
     if (!response.ok) {
         const errorData = await response.json();
