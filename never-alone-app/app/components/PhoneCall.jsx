@@ -9,6 +9,7 @@ import Octicons from '@expo/vector-icons/Octicons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { StatusBar } from 'expo-status-bar';
 
 const PhoneCall = ({ visible, onClose }) => {
     const [elapsedTime, setElapsedTime] = useState(0)
@@ -48,12 +49,13 @@ const PhoneCall = ({ visible, onClose }) => {
         return `${minutes}:${seconds}`
     }
     return (
-
+        <>
+            <StatusBar barStyle={'light-content'} />
         <Modal
             visible={visible}
             onRequestClose={hangUp}
             animationType='slide'
-            presentationStyle='overFullScreen'
+            presentationStyle='pageSheet'
 
         >
             <View
@@ -106,7 +108,7 @@ const PhoneCall = ({ visible, onClose }) => {
 
             </View>
         </Modal>
-
+</>
     )
 }
 
@@ -149,10 +151,6 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     name: {
         fontSize: 40
     },
-    phoneButtons: {
-        size: 40
-
-    },
     secondRow: {
         gap: 80,
         paddingHorizontal: 30,
@@ -161,7 +159,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     },
     hangUpButton: {
         backgroundColor: 'red',
-        padding: 20,
+        padding: 15,
         // height: 60,
         // width: 60,
         borderRadius: 90,

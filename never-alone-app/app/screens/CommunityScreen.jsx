@@ -3,9 +3,9 @@ import React from 'react'
 
 const CommunityScreen = () => {
   return (
-    <SafeAreaView>
+    < >
       <Text>CommunityScreen</Text>
-    </SafeAreaView>
+    </>
   )
 }
 
