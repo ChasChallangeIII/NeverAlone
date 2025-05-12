@@ -17,34 +17,31 @@ const MapComponent = () => {
 
     return (
         <div className="map-container">
-        <MapContainer
-            center={[63.8258, 20.2630]} 
-            zoom={4}
-            style={{ height: "100%", width: "100%" }}
-        >
-            <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
+            <MapContainer
+                center={[63.8258, 20.2630]}
+                zoom={4}
+                style={{ height: "100%", width: "100%" }}
+            >
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                />
 
-        {reports
-            .filter(report => report.location && report.location.includes(','))
-            .map((report) => {
-                const [lat, lng] = report.location.split(',').map(coord => parseFloat(coord.trim()));
-                return (
-                    <Marker
-                        key={report.id}
-                        position={[lat, lng]}
-                        icon={markerIcon}
-                    >
-                        <Popup>
-                            <strong>{report.time}</strong><br />
-                            {report.city}
-                        </Popup>
-                    </Marker>
-                );
-            })}
-        </MapContainer>
+                {reports
+                    .filter(report => report.location && report.location.latitude && report.location.longitude)
+                    .map((report) => (
+                        <Marker
+                            key={report.id}
+                            position={[report.location.latitude, report.location.longitude]}
+                            icon={markerIcon}
+                        >
+                            <Popup>
+                                <strong>{report.time}</strong><br />
+                                {report.city}
+                            </Popup>
+                        </Marker>
+                    ))}
+            </MapContainer>
         </div>
     );
 };
