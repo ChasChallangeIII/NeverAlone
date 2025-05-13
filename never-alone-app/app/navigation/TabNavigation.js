@@ -16,6 +16,7 @@ import { useTheme } from "../context/ThemeContext";
 import { useNavigation } from "@react-navigation/native";
 import Settings from "../components/Settings";
 import LogoInHeader from "../components/LogoInHeader";
+import Entypo from "@expo/vector-icons/Entypo";
 
 const Tab = createBottomTabNavigator();
 const TabNavigation = ({}) => {
@@ -33,9 +34,7 @@ const TabNavigation = ({}) => {
             backgroundColor: customTheme.colors.background,
             height: 120,
           },
-          headerLeft: () => (
-           <LogoInHeader/>
-          ),
+          headerLeft: () => <LogoInHeader />,
           headerRight: ({ canGoBack = true }) => <Settings />,
           tabBarStyle: {
             backgroundColor: customTheme.colors.background,
@@ -96,7 +95,7 @@ const TabNavigation = ({}) => {
           component={ReportScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="report" size={size} color={color} />
+              <Entypo name="typing" size={size} color={color} />
             ),
           }}
         />
