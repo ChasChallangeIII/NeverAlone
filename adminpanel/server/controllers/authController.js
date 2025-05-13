@@ -42,8 +42,8 @@ import {
         user = await performLogin(req.body);
         }
 
-        const token = jwt.sign({ ...user, isAdmin: !!isAdmin }, JWT_SECRET, {
-        expiresIn: "1h",
+        const token = jwt.sign({ ...user, isAdmin: user.isAdmin }, JWT_SECRET, {
+            expiresIn: "1h",
         });
 
         res.status(200).json({

@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_URL = 'http://localhost:8080/api/reports';
+const API_URL = 'https://neveralone.onrender.com/api/reports';
+
+
 
 export const fetchReports = createAsyncThunk('reports/fetchReports', async () => {
     const token = localStorage.getItem('token');
@@ -24,8 +26,9 @@ export const fetchReports = createAsyncThunk('reports/fetchReports', async () =>
     });
 
     if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Kunde inte hämta rapporter');
+            const errorText = await response.text();
+            console.error('API error (text):', errorText);
+            throw new Error(`Fel från API: ${response.status} - ${errorText}`);
     }
 
     const data = await response.json();

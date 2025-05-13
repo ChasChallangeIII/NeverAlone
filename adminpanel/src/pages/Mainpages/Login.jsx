@@ -14,7 +14,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const res = await fetch('https://neveralone.onrender.com/auth/signin?admin=false', {
+            const res = await fetch('https://neveralone.onrender.com/auth/signin?admin=true', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

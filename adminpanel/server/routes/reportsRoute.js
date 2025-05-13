@@ -4,6 +4,9 @@ import { verifyToken, authorizeAdmin } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-router.get('/', verifyToken, authorizeAdmin, getReports);
+router.get('/', (req, res) => {
+    console.log('🛎️ /api/reports GET route hit');
+    getReports(req, res);
+});
 
 export default router;
