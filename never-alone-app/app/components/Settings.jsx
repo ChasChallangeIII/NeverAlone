@@ -4,22 +4,22 @@ import MyText from './textwrappers/MyText'
 import { Switch } from 'react-native'
 import BigText from './textwrappers/BigText'
 import { useTheme } from '../context/ThemeContext'
-
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 const Settings = () => {
     const [isShown, setIsShown] = useState(false)
-    const [isEnabled, setIsEnabled] = useState(false)
-    const { customTheme, toggleTheme } = useTheme()
+    const { customTheme, toggleTheme, isDark } = useTheme()
 
     const styles = createStyles(customTheme)
     const toggleSwitch = (value) => {
-        setIsEnabled(!value)
+        // setIsEnabled(!value)
         toggleTheme()
     }
 
     return (
         <View>
-            <Pressable onPress={() => setIsShown(true)}>
+            <Pressable style={styles.button} onPress={() => setIsShown(true)}>
+                <MaterialIcons name="settings" size={customTheme.fonts.regular.fontSize} color={customTheme.colors.text} />
                 <MyText>Inställningar</MyText>
             </Pressable>
 
@@ -27,18 +27,24 @@ const Settings = () => {
                 visible={isShown}
                 presentationStyle='formSheet'
                 animationType='slide'
-      
+
             >
                 <View style={styles.background}>
-                <BigText >Inställningar</BigText>
+                    <BigText >Inställningar</BigText>
 
-                <Switch
-                    value={isEnabled}
-                    onValueChange={toggleSwitch}
-                />
-                
+                    <View style={styles.switchContainer}>
+                        <MyText>Mörktläge</MyText>
+                        <Switch
+                            value={isDark}
+                            onValueChange={toggleSwitch}
+                            trackColor={{ false: customTheme.colors.primary, true: customTheme.colors.primary }}
+                            thumbColor={isDark ? customTheme.colors.primary100 : customTheme.colors.primary500}
+                            // style={styles.switch}
+                        />
+                    </View>
+
                     <Button title='stäng' onPress={() => setIsShown(false)} />
-                    
+
                 </View>
             </Modal>
         </View>
@@ -47,9 +53,23 @@ const Settings = () => {
 
 export default Settings
 
-const createStyles = (theme)=> StyleSheet.create({
+const createStyles = (theme) => StyleSheet.create({
     background: {
         backgroundColor: theme.colors.background,
-        flex:1
+        flex: 1,
+        padding: 20,
+        gap: 20
+    },
+    switchContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+  
+    button: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 5
     }
 })
