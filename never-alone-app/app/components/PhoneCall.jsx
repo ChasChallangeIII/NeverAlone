@@ -1,4 +1,4 @@
-import { Button, Image, Modal, Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Button, Image, Modal, Platform, Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useRef, useState } from 'react'
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useTheme } from '../context/ThemeContext';
@@ -76,24 +76,24 @@ const PhoneCall = ({ visible, onClose }) => {
                         <FontAwesome6
                             name="microphone-slash"
                             style={[styles.text, styles.phoneButtons]}
-                            size={40} />
+                            size={Platform.OS==='ios'? 40:30} />
                         <Ionicons
                             name="keypad"
-                            size={40}
+                            size={Platform.OS==='ios'? 40:30}
                             style={[styles.text, styles.phoneButtons]} />
                         <Octicons
                             style={[styles.text, styles.phoneButtons]}
                             name="unmute"
-                            size={40} />
+                            size={Platform.OS==='ios'? 40:30} />
                         <View style={[styles.text, styles.phoneButtons, styles.secondRow]}>
                             <MaterialIcons
                                 style={[styles.text, styles.phoneButtons, { alignSelf: 'flex-start' }]}
                                 name="add-call"
-                                size={40} />
+                                size={Platform.OS==='ios'? 40:30} />
                             <FontAwesome
                                 style={[styles.text, styles.phoneButtons, { alignSelf: 'flex-start' }]}
                                 name="video-camera"
-                                size={40} />
+                                size={ Platform.OS==='ios'? 40:30} />
                         </View>
                     </View>
 
@@ -102,7 +102,7 @@ const PhoneCall = ({ visible, onClose }) => {
                     <Pressable onPress={hangUp}
 
                     >
-                        <MaterialCommunityIcons name="phone-hangup" size={40} color={"white"} style={[styles.text, styles.hangUpButton]} />
+                        <MaterialCommunityIcons name="phone-hangup" size={Platform.OS==='ios'? 40:30} color={"white"} style={[styles.text, styles.hangUpButton]} />
 
                     </Pressable>
 
@@ -118,15 +118,16 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     modal: {
         flex: 1,
         backgroundColor: isDark ? theme.colors.background : theme.colors.background900,
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: "20%",
-        gap: 90
+        // paddingVertical: "0",
+        gap: Platform.OS==='ios'?80:30,
     },
     container1: {
         justifyContent: 'flex-start',
         alignItems: 'center',
-        gap: 10
+        gap: 10,
+        
     },
 
     container2: {
@@ -137,7 +138,8 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         paddingVertical: 30,
         paddingHorizontal: 30,
         alignItems: 'center',
-        gap: 80
+        gap: 80,
+        
     },
     image: {
         width: 120,
@@ -155,7 +157,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         gap: 80,
         paddingHorizontal: 30,
         flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     hangUpButton: {
         backgroundColor: 'red',
@@ -166,6 +168,8 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
+        // bottom: '40'
+
 
     }
 })

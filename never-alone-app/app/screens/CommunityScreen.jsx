@@ -94,7 +94,7 @@ const CommunityScreen = () => {
 
 
           <FlatList
-            style={styles.posts}
+            contentContainerStyle={styles.posts}
             data={posts}
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
@@ -167,11 +167,13 @@ const createStyles = (theme) => StyleSheet.create({
     fontFamily: theme.fonts.regular.fontFamily
   },
   posts: {
+    gap:30
   },
   post: {
     gap: 20,
     padding: 20,
-    backgroundColor: theme.colors.background100
+    backgroundColor: theme.colors.background100,
+    borderRadius:5
   },
   profileImage: {
     width: 50,
