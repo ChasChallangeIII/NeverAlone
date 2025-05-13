@@ -82,7 +82,7 @@ export default function useBLE() {
         return;
       }
 
-      if (device && (device.localName === 'Arduino' || device.name === 'Arduino')) {
+      if (device && (device.localName === 'ESP32C3_Button' || device.name === 'ESP32C3_Button')) {
         setAllDevices(prevDevices => {
           if (!isDuplicateDevice(prevDevices, device)) {
             return [...prevDevices, device];
@@ -93,17 +93,36 @@ export default function useBLE() {
     });
   };
 
-  const connectToDevice = async (device) => {
-    try {
-      const deviceConnection = await bleManager.connectToDevice(device.id);
-      setConnectedDevice(deviceConnection);
-      await deviceConnection.discoverAllServicesAndCharacteristics();
-      bleManager.stopDeviceScan();
-      startStreamingData(deviceConnection);
-    } catch (error) {
-      console.log('FAILED TO CONNECT', error);
-    }
-  };
+const connectToDevice = async (device) => {
+  try {
+    const connectedDevice = await device.connect();
+    await connectedDevice.discoverAllServicesAndCharacteristics();
+
+    // OPTIONAL: update app state with connected device
+    setConnectedDevice(connectedDevice);
+
+    // Start listening for notifications
+    connectedDevice.monitorCharacteristicForService(
+      '6E400001-B5A3-F393-E0A9-E50E24DCCA9E', // Service UUID
+      '6E400003-B5A3-F393-E0A9-E50E24DCCA9E', // Characteristic UUID
+      (error, characteristic) => {
+        if (error) {
+          console.error('Notification error:', error);
+          return;
+        }
+
+        if (characteristic?.value) {
+          const decoded = base64.decode(characteristic.value);
+          console.log('📬 Received from ESP32:', decoded);
+
+          // You can now do something with `decoded`, like update state
+        }
+      }
+    );
+  } catch (error) {
+    console.error('Connection failed', error);
+  }
+};
 
   const onDataUpdate = (error, characteristic) => {
   if (error) {

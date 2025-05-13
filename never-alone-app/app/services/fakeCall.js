@@ -1,5 +1,5 @@
 export const handleFakeCall = () => {
-  alert("Fake samta på g");
+  alert("Fake samtal på g");
 //   alertLocation();
 };
 export const alertLocation = async () => {
