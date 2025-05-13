@@ -15,6 +15,7 @@ const Settings = () => {
         // setIsEnabled(!value)
         toggleTheme()
     }
+    const onClose = () => setIsShown(false) 
 
     return (
         <View>
@@ -27,6 +28,7 @@ const Settings = () => {
                 visible={isShown}
                 presentationStyle='formSheet'
                 animationType='slide'
+                onRequestClose={onClose}
 
             >
                 <View style={styles.background}>
@@ -43,7 +45,7 @@ const Settings = () => {
                         />
                     </View>
 
-                    <Button title='stäng' onPress={() => setIsShown(false)} />
+                    <Button title='stäng' onPress={onClose} />
 
                 </View>
             </Modal>
