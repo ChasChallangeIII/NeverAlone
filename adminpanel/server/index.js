@@ -5,6 +5,7 @@ import cors from 'cors';
 import commentsRoutes from './routes/commentsRoute.js';
 import usersRoutes from './routes/usersRoutes.js';
 import authRoutes from "./routes/authRoutes.js";
+import reportsRoutes from './routes/reportsRoute.js';
 
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.get('/api/hello', (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use('/api/comments', commentsRoutes);
 app.use('/api/users', usersRoutes);
+app.use('/api/reports', reportsRoutes);
 
 
 app.listen(PORT, () => {

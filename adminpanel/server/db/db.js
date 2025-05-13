@@ -18,3 +18,7 @@ export async function executeQuery(sql) {
         client.release();
     }
 }
+export async function getReportsFromDatabase() {
+    const sql = 'SELECT * FROM reports';
+    return executeQuery(sql);
+}

@@ -1,10 +1,10 @@
-    import jwt from 'jsonwebtoken';
-    import dotenv from 'dotenv';
-    import { NoTokenError, UnauthorizedError } from '../utils/authErrors.js';
+import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+import { NoTokenError, UnauthorizedError } from '../utils/authErrors.js';
 
-    dotenv.config();
+dotenv.config();
 
-    export const verifyToken = (req, res, next) => {
+export const verifyToken = (req, res, next) => {
     const authHeader = req.headers.authorization;
 
     if (!authHeader) throw new NoTokenError();
@@ -13,10 +13,18 @@
 
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
         if (err) {
-        throw new UnauthorizedError("Token är ogiltig eller har gått ut");
+            throw new UnauthorizedError("Token är ogiltig eller har gått ut");
         }
 
-        req.user = decoded;
+        req.user = decoded; 
         next();
     });
-    };
+};
+
+
+export const authorizeAdmin = (req, res, next) => {
+    if (!req.user.isAdmin) {
+        return res.status(403).json({ message: 'Inte administratör, access denied' });
+    }
+    next();
+};
