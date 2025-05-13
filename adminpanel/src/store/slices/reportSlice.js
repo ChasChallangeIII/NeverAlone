@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_URL = 'https://neveralone.onrender.com/admin/reports';
+const API_URL = 'http://localhost:8080/api/reports';
 
 export const fetchReports = createAsyncThunk('reports/fetchReports', async () => {
     const token = localStorage.getItem('token');
@@ -17,8 +17,7 @@ export const fetchReports = createAsyncThunk('reports/fetchReports', async () =>
         },
     });
 
-    console.log("API Response:", response);
-    console.log("Request URL:", API_URL);
+    console.log("API Response:", response); 
     console.log("Request Headers:", {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
