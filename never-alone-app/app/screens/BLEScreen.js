@@ -43,7 +43,7 @@ const BLEScreen = () => {
           <Text style={styles.heartRateTitleText}>Connected</Text>
         ) : (
           <Text style={styles.heartRateTitleText}>
-            Please connect the Arduino
+            Please connect the ESP32
           </Text>
         )}
       </View>

@@ -13,7 +13,7 @@ const DrawerNavigation = () => {
     <Drawer.Navigator drawerContent={(props)=> CustomDrawerContent({...props})}>
       <Drawer.Screen name="Startsida" component={TabNavigation} />
       <Drawer.Screen name="Om oss" component={AboutScreen} />
-      <Drawer.Screen name="Intsällningar" component={SettingsScreen} />
+      <Drawer.Screen name="Inställningar" component={SettingsScreen} />
       <Drawer.Screen name="Bluetooth" component={BLEScreen} />
     </Drawer.Navigator>
   );
