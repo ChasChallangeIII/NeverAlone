@@ -51,64 +51,64 @@ const PhoneCall = ({ visible, onClose }) => {
     return (
         <>
             <StatusBar barStyle={'light-content'} />
-        <Modal
-            visible={visible}
-            onRequestClose={hangUp}
-            animationType='slide'
-            presentationStyle='pageSheet'
+            <Modal
+                visible={visible}
+                onRequestClose={hangUp}
+                animationType='slide'
+                presentationStyle='pageSheet'
 
-        >
-            <View
-                style={styles.modal}>
-                <View style={styles.container1}>
-                    <Image
-                        style={styles.image}
-                        source={require('../assets/images/image.png')} />
-                    <MyText
-                        style={[styles.text, styles.name]}>
-                        hubby
-                    </MyText>
-                    <View>
-                        <MyText style={styles.text}>{formatTime()}</MyText>
+            >
+                <View
+                    style={styles.modal}>
+                    <View style={styles.container1}>
+                        <Image
+                            style={styles.image}
+                            source={require('../assets/images/image.png')} />
+                        <MyText
+                            style={[styles.text, styles.name]}>
+                            hubby
+                        </MyText>
+                        <View>
+                            <MyText style={styles.text}>{formatTime()}</MyText>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.container2}>
-                    <FontAwesome6
-                        name="microphone-slash"
-                        style={[styles.text, styles.phoneButtons]}
-                        size={40} />
-                    <Ionicons
-                        name="keypad"
-                        size={40}
-                        style={[styles.text, styles.phoneButtons]} />
-                    <Octicons
-                        style={[styles.text, styles.phoneButtons]}
-                        name="unmute"
-                        size={40} />
-                    <View style={[styles.text, styles.phoneButtons, styles.secondRow]}>
-                        <MaterialIcons
-                            style={[styles.text, styles.phoneButtons, {alignSelf: 'flex-start'}]}
-                            name="add-call"
+                    <View style={styles.container2}>
+                        <FontAwesome6
+                            name="microphone-slash"
+                            style={[styles.text, styles.phoneButtons]}
                             size={40} />
-                        <FontAwesome
-                            style={[styles.text, styles.phoneButtons, { alignSelf: 'flex-start' }]}
-                            name="video-camera"
+                        <Ionicons
+                            name="keypad"
+                            size={40}
+                            style={[styles.text, styles.phoneButtons]} />
+                        <Octicons
+                            style={[styles.text, styles.phoneButtons]}
+                            name="unmute"
                             size={40} />
+                        <View style={[styles.text, styles.phoneButtons, styles.secondRow]}>
+                            <MaterialIcons
+                                style={[styles.text, styles.phoneButtons, { alignSelf: 'flex-start' }]}
+                                name="add-call"
+                                size={40} />
+                            <FontAwesome
+                                style={[styles.text, styles.phoneButtons, { alignSelf: 'flex-start' }]}
+                                name="video-camera"
+                                size={40} />
+                        </View>
                     </View>
+
+
+
+                    <Pressable onPress={hangUp}
+
+                    >
+                        <MaterialCommunityIcons name="phone-hangup" size={40} color={"white"} style={[styles.text, styles.hangUpButton]} />
+
+                    </Pressable>
+
                 </View>
-
-
-
-                <Pressable onPress={hangUp}
-
-                >
-                    <MaterialCommunityIcons name="phone-hangup" size={40} color={"white"} style={[styles.text, styles.hangUpButton]} />
-
-                </Pressable>
-
-            </View>
-        </Modal>
-</>
+            </Modal>
+        </>
     )
 }
 

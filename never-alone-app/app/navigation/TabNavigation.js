@@ -30,6 +30,13 @@ const TabNavigation = ({}) => {
         screenOptions={{
           headerShown: true,
           headerTitle: "",
+          // headerTitle: screen
+          headerTitleStyle: {
+            fontFamily:customTheme.fonts.regular.fontFamily
+          },
+          headerTintColor: customTheme.colors.text,
+          headerLeftContainerStyle: {},
+
           headerStyle: {
             backgroundColor: customTheme.colors.background,
             height: 120,

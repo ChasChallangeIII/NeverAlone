@@ -1,4 +1,4 @@
-import { Button, Modal, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Button, Image, Modal, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import MyText from './textwrappers/MyText'
 import { Switch } from 'react-native'
@@ -20,8 +20,11 @@ const Settings = () => {
     return (
         <View>
             <Pressable style={styles.button} onPress={() => setIsShown(true)}>
-                <MaterialIcons name="settings" size={customTheme.fonts.regular.fontSize} color={customTheme.colors.text} />
-                <MyText>Inställningar</MyText>
+                {/* <MaterialIcons name="settings" size={30} color={customTheme.colors.text} /> */}
+                <Image
+                    source={require('../assets/images/rim.jpg')}
+                    style={styles.image}
+                />
             </Pressable>
 
             <Modal
@@ -41,7 +44,7 @@ const Settings = () => {
                             onValueChange={toggleSwitch}
                             trackColor={{ false: customTheme.colors.primary, true: customTheme.colors.primary }}
                             thumbColor={isDark ? customTheme.colors.primary100 : customTheme.colors.primary500}
-                            // style={styles.switch}
+                          
                         />
                     </View>
 
@@ -56,6 +59,12 @@ const Settings = () => {
 export default Settings
 
 const createStyles = (theme) => StyleSheet.create({
+    image: {
+        width: 60,
+        height: 60,
+        borderRadius:60,
+        resizeMode:'cover'
+    },
     background: {
         backgroundColor: theme.colors.background,
         flex: 1,
