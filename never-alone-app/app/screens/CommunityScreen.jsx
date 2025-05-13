@@ -6,8 +6,8 @@ import BigText from '../components/textwrappers/BigText'
 
 
 const CommunityScreen = () => {
-  const { customTheme } = useTheme()
-  const styles = createStyles(customTheme)
+  const { customTheme, isDark } = useTheme()
+  const styles = createStyles(customTheme, isDark)
   const [isShown, setIsShown] = useState(false)
   const openModal = () => setIsShown(true)
   const closeModal = () => setIsShown(false)
@@ -62,7 +62,6 @@ const CommunityScreen = () => {
 
       <SafeAreaView style={styles.screen}>
         <View style={styles.container}>
-          <BigText>CommunityScreen</BigText>
 
           <Pressable
             onPress={openModal}>
@@ -81,7 +80,7 @@ const CommunityScreen = () => {
               <BigText>Skriv ett inlägg här till communityt</BigText>
               <TextInput
                 placeholder='Skriv ett inlägg...'
-                placeholderTextColor={customTheme.colors.primary50}
+                placeholderTextColor={isDark ? customTheme.colors.secondary50 : customTheme.colors.text}
                 style={styles.textArea}
                 multiline
               />
@@ -133,7 +132,7 @@ const CommunityScreen = () => {
 
 export default CommunityScreen
 
-const createStyles = (theme) => StyleSheet.create({
+const createStyles = (theme, isDark) => StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: theme.colors.background50,
@@ -142,7 +141,8 @@ const createStyles = (theme) => StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 20
+    gap: 20,
+    paddingHorizontal:8
   },
   modalContent: {
     flex: 1,
@@ -158,8 +158,8 @@ const createStyles = (theme) => StyleSheet.create({
     borderColor: theme.colors.secondary,
     minHeight: 80,
     width: 300,
-    backgroundColor: theme.colors.primary800,
-    color: theme.colors.secondary50,
+    backgroundColor: theme.colors.secondary400,
+    color: isDark ? theme.colors.secondary50 :theme.colors.secondary900,
     textAlign: 'left',
     justifyContent: 'flex-start',
     borderRadius: 6,
@@ -173,8 +173,8 @@ const createStyles = (theme) => StyleSheet.create({
   post: {
     gap: 20,
     padding: 20,
-    backgroundColor: theme.colors.background100,
-    borderRadius:5
+    backgroundColor: theme.colors.secondary50,
+    borderRadius:20
   },
   profileImage: {
     width: 50,

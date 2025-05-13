@@ -56,7 +56,7 @@ const NotificationsScreen = () => {
   return (
     <SafeAreaView style={styles.screen}>
          <View style={styles.container}>
-        <BigText>NotificationsScreen</BigText>
+    
 
         <FlatList
           data={notifications}
@@ -107,7 +107,7 @@ const createStyles = (theme) => StyleSheet.create({
   },
   notification: {
     gap: 5,
-    backgroundColor: theme.colors.background100,
+    backgroundColor: theme.colors.accent50,
     padding: 20,
     borderRadius: 20
   },

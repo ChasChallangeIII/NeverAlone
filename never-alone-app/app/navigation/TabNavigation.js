@@ -3,7 +3,7 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import HomeScreen from "../screens/HomeScreen";
 import React, { useState } from "react";
 import CommunityScreen from "../screens/CommunityScreen";
-import { Button, Image, Modal, Pressable, StatusBar, Text } from "react-native";
+import { Button, Image, Modal, Platform, Pressable, StatusBar, Text } from "react-native";
 import ReportScreen from "../screens/ReportScreen";
 import * as Location from "expo-location";
 import SearchScreen from "../screens/SearchScreen";
@@ -29,28 +29,32 @@ const TabNavigation = ({}) => {
       <Tab.Navigator
         screenOptions={{
           headerShown: true,
-          headerTitle: "",
-          // headerTitle: screen
           headerTitleStyle: {
-            fontFamily:customTheme.fonts.regular.fontFamily
+            fontFamily: customTheme.fonts.regular.fontFamily,
+         
           },
+          headerTitleAlign:'left',
           headerTintColor: customTheme.colors.text,
           headerLeftContainerStyle: {},
 
           headerStyle: {
             backgroundColor: customTheme.colors.background,
-            height: 120,
+            height: Platform.OS === "ios" ? 120 : 100,
           },
           headerLeft: () => <LogoInHeader />,
           headerRight: ({ canGoBack = true }) => <Settings />,
           tabBarStyle: {
             backgroundColor: customTheme.colors.background,
+            overflow: 'visible',
+            position:'absolute'
           },
           tabBarLabelStyle: {
             fontFamily: customTheme.fonts.regular.fontFamily,
           },
           tabBarActiveTintColor: customTheme.colors.primary,
           tabBarInactiveTintColor: customTheme.colors.text800,
+
+          animation: "shift",
         }}
       >
         {/* <Tab.Screen
@@ -64,11 +68,13 @@ const TabNavigation = ({}) => {
       /> */}
         <Tab.Screen
           name="Search"
+          // headerTitle='kko'
           component={SearchScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
               <MaterialIcons name="search" size={size} color={color} />
             ),
+            headerTitle: "Hitta vänner",
           }}
         />
         <Tab.Screen
@@ -78,6 +84,7 @@ const TabNavigation = ({}) => {
             tabBarIcon: ({ color, size }) => (
               <MaterialIcons name="notifications" size={size} color={color} />
             ),
+            headerTitle: "Aviseringar",
           }}
         />
         <Tab.Screen
@@ -104,6 +111,7 @@ const TabNavigation = ({}) => {
             tabBarIcon: ({ color, size }) => (
               <Entypo name="typing" size={size} color={color} />
             ),
+            headerTitle: "Rapportera händelse",
           }}
         />
       </Tab.Navigator>

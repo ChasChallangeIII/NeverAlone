@@ -40,13 +40,12 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         borderRadius: 35,
         justifyContent: 'center',
         alignItems: 'center',
-        height: '70',
-        width: '70',
-        padding: '10',
+        height: 70,
+        width: 70,
+        padding: 10,
         position: 'absolute',
-        bottom: '9',
-        left: '9',
-        overflow: 'visible'
+        bottom: 9,
+        left: 9
     },
     icon: {
         color: isDark ? theme.colors.accent100 : theme.colors.text

@@ -17,7 +17,6 @@ const ReportScreen = () => {
         keyboardVerticalOffset={100}
       >
         <ScrollView  contentContainerStyle={styles.container}>
-          <BigText>Rapportera händelser</BigText>
           <MyText>Vad har hänt? Betätta - vi finns här, läser och lyssnar! ♡</MyText>
         
           <TextInput
@@ -51,7 +50,7 @@ const createStyles = (theme) => StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.secondary700,
     minHeight: 400,
-    backgroundColor: theme.colors.background100,
+    backgroundColor: theme.colors.accent100,
     padding: 20,
     borderRadius: 9,
     fontFamily: theme.fonts.regular.fontFamily,
