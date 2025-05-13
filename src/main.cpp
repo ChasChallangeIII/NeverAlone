@@ -159,17 +159,17 @@ void loop()
     if (detectedEvent == SHORT_PRESS)
     {
       // Short press: LED on for 1 second
-      digitalWrite(ledPin, HIGH);
-      delay(1000); // LED stays on for 1 second
       digitalWrite(ledPin, LOW);
+      delay(1000); // LED stays on for 1 second
+      digitalWrite(ledPin, HIGH);
       message = "Short_Button_Press at " + String(now) + " ms";
     }
     else if (detectedEvent == LONG_PRESS)
     {
       // Long press: LED on for 3 seconds
-      digitalWrite(ledPin, HIGH);
-      delay(3000); // LED stays on for 3 seconds
       digitalWrite(ledPin, LOW);
+      delay(3000); // LED stays on for 3 seconds
+      digitalWrite(ledPin, HIGH);
       message = "Long_Button_Press at " + String(now) + " ms";
     }
 

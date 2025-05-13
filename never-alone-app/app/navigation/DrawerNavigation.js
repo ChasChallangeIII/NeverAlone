@@ -5,6 +5,7 @@ import SettingsScreen from "../screens/SettingsScreen";
 import AboutScreen from "../screens/AboutScreen";
 import TabNavigation from "./TabNavigation";
 import CustomDrawerContent from "./CustomDrawerContent";
+import BLEScreen from "../screens/BLEScreen";
 
 const Drawer = createDrawerNavigator();
 const DrawerNavigation = () => {
@@ -13,6 +14,7 @@ const DrawerNavigation = () => {
       <Drawer.Screen name="Startsida" component={TabNavigation} />
       <Drawer.Screen name="Om oss" component={AboutScreen} />
       <Drawer.Screen name="Intsällningar" component={SettingsScreen} />
+      <Drawer.Screen name="Bluetooth" component={BLEScreen} />
     </Drawer.Navigator>
   );
 };
