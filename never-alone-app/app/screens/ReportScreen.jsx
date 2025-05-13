@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
@@ -10,18 +10,25 @@ const ReportScreen = () => {
   const styles = createStyles(customTheme)
   return (
     <SafeAreaView style= {styles.screen} >
-      <View style={styles.container}>
-        <BigText>Rapportera händelser</BigText>
-        <MyText>Vad har hänt? Betätta - vi finns här, läser och lyssnar! ♡</MyText>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+      
+        behavior= {Platform.OS==='ios'?'padding':'height'}
+        keyboardVerticalOffset={100}
+      >
+        <ScrollView  contentContainerStyle={styles.container}>
+          <BigText>Rapportera händelser</BigText>
+          <MyText>Vad har hänt? Betätta - vi finns här, läser och lyssnar! ♡</MyText>
         
-        <TextInput
-          style={styles.textarea}
-          multiline
-          placeholder='Berätta..'
-          placeholderTextColor={customTheme.colors.text}
-          
-        />
-      </View>
+          <TextInput
+            style={styles.textarea}
+            multiline
+            placeholder='Berätta..'
+            placeholderTextColor={customTheme.colors.text}
+        
+          />
+        </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   )
 }
@@ -36,7 +43,8 @@ const createStyles = (theme) => StyleSheet.create({
   },
   container: {
     padding: 20,
-    gap: 30
+    gap: 30,
+    // paddingBottom:40
   },
   textarea: {
     color: theme.colors.text,
@@ -46,6 +54,7 @@ const createStyles = (theme) => StyleSheet.create({
     backgroundColor: theme.colors.background100,
     padding: 20,
     borderRadius: 9,
-    fontFamily: theme.fonts.regular.fontFamily
+    fontFamily: theme.fonts.regular.fontFamily,
+    textAlignVertical:'top'
   }
 })

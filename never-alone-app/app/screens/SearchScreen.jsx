@@ -46,7 +46,8 @@ const createStyles = (theme) => StyleSheet.create({
     paddingHorizontal: 15,
     backgroundColor: theme.colors.backgroundColor,
     width: 300,
-    borderRadius:50
+    borderRadius: 50,
+    textAlignVertical:'top'
 
   }
 })

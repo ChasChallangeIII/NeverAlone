@@ -164,7 +164,8 @@ const createStyles = (theme) => StyleSheet.create({
     justifyContent: 'flex-start',
     borderRadius: 6,
     padding: '17',
-    fontFamily: theme.fonts.regular.fontFamily
+    fontFamily: theme.fonts.regular.fontFamily,
+    textAlignVertical:'top'
   },
   posts: {
     gap:30
