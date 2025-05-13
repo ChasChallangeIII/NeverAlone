@@ -42,6 +42,7 @@ const createStyles = (theme) => StyleSheet.create({
     color: theme.colors.secondary800,
     height: 50,
     fontSize: theme.fonts.regular.fontSize,
+    fontFamily: theme.fonts.regular.fontFamily,
     paddingHorizontal: 15,
     backgroundColor: theme.colors.backgroundColor,
     width: 300,

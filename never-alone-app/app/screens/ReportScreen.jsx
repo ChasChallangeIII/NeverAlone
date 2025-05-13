@@ -15,7 +15,11 @@ const ReportScreen = () => {
         <MyText>Vad har hänt? Betätta - vi finns här, läser och lyssnar! ♡</MyText>
         
         <TextInput
-        
+          style={styles.textarea}
+          multiline
+          placeholder='Berätta..'
+          placeholderTextColor={customTheme.colors.text}
+          
         />
       </View>
     </SafeAreaView>
@@ -32,6 +36,16 @@ const createStyles = (theme) => StyleSheet.create({
   },
   container: {
     padding: 20,
-    gap: 10
+    gap: 30
+  },
+  textarea: {
+    color: theme.colors.text,
+    borderWidth: 1,
+    borderColor: theme.colors.secondary700,
+    minHeight: 400,
+    backgroundColor: theme.colors.background100,
+    padding: 20,
+    borderRadius: 9,
+    fontFamily: theme.fonts.regular.fontFamily
   }
 })

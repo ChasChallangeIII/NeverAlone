@@ -163,7 +163,8 @@ const createStyles = (theme) => StyleSheet.create({
     textAlign: 'left',
     justifyContent: 'flex-start',
     borderRadius: 6,
-    padding:'17'
+    padding: '17',
+    fontFamily: theme.fonts.regular.fontFamily
   },
   posts: {
   },
