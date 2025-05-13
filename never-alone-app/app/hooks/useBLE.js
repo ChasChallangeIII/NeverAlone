@@ -115,7 +115,7 @@ const connectToDevice = async (device) => {
           const decoded = base64.decode(characteristic.value);
           console.log('📬 Received from ESP32:', decoded);
 
-          // You can now do something with `decoded`, like update state
+          //Fake call
         }
       }
     );
