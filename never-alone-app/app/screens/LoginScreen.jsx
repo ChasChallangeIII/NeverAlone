@@ -36,7 +36,9 @@ const LoginScreen = () => {
           <MyText>Användarnamn</MyText>
           <TextInput
             placeholder='Rim'
+            placeholderTextColor={customTheme.colors.text}
             style={styles.input}
+            returnKeyType='next'
           />
         </View>
 
@@ -44,8 +46,11 @@ const LoginScreen = () => {
           <MyText>Lösenord</MyText>
           <TextInput
             placeholder='******'
+            placeholderTextColor={customTheme.colors.text }
             secureTextEntry
             style={styles.input}
+            returnKeyType='previous'
+
 
           />
         </View>
@@ -112,7 +117,9 @@ const createStyles = (theme) => StyleSheet.create({
     borderRadius: 4,
     padding: 10,
     borderColor: theme.colors.secondary600,
-    width: 200
+    color: theme.colors.text,
+    width: 200,
+    
   },
   button: {
     backgroundColor: theme.colors.primary600,
