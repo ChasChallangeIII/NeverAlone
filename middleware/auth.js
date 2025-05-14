@@ -34,7 +34,7 @@ export const authorizeAdmin = async (req, res, next) => {
   try {
     const user = jwt.verify(token, JWT_SECRET);
 
-    if (!user || !user.admin) {
+    if (!user || !user.isAdmin) {
       return next(new NotAdminError());
     }
 

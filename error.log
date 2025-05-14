@@ -709,3 +709,80 @@
     at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
     at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
     at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:32:22)
+2025-05-14T10:11:15.867Z [ERROR] Error: Could not find /api/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-14T10:11:15.874Z [ERROR] Error: Could not find /api/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-14T10:15:05.399Z [ERROR] Error: Could not find /api/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-14T10:15:05.405Z [ERROR] Error: Could not find /api/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-14T10:15:58.563Z [ERROR] Error: Not Admin, access denied
+    at authorizeAdmin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:38:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-14T10:17:28.506Z [ERROR] Error: Not Admin, access denied
+    at authorizeAdmin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:40:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-14T10:17:28.517Z [ERROR] Error: Not Admin, access denied
+    at authorizeAdmin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:40:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
