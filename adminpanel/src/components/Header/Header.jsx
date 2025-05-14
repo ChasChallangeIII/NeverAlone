@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
 import { FaBell } from 'react-icons/fa';
-import { useAuth } from '../../pages/AuthContext/AuthContext'; 
+import { useAuth } from '../../hooks/useAuth';
 import '../../components/Header/Header.css';
 import { useSelector } from 'react-redux';
 

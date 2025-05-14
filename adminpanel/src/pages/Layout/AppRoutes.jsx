@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import RootLayout from '../../pages/Layout/RootLayout';
 import Spinner from '../../components/Spinner/Spinner';
 import ProtectedRoute from '../../pages/Layout/ProtectedRoute';
-import { useAuth } from '../../pages/AuthContext/AuthContext'
+import { useAuth } from '../../hooks/useAuth';
 
 const Home = lazy(() => import('../Mainpages/Home'));
 const Users = lazy(() => import('../Mainpages/Users'));
