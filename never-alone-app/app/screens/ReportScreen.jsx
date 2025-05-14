@@ -24,7 +24,7 @@ const ReportScreen = () => {
             multiline
             placeholder='Berätta..'
             placeholderTextColor={customTheme.colors.text}
-        
+            returnKeyType='go'
           />
         </ScrollView>
       </KeyboardAvoidingView>

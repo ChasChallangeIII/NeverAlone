@@ -1,13 +1,18 @@
 import { SafeAreaView, StyleSheet, Text, View, TextInput, Platform, StatusBar } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
+import { useUser } from '../context/UserContext'
 
 
 const SearchScreen = () => {
   const { customTheme, isDark } = useTheme()
+  const { username} = useUser()
   const styles = createStyles(customTheme)
+
+
+
   return (
     <SafeAreaView style={styles.screen} >
       <StatusBar
@@ -20,7 +25,10 @@ const SearchScreen = () => {
           style={styles.searchBar}
           placeholder='sök..'
           placeholderTextColor={customTheme.colors.secondary700}
+          returnKeyType='go'
         />
+
+        <BigText>Hej { username}, vad vill du göra idag?</BigText>
       </View>
     </SafeAreaView>
   )

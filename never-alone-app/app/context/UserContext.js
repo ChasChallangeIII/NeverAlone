@@ -1,10 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const UserContext = createContext();
@@ -45,6 +40,7 @@ export const UserProvider = ({ children }) => {
       setError(error.message);
     }
   };
+  const clearError = () => setError(false);
 
   const value = {
     username,
@@ -52,6 +48,8 @@ export const UserProvider = ({ children }) => {
     error,
     saveUsername,
     clearUsername,
+    clearError,
+    setError,
   };
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

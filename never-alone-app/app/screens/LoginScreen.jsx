@@ -1,5 +1,5 @@
-import { Button, Platform, SafeAreaView, StyleSheet, TextInput, View, StatusBar, Image, Pressable } from 'react-native'
-import React from 'react'
+import { Button, ScrollView, Platform, SafeAreaView, StyleSheet, TextInput, View, StatusBar, Image, Pressable } from 'react-native'
+import React, { useState } from 'react'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
 import { useNavigation } from '@react-navigation/native'
@@ -10,69 +10,82 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 
 const LoginScreen = () => {
   const { customTheme, isDark } = useTheme()
-  const styles = createStyles(customTheme)
   const navigation = useNavigation()
+  const { username, saveUsername, error, clearError, setError, isLoading } = useUser()
+  // const [inputUserData, setInputUserData] = useState({
+  //   username: '',
+  //   password:''
+  // })
+  const [inputUsername, setInputUsername] = useState(null)
+  const onChangeInputUsername = (text) => {
+    clearError()
+    setInputUsername(text)
+}
 
-  const { username, saveUsername, error, isLoading } = useUser()
+  const styles = createStyles(customTheme)
 
-  const login = () => {
-    // saveUsername()
-    navigation.navigate('Home')
+  const login = async (name) => {
+    if (!inputUsername) {
+      setError('Du har inte skrivit ditt namn')
+      return
+    }
+    await saveUsername(name)
+    if (!error) {
+      navigation.navigate('Home')
+    }
   }
   return (
-    <SafeAreaView style={styles.SafeAreaView}>
-      <Image source={
-        isDark ?
-          require('../assets/images/darkLogo2.png') :
-          require('../assets/images/logo.png')
-      }
-        style={styles.logo} />
-      <View
-        style={styles.form}
-      >
-        <BigText>Logga in</BigText>
-
-        <View style={styles.field}>
-          <MyText>Användarnamn</MyText>
-          <TextInput
-            placeholder='Rim'
-            placeholderTextColor={customTheme.colors.text}
-            style={styles.input}
-            returnKeyType='next'
-          />
-        </View>
-
-        <View style={styles.field}>
-          <MyText>Lösenord</MyText>
-          <TextInput
-            placeholder='******'
-            placeholderTextColor={customTheme.colors.text }
-            secureTextEntry
-            style={styles.input}
-            returnKeyType='previous'
-
-
-          />
-        </View>
-
-        <Pressable
-          onPress={login}
-          style={styles.button}
-        >
-          <MyText style={{ color: customTheme.colors.primary50 }}>
-            Logga in
-          </MyText>
-        </Pressable>
-
-
-        {error && (
-          <View style={styles.errorView}>
-            <AntDesign name="frowno" style={styles.icon} />
-            <MyText style={styles.error}>{error}</MyText>
+    <SafeAreaView style={styles.screen} >
+      <ScrollView >
+        <View style={styles.container}>
+          <Image source={
+            isDark ?
+              require('../assets/images/darkLogo2.png') :
+              require('../assets/images/logo.png')
+          }
+            style={styles.logo} />
+          <View
+            style={styles.form}
+          >
+            <BigText>Logga in</BigText>
+            <View style={styles.field}>
+              <MyText>Användarnamn</MyText>
+              <TextInput
+                placeholder='användarnamn...'
+                placeholderTextColor={customTheme.colors.text}
+                style={styles.input}
+                returnKeyType='go'
+                value={inputUsername}
+                onChangeText={onChangeInputUsername}
+              />
+            </View>
+            <View style={styles.field}>
+              <MyText>Lösenord</MyText>
+              <TextInput
+                placeholder='******'
+                placeholderTextColor={customTheme.colors.text}
+                secureTextEntry
+                style={styles.input}
+                returnKeyType='go'
+              />
+            </View>
+            <Pressable
+              onPress={() => login(inputUsername)}
+              style={styles.button}
+            >
+              <MyText style={{ color: customTheme.colors.primary50 }}>
+                Logga in
+              </MyText>
+            </Pressable>
+            {error && (
+              <View style={styles.errorView}>
+                <AntDesign name="frowno" style={styles.icon} />
+                <MyText style={styles.error}>{error}</MyText>
+              </View>
+            )}
           </View>
-        )}
-
-      </View>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   )
 }
@@ -80,11 +93,13 @@ const LoginScreen = () => {
 export default LoginScreen
 
 const createStyles = (theme) => StyleSheet.create({
-  SafeAreaView: {
+  screen: {
     flex: 1,
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     backgroundColor: theme.colors.background,
-    // justifyContent: 'center',
+  },
+  container: {
+        // justifyContent: 'center',
     alignItems: 'center',
     gap: 60,
     paddingHorizontal: 10
@@ -119,7 +134,7 @@ const createStyles = (theme) => StyleSheet.create({
     borderColor: theme.colors.secondary600,
     color: theme.colors.text,
     width: 200,
-    
+
   },
   button: {
     backgroundColor: theme.colors.primary600,

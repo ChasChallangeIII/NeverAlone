@@ -83,6 +83,7 @@ const CommunityScreen = () => {
                 placeholderTextColor={isDark ? customTheme.colors.secondary50 : customTheme.colors.text}
                 style={styles.textArea}
                 multiline
+                returnKeyType='go'
               />
               <Button onPress={closeModal} title='avbryt' />
             </View>
