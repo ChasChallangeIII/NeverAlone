@@ -8,9 +8,13 @@ const CommentSection = ({ reportId, adminId, closeModal }) => {
     const comments = useSelector(state => state.reportComments.commentsByReport[reportId] || []);
     const [text, setText] = useState('');
 
-    useEffect(() => {
-        dispatch(fetchCommentsByReportId(reportId));
-    }, [dispatch, reportId]);
+        useEffect(() => {
+            dispatch(fetchCommentsByReportId(reportId));
+        }, [dispatch, reportId]);
+
+        useEffect(() => {
+            console.log("Kommentarer laddade för:", reportId, comments);
+        }, [comments, reportId]);
 
 const handlePost = async () => {
     if (!text.trim()) return;
@@ -29,13 +33,16 @@ const handlePost = async () => {
         <div className="comment-section">
             <h4 className='notes-title'>Noteringar:</h4>
             <ul className="comment-list">
-            {comments.map((c) => (
-                <li key={c.id}>
-                    {new Date(c.created_at).toLocaleString()}: {c.comment}
-                </li>
-                ))}
+                {Array.isArray(comments) && comments.length > 0 ? (
+                    comments.map((c) => (
+                        <li key={c.id}>
+                            {new Date(c.created_at).toLocaleString()}: {c.comment}
+                        </li>
+                    ))
+                ) : (
+                    <li>Inga kommentarer ännu.</li>
+                )}
             </ul>
-
             <textarea
                 className="comment-textarea"
                 value={text}

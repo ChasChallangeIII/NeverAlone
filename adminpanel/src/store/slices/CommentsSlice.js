@@ -1,14 +1,15 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchCommentsByReportId = createAsyncThunk(
-    'comments/fetchByReportId',
-    async (reportId) => {
-    const res = await fetch(`/api/comments`);
+  'comments/fetchByReportId',
+  async (reportId) => {
+    const res = await fetch(`/api/comments?report_id=${reportId}`);
     const data = await res.json();
 
-    
-    return { reportId, comments: data.filter(c => c.report_id === reportId) };
-    }
+    const commentsForReport = data.rows.filter(comment => comment.report_id === reportId);
+
+    return { reportId, comments: commentsForReport };
+  }
 );
 
 
