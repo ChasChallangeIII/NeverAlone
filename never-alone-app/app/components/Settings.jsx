@@ -1,4 +1,4 @@
-import { Button, Image, Modal, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Button, Image, Modal, Platform, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import MyText from './textwrappers/MyText'
 import { Switch } from 'react-native'
@@ -15,7 +15,7 @@ const Settings = () => {
         // setIsEnabled(!value)
         toggleTheme()
     }
-    const onClose = () => setIsShown(false) 
+    const onClose = () => setIsShown(false)
 
     return (
         <View>
@@ -42,9 +42,17 @@ const Settings = () => {
                         <Switch
                             value={isDark}
                             onValueChange={toggleSwitch}
-                            trackColor={{ false: customTheme.colors.primary, true: customTheme.colors.primary }}
-                            thumbColor={isDark ? customTheme.colors.primary100 : customTheme.colors.primary500}
-                          
+                            trackColor={{
+                                false: 'default',
+                                true: customTheme.colors.primary
+                            }}
+                            thumbColor={
+                                isDark && Platform.OS === 'ios' ? customTheme.colors.primary100 :
+                                    isDark && Platform.OS === 'android' ? customTheme.colors.primary900 : 
+                                customTheme.colors.primary500
+                            }
+
+
                         />
                     </View>
 
@@ -62,8 +70,8 @@ const createStyles = (theme) => StyleSheet.create({
     image: {
         width: 60,
         height: 60,
-        borderRadius:60,
-        resizeMode:'cover'
+        borderRadius: 60,
+        resizeMode: 'cover'
     },
     background: {
         backgroundColor: theme.colors.background,
@@ -76,7 +84,7 @@ const createStyles = (theme) => StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between'
     },
-  
+
     button: {
         flexDirection: 'row',
         justifyContent: 'center',

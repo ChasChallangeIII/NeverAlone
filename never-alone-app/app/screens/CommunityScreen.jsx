@@ -1,4 +1,4 @@
-import { Button, FlatList, Image, Modal, Pressable, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Button, FlatList, Image, Modal, Platform, Pressable, SafeAreaView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import MyText from '../components/textwrappers/MyText'
 import { useTheme } from '../context/ThemeContext'
@@ -136,13 +136,15 @@ const createStyles = (theme, isDark) => StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: theme.colors.background50,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+
   },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     gap: 20,
-    paddingHorizontal:8
+    paddingHorizontal: 8
   },
   modalContent: {
     flex: 1,
@@ -150,7 +152,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     padding: 20,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    gap:'40'
+    gap: '40'
   },
 
   textArea: {
@@ -159,22 +161,22 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     minHeight: 80,
     width: 300,
     backgroundColor: theme.colors.secondary400,
-    color: isDark ? theme.colors.secondary50 :theme.colors.secondary900,
+    color: isDark ? theme.colors.secondary50 : theme.colors.secondary900,
     textAlign: 'left',
     justifyContent: 'flex-start',
     borderRadius: 6,
     padding: '17',
     fontFamily: theme.fonts.regular.fontFamily,
-    textAlignVertical:'top'
+    textAlignVertical: 'top'
   },
   posts: {
-    gap:30
+    gap: 30
   },
   post: {
     gap: 20,
     padding: 20,
     backgroundColor: theme.colors.secondary50,
-    borderRadius:20
+    borderRadius: 20
   },
   profileImage: {
     width: 50,

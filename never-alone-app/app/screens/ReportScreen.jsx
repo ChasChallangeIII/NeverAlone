@@ -1,4 +1,4 @@
-import { KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
@@ -38,7 +38,8 @@ const createStyles = (theme) => StyleSheet.create({
   screen: {
     flex:1,
     backgroundColor: theme.colors.background50,
-   
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+
   },
   container: {
     padding: 20,

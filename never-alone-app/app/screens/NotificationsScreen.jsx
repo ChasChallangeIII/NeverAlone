@@ -1,4 +1,4 @@
-import { FlatList, Image, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { FlatList, Image, Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 import MyText from '../components/textwrappers/MyText'
@@ -92,6 +92,8 @@ const createStyles = (theme) => StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: theme.colors.background50,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+
   },
   container: {
     padding: 20,

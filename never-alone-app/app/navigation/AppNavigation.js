@@ -4,16 +4,18 @@ import DrawerNavigation from "./DrawerNavigation";
 import { ThemeProvider, useTheme } from "../context/ThemeContext";
 import TabNavigation from "./TabNavigation";
 import { StatusBar } from "expo-status-bar";
+import StackNavigation from "./StackNavigation";
 
 const AppNavigation = () => {
 
   return (
-    <ThemeProvider>
+   
       <NavigationContainer>
 
-        <TabNavigation />
+        <StackNavigation/>
+        {/* <TabNavigation /> */}
       </NavigationContainer>
-    </ThemeProvider>
+   
   );
 };
 

@@ -1,8 +1,13 @@
-import AppNavigation from './app/navigation/AppNavigation'
+import { ThemeProvider } from "./app/context/ThemeContext";
+import { UserProvider } from "./app/context/UserContext";
+import AppNavigation from "./app/navigation/AppNavigation";
 
 export default function App() {
   return (
-    <AppNavigation/>
-  )
+    <ThemeProvider>
+      <UserProvider>
+        <AppNavigation />
+      </UserProvider>
+    </ThemeProvider>
+  );
 }
-

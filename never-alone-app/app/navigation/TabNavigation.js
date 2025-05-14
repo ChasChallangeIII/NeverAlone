@@ -25,15 +25,17 @@ const TabNavigation = ({}) => {
 
   return (
     <>
-      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} />
+       <StatusBar
+              barStyle={isDark ? 'light-content' : 'dark-content'}
+              backgroundColor={customTheme.colors.background}
+            />
       <Tab.Navigator
         screenOptions={{
           headerShown: true,
           headerTitleStyle: {
             fontFamily: customTheme.fonts.regular.fontFamily,
-         
           },
-          headerTitleAlign:'left',
+          headerTitleAlign: "left",
           headerTintColor: customTheme.colors.text,
           headerLeftContainerStyle: {},
 
@@ -45,8 +47,8 @@ const TabNavigation = ({}) => {
           headerRight: ({ canGoBack = true }) => <Settings />,
           tabBarStyle: {
             backgroundColor: customTheme.colors.background,
-            overflow: 'visible',
-            position:'absolute'
+            overflow: "visible",
+            position: "absolute",
           },
           tabBarLabelStyle: {
             fontFamily: customTheme.fonts.regular.fontFamily,
@@ -57,15 +59,6 @@ const TabNavigation = ({}) => {
           animation: "shift",
         }}
       >
-        {/* <Tab.Screen
-        name="Hem"
-        component={HomeScreen}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="home" size={size} color={color} />
-          ),
-        }}
-      /> */}
         <Tab.Screen
           name="Search"
           // headerTitle='kko'
