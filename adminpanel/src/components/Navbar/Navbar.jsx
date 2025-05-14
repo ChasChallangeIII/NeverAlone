@@ -23,12 +23,12 @@ const Sidebar = () => {
                 <button className="close-button" onClick={closeSidebar}>✖</button>
                 {isOpen && <h2 className="company-name">NeverAlone</h2>}
                 <ul>
-                    <li><Link to="/" onClick={closeSidebar}><FaHome /> Home</Link></li>
-                    <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Statistics</Link></li>
-                    <li><Link to="/reports" onClick={closeSidebar}><FaChartBar /> Reports</Link></li>
-                    <li><Link to="/profile" onClick={closeSidebar}><FaUser /> Users</Link></li> 
-                    <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Settings</Link></li>
-                    <li><Link to="/help" onClick={closeSidebar}><FaQuestionCircle /> Help</Link></li>
+                    <li><Link to="/" onClick={closeSidebar}><FaHome /> Hem</Link></li>
+                    <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Statistik</Link></li>
+                    <li><Link to="/reports" onClick={closeSidebar}><FaChartBar /> Rapporter</Link></li>
+                    <li><Link to="/profile" onClick={closeSidebar}><FaUser /> Användardata</Link></li> 
+                    <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Inställningar</Link></li>
+                    <li><Link to="/help" onClick={closeSidebar}><FaQuestionCircle /> Support</Link></li>
                 </ul>
                 {!isOpen && (
                     <div className="toggle-arrow" onClick={toggleSidebar}>

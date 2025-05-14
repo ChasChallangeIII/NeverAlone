@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_URL = 'https://neveralone.onrender.com/api/reports';
+const API_URL = 'https://neveralone.onrender.com/admin/reports';
+
 
 
 
@@ -19,12 +20,6 @@ export const fetchReports = createAsyncThunk('reports/fetchReports', async () =>
         },
     });
 
-    console.log("API Response:", response); 
-    console.log("Request Headers:", {
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json',
-    });
-
     if (!response.ok) {
             const errorText = await response.text();
             console.error('API error (text):', errorText);
@@ -34,6 +29,35 @@ export const fetchReports = createAsyncThunk('reports/fetchReports', async () =>
     const data = await response.json();
     return data.reports;
 });
+
+export const updateReportStatus = createAsyncThunk(
+    'reports/updateStatus',
+    async ({ reportId, newStatus }, { rejectWithValue }) => {
+        const token = localStorage.getItem('token');
+
+        try {
+            const response = await fetch(`${API_URL}/${reportId}`, {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ status: newStatus }),
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('Fel vid statusuppdatering:', errorText);
+                return rejectWithValue(errorText);
+            }
+
+            const updatedReport = await response.json();
+            return updatedReport;
+        } catch (error) {
+            return rejectWithValue(error.message);
+        }
+    }
+);
 
 const reportsSlice = createSlice({
     name: 'reports',

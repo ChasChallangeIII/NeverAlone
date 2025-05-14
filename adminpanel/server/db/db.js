@@ -9,16 +9,18 @@ const pool = new Pool({
     ssl: { rejectUnauthorized: false }
 });
 
-export async function executeQuery(sql) {
+export async function executeQuery(sql, params = []) {
     const client = await pool.connect();
     try {
-        const result = await client.query(sql);
-        return result.rows;
+        const result = await client.query(sql, params);
+        return result;
     } finally {
         client.release();
     }
 }
+
 export async function getReportsFromDatabase() {
     const sql = 'SELECT * FROM reports';
-    return executeQuery(sql);
+    const result = await executeQuery(sql);
+    return result.rows;
 }

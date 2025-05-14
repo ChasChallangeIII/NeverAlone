@@ -12,16 +12,16 @@ const CommentSection = ({ reportId, adminId, closeModal }) => {
         dispatch(fetchCommentsByReportId(reportId));
     }, [dispatch, reportId]);
 
-    const handlePost = () => {
-        if (!text.trim()) return;
+const handlePost = async () => {
+    if (!text.trim()) return;
 
-        dispatch(postComment({
-            report_id: reportId,
-            admin_id: adminId,
-            comment: text,
-        }));
+    await dispatch(postComment({
+        report_id: reportId,
+        admin_id: adminId,
+        comment: text,
+    }));
 
-        setText('');
+    setText('');
         closeModal(); 
     };
 
@@ -29,10 +29,10 @@ const CommentSection = ({ reportId, adminId, closeModal }) => {
         <div className="comment-section">
             <h4 className='notes-title'>Noteringar:</h4>
             <ul className="comment-list">
-                {comments.map((c, i) => (
-                    <li key={i}>
-                        {new Date(c.created_at).toLocaleString()}: {c.comment}
-                    </li>
+            {comments.map((c) => (
+                <li key={c.id}>
+                    {new Date(c.created_at).toLocaleString()}: {c.comment}
+                </li>
                 ))}
             </ul>
 

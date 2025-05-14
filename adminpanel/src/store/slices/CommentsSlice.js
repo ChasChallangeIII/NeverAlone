@@ -6,7 +6,7 @@ export const fetchCommentsByReportId = createAsyncThunk(
     const res = await fetch(`/api/comments`);
     const data = await res.json();
 
-    // Filtrera på report_id
+    
     return { reportId, comments: data.filter(c => c.report_id === reportId) };
     }
 );

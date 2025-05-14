@@ -34,9 +34,10 @@ const UserStats = () => {
         fetch('http://localhost:8080/api/users')
             .then(response => response.json())
             .then(data => {
-                setUserData(data);
-                processGenderData(data);
-                processBirthDateData(data);
+                const users = data.rows; 
+                setUserData(users);
+                processGenderData(users);
+                processBirthDateData(users);
             })
             .catch(error => console.error('Error fetching user data:', error));
     }, []);
