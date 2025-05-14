@@ -13,7 +13,7 @@
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/drawer": "^7.3.9",
     "@react-navigation/native": "^7.1.6",
-    "device": "^0.3.12",
+    "device": "^0.2.0",
     "expo": "53.0.9",
     "expo-dev-client": "~5.1.8",
     "expo-device": "~7.1.4",

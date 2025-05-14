@@ -6,7 +6,7 @@
 #include <vector>
 
 const int buttonPin = 2; // GPIO2 (Button pin)
-const int ledPin = 3;   // GPIO3 (LED pin for feedback)
+const int ledPin = 3;    // GPIO3 (LED pin for feedback)
 
 BLEServer *pServer = nullptr;
 BLECharacteristic *pTxCharacteristic = nullptr;
