@@ -86,7 +86,11 @@ export const performAdminLogin = async (adminData) => {
     throw new PasswordError();
   }
 
-  return admin;
+  return {
+    id: admin.id,
+    username: admin.username,
+    isAdmin: true,
+  };
 };
 
 export const deleteAccount = async (userId, deleteCommand = "") => {
