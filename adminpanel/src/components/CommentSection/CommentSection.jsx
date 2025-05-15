@@ -12,9 +12,6 @@ const CommentSection = ({ reportId, adminId, closeModal }) => {
             dispatch(fetchCommentsByReportId(reportId));
         }, [dispatch, reportId]);
 
-        useEffect(() => {
-            console.log("Kommentarer laddade för:", reportId, comments);
-        }, [comments, reportId]);
 
 const handlePost = async () => {
     if (!text.trim()) return;
@@ -40,7 +37,7 @@ const handlePost = async () => {
                         </li>
                     ))
                 ) : (
-                    <li>Inga kommentarer ännu.</li>
+                    <li>Inga noteringar i ärendet ännu.</li>
                 )}
             </ul>
             <textarea

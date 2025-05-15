@@ -17,7 +17,7 @@ const Sidebar = () => {
     return (
         <div>
             <button onClick={toggleSidebar} className="toggle-button">
-                {isOpen ? 'Close' : 'Open'} Menu
+                {isOpen ? 'Stäng' : 'Öppna'} Meny
             </button>
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <button className="close-button" onClick={closeSidebar}>✖</button>

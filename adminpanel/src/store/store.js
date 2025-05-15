@@ -8,5 +8,6 @@ export const store = configureStore({
         reports: reportsReducer,
         reportComments: reportCommentsReducer,
         auth: authReducer,
+        
     }
 });

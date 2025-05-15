@@ -18,7 +18,6 @@ const token = authHeader.split(' ')[1];
         if (err) {
             return res.status(401).json({ message: "Token är ogiltig eller har gått ut." });
         }
-        console.log(token);
         req.user = decoded; 
         next();
     });

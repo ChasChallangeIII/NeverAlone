@@ -75,10 +75,11 @@ const Reports = () => {
 
             {activeReport && (
                 <Modal isOpen={!!activeReport} onClose={closeModal}>
-                    <h3>Rapportdetaljer</h3>
+                    <h3><strong>Rapportdetaljer</strong></h3>
                     <p><strong>Tid:</strong> {new Date(activeReport.time).toLocaleString()}</p>
                     <p><strong>Orsak:</strong> {activeReport.cause}</p>
                     <p><strong>Meddelande:</strong> {activeReport.message}</p>
+                    <p><strong>Ärendestatus:</strong> {activeReport.status}</p>
 
                     <div style={{ marginTop: '20px' }}>
                         <CommentSection 
