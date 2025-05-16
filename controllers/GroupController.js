@@ -2,6 +2,7 @@ import {
   deleteGroupMember,
   insertGroupAndAdmin,
   insertNewGroupMember,
+  selectGroups,
 } from "../services/groupService.js";
 
 export const createGroup = async (req, res, next) => {
@@ -36,6 +37,17 @@ export const leaveGroup = async (req, res, next) => {
     await deleteGroupMember(userId, groupId);
 
     res.status(200).json({ message: "Successfully left group", success: true });
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const getGroups = async (req, res, next) => {
+  const { q: query } = req.query;
+
+  try {
+    const groups = await selectGroups(query);
+    res.status(200).json({ groups, success: true });
   } catch (err) {
     next(err);
   }

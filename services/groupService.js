@@ -76,3 +76,20 @@ export const deleteGroupMember = async (userId, groupId) => {
     throw new UserIsNotGroupMemberError();
   }
 };
+
+export const selectGroups = async (searchQuery) => {
+  let query = `
+    SELECT g.group_name, COUNT(g_m.id) + COUNT(g_a.id) AS total_members
+    FROM groups g
+    LEFT JOIN group_members g_m ON g_m.group_id = g.id
+    LEFT JOIN group_admins g_a ON g_a.group_id = g.id
+  `;
+
+  if (searchQuery) {
+    query += ` WHERE g.group_name ILIKE $1`;
+  }
+
+  query += ` GROUP BY g.id;`;
+
+  return await executeQuery(query, [`%${searchQuery}%`]);
+};
