@@ -5,3 +5,9 @@ export class GroupCreationError extends AppError {
     super(message, 400);
   }
 }
+
+export class UserAlreadyInGroupError extends AppError {
+  constructor(message = "User is already a member of the group") {
+    super(message, 400);
+  }
+}
