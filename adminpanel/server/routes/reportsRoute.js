@@ -1,6 +1,6 @@
 import express from 'express';
 import { getReports } from '../controllers/reportsController.js';
-import { verifyToken, authorizeAdmin } from '../middleware/authMiddleware.js';
+import { verifyToken, authorizeAdmin } from '../middleware/AuthMiddleware.js';
 
 const router = express.Router();
 
