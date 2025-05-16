@@ -10,6 +10,8 @@ export const createTables = async () => {
   await ensureGroupMembersTable();
   await ensureGroupAdminsTable();
   await ensureContactsTable();
+  await ensurePostsTable();
+  await ensurePostCommentsTable();
 };
 
 export const createIndexes = async () => {
@@ -191,6 +193,43 @@ const ensureReportCommentsTable = async () => {
     console.log("✅ Report comments table ensured.");
   } catch (err) {
     console.error("Error ensuring report comments table", err);
+  }
+};
+
+const ensurePostsTable = async () => {
+  try {
+    const query = `
+      CREATE TABLE IF NOT EXISTS posts (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        content TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );`;
+
+    await executeQuery(query);
+
+    console.log("✅ Posts table ensured.");
+  } catch (err) {
+    console.error("Error ensuring posts table", err);
+  }
+};
+
+const ensurePostCommentsTable = async () => {
+  try {
+    const query = `
+      CREATE TABLE IF NOT EXISTS comments (
+        id SERIAL PRIMARY KEY,
+        post_id INTEGER NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+        user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        content TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );`;
+
+    await executeQuery(query);
+
+    console.log("✅ Post comments table ensured.");
+  } catch (err) {
+    console.error("Error ensuring post comments table", err);
   }
 };
 

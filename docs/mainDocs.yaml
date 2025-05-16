@@ -11,5 +11,7 @@ tags:
     description: Endpoints for managing user contacts
   - name: Auth
     description: Endpoints for handling user authentication and account management
+  - name: Community
+    description: Endpoints for handling communityposts and comments
 
 paths: {}

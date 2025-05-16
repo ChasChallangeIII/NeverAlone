@@ -1,4 +1,5 @@
 import express from "express";
+import { authenticate } from "../middleware/auth.js";
 import {
   addContact,
   removeContact,
@@ -8,9 +9,9 @@ import {
 
 const router = express.Router();
 
-router.post("/", addContact);
-router.delete("/:contactId", removeContact);
-router.get("/", getContacts);
-router.get("/search", searchContacts);
+router.post("/", authenticate, addContact);
+router.delete("/:contactId", authenticate, removeContact);
+router.get("/", authenticate, getContacts);
+router.get("/search", authenticate, searchContacts);
 
 export default router;
