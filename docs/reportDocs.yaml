@@ -122,8 +122,6 @@ components:
         location:
           type: object
           example: { "latitude": 59.3293, "longitude": 18.0686 }
-        city:
-          type: string
         time:
           type: string
           format: date-time
@@ -138,7 +136,6 @@ components:
       type: object
       required:
         - location
-        - city
         - cause
         - message
         - status
@@ -157,8 +154,6 @@ components:
             longitude:
               type: number
               example: 18.0686
-        city:
-          type: string
         cause:
           type: string
         message:
