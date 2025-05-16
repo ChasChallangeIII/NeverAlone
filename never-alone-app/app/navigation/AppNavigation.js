@@ -7,15 +7,10 @@ import { StatusBar } from "expo-status-bar";
 import StackNavigation from "./StackNavigation";
 
 const AppNavigation = () => {
-
   return (
-   
-      <NavigationContainer>
-
-        <StackNavigation/>
-        {/* <TabNavigation /> */}
-      </NavigationContainer>
-   
+    <NavigationContainer>
+      <StackNavigation />
+    </NavigationContainer>
   );
 };
 

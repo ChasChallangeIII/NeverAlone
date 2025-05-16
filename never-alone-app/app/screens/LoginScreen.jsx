@@ -6,34 +6,69 @@ import { useNavigation } from '@react-navigation/native'
 import { useUser } from '../context/UserContext'
 import { useTheme } from '../context/ThemeContext'
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { useAuth } from '../context/AuthContext'
 
 
 const LoginScreen = () => {
   const { customTheme, isDark } = useTheme()
-  const navigation = useNavigation()
-  const { username, saveUsername, error, clearError, setError, isLoading } = useUser()
-  // const [inputUserData, setInputUserData] = useState({
-  //   username: '',
-  //   password:''
-  // })
-  const [inputUsername, setInputUsername] = useState(null)
+  const { logIn, isLoading } = useAuth()
+  const { username, saveUsername, error, clearError, setError } = useUser()
+
+  const [inputUsername, setInputUsername] = useState('')
+  const [inputPassword, setInputPassword] = useState('')
+
   const onChangeInputUsername = (text) => {
     clearError()
     setInputUsername(text)
-}
+  }
+  const onChangeInputPassword = (text) => {
+    clearError()
+    setInputPassword(text)
+  }
+  const handleSubmit = async () => {
+
+    if (!inputUsername || !inputPassword) {
+      setError('Du har inte fyllt i både fälten')
+      return
+    }
+
+    try {
+      const response = await fetch('https://neveralone.onrender.com/auth/signin?admin=false', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: inputUsername,
+          password: inputPassword
+        })
+      })
+      alert(response.status);
+
+      if (!response.ok) {
+        if (response.status === 400 || response.status === 404) {
+          throw new Error('Fel användarnamn eller lösenord')
+        } else if (response.status === 500) {
+          throw new Error('Det gick inte att kontakta servern. Försök igen senare')
+        } else {
+          throw new Error('Inloggningen misslyckades')
+        }
+      }
+
+      const data = await response.json()
+      const token = data.token
+      await saveUsername(inputUsername)
+      logIn(token)
+
+    } catch (error) {
+      setError(error.message)
+    }
+
+  }
+
 
   const styles = createStyles(customTheme)
 
-  const login = async (name) => {
-    if (!inputUsername) {
-      setError('Du har inte skrivit ditt namn')
-      return
-    }
-    await saveUsername(name)
-    if (!error) {
-      navigation.navigate('Home')
-    }
-  }
   return (
     <SafeAreaView style={styles.screen} >
       <ScrollView >
@@ -65,23 +100,28 @@ const LoginScreen = () => {
                 placeholder='******'
                 placeholderTextColor={customTheme.colors.text}
                 secureTextEntry
+                value={inputPassword}
+                onChangeText={onChangeInputPassword}
                 style={styles.input}
                 returnKeyType='go'
               />
             </View>
             <Pressable
-              onPress={() => login(inputUsername)}
+              onPress={handleSubmit}
               style={styles.button}
             >
               <MyText style={{ color: customTheme.colors.primary50 }}>
                 Logga in
               </MyText>
             </Pressable>
+            {isLoading && (<MyText> laddar...</MyText>)}
+
             {error && (
               <View style={styles.errorView}>
                 <AntDesign name="frowno" style={styles.icon} />
                 <MyText style={styles.error}>{error}</MyText>
               </View>
+
             )}
           </View>
         </View>
@@ -99,7 +139,7 @@ const createStyles = (theme) => StyleSheet.create({
     backgroundColor: theme.colors.background,
   },
   container: {
-        // justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
     gap: 60,
     paddingHorizontal: 10
@@ -141,7 +181,7 @@ const createStyles = (theme) => StyleSheet.create({
     padding: 8,
     borderRadius: 10,
     width: 200,
-    alignItems:'center'
+    alignItems: 'center'
   },
   errorView: {
     flexDirection: 'row',

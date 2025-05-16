@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "../screens/LoginScreen";
 import TabNavigation from "./TabNavigation";
-import { useUser } from "../context/UserContext";
+import { useAuth } from "../context/AuthContext";
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => {
-  const { username } = useUser();
+  const { userToken } = useAuth();
   return (
     <Stack.Navigator
       screenOptions={{
@@ -16,10 +16,10 @@ const StackNavigation = () => {
         headerStyle: {},
       }}
     >
-      {!username ? (
+      {!userToken ? (
         <Stack.Screen name="Login" component={LoginScreen} />
       ) : (
-        <Stack.Screen name="Home" component={TabNavigation} />
+        <Stack.Screen name="Main" component={TabNavigation} />
       )}
     </Stack.Navigator>
   );

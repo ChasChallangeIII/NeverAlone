@@ -1,4 +1,4 @@
-import { Button, Image, Modal, Platform, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Button, Image, Modal, Platform, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import MyText from './textwrappers/MyText'
 import { Switch } from 'react-native'
@@ -7,16 +7,22 @@ import { useTheme } from '../context/ThemeContext'
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useUser } from '../context/UserContext'
+import { useAuth } from '../context/AuthContext'
 
 const Settings = () => {
     const [isShown, setIsShown] = useState(false)
     const { customTheme, toggleTheme, isDark } = useTheme()
-    const { clearUsername } = useUser()
+    const { clearUsername, togglePrefersDark } = useUser()
+    const{logOut} = useAuth()
 
+    const handleSignOut = async () => {
+        clearUsername()
+        logOut()
+    }
     const styles = createStyles(customTheme, isDark)
     const toggleSwitch = (value) => {
-        // setIsEnabled(!value)
         toggleTheme()
+
     }
     const onClose = () => setIsShown(false)
 
@@ -59,30 +65,20 @@ const Settings = () => {
                         />
                     </View>
                     <View style={styles.switchContainer}>
-                        <MyText>Mörktläge</MyText>
-                        <Switch
-                            value={isDark}
-                            onValueChange={toggleSwitch}
-                            trackColor={{
-                                false: 'default',
-                                true: customTheme.colors.primary
-                            }}
-                            thumbColor={
-                                isDark && Platform.OS === 'ios' ? customTheme.colors.primary100 :
-                                    isDark && Platform.OS === 'android' ? customTheme.colors.primary900 :
-                                        customTheme.colors.primary500
-                            }
-
-
+                        <MyText>Uppringarens namn</MyText>
+                        <TextInput
+                            placeholder='hunn'
+                            placeholderTextColor={customTheme.colors.text}
+                            style={styles.input}
                         />
                     </View>
                     <Pressable
                         style={styles.signoutButton}
-                        onPress={() => clearUsername()}
+                        onPress={handleSignOut}
                     >
-                        <BigText>
+                        <MyText>
                             Logga ut
-                        </BigText>
+                        </MyText>
 
                     </Pressable>
                     <Pressable
@@ -114,13 +110,20 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         backgroundColor: theme.colors.background,
         flex: 1,
         padding: 20,
-        paddingBlockEnd: 90,
+        paddingBlockEnd: Platform.OS === 'android' ? 20 : 70,
         gap: 20
     },
     switchContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between'
+    },
+
+    input: {
+        width: 90,
+        color: theme.colors.text,
+        borderWidth: 1,
+        borderColor:theme.colors.text
     },
 
     settingsButton: {
@@ -137,7 +140,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     },
     closeIcon: {
         color: theme.colors.text,
-        fontSize:24
+        fontSize: 24
 
     },
     signoutButton: {
@@ -145,6 +148,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         padding: 10,
         borderRadius: 30,
         backgroundColor: isDark ? theme.colors.secondary100 : theme.colors.secondary400,
-        alignItems: 'center'
+        alignItems: 'center',
+        width: 100
     }
 })
