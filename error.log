@@ -899,3 +899,84 @@
     at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
 2025-05-16T16:31:41.943Z [ERROR] ReferenceError: isAdmin is not defined
     at signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:45:50)
+2025-05-16T16:32:32.069Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:49:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-16T16:34:34.662Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:49:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-16T16:34:39.595Z [ERROR] Error: Incorrect password
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:57:11)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-16T16:55:44.276Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:56:01.172Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:56:46.134Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:57:03.950Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:57:07.819Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:57:59.587Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:58:18.696Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:49:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)

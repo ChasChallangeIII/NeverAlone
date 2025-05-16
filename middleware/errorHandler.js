@@ -25,7 +25,7 @@ const errorHandler = (err, req, res, next) => {
   }
 
   if (err instanceof jwt.JsonWebTokenError) {
-    return res.status(err.statusCode).json({
+    return res.status(401).json({
       message: "Your session has expired, plase login in again to continue",
       success: false,
     });

@@ -2,21 +2,12 @@ import yaml from "js-yaml";
 import fs from "fs";
 import path from "path";
 
-const mainDoc = yaml.load(
-  fs.readFileSync(path.resolve("docs/mainDocs.yaml"), "utf8")
-);
-const authDoc = yaml.load(
-  fs.readFileSync(path.resolve("docs/authDocs.yaml"), "utf8")
-);
-const reportDoc = yaml.load(
-  fs.readFileSync(path.resolve("docs/reportDocs.yaml"), "utf8")
-);
-const contactDoc = yaml.load(
-  fs.readFileSync(path.resolve("docs/contactDocs.yaml"), "utf8")
-);
-const communityDoc = yaml.load(
-  fs.readFileSync(path.resolve("docs/communityDocs.yaml"), "utf8")
-);
+const mainDoc = yaml.load(fs.readFileSync(path.resolve("docs/mainDocs.yaml"), "utf8"));
+const authDoc = yaml.load(fs.readFileSync(path.resolve("docs/authDocs.yaml"), "utf8"));
+const reportDoc = yaml.load(fs.readFileSync(path.resolve("docs/reportDocs.yaml"), "utf8"));
+const contactDoc = yaml.load(fs.readFileSync(path.resolve("docs/contactDocs.yaml"), "utf8"));
+const communityDoc = yaml.load(fs.readFileSync(path.resolve("docs/communityDocs.yaml"), "utf8"));
+const groupDoc = yaml.load(fs.readFileSync(path.resolve("docs/groupDocs.yaml"), "utf8"));
 
 export const swaggerDocs = {
   ...mainDoc,
@@ -26,6 +17,7 @@ export const swaggerDocs = {
     ...reportDoc.paths,
     ...contactDoc.paths,
     ...communityDoc.paths,
+    ...groupDoc.paths,
   },
   components: {
     schemas: {
@@ -33,6 +25,7 @@ export const swaggerDocs = {
       ...(reportDoc.components?.schemas || {}),
       ...(contactDoc.components?.schemas || {}),
       ...(communityDoc.components?.schemas || {}),
+      ...(groupDoc.components?.schemas || {}),
     },
   },
 };
