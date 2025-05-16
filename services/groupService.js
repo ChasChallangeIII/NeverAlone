@@ -39,6 +39,10 @@ export const insertNewGroupMember = async (userId, groupId) => {
             SELECT 1 FROM group_members
             WHERE user_id = $2 AND group_id = $1
         )
+        AND EXISTS (
+            SELECT 1 FROM groups
+            WHERE id = $1
+        )
         RETURNING group_id
     )
     SELECT g.group_name
