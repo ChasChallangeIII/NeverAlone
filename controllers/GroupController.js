@@ -23,7 +23,7 @@ export const joinGroup = async (req, res, next) => {
 
   try {
     const groupName = await insertNewGroupMember(userId, groupId);
-    res.status(200).json({ message: "Successfully joined group", groupName });
+    res.status(200).json({ groupName, message: "Successfully joined group", success: true });
   } catch (err) {
     next(err);
   }
@@ -34,9 +34,9 @@ export const leaveGroup = async (req, res, next) => {
   const { id: userId } = req.user;
 
   try {
-    await deleteGroupMember(userId, groupId);
+    const groupName = await deleteGroupMember(userId, groupId);
 
-    res.status(200).json({ message: "Successfully left group", success: true });
+    res.status(200).json({ groupName, message: "Successfully left group", success: true });
   } catch (err) {
     next(err);
   }

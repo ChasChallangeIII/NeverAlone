@@ -65,16 +65,28 @@ export const insertNewGroupMember = async (userId, groupId) => {
 };
 
 export const deleteGroupMember = async (userId, groupId) => {
-  const query = `
-    DELETE FROM groups_members
+  const deleteQuery = `
+    DELETE FROM group_members
     WHERE user_id = $1 AND group_id = $2
+    RETURNING group_id;
   `;
 
-  const result = await executeQuery(query, [userId, groupId]);
+  const result = await executeQuery(deleteQuery, [userId, groupId]);
 
   if (result.length === 0) {
     throw new UserIsNotGroupMemberError();
   }
+
+  const groupIdDeleted = result[0].group_id;
+
+  const groupNameQuery = `
+    SELECT group_name FROM groups
+    WHERE id = $1;
+  `;
+
+  const groupNameResult = await executeQuery(groupNameQuery, [groupIdDeleted]);
+
+  return groupNameResult[0].group_name;
 };
 
 export const selectGroups = async (searchQuery) => {
@@ -91,5 +103,9 @@ export const selectGroups = async (searchQuery) => {
 
   query += ` GROUP BY g.id;`;
 
-  return await executeQuery(query, [`%${searchQuery}%`]);
+  if (searchQuery) {
+    return await executeQuery(query, [`%${searchQuery}%`]);
+  }
+
+  return await executeQuery(query);
 };

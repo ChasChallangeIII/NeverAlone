@@ -786,3 +786,86 @@
     at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
     at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
     at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-16T15:43:43.897Z [ERROR] Error: Could not find /groups
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-16T15:43:51.198Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-16T15:45:29.767Z [ERROR] Error: Username or email already exsits
+    at addUser (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:16:21)
+2025-05-16T15:49:42.245Z [ERROR] Error: Could not find /api/groups/join/2
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+2025-05-16T15:50:01.891Z [ERROR] Error: You is already a member of the group
+    at insertNewGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:61:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:25:23)
+2025-05-16T15:50:17.685Z [ERROR] error: relation "groups_members" does not exist
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:73:18)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:5)
+2025-05-16T15:51:13.585Z [ERROR] Error: You are not a member of this group
+    at deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:76:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:5)
+2025-05-16T15:53:45.264Z [ERROR] error: column "group_name" does not exist
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:74:18)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:23)
+2025-05-16T15:55:12.844Z [ERROR] error: syntax error at or near "INNER"
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:75:18)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:23)
+2025-05-16T15:56:45.671Z [ERROR] Error: You are not a member of this group
+    at deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:77:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:23)
+2025-05-16T15:57:30.750Z [ERROR] Error: You is already a member of the group
+    at insertNewGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:61:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:25:23)
+2025-05-16T15:57:51.667Z [ERROR] error: bind message supplies 1 parameters, but prepared statement "" requires 0
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async selectGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:106:10)
+    at async getGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:49:20)
+2025-05-16T15:58:13.547Z [ERROR] error: bind message supplies 1 parameters, but prepared statement "" requires 0
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async selectGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:106:10)
+    at async getGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:49:20)
