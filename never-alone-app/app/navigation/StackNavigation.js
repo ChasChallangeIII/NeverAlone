@@ -12,7 +12,7 @@ const StackNavigation = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        // headerShown: false,
+        headerShown: false,
         headerStyle: {},
       }}
     >

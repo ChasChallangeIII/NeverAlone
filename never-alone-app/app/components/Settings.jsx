@@ -58,6 +58,24 @@ const Settings = () => {
 
                         />
                     </View>
+                    <View style={styles.switchContainer}>
+                        <MyText>Mörktläge</MyText>
+                        <Switch
+                            value={isDark}
+                            onValueChange={toggleSwitch}
+                            trackColor={{
+                                false: 'default',
+                                true: customTheme.colors.primary
+                            }}
+                            thumbColor={
+                                isDark && Platform.OS === 'ios' ? customTheme.colors.primary100 :
+                                    isDark && Platform.OS === 'android' ? customTheme.colors.primary900 :
+                                        customTheme.colors.primary500
+                            }
+
+
+                        />
+                    </View>
                     <Pressable
                         style={styles.signoutButton}
                         onPress={() => clearUsername()}
@@ -70,7 +88,7 @@ const Settings = () => {
                     <Pressable
                         style={styles.close}
                         onPress={onClose}>
-                        <AntDesign name="back" size={24} color="black" />
+                        <AntDesign style={styles.closeIcon} name='back' />
                         {/* <MyText>
                             Tillbaka
                         </MyText> */}
@@ -114,7 +132,13 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     close: {
         position: 'absolute',
         right: 0,
-        padding: 20
+        padding: 20,
+        color: theme.colors.text
+    },
+    closeIcon: {
+        color: theme.colors.text,
+        fontSize:24
+
     },
     signoutButton: {
         marginTop: 'auto',

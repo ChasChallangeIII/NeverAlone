@@ -6,8 +6,8 @@ import { useTheme } from '../context/ThemeContext'
 
 
 const ReportScreen = () => {
-  const { customTheme } = useTheme()
-  const styles = createStyles(customTheme)
+  const { customTheme, isDark } = useTheme()
+  const styles = createStyles(customTheme, isDark)
   return (
     <SafeAreaView style= {styles.screen} >
       <KeyboardAvoidingView
@@ -34,7 +34,7 @@ const ReportScreen = () => {
 
 export default ReportScreen
 
-const createStyles = (theme) => StyleSheet.create({
+const createStyles = (theme, isDark) => StyleSheet.create({
   screen: {
     flex:1,
     backgroundColor: theme.colors.background50,
@@ -49,9 +49,9 @@ const createStyles = (theme) => StyleSheet.create({
   textarea: {
     color: theme.colors.text,
     borderWidth: 1,
-    borderColor: theme.colors.secondary700,
+    borderColor: isDark ? theme.colors.secondary700 : theme.colors.primary100,
     minHeight: 400,
-    backgroundColor: theme.colors.accent100,
+    backgroundColor: isDark ? theme.colors.primary100 : theme.colors.secondary100,
     padding: 20,
     borderRadius: 9,
     fontFamily: theme.fonts.regular.fontFamily,

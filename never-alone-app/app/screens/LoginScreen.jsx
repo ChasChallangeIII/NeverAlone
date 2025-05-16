@@ -140,6 +140,8 @@ const createStyles = (theme) => StyleSheet.create({
     backgroundColor: theme.colors.primary600,
     padding: 8,
     borderRadius: 10,
+    width: 200,
+    alignItems:'center'
   },
   errorView: {
     flexDirection: 'row',
