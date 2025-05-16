@@ -1,9 +1,10 @@
 import express from "express";
+import { createGroup } from "../controllers/GroupController";
 
 const router = express.Router();
 
-//create group
-// router.post("/")
+// create group
+router.post("/", createGroup);
 
 //join group
 // router.patch("/")
