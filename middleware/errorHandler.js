@@ -1,5 +1,6 @@
 import { AppError } from "../utils/errors/errors.js";
 import { ZodError } from "zod";
+import jwt from "jsonwebtoken";
 import logger from "../utils/logger.js";
 
 const errorHandler = (err, req, res, next) => {
@@ -19,6 +20,13 @@ const errorHandler = (err, req, res, next) => {
   if (err instanceof AppError) {
     return res.status(err.statusCode).json({
       message: err.message,
+      success: false,
+    });
+  }
+
+  if (err instanceof jwt.JsonWebTokenError) {
+    return res.status(err.statusCode).json({
+      message: "Your session has expired, plase login in again to continue",
       success: false,
     });
   }
