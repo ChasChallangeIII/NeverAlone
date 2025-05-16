@@ -6,7 +6,8 @@ import {
 } from "../services/contactService.js";
 
 export async function addContact(req, res) {
-  const { userId, contactId } = req.body;
+  const { id: userId } = req.user;
+  const { contactId } = req.body;
 
   try {
     if (userId === contactId) {
@@ -28,7 +29,8 @@ export async function addContact(req, res) {
 }
 
 export async function removeContact(req, res) {
-  const { userId, contactId } = req.params;
+  const { id: userId } = req.user;
+  const { contactId } = req.params;
 
   try {
     await deleteContact(userId, contactId);
@@ -39,7 +41,7 @@ export async function removeContact(req, res) {
 }
 
 export async function getContacts(req, res) {
-  const { userId } = req.params;
+  const { id: userId } = req.user;
 
   try {
     const contacts = await selectContacts(userId);
@@ -50,7 +52,7 @@ export async function getContacts(req, res) {
 }
 
 export async function searchContacts(req, res) {
-  const { userId } = req.params;
+  const { id: userId } = req.user;
   const { q } = req.query;
 
   try {

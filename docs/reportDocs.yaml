@@ -115,10 +115,6 @@ components:
     Report:
       type: object
       properties:
-        id:
-          type: integer
-        user_id:
-          type: integer
         location:
           type: object
           example: { "latitude": 59.3293, "longitude": 18.0686 }
