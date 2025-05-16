@@ -21,6 +21,12 @@ paths:
       tags:
         - Groups
       summary: Get all groups
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+          description: Search by group name
       responses:
         "200":
           description: List of groups
