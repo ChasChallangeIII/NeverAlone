@@ -6,7 +6,7 @@ import commentsRoutes from './routes/commentsRoute.js';
 import usersRoutes from './routes/usersRoutes.js';
 import authRoutes from "./routes/authRoutes.js";
 import reportsRoutes from './routes/reportsRoute.js';
-import { verifyToken, authorizeAdmin } from './middleware/authMiddleware.js';
+import { verifyToken, authorizeAdmin } from './middleware/AuthMiddleware.js';
 
 dotenv.config();
 
