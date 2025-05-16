@@ -18,6 +18,7 @@ export const createIndexes = async () => {
   await ensureIndexReportsCity();
   await ensureIndexContactsUserId();
   await ensureIndexReportsStatusCity();
+  await ensureIndexGroupName();
 };
 
 export const executeQuery = async (query, values = []) => {
@@ -264,6 +265,18 @@ const ensureIndexReportsStatusCity = async () => {
     await executeQuery(query);
 
     console.log("✅ Index for reports status city created.");
+  } catch (err) {
+    console.error("Error ensuring creating index for reports status city", err);
+  }
+};
+
+const ensureIndexGroupName = async () => {
+  try {
+    const query = `CREATE INDEX IF NOT EXISTS idx_group_name ON groups(group_name);`;
+
+    await executeQuery(query);
+
+    console.log("✅ Index for groups groups_name created.");
   } catch (err) {
     console.error("Error ensuring creating index for reports status city", err);
   }
