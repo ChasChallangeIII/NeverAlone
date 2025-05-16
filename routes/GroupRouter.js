@@ -7,13 +7,13 @@ const router = express.Router();
 router.post("/", createGroup);
 
 //join group
-router.patch("/:groupid", joinGroup);
+router.patch("join/:groupid", joinGroup);
 
 //leave group
-// router.patch("/leave")
+router.patch("/leave/:groupid");
 
-//get groups
-// router.get("/")
+// get groups
+router.get("/");
 
 //search groups
 // router.get("/?q")

@@ -1,4 +1,8 @@
-import { GroupCreationError, UserAlreadyInGroupError } from "../utils/errors/dbErrors.js";
+import {
+  GroupCreationError,
+  UserAlreadyInGroupError,
+  UserIsNotGroupMemberError,
+} from "../utils/errors/dbErrors.js";
 import { executeQuery } from "./db/db.js";
 
 export const insertGroupAndAdmin = async (userId, groupName) => {
@@ -58,4 +62,17 @@ export const insertNewGroupMember = async (userId, groupId) => {
   }
 
   return result[0].group_name;
+};
+
+export const deleteGroupMember = async (userId, groupId) => {
+  const query = `
+    DELETE FROM groups_members
+    WHERE user_id = $1 AND group_id = $2
+  `;
+
+  const result = await executeQuery(query, [userId, groupId]);
+
+  if (result.length === 0) {
+    throw new UserIsNotGroupMemberError();
+  }
 };
