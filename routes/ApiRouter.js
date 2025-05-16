@@ -2,7 +2,7 @@ import express from "express";
 import { addReport } from "../controllers/ReportController.js";
 import { validateReportReqBody } from "../validators/reportValidator.js";
 import GroupRouter from "./GroupRouter.js";
-import ContactRouter from "./ContactRoutes.js";
+import ContactRouter from "./ContactRouter.js";
 import CommunityRouter from "./CommunityRouter.js";
 
 const router = express.Router();
