@@ -869,3 +869,33 @@
     at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
     at async selectGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:106:10)
     at async getGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:49:20)
+2025-05-16T16:27:36.349Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:40:14)
+2025-05-16T16:28:43.231Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:29:24.174Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:29:40.102Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:30:05.088Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:30:40.374Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:31:34.494Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:49:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:31:41.943Z [ERROR] ReferenceError: isAdmin is not defined
+    at signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:45:50)

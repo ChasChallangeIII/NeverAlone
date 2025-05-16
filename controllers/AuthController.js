@@ -31,7 +31,9 @@ export const signup = async (req, res, next) => {
 };
 
 export const signin = async (req, res, next) => {
-  const { admin: isAdmin } = req.query;
+  const { admin } = req.query;
+
+  const isAdmin = admin === "true";
 
   try {
     let user;
@@ -42,7 +44,7 @@ export const signin = async (req, res, next) => {
       user = await performLogin(req.body);
     }
 
-    const token = jwt.sign({ ...user, isAdmin: !!isAdmin }, JWT_SECRET, {
+    const token = jwt.sign({ ...user, isAdmin }, JWT_SECRET, {
       expiresIn: "1h",
     });
 
