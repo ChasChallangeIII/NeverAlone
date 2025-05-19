@@ -12,6 +12,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0
+    },
     "plugins": [
       [
         "expo-location",
@@ -23,24 +27,22 @@
         "react-native-ble-plx",
         {
           "isBackgroundEnabled": true,
-          "modes": [
-            "peripheral",
-            "central"
-          ],
+          "modes": ["peripheral", "central"],
           "bluetoothAlwaysPermission": "Allow $(PRODUCT_NAME) to connect to bluetooth devices"
         }
       ]
     ],
     "ios": {
       "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.neveraloneapp",
       "infoPlist": {
         "NSBluetoothAlwaysUsageDescription": "Den här appen använder Bluetooth för att ansluta till en knapp.",
         "NSBluetoothPeripheralUsageDescription": "Den här appen använder Bluetooth för att ansluta till en knapp.",
         "ITSAppUsesNonExemptEncryption": false
-      },
-      "bundleIdentifier": "com.anonymous.neveraloneapp"
+      }
     },
     "android": {
+      "package": "com.anonymous.neveraloneapp",
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -51,12 +53,8 @@
         "BLUETOOTH",
         "BLUETOOTH_ADMIN",
         "BLUETOOTH_CONNECT",
-        "BLUETOOTH_SCAN",
-        "android.permission.BLUETOOTH",
-        "android.permission.BLUETOOTH_ADMIN",
-        "android.permission.BLUETOOTH_CONNECT"
-      ],
-      "package": "com.anonymous.neveraloneapp"
+        "BLUETOOTH_SCAN"
+      ]
     },
     "web": {
       "favicon": "./app/assets/images/favicon.png"
