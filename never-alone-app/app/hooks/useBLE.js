@@ -106,10 +106,11 @@ export default function useBLE() {
   };
 
 // Connect to the selected BLE device and start listening for data
-const connectToDevice = async (device) => {
-  try {
-    const connectedDevice = await device.connect();
-    await connectedDevice.discoverAllServicesAndCharacteristics();
+  const connectToDevice = async (device) => {
+    try {
+      const connectedDevice = await device.connect();
+      await connectedDevice.discoverAllServicesAndCharacteristics();
+      setConnectedDevice(connectedDevice);
 
       connectedDevice.monitorCharacteristicForService(
         DATA_SERVICE_UUID,
