@@ -83,6 +83,9 @@ export default function useBLE() {
       }
 
       if (device && (device.localName === 'ESP32C3_Button' || device.name === 'ESP32C3_Button')) {
+        console.log("🎯 Device found:", device.name || device.localName); 
+        bleManager.stopDeviceScan(); // stop scanning to save battery
+
         setAllDevices(prevDevices => {
           if (!isDuplicateDevice(prevDevices, device)) {
             return [...prevDevices, device];
