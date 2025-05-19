@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "never-alone-app",
+    "name": "Never Alone",
     "slug": "never-alone-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/images/icon.png",
+    "icon": "./app/assets/images/logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
