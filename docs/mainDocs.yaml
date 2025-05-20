@@ -13,5 +13,7 @@ tags:
     description: Endpoints for handling user authentication and account management
   - name: Community
     description: Endpoints for handling communityposts and comments
+  - name: Groups
+    description: Endpoints for handling groups
 
 paths: {}
