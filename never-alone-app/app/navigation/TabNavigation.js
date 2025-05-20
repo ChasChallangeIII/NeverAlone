@@ -3,12 +3,19 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import HomeScreen from "../screens/HomeScreen";
 import React, { useState } from "react";
 import CommunityScreen from "../screens/CommunityScreen";
-import { Button, Image, Modal, Platform, Pressable, StatusBar, Text } from "react-native";
+import {
+  Button,
+  Image,
+  Modal,
+  Platform,
+  Pressable,
+  StatusBar,
+  Text,
+} from "react-native";
 import ReportScreen from "../screens/ReportScreen";
 import * as Location from "expo-location";
 import SearchScreen from "../screens/SearchScreen";
-import { handleFakeCall } from "../services/fakeCall";
-import PhoneCall from "../components/PhoneCall";
+
 import NotificationsScreen from "../screens/NotificationsScreen";
 import MyText from "../components/textwrappers/MyText";
 import CallMeButton from "../components/textwrappers/CallMeButton";
@@ -25,10 +32,10 @@ const TabNavigation = ({}) => {
 
   return (
     <>
-       <StatusBar
-              barStyle={isDark ? 'light-content' : 'dark-content'}
-              backgroundColor={customTheme.colors.background}
-            />
+      <StatusBar
+        barStyle={isDark ? "light-content" : "dark-content"}
+        backgroundColor={customTheme.colors.background}
+      />
       <Tab.Navigator
         screenOptions={{
           headerShown: true,
@@ -44,11 +51,12 @@ const TabNavigation = ({}) => {
             height: Platform.OS === "ios" ? 120 : 100,
           },
           headerLeft: () => <LogoInHeader />,
-          headerRight: ({ canGoBack = true }) => <Settings />,
+          headerRight: () => <Settings />,
           tabBarStyle: {
             backgroundColor: customTheme.colors.background,
             overflow: "visible",
             position: "absolute",
+         
           },
           tabBarLabelStyle: {
             fontFamily: customTheme.fonts.regular.fontFamily,

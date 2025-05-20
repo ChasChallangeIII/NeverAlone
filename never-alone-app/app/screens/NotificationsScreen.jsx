@@ -99,7 +99,9 @@ const createStyles = (theme) => StyleSheet.create({
     padding: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 20
+    gap: 20,
+    paddingBottom: 90
+
   },
   notificatons: {
     gap: 20,
