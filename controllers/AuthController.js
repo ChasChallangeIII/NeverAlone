@@ -19,11 +19,20 @@ export const signup = async (req, res, next) => {
       expiresIn: "1h",
     });
 
+    const userId = newUser.id;
+
+    const profile = {
+      id: userId,
+      username: user.username,
+      profileImage: `https://randomuser.me/api/portraits/women/${userId}.jpg`,
+    };
+
     res.status(201).json({
       user: newUser,
       message: "Account registered successfully",
       success: true,
       token,
+      profile,
     });
   } catch (error) {
     next(error);
@@ -48,10 +57,19 @@ export const signin = async (req, res, next) => {
       expiresIn: "1h",
     });
 
+    const userId = user.id;
+
+    const profile = {
+      id: userId,
+      username: user.username,
+      profileImage: `https://randomuser.me/api/portraits/women/${userId}.jpg`,
+    };
+
     res.status(200).json({
       message: "Login successful",
       success: true,
       token,
+      profile,
     });
   } catch (error) {
     next(error);
