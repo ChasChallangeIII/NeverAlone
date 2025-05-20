@@ -20,6 +20,7 @@ export async function postComment(req, res) {
         `;
 
         const values = [report_id, comment, admin_id];
+        console.log(query);
 
         const result = await executeQuery(
         "INSERT INTO report_comments (report_id, comment, admin_id) VALUES ($1, $2, $3) RETURNING *",

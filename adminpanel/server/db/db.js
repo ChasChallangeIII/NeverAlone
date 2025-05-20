@@ -24,3 +24,9 @@ export async function getReportsFromDatabase() {
     const result = await executeQuery(sql);
     return result.rows;
 }
+
+export async function getCommentsFromDatabase() {
+    const sql = 'SELECT * FROM report_comments';
+    const result = await executeQuery(sql);
+    return result.rows;
+}
