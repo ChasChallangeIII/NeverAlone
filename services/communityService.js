@@ -1,7 +1,16 @@
 import { executeQuery } from "./db/db.js";
 
 export const getPosts = async () => {
-  const query = `SELECT * FROM posts ORDER BY created_at DESC`;
+  const query = `
+    SELECT 
+      posts.id,
+      posts.content,
+      posts.created_at,
+      users.id AS user_id,
+      users.username
+    FROM posts
+    JOIN users ON posts.user_id = users.id
+    ORDER BY posts.created_at DESC;`;
   return await executeQuery(query);
 };
 
@@ -43,10 +52,19 @@ export const getCommentsForPost = async (postId) => {
   if (checkPost.length === 0) return null;
 
   const query = `
-    SELECT * FROM comments
-    WHERE post_id = $1
-    ORDER BY created_at ASC;
+    SELECT 
+      comments.id,
+      comments.post_id,
+      comments.text,
+      comments.created_at,
+      users.id AS userId,
+      users.username
+    FROM comments
+    JOIN users ON comments.user_id = users.id
+    WHERE comments.post_id = ?
+    ORDER BY comments.created_at ASC;
   `;
+
   return await executeQuery(query, [postId]);
 };
 

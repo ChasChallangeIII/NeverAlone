@@ -3,7 +3,20 @@ import * as communityService from "../services/communityService.js";
 export const getPosts = async (req, res, next) => {
   try {
     const posts = await communityService.getPosts();
-    res.json(posts);
+    console.log(posts);
+
+    const mappedPosts = posts.map((post) => ({
+      id: post.id,
+      content: post.content,
+      created_at: post.created_at,
+      profile: {
+        id: post.user_id,
+        username: post.username,
+        profileImage: `https://randomuser.me/api/portraits/women/${post.user_id}.jpg`,
+      },
+    }));
+
+    res.json(mappedPosts);
   } catch (err) {
     next(err);
   }
