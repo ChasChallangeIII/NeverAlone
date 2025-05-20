@@ -12,8 +12,9 @@ export const alertLocation = async () => {
     const location = await Location.getCurrentPositionAsync();
     const { latitude, longitude } = location;
 
-    alert(latitude);
+    console.log(latitude, longitude);
   } catch (error) {
-    alert(error);
+    console.warn(error);
+ 
   }
 };

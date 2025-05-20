@@ -8,6 +8,9 @@ import { useTheme } from '../../context/ThemeContext';
 import { sendCallNotification } from '../../services/sendCallNotification';
 import { Audio, InterruptionModeIOS, InterruptionModeAndroid } from "expo-av";
 import * as Notifications from 'expo-notifications';
+import * as Location from 'expo-location';
+import MyText from './MyText';
+
 
 let ringtoneSound = null
 
@@ -48,12 +51,32 @@ const stopRingtone = async () => {
         console.warn("⚠️ Failed to stop ringtone:", error);
     }
 }
+const saveLocationAndTime = async () => {
+    try {
+        let { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== "granted") {
+            alert(status);
+            return;
+        }
+        const location = await Location.getCurrentPositionAsync();
+        const {
+            coords: { latitude, longitude },
+            timestamp
+        } = location;
+
+        const isoTimeStamp = new Date(timestamp).toISOString()
+        console.log(latitude, longitude, isoTimeStamp);
+    } catch (error) {
+        console.warn(error);
+    }
+};
 
 
 const CallMeButton = ({ props }) => {
     const [isModalShown, setIsModalShown] = useState(false)
     const { customTheme, isDark } = useTheme()
     const styles = createStyles(customTheme, isDark)
+    
     useEffect(() => {
         const subscription = Notifications.addNotificationResponseReceivedListener(response => {
             setIsModalShown(true)
@@ -70,11 +93,9 @@ const CallMeButton = ({ props }) => {
 
     const handleFakeCall = () => {
 
-            sendCallNotification()
-            playRingtone()
-      
-
-
+        sendCallNotification()
+        playRingtone()
+        saveLocationAndTime()
         // setIsModalShown(true)
 
     }
@@ -94,10 +115,14 @@ const CallMeButton = ({ props }) => {
 
             </Pressable>
 
+            <MyText style={styles.feedbackMessage}>Samtal kommer</MyText>
+
             <PhoneCall visible={isModalShown} onClose={() => setIsModalShown(false)} />
         </>
     )
 }
+
+
 
 export default CallMeButton
 
@@ -117,5 +142,9 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     },
     icon: {
         color: isDark ? theme.colors.accent100 : theme.colors.text
+    },
+    feedbackMessage: {
+        position: 'relative',
+        top:-300
     }
 })
