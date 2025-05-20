@@ -29,11 +29,11 @@ const Settings = () => {
     return (
         <View>
             <Pressable style={styles.settingsButton} onPress={() => setIsShown(true)}>
-                {/* <MaterialIcons name="settings" size={30} color={customTheme.colors.text} /> */}
-                <Image
+                <MaterialIcons name="settings" size={30} color={customTheme.colors.text} />
+                {/* <Image
                     source={require('../assets/images/rim.jpg')}
                     style={styles.image}
-                />
+                /> */}
             </Pressable>
 
             <Modal

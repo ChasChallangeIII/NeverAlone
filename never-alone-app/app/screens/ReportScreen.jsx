@@ -38,13 +38,15 @@ const createStyles = (theme, isDark) => StyleSheet.create({
   screen: {
     flex:1,
     backgroundColor: theme.colors.background50,
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    
+
 
   },
   container: {
     padding: 20,
     gap: 30,
-    // paddingBottom:40
+    paddingBottom: 90
   },
   textarea: {
     color: theme.colors.text,

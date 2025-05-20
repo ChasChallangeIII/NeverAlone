@@ -40,14 +40,17 @@ const createStyles = (theme) => StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: theme.colors.background50,
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+  
+
 
   },
   container: {
     padding: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    gap:20
+    gap: 20,
+    
   },
 
   searchBar: {
