@@ -18,19 +18,19 @@ paths:
               schema:
                 type: object
                 properties:
-                  user:
+                  profile:
                     type: object
                     properties:
                       id:
                         type: integer
                       username:
                         type: string
-                      email:
+                      profileImage:
                         type: string
                   token:
                     type: string
         400:
-          description: Request body validation failed or username/email already exists
+          description: Request body validation failed or username already exists
         500:
           description: Server error
 
@@ -52,9 +52,7 @@ paths:
         content:
           application/json:
             schema:
-              oneOf:
-                - $ref: "#/components/schemas/SigninRequestWithUsername"
-                - $ref: "#/components/schemas/SigninRequestWithEmail"
+              $ref: "#/components/schemas/SigninRequest"
       responses:
         200:
           description: User signed in successfully
@@ -63,9 +61,17 @@ paths:
               schema:
                 type: object
                 properties:
+                  profile:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      username:
+                        type: string
+                      profileImage:
+                        type: string
                   token:
                     type: string
-
         400:
           description: Request body validation failed or password is incorrect
         404:
@@ -102,7 +108,6 @@ components:
       type: object
       required:
         - username
-        - email
         - password
         - gender
         - birthDate
@@ -110,9 +115,6 @@ components:
         username:
           type: string
           example: johndoe
-        email:
-          type: string
-          example: johndoe@example.com
         password:
           type: string
           example: yourSecurePassword
@@ -121,9 +123,10 @@ components:
           example: male
         birthDate:
           type: string
+          format: date
           example: 1990-01-01
 
-    SigninRequestWithUsername:
+    SigninRequest:
       type: object
       required:
         - username
@@ -132,19 +135,6 @@ components:
         username:
           type: string
           example: johndoe
-        password:
-          type: string
-          example: yourSecurePassword
-
-    SigninRequestWithEmail:
-      type: object
-      required:
-        - email
-        - password
-      properties:
-        email:
-          type: string
-          example: johndoe@example.com
         password:
           type: string
           example: yourSecurePassword

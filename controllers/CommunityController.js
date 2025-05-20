@@ -38,11 +38,7 @@ export const updatePost = async (req, res, next) => {
     const userId = req.user.id;
     const postId = Number(req.params.postId);
     const { content } = req.body;
-    const updatedPost = await communityService.updatePost(
-      userId,
-      postId,
-      content
-    );
+    const updatedPost = await communityService.updatePost(userId, postId, content);
     if (!updatedPost) {
       return res.status(403).json({ message: "Forbidden or post not found" });
     }
@@ -99,15 +95,9 @@ export const updateComment = async (req, res, next) => {
     const userId = req.user.id;
     const commentId = Number(req.params.commentId);
     const { text } = req.body;
-    const updatedComment = await communityService.updateComment(
-      userId,
-      commentId,
-      text
-    );
+    const updatedComment = await communityService.updateComment(userId, commentId, text);
     if (!updatedComment) {
-      return res
-        .status(403)
-        .json({ message: "Forbidden or comment not found" });
+      return res.status(403).json({ message: "Forbidden or comment not found" });
     }
     res.json(updatedComment);
   } catch (err) {
@@ -121,9 +111,7 @@ export const deleteComment = async (req, res, next) => {
     const commentId = Number(req.params.commentId);
     const success = await communityService.deleteComment(userId, commentId);
     if (!success) {
-      return res
-        .status(403)
-        .json({ message: "Forbidden or comment not found" });
+      return res.status(403).json({ message: "Forbidden or comment not found" });
     }
     res.status(204).end();
   } catch (err) {

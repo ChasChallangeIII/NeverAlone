@@ -134,7 +134,6 @@ components:
         - location
         - cause
         - message
-        - status
       properties:
         user_id:
           type: integer
@@ -153,6 +152,4 @@ components:
         cause:
           type: string
         message:
-          type: string
-        status:
           type: string
