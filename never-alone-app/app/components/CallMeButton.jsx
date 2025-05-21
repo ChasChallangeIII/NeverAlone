@@ -46,7 +46,7 @@ const CallMeButton = ({ props }) => {
             setFeedback(false)
         }, 2000);
         setTimeout(() => {
-      
+
             navigation.navigate('IncomingCallScreen')
             saveLocationAndTime()
         }, 4000);
@@ -93,7 +93,7 @@ export default CallMeButton
 
 const createStyles = (theme, isDark) => StyleSheet.create({
     button: {
-        backgroundColor: isDark ? theme.colors.accent700 : theme.colors.accent300,
+        backgroundColor: isDark ? theme.colors.accent500 : theme.colors.accent300,
         borderRadius: 35,
         justifyContent: 'center',
         alignItems: 'center',
@@ -109,18 +109,17 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         color: isDark ? theme.colors.accent100 : theme.colors.text
     },
     feedbackMessage: {
-        // position: 'relative',
         flexDirection: 'row',
         gap: 10,
         alignItems: 'center',
         top: Platform.OS === 'android' ? -80 : -100,
         left: Platform.OS === 'android' ? -130 : -130,
-        backgroundColor: isDark ? theme.colors.background100 : theme.colors.accent300,
+        backgroundColor: isDark ? theme.colors.background100 : theme.colors.accent100,
         padding: 10,
         borderRadius: 5,
         borderWidth: 1,
         height: 60,
         width: 300,
-        borderColor: theme.colors.accent
+        borderColor: isDark ? theme.colors.accent : theme.colors.accent600
     }
 })

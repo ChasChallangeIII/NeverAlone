@@ -10,7 +10,7 @@ SplashScreen.preventAutoHideAsync();
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [prefersDark, setPrefersDark] = useState(isDark);
   
 
