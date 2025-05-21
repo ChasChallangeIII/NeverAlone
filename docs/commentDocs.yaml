@@ -1,0 +1,83 @@
+paths:
+  /api/comments:
+    get:
+      summary: "Hämta alla kommentarer"
+      description: "Hämtar alla kommentarer som är sparade i databasen"
+      responses:
+        '200':
+          description: "Lista med alla kommentarer"
+          content:
+            application/json:
+              schema:
+                type: "array"
+                items:
+                  type: "object"
+                  properties:
+                    id:
+                      type: "integer"
+                    report_id:
+                      type: "integer"
+                    admin_id:
+                      type: "integer"
+                    comment:
+                      type: "string"
+                    created_at:
+                      type: "string"
+                      format: "date-time"
+    post:
+      summary: "Skapa en ny kommentar"
+      description: "Lägg till en ny kommentar till en rapport"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: "object"
+              required:
+                - report_id
+                - admin_id
+                - comment
+              properties:
+                report_id:
+                  type: "integer"
+                admin_id:
+                  type: "integer"
+                comment:
+                  type: "string"
+      responses:
+        '201':
+          description: "Kommentar skapad framgångsrikt"
+  /api/comments/{id}:
+    put:
+      summary: "Uppdatera en kommentar"
+      description: "Uppdatera en befintlig kommentar"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          description: "ID för kommentaren som ska uppdateras"
+          schema:
+            type: "integer"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: "object"
+              properties:
+                comment:
+                  type: "string"
+      responses:
+        '200':
+          description: "Kommentar uppdaterad framgångsrikt"
+    delete:
+      summary: "Ta bort en kommentar"
+      description: "Ta bort en specifik kommentar genom ID"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          description: "ID för kommentaren som ska tas bort"
+          schema:
+            type: "integer"
+      responses:
+        '204':
+          description: "Kommentar borttagen framgångsrikt"

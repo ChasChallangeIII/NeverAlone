@@ -1027,3 +1027,303 @@
     at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
     at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
     at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-21T13:42:15.633Z [ERROR] Error: Could not find /comments?reportId=1
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:60:12)
+2025-05-21T13:42:32.260Z [ERROR] Error: Could not find /comments
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:60:12)
+2025-05-21T13:42:32.337Z [ERROR] Error: Could not find /favicon.ico
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:42:47.267Z [ERROR] Error: Could not find /comments?reportId=2
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:60:12)
+2025-05-21T13:47:07.486Z [ERROR] Error: Could not find /comments
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:60:12)
+2025-05-21T13:51:32.626Z [ERROR] Error: Could not find /comments
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:51:45.888Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:52:44.203Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:54:52.731Z [ERROR] Error: Incorrect password
+    at performLogin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/services/authService.js:57:11)
+    at async signin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:53:14)
+2025-05-21T13:55:08.729Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Email must be a string"
+  }
+]
+    at get error [as error] (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-21T13:55:09.635Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Email must be a string"
+  }
+]
+    at get error [as error] (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-21T13:55:16.782Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Email must be a string"
+  }
+]
+    at get error [as error] (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-21T13:55:40.693Z [ERROR] ReferenceError: user is not defined
+    at signup (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:26:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-05-21T13:56:01.834Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:57:07.906Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:57:19.870Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:57:21.779Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:57:56.836Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:58:05.084Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:58:13.446Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:58:39.023Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:59:00.130Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:59:55.303Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T14:00:04.698Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T14:01:25.907Z [ERROR] SyntaxError: Expected double-quoted property name in JSON at position 53
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-05-21T14:01:30.369Z [ERROR] SyntaxError: Expected double-quoted property name in JSON at position 53
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)

@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import ApiRouter from "./routes/ApiRouter.js";
 import AuthRouter from "./routes/AuthRouter.js";
 import AdminRouter from "./routes/AdminRouter.js";
+import CommentsRouter from "./routes/ReportCommentRouter.js";
 import dotenv from "dotenv";
 import cors from "cors";
 import notFound from "./middleware/notFound.js";
@@ -26,6 +27,8 @@ app.get("/", (_, res) => {
 });
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+app.use("/api/comments", authenticate, CommentsRouter);
 
 app.use("/api", authenticate, ApiRouter);
 app.use("/admin", authorizeAdmin, AdminRouter);
