@@ -44,9 +44,12 @@ const CallMeButton = ({ props }) => {
         setFeedback(true)
         setTimeout(() => {
             setFeedback(false)
+        }, 2000);
+        setTimeout(() => {
+      
             navigation.navigate('IncomingCallScreen')
             saveLocationAndTime()
-        }, 5000);
+        }, 4000);
 
         // sendCallNotification()
         // playRingtone()
@@ -74,7 +77,7 @@ const CallMeButton = ({ props }) => {
                 <View style={styles.feedbackMessage}>
                     <AntDesign name="checkcircle" size={24} color={customTheme.colors.accent600} />
 
-                    <MyText >Samtal kommer om 5 sekunder...</MyText>
+                    <MyText >Samtal kommer om 4 sekunder...</MyText>
                 </View>)
             }
 

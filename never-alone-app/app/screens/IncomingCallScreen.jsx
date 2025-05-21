@@ -39,7 +39,7 @@ const playRingtone = async () => {
     }
 }
 
- const stopRingtone = async () => {
+const stopRingtone = async () => {
     try {
         await ringtoneSound.stopAsync()
         await ringtoneSound.unloadAsync()
@@ -85,9 +85,9 @@ const IncomingCallScreen = ({ navigation }) => {
                     }}
 
                 >
-                    
+
                     <MaterialCommunityIcons name="phone" size={Platform.OS === 'ios' ? 40 : 30} color={"white"} style={[styles.text, styles.answerButton]} />
-                    
+
                     <MyText
                         style={[styles.text]}>
                         Acceptera
@@ -104,7 +104,7 @@ const IncomingCallScreen = ({ navigation }) => {
                     }}
                     title={'Ignorera'}
                 >
-                    
+
                     <MaterialCommunityIcons name="phone-hangup" size={Platform.OS === 'ios' ? 40 : 30} color={"white"} style={[styles.text, styles.hangUpButton]} />
 
                     <MyText
@@ -151,36 +151,29 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     buttons: {
         flexDirection: 'row',
         gap: 150,
-        marginBottom:50
+        marginBottom: 50
     },
     button: {
-        gap:20
+        gap: Platform.OS === 'android' ? 14 : 20,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     answerButton: {
-        backgroundColor: 'green',
+        backgroundColor: theme.colors.accent500,
         padding: 15,
-        // height: 60,
-        // width: 60,
         borderRadius: 90,
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        // bottom: '40'
-
-
     }
     ,
     hangUpButton: {
         backgroundColor: 'red',
         padding: 15,
-        // height: 60,
-        // width: 60,
+
         borderRadius: 90,
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        // bottom: '40'
-
-
     }
 })
