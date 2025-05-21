@@ -18,7 +18,7 @@ import SearchScreen from "../screens/SearchScreen";
 
 import NotificationsScreen from "../screens/NotificationsScreen";
 import MyText from "../components/textwrappers/MyText";
-import CallMeButton from "../components/textwrappers/CallMeButton";
+import CallMeButton from "../components/CallMeButton";
 import { useTheme } from "../context/ThemeContext";
 import { useNavigation } from "@react-navigation/native";
 import Settings from "../components/Settings";

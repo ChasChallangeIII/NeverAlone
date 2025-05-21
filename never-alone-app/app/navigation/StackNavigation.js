@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "../screens/LoginScreen";
 import TabNavigation from "./TabNavigation";
 import { useAuth } from "../context/AuthContext";
+import OngoingCallScreen from "../screens/OngoingCallScreen";
+import IncomingCallScreen from "../screens/IncomingCallScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +21,25 @@ const StackNavigation = () => {
       {!userToken ? (
         <Stack.Screen name="Login" component={LoginScreen} />
       ) : (
-        <Stack.Screen name="Main" component={TabNavigation} />
+        <>
+          <Stack.Screen name="Main" component={TabNavigation} />
+          <Stack.Screen
+            name="IncomingCallScreen"
+            component={IncomingCallScreen}
+            options={{
+              presentation: "modal",
+              animation: "fade_from_bottom",
+            }}
+          />
+          <Stack.Screen
+            name="OngoingCallScreen"
+            component={OngoingCallScreen}
+            options={{
+              presentation: "modal",
+              animation: "fade_from_bottom",
+            }}
+          />
+        </>
       )}
     </Stack.Navigator>
   );

@@ -1,56 +1,16 @@
-import { StyleSheet, Pressable } from 'react-native'
+import { StyleSheet, Pressable, View, Platform } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-// import playRingtone from "../../services/playRingtone"
-import PhoneCall from '../PhoneCall';
-
-import { useTheme } from '../../context/ThemeContext';
-import { sendCallNotification } from '../../services/sendCallNotification';
-import { Audio, InterruptionModeIOS, InterruptionModeAndroid } from "expo-av";
+import PhoneCall from './PhoneCall';
+import { useTheme } from '../context/ThemeContext';
 import * as Notifications from 'expo-notifications';
 import * as Location from 'expo-location';
-import MyText from './MyText';
+import MyText from './textwrappers/MyText';
+import { useNavigation } from '@react-navigation/native';
+
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 
-let ringtoneSound = null
-
-
-const playRingtone = async () => {
-    try {
-        await Audio.setAudioModeAsync({
-            allowsRecordingIOS: false,
-            staysActiveInBackground: true,
-            interruptionModeIOS: InterruptionModeIOS.DoNotMix,
-            playsInSilentModeIOS: true, // 🔈 Viktigt
-            shouldDuckAndroid: true,
-            interruptionModeAndroid: InterruptionModeAndroid.DoNotMix,
-            playThroughEarpieceAndroid: false,
-        });
-
-
-        const { sound } = await Audio.Sound.createAsync(
-            require("../../assets/sounds/original-phone-ringtone-36558.mp3"),
-            {
-                isLooping: true,
-                volume: 1.0,
-                shouldPlay: true,
-            }
-        );
-        ringtoneSound = sound
-        await sound.playAsync()
-    } catch (error) {
-        console.log("❌ Failed to play ringtone:", error);
-    }
-}
-
-const stopRingtone = async () => {
-    try {
-        await ringtoneSound.stopAsync()
-        await ringtoneSound.unloadAsync()
-    } catch (error) {
-        console.warn("⚠️ Failed to stop ringtone:", error);
-    }
-}
 const saveLocationAndTime = async () => {
     try {
         let { status } = await Location.requestForegroundPermissionsAsync();
@@ -76,26 +36,21 @@ const CallMeButton = ({ props }) => {
     const [isModalShown, setIsModalShown] = useState(false)
     const { customTheme, isDark } = useTheme()
     const styles = createStyles(customTheme, isDark)
-    
-    useEffect(() => {
-        const subscription = Notifications.addNotificationResponseReceivedListener(response => {
-            setIsModalShown(true)
-            stopRingtone()
-        })
-
-        return () => {
-            subscription.remove()
-        }
-    }, [])
-
-
+    const navigation = useNavigation()
+    const [feedback, setFeedback] = useState(false)
 
 
     const handleFakeCall = () => {
+        setFeedback(true)
+        setTimeout(() => {
+            setFeedback(false)
+            navigation.navigate('IncomingCallScreen')
+            saveLocationAndTime()
+        }, 5000);
 
-        sendCallNotification()
-        playRingtone()
-        saveLocationAndTime()
+        // sendCallNotification()
+        // playRingtone()
+
         // setIsModalShown(true)
 
     }
@@ -115,7 +70,14 @@ const CallMeButton = ({ props }) => {
 
             </Pressable>
 
-            <MyText style={styles.feedbackMessage}>Samtal kommer</MyText>
+            {feedback && (
+                <View style={styles.feedbackMessage}>
+                    <AntDesign name="checkcircle" size={24} color={customTheme.colors.accent600} />
+
+                    <MyText >Samtal kommer om 5 sekunder...</MyText>
+                </View>)
+            }
+
 
             <PhoneCall visible={isModalShown} onClose={() => setIsModalShown(false)} />
         </>
@@ -144,7 +106,18 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         color: isDark ? theme.colors.accent100 : theme.colors.text
     },
     feedbackMessage: {
-        position: 'relative',
-        top:-300
+        // position: 'relative',
+        flexDirection: 'row',
+        gap: 10,
+        alignItems: 'center',
+        top: Platform.OS === 'android' ? -80 : -100,
+        left: Platform.OS === 'android' ? -130 : -130,
+        backgroundColor: isDark ? theme.colors.background100 : theme.colors.accent300,
+        padding: 10,
+        borderRadius: 5,
+        borderWidth: 1,
+        height: 60,
+        width: 300,
+        borderColor: theme.colors.accent
     }
 })
