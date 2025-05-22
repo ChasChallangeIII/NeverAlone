@@ -28,7 +28,7 @@ app.get("/", (_, res) => {
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-app.use("/api/comments", authenticate, CommentsRouter);
+
 
 app.use("/api", authenticate, ApiRouter);
 app.use("/admin", authorizeAdmin, AdminRouter);

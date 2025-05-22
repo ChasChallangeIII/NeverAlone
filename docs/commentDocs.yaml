@@ -1,8 +1,10 @@
 paths:
-  /api/comments:
+  /admin/comments:
     get:
       summary: "Hämta alla kommentarer"
-      description: "Hämtar alla kommentarer som är sparade i databasen"
+      description: "Hämtar alla kommentarer som är sparade i databasen (kräver admin)"
+      security:
+        - bearerAuth: []
       responses:
         '200':
           description: "Lista med alla kommentarer"
@@ -24,21 +26,64 @@ paths:
                     created_at:
                       type: "string"
                       format: "date-time"
+
+  /admin/comments/report/{reportId}:
+    get:
+      summary: "Hämta kommentarer för specifik rapport"
+      description: "Hämtar alla kommentarer kopplade till en viss rapport (kräver admin)"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "reportId"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+          description: "ID på rapporten"
+      responses:
+        '200':
+          description: "Kommentarer kopplade till rapporten"
+          content:
+            application/json:
+              schema:
+                type: "array"
+                items:
+                  type: "object"
+                  properties:
+                    id:
+                      type: "integer"
+                    report_id:
+                      type: "integer"
+                    admin_id:
+                      type: "integer"
+                    comment:
+                      type: "string"
+                    created_at:
+                      type: "string"
+                      format: "date-time"
+
+  /admin/comments/{reportId}:
     post:
       summary: "Skapa en ny kommentar"
-      description: "Lägg till en ny kommentar till en rapport"
+      description: "Lägg till en ny kommentar till en rapport (kräver admin)"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "reportId"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+          description: "ID på rapporten"
       requestBody:
         content:
           application/json:
             schema:
               type: "object"
               required:
-                - report_id
                 - admin_id
                 - comment
               properties:
-                report_id:
-                  type: "integer"
                 admin_id:
                   type: "integer"
                 comment:
@@ -46,38 +91,46 @@ paths:
       responses:
         '201':
           description: "Kommentar skapad framgångsrikt"
-  /api/comments/{id}:
+
+  /admin/comments/{id}:
     put:
       summary: "Uppdatera en kommentar"
-      description: "Uppdatera en befintlig kommentar"
+      description: "Uppdatera en befintlig kommentar (kräver admin)"
+      security:
+        - bearerAuth: []
       parameters:
         - name: "id"
           in: "path"
           required: true
-          description: "ID för kommentaren som ska uppdateras"
           schema:
             type: "integer"
+          description: "ID på kommentaren"
       requestBody:
         content:
           application/json:
             schema:
               type: "object"
+              required:
+                - comment
               properties:
                 comment:
                   type: "string"
       responses:
         '200':
           description: "Kommentar uppdaterad framgångsrikt"
+
     delete:
       summary: "Ta bort en kommentar"
-      description: "Ta bort en specifik kommentar genom ID"
+      description: "Ta bort en specifik kommentar genom ID (kräver admin)"
+      security:
+        - bearerAuth: []
       parameters:
         - name: "id"
           in: "path"
           required: true
-          description: "ID för kommentaren som ska tas bort"
           schema:
             type: "integer"
+          description: "ID på kommentaren"
       responses:
         '204':
           description: "Kommentar borttagen framgångsrikt"

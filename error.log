@@ -1327,3 +1327,47 @@
     at IncomingMessage.emit (node:events:519:28)
     at endReadableNT (node:internal/streams/readable:1696:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-05-22T17:44:46.413Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-22T17:53:32.466Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-22T17:55:35.502Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-22T17:58:24.644Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
