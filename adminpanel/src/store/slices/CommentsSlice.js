@@ -1,70 +1,81 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+
+const API_BASE = 'https://neveralone.onrender.com/admin/comments';
+
 export const fetchCommentsByReportId = createAsyncThunk(
-  'comments/fetchByReportId',
-  async (reportId) => {
-    const res = await fetch(`/api/comments?report_id=${reportId}`);
-    const data = await res.json();
+    'comments/fetchByReportId',
+    async (reportId, thunkAPI) => {
+        const state = thunkAPI.getState();
+        const token = state.auth.token;  
+        const res = await fetch(`${API_BASE}/report/${reportId}`, {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+        });
 
-    const commentsForReport = data.rows.filter(comment => comment.report_id === reportId);
+        if (!res.ok) throw new Error('Failed to fetch comments');
+        const comments = await res.json();
 
-    return { reportId, comments: commentsForReport };
-  }
+        return { reportId, comments };
+    }
 );
-
 
 export const postComment = createAsyncThunk(
     'comments/postComment',
-    async (commentData, { dispatch }) => {
-    const res = await fetch('/api/comments', {
+    async (commentData, { dispatch, getState }) => {
+        const token = getState().auth.token;
+        const { report_id, admin_id, comment } = commentData;
+
+        const res = await fetch(`${API_BASE}/${report_id}`, {  
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(commentData),
-    });
+        headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ adminId: admin_id, comment }), 
+        });
 
-    const newComment = await res.json();
+        if (!res.ok) throw new Error('Failed to post comment');
+        const newComment = await res.json();
 
+        dispatch(fetchCommentsByReportId(report_id));
 
-    dispatch(fetchCommentsByReportId(commentData.report_id));
-    return newComment;
-        }
+        return newComment;
+    }
 );
+
 
 const commentsSlice = createSlice({
     name: 'reportComments',
     initialState: {
-        commentsByReport: {}, 
-        status: 'idle', 
-        error: null, 
+    commentsByReport: {},
+    status: 'idle',
+    error: null,
     },
     reducers: {},
     extraReducers: (builder) => {
-    builder
-
+        builder
         .addCase(fetchCommentsByReportId.pending, (state) => {
             state.status = 'loading';
         })
         .addCase(fetchCommentsByReportId.fulfilled, (state, action) => {
             state.status = 'succeeded';
-
             state.commentsByReport[action.payload.reportId] = action.payload.comments;
         })
         .addCase(fetchCommentsByReportId.rejected, (state, action) => {
             state.status = 'failed';
             state.error = action.error.message;
         })
-        
-
         .addCase(postComment.fulfilled, (state, action) => {
             const newComment = action.payload;
             const reportId = newComment.report_id;
-
 
             if (!state.commentsByReport[reportId]) {
             state.commentsByReport[reportId] = [];
             }
 
-        state.commentsByReport[reportId].push(newComment);
+            state.commentsByReport[reportId].push(newComment);
         });
     },
 });
