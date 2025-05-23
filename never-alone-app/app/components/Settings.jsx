@@ -12,11 +12,11 @@ import { useAuth } from '../context/AuthContext'
 const Settings = () => {
     const [isShown, setIsShown] = useState(false)
     const { customTheme, toggleTheme, isDark } = useTheme()
-    const { clearUsername, togglePrefersDark } = useUser()
-    const{logOut} = useAuth()
+    const { user, clearUser, togglePrefersDark } = useUser()
+    const { logOut } = useAuth()
 
     const handleSignOut = async () => {
-        clearUsername()
+        clearUser()
         logOut()
     }
     const styles = createStyles(customTheme, isDark)
@@ -30,6 +30,10 @@ const Settings = () => {
         <View>
             <Pressable style={styles.settingsButton} onPress={() => setIsShown(true)}>
                 <MaterialIcons name="settings" size={30} color={customTheme.colors.text} />
+                {/* <Image
+                    source={{ uri: user.profileImage }}
+                    style={styles.image}
+                /> */}
                 {/* <Image
                     source={require('../assets/images/rim.jpg')}
                     style={styles.image}
@@ -123,7 +127,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         width: 90,
         color: theme.colors.text,
         borderWidth: 1,
-        borderColor:theme.colors.text
+        borderColor: theme.colors.text
     },
 
     settingsButton: {

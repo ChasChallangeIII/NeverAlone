@@ -12,7 +12,7 @@ import { useAuth } from '../context/AuthContext'
 const LoginScreen = () => {
   const { customTheme, isDark } = useTheme()
   const { logIn, isLoading } = useAuth()
-  const { username, saveUsername, error, clearError, setError } = useUser()
+  const { user, saveUser, error, clearError, setError } = useUser()
 
   const [inputUsername, setInputUsername] = useState('')
   const [inputPassword, setInputPassword] = useState('')
@@ -43,7 +43,6 @@ const LoginScreen = () => {
           password: inputPassword
         })
       })
-      alert(response.status);
 
       if (!response.ok) {
         if (response.status === 400 || response.status === 404) {
@@ -57,7 +56,9 @@ const LoginScreen = () => {
 
       const data = await response.json()
       const token = data.token
-      await saveUsername(inputUsername)
+      const profile = data.profile
+
+      await saveUser(profile)
       logIn(token)
 
     } catch (error) {
@@ -114,8 +115,9 @@ const LoginScreen = () => {
                 Logga in
               </MyText>
             </Pressable>
-            {isLoading && (<MyText> laddar...</MyText>)}
-
+            {isLoading && (
+              <ActivityIndicator color={customTheme.colors.primary} />
+            )}
             {error && (
               <View style={styles.errorView}>
                 <AntDesign name="frowno" style={styles.icon} />
@@ -169,7 +171,7 @@ const createStyles = (theme) => StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderRadius: 4,
+    borderRadius: 12,
     padding: 10,
     borderColor: theme.colors.secondary600,
     color: theme.colors.text,
@@ -184,13 +186,15 @@ const createStyles = (theme) => StyleSheet.create({
     alignItems: 'center'
   },
   errorView: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     gap: 10,
     backgroundColor: theme.colors.primary200,
     marginHorizontal: 20,
     padding: 10,
-    borderRadius: 5
+    borderRadius: 5,
+    borderColor: theme.colors.primary500,
+    borderWidth: 1,
   },
   error: {
     color: theme.colors.primary800
@@ -199,4 +203,6 @@ const createStyles = (theme) => StyleSheet.create({
     fontSize: 60,
     color: theme.colors.primary800
   }
+
+
 })

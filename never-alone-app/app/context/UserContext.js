@@ -6,7 +6,7 @@ import { useTheme } from "./ThemeContext";
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [username, setUsername] = useState(null);
+  const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -23,27 +23,27 @@ export const UserProvider = ({ children }) => {
 
   const getUser = async () => {
     try {
-      const storedUsername = await AsyncStorage.getItem("username");
-      if (storedUsername) {
-        setUsername(storedUsername);
+      const storedUser = await AsyncStorage.getItem("user");
+      if (storedUser) {
+        setUsername(storedUser);
       }
     } catch (error) {
       setError(error.message);
     }
   };
-  const saveUsername = async (name) => {
+  const saveUser = async (user) => {
     try {
-      setUsername(name);
-      await AsyncStorage.setItem("username", name);
+      setUser(user);
+      await AsyncStorage.setItem("user", JSON.stringify(user));
     } catch (error) {
       setError(error.message);
     }
   };
 
-  const clearUsername = async (name) => {
+  const clearUser = async (user) => {
     try {
-      setUsername(null);
-      await AsyncStorage.removeItem("username", name);
+      setUser(null);
+      await AsyncStorage.removeItem("user", user);
     } catch (error) {
       setError(error.message);
     }
@@ -51,11 +51,11 @@ export const UserProvider = ({ children }) => {
   const clearError = () => setError(false);
 
   const value = {
-    username,
+    user,
     isLoading,
     error,
-    saveUsername,
-    clearUsername,
+    saveUser,
+    clearUser,
     clearError,
     setError,
     prefersDark,

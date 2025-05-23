@@ -9,27 +9,10 @@ import MyText from './textwrappers/MyText';
 import { useNavigation } from '@react-navigation/native';
 
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { useFakeCall } from '../context/FakeCallContext';
 
 
-const saveLocationAndTime = async () => {
-    try {
-        let { status } = await Location.requestForegroundPermissionsAsync();
-        if (status !== "granted") {
-            alert(status);
-            return;
-        }
-        const location = await Location.getCurrentPositionAsync();
-        const {
-            coords: { latitude, longitude },
-            timestamp
-        } = location;
 
-        const isoTimeStamp = new Date(timestamp).toISOString()
-        console.log(latitude, longitude, isoTimeStamp);
-    } catch (error) {
-        console.warn(error);
-    }
-};
 
 
 const CallMeButton = ({ props }) => {
@@ -38,6 +21,35 @@ const CallMeButton = ({ props }) => {
     const styles = createStyles(customTheme, isDark)
     const navigation = useNavigation()
     const [feedback, setFeedback] = useState(false)
+    const { setFakeCallLocation } = useFakeCall()
+
+
+    const saveLocationAndTime = async () => {
+        try {
+            let { status } = await Location.requestForegroundPermissionsAsync();
+            if (status !== "granted") {
+                alert(status);
+                return;
+            }
+            const location = await Location.getCurrentPositionAsync();
+            const {
+                coords: { latitude, longitude },
+                timestamp
+            } = location;
+
+            const isoTimeStamp = new Date(timestamp).toISOString()
+            console.log(latitude, longitude, isoTimeStamp);
+            setFakeCallLocation({
+                location: {
+                    latitude: latitude,
+                    longitude: longitude
+                }
+            })
+
+        } catch (error) {
+            console.warn(error);
+        }
+    };
 
 
     const handleFakeCall = () => {

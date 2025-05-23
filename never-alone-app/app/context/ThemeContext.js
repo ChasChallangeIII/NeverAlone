@@ -17,9 +17,10 @@ export const ThemeProvider = ({ children }) => {
   const chosenTheme = isDark ? darkTheme : lightTheme;
   const customTheme = buildCustomTheme(chosenTheme, isDark);
   const toggleTheme = async () => {
-    setIsDark((prev) => !prev);
-    await AsyncStorage.setItem("prefersDark", isDark);
-    setPrefersDark(isDark)
+    const newMode = !isDark;
+    setIsDark(newMode);
+    await AsyncStorage.setItem("prefersDark", newMode);
+    // setPrefersDark(isDark)
   };
   const [fontsLoaded, error] = useFonts({
     "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
