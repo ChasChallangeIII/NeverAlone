@@ -27,20 +27,20 @@
     };
 
         export const createComment = async (req, res) => {
-            const { reportId } = req.params;
-            const { adminId, comment } = req.body;
+        const { reportId } = req.params;  // Här läser vi från URL
+        const { adminId, comment } = req.body;
 
-            if (!adminId || !comment) {
-                return res.status(400).json({ message: "Admin ID och kommentar krävs" });
-            }
+        if (!reportId || !adminId || !comment) {
+            return res.status(400).json({ message: "Report ID, Admin ID and comment text are required" });
+        }
 
-            try {
-                const newComment = await insertReportComment(reportId, adminId, comment);
-                res.status(201).json(newComment);
-            } catch (error) {
-                console.error("Error creating comment:", error);
-                res.status(500).json({ message: "Error creating comment", error: error.message });
-            }
+        try {
+            const newComment = await insertReportComment(reportId, adminId, comment);
+            res.status(201).json(newComment);
+        } catch (error) {
+            console.error("Error creating comment:", error);
+            res.status(500).json({ message: "Error creating comment", error: error.message });
+        }
         };
 export const updateComment = async (req, res) => {
     const { commentId } = req.params;
