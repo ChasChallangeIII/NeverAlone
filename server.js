@@ -32,6 +32,7 @@ app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use("/api", authenticate, ApiRouter);
 app.use("/admin", authorizeAdmin, AdminRouter);
+app.use("/admin/comments", authorizeAdmin, CommentsRouter);
 app.use("/auth", AuthRouter);
 
 app.use(notFound);

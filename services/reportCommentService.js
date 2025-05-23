@@ -24,11 +24,15 @@ export const insertReportComment = async (reportId, adminId, comment) => {
         RETURNING *;
     `;
 
+    console.log("Running query:", query, [reportId, adminId, comment]);
+
     const result = await executeQuery(query, [
         parseInt(reportId),
         parseInt(adminId),
         comment,
     ]);
+
+    console.log("Insert result:", result);
 
     return result[0];
 };

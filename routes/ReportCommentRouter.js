@@ -9,19 +9,19 @@ import {
 
 const router = express.Router();
 
-// GET /admin/comments/report/:reportId → Hämta kommentarer för specifik rapport
-router.get("/report/:reportId", getComments);
-
-// GET /admin/comments → Hämta alla kommentarer
+// GET alla kommentarer
 router.get("/", getAllComments);
 
-// POST /admin/comments
-router.post("/", createComment);
+// GET kommentarer för specifik rapport
+router.get("/report/:reportId", getComments);
 
-// PUT /admin/comments/:id
-router.put("/:id", updateComment);
+// POST ny kommentar till specifik rapport
+router.post("/report/:reportId", createComment);
 
-// DELETE /admin/comments/:id
-router.delete("/:id", deleteComment);
+// PUT uppdatera kommentar
+router.put("/:commentId", updateComment);
+
+// DELETE kommentar
+router.delete("/:commentId", deleteComment);
 
 export default router;

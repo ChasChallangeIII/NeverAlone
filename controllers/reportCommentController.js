@@ -26,25 +26,24 @@
     }
     };
 
-    export const createComment = async (req, res) => {
-    const { reportId } = req.params;
-    const { adminId, comment } = req.body;
+        export const createComment = async (req, res) => {
+            const { reportId } = req.params;
+            const { adminId, comment } = req.body;
 
-    if (!adminId || !comment) {
-        return res.status(400).json({ message: "Admin ID and comment text are required" });
-    }
+            if (!adminId || !comment) {
+                return res.status(400).json({ message: "Admin ID och kommentar krävs" });
+            }
 
-    try {
-        const newComment = await insertReportComment(reportId, adminId, comment);
-        res.status(201).json(newComment);
-    } catch (error) {
-        console.error("Error creating comment:", error);
-        res.status(500).json({ message: "Error creating comment" });
-    }
-    };
-
-    export const updateComment = async (req, res) => {
-    const { id } = req.params;
+            try {
+                const newComment = await insertReportComment(reportId, adminId, comment);
+                res.status(201).json(newComment);
+            } catch (error) {
+                console.error("Error creating comment:", error);
+                res.status(500).json({ message: "Error creating comment", error: error.message });
+            }
+        };
+export const updateComment = async (req, res) => {
+    const { commentId } = req.params;
     const { comment } = req.body;
 
     if (!comment) {
@@ -52,19 +51,19 @@
     }
 
     try {
-        // TODO: Add update logic with your DB
-        res.status(200).json({ message: `Comment ${id} updated successfully` });
+        const updated = await updateReportComment(commentId, comment);
+        res.status(200).json(updated);
     } catch (error) {
         console.error("Error updating comment:", error);
         res.status(500).json({ message: "Error updating comment" });
     }
-    };
+};
+
 
     export const deleteComment = async (req, res) => {
     const { id } = req.params;
 
     try {
-        // TODO: Add delete logic with your DB
         res.status(200).json({ message: `Comment ${id} deleted successfully` });
     } catch (error) {
         console.error("Error deleting comment:", error);
