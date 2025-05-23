@@ -28,14 +28,13 @@ export const postComment = createAsyncThunk(
         const token = getState().auth.token;
         const { report_id, admin_id, comment } = commentData;
 
-        const res = await fetch('https://neveralone.onrender.com/admin/comments', {  // POST till /admin/comments
+            const res = await fetch(`https://neveralone.onrender.com/admin/comments/report/${report_id}`, {  
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
             },
             body: JSON.stringify({
-            reportId: report_id,
             adminId: admin_id,
             comment,
             }),
@@ -48,7 +47,6 @@ export const postComment = createAsyncThunk(
 
         const newComment = await res.json();
 
-        // Uppdatera kommentarslistan efter ny kommentar
         dispatch(fetchCommentsByReportId(report_id));
 
         return newComment;
