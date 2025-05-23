@@ -23,27 +23,40 @@ export const fetchCommentsByReportId = createAsyncThunk(
 
 export const postComment = createAsyncThunk(
     'comments/postComment',
-    async (commentData, { dispatch, getState }) => {
+    async (commentData, { dispatch, getState, rejectWithValue }) => {
+    try {
         const token = getState().auth.token;
         const { report_id, admin_id, comment } = commentData;
 
-        const res = await fetch(`${API_BASE}/${report_id}`, {  
-        method: 'POST',
-        headers: { 
+        const res = await fetch('https://neveralone.onrender.com/admin/comments', {  // POST till /admin/comments
+            method: 'POST',
+            headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({ adminId: admin_id, comment }), 
+            'Authorization': `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+            reportId: report_id,
+            adminId: admin_id,
+            comment,
+            }),
         });
 
-        if (!res.ok) throw new Error('Failed to post comment');
+        if (!res.ok) {
+            const errorData = await res.json();
+            return rejectWithValue(errorData.message || 'Failed to post comment');
+        }
+
         const newComment = await res.json();
 
+        // Uppdatera kommentarslistan efter ny kommentar
         dispatch(fetchCommentsByReportId(report_id));
 
         return newComment;
+        } catch (error) {
+        return rejectWithValue(error.message || 'Failed to post comment');
+        }
     }
-);
+    );
 
 
 const commentsSlice = createSlice({
