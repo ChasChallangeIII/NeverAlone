@@ -13,7 +13,7 @@ export const findReportCommentsByReportId = async (reportId) => {
 
 export const getAllComments = async () => {
   const query = `SELECT * FROM report_comments ORDER BY created_at DESC;`; 
-  return await executeQuery(query); 
+    return await executeQuery(query); 
 };
 
 

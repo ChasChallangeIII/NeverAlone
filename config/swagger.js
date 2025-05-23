@@ -9,6 +9,8 @@ const contactDoc = yaml.load(fs.readFileSync(path.resolve("docs/contactDocs.yaml
 const communityDoc = yaml.load(fs.readFileSync(path.resolve("docs/communityDocs.yaml"), "utf8"));
 const groupDoc = yaml.load(fs.readFileSync(path.resolve("docs/groupDocs.yaml"), "utf8"));
 const commentDoc = yaml.load(fs.readFileSync(path.resolve("docs/commentDocs.yaml"), "utf8"));
+const userDoc = yaml.load(fs.readFileSync(path.resolve("docs/usersDocs.yaml"), "utf8"));
+
 
 export const swaggerDocs = {
   ...mainDoc,
@@ -20,6 +22,7 @@ export const swaggerDocs = {
     ...communityDoc.paths,
     ...groupDoc.paths,
     ...commentDoc.paths,
+    ...userDoc.paths, 
   },
   components: {
     schemas: {
@@ -29,6 +32,7 @@ export const swaggerDocs = {
       ...(communityDoc.components?.schemas || {}),
       ...(groupDoc.components?.schemas || {}),
       ...(commentDoc.components?.schemas || {}),
+      ...(userDoc.components?.schemas || {}), 
     },
   },
 };
