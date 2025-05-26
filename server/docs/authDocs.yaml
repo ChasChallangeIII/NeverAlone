@@ -1,0 +1,140 @@
+paths:
+  /auth/signup:
+    post:
+      tags:
+        - Auth
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SignupRequest"
+      responses:
+        201:
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  profile:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      username:
+                        type: string
+                      profileImage:
+                        type: string
+                  token:
+                    type: string
+        400:
+          description: Request body validation failed or username already exists
+        500:
+          description: Server error
+
+  /auth/signin:
+    post:
+      tags:
+        - Auth
+      summary: Sign in a user or admin
+      parameters:
+        - in: query
+          name: admin
+          required: false
+          schema:
+            type: boolean
+            example: false
+          description: Set to `true` if signing in as an admin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SigninRequest"
+      responses:
+        200:
+          description: User signed in successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  profile:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      username:
+                        type: string
+                      profileImage:
+                        type: string
+                  token:
+                    type: string
+        400:
+          description: Request body validation failed or password is incorrect
+        404:
+          description: User not found
+        500:
+          description: Server error
+
+  /auth/account/{deletecommand}:
+    delete:
+      tags:
+        - Auth
+      summary: Delete user account
+      parameters:
+        - in: path
+          name: deletecommand
+          required: true
+          schema:
+            type: string
+            example: deletealex
+          description: Command-like string to trigger account deletion
+      responses:
+        200:
+          description: Account deleted successfully
+        400:
+          description: Error deleting account
+        404:
+          description: User not found
+        500:
+          description: Server error
+
+components:
+  schemas:
+    SignupRequest:
+      type: object
+      required:
+        - username
+        - password
+        - gender
+        - birthDate
+      properties:
+        username:
+          type: string
+          example: johndoe
+        password:
+          type: string
+          example: yourSecurePassword
+        gender:
+          type: string
+          example: male
+        birthDate:
+          type: string
+          format: date
+          example: 1990-01-01
+
+    SigninRequest:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          example: johndoe
+        password:
+          type: string
+          example: yourSecurePassword

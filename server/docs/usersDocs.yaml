@@ -1,0 +1,31 @@
+paths:
+  /admin/users:
+    get:
+      summary: Hämta alla användare
+      tags:
+        - Admin
+      responses:
+        '200':
+          description: En lista med användare
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        gender:
+          type: string
+          example: "female"
+        birth_date:
+          type: string
+          format: date
+          example: "1992-03-15"

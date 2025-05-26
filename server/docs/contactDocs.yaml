@@ -1,0 +1,114 @@
+paths:
+  /api/contacts:
+    post:
+      tags:
+        - Contacts
+      summary: Add a new contact
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+                - contactId
+              properties:
+                contactId:
+                  type: integer
+                  example: 2
+      responses:
+        "201":
+          description: Contact added successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Contact"
+        "409":
+          description: Contact already exists
+        "400":
+          description: Invalid request
+        "500":
+          description: Server error
+
+    get:
+      tags:
+        - Contacts
+      summary: Get all contacts for a user
+      responses:
+        "200":
+          description: List of contacts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "500":
+          description: Server error
+
+  /api/contacts/{contactId}:
+    delete:
+      tags:
+        - Contacts
+      summary: Remove a contact
+      parameters:
+        - name: contactId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Contact deleted successfully
+        "500":
+          description: Server error
+
+  /api/contacts/search:
+    get:
+      tags:
+        - Contacts
+      summary: Search contacts by name
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: q
+          in: query
+          required: false
+          schema:
+            type: string
+            description: Search term (name)
+      responses:
+        "200":
+          description: Matching contacts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "500":
+          description: Server error
+
+components:
+  schemas:
+    Contact:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        contact_id:
+          type: integer
+        created_at:
+          type: string
+          format: date-time
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string

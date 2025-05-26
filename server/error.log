@@ -1,0 +1,1525 @@
+2025-04-11T08:50:01.297Z [ERROR] Error: Kan inte hitta /api/record
+    at notFound (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/middleware/notFound.js:5:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:60:12)
+2025-04-11T08:51:04.282Z [ERROR] Error: Inget innehåll hittades
+    at file:///C:/Users/oscar/Documents/FJSX24/neverAlone/routes/ApiRouter.js:9:13
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:186:3)
+2025-04-11T09:04:10.841Z [ERROR] Error: Inget innehåll hittades
+    at file:///C:/Users/oscar/Documents/FJSX24/neverAlone/routes/ApiRouter.js:9:13
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:186:3)
+2025-04-11T09:26:28.695Z [ERROR] Error: Incorrect error
+    at signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:77:13)
+2025-04-11T09:27:03.734Z [ERROR] Error: Incorrect password
+    at signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:77:13)
+2025-04-17T09:50:09.495Z [ERROR] Error: Could not find /records
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-04-17T09:50:30.056Z [ERROR] Error: Could not find /records
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-04-25T09:15:39.569Z [ERROR] RangeError: Maximum call stack size exceeded
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:7:27)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:8:25)
+2025-04-25T09:16:43.683Z [ERROR] ReferenceError: findReportsReports is not defined
+    at getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:12:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:186:3)
+2025-04-25T09:16:59.937Z [ERROR] error: syntax error at or near "reports"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/dbInit.js:13:22)
+    at async findReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:18:10)
+    at async getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:12:19)
+2025-04-25T09:18:14.819Z [ERROR] error: syntax error at or near "reports"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/dbInit.js:13:22)
+    at async findReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:18:10)
+    at async getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:12:19)
+2025-04-25T09:20:25.682Z [ERROR] error: syntax error at or near "reports"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/dbInit.js:13:22)
+    at async findReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:10:10)
+    at async getReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:19:18)
+2025-04-25T09:20:37.066Z [ERROR] error: syntax error at or near "reports"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/dbInit.js:13:22)
+    at async findReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:10:10)
+    at async getReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:19:18)
+2025-04-25T09:21:00.281Z [ERROR] Error: Report not found
+    at findReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:13:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:19:18)
+2025-04-25T09:21:49.439Z [ERROR] Error: Report not found
+    at findReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/reportServices.js:13:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getReport (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:19:18)
+2025-04-25T09:26:11.442Z [ERROR] SyntaxError: Expected ',' or '}' after property value in JSON at position 66 (line 3 column 5)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-04-25T09:57:52.445Z [ERROR] ReferenceError: result is not defined
+    at findReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/ReportServices.js:24:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getReports (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/ReportsController.js:10:21)
+2025-04-25T13:01:43.932Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+    at get error [as error] (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:663:22)
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:29:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+2025-04-25T13:03:09.251Z [ERROR] Error: Required
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:33:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:03:33.912Z [ERROR] Error: Required
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:05:53.719Z [ERROR] Error: Required
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:06:21.625Z [ERROR] Error: Required
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:07:38.792Z [ERROR] SyntaxError: Expected property name or '}' in JSON at position 29
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-25T13:07:47.461Z [ERROR] SyntaxError: Expected property name or '}' in JSON at position 29
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-25T13:08:44.915Z [ERROR] Error: Cause must be a string, Unrecognized key(s) in object: 'causes'
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:09:30.447Z [ERROR] Error: Cause must be a string, Unrecognized key(s) in object: 'causes'
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:35:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+2025-04-25T13:10:23.635Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "cause"
+    ],
+    "message": "Cause must be a string"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "causes"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'causes'"
+  }
+]
+    at get error [as error] (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:663:22)
+    at validateReportReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/reportSchema.js:29:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+2025-04-25T13:23:10.462Z [ERROR] Error: Could not find /admin/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-03T09:08:59.475Z [ERROR] Error: Username or email already exsits
+    at addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:14:44.861Z [ERROR] ZodError: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "gender",
+      "birthDate"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'gender', 'birthDate'"
+  }
+]
+    at get error (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/validators/authValidator.js:56:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-03T09:14:55.479Z [ERROR] error: column "password" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async performLogin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:50:18)
+    at async signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:51:20)
+2025-05-03T09:17:05.151Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:53:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:51:20)
+2025-05-03T09:17:43.571Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:53:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:51:20)
+2025-05-03T09:18:40.210Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:59:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signin (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:51:20)
+2025-05-03T09:20:47.956Z [ERROR] TypeError: bcrypt is not a function
+    at addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:26:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:21:02.797Z [ERROR] error: column "password" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:21:20.912Z [ERROR] error: column "birthdate" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:21:42.451Z [ERROR] error: column "birth_date" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:23:07.147Z [ERROR] error: syntax error at or near ";"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:23:36.974Z [ERROR] error: syntax error at or near ";"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:24:39.554Z [ERROR] error: column "brith_date" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:26:14.725Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "brithDay"
+    ],
+    "message": "BrithDay must be a string or date"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "brithDate"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'brithDate'"
+  }
+]
+    at get error (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/validators/authValidator.js:47:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-03T09:26:26.463Z [ERROR] error: column "brith_day" of relation "users" does not exist
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:29:14.191Z [ERROR] error: invalid input syntax for type integer: "05-10-27"
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:28:10)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:35:15.993Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "birthDay"
+    ],
+    "message": "BirthDate must be a string or date"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "birthDate"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'birthDate'"
+  }
+]
+    at get error (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/validators/authValidator.js:47:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-05T08:38:52.301Z [ERROR] ZodError: [
+  {
+    "code": "too_small",
+    "minimum": 8,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "Password must be at least 8 characters long",
+    "path": [
+      "password"
+    ]
+  }
+]
+    at get error [as error] (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/authValidator.js:56:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+2025-05-05T08:39:47.856Z [ERROR] error: column "email" does not exist
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:26:22)
+    at async performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/authService.js:88:18)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:46:21)
+2025-05-05T08:40:39.841Z [ERROR] Error: Incorrect password
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/authService.js:92:11)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:46:21)
+2025-05-09T08:57:15.219Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "nan",
+    "path": [
+      "location",
+      "lat"
+    ],
+    "message": "Expected number, received nan"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "nan",
+    "path": [
+      "location",
+      "lng"
+    ],
+    "message": "Expected number, received nan"
+  }
+]
+    at get error (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateReportReqBody (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/validators/reportValidator.js:29:18)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-09T09:03:12.968Z [ERROR] error: column "text" of relation "reports" does not exist
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
+    at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:30:22)
+2025-05-09T09:04:08.313Z [ERROR] error: column "text" of relation "reports" does not exist
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
+    at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:30:22)
+2025-05-09T09:17:59.856Z [ERROR] error: column "text" of relation "reports" does not exist
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
+    at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:30:22)
+2025-05-09T09:19:02.315Z [ERROR] SyntaxError: Expected property name or '}' in JSON at position 24 (line 3 column 5)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-05-09T09:22:15.767Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "message"
+    ],
+    "message": "Text must be a string"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "text"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'text'"
+  }
+]
+    at get error (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateReportReqBody (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/validators/reportValidator.js:29:18)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-09T09:22:49.882Z [ERROR] error: column "text" of relation "reports" does not exist
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
+    at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:30:22)
+2025-05-09T09:23:58.915Z [ERROR] error: null value in column "status" of relation "reports" violates not-null constraint
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
+    at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:30:22)
+2025-05-09T09:24:58.025Z [ERROR] error: INSERT has more target columns than expressions
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
+    at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:30:22)
+2025-05-03T09:36:17.983Z [ERROR] Error: Username or email already exsits
+    at addUser (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/services/db/authService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async signup (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/controllers/AuthController.js:18:21)
+2025-05-03T09:36:25.359Z [ERROR] ZodError: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "gender",
+      "birthDate"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'gender', 'birthDate'"
+  }
+]
+    at get error (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/oscar/Documents/FJSX24/neverAlone/validators/authValidator.js:56:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\FJSX24\neverAlone\node_modules\router\index.js:582:12)
+2025-05-09T09:51:40.007Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "number",
+    "path": [
+      "password"
+    ],
+    "message": "Password must be a string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "birthDate"
+    ],
+    "message": "BirthDate must be a string or date"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "birth_date"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'birth_date'"
+  }
+]
+    at get error (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-09T09:51:54.234Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "birthDate"
+    ],
+    "message": "BirthDate must be a string or date"
+  },
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "birth_date"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'birth_date'"
+  }
+]
+    at get error (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-09T09:52:25.804Z [ERROR] error: date/time field value out of range: "25-03-2001"
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/authService.js:28:19)
+    at async signup (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/AuthController.js:16:21)
+2025-05-09T09:52:47.845Z [ERROR] error: date/time field value out of range: "2001-25-03"
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async addUser (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/authService.js:28:19)
+    at async signup (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/AuthController.js:16:21)
+2025-05-09T09:57:41.050Z [ERROR] ReferenceError: accessToken is not defined
+    at authenticate (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/middleware/auth.js:18:29)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+2025-05-09T09:58:01.046Z [ERROR] ReferenceError: accessToken is not defined
+    at authenticate (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/middleware/auth.js:18:29)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+2025-05-09T09:58:09.032Z [ERROR] ReferenceError: accessToken is not defined
+    at authenticate (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/middleware/auth.js:18:29)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\router\index.js:297:9
+2025-05-09T09:58:54.016Z [ERROR] error: null value in column "city" of relation "reports" violates not-null constraint
+    at C:\Users\TB\Documents\Plugg\NeverAlone\NeverAlone\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeQuery (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/db/db.js:26:22)
+    at async insertReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/services/reportService.js:43:18)
+    at async addReport (file:///C:/Users/TB/Documents/Plugg/NeverAlone/NeverAlone/controllers/ReportController.js:32:22)
+2025-05-14T10:11:15.867Z [ERROR] Error: Could not find /api/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-14T10:11:15.874Z [ERROR] Error: Could not find /api/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-14T10:15:05.399Z [ERROR] Error: Could not find /api/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-14T10:15:05.405Z [ERROR] Error: Could not find /api/reports
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:186:3)
+    at router (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:60:12)
+2025-05-14T10:15:58.563Z [ERROR] Error: Not Admin, access denied
+    at authorizeAdmin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:38:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-14T10:17:28.506Z [ERROR] Error: Not Admin, access denied
+    at authorizeAdmin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:40:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-14T10:17:28.517Z [ERROR] Error: Not Admin, access denied
+    at authorizeAdmin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:40:19)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-16T15:43:43.897Z [ERROR] Error: Could not find /groups
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-16T15:43:51.198Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-16T15:45:29.767Z [ERROR] Error: Username or email already exsits
+    at addUser (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:16:21)
+2025-05-16T15:49:42.245Z [ERROR] Error: Could not find /api/groups/join/2
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:688:15
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:276:14)
+2025-05-16T15:50:01.891Z [ERROR] Error: You is already a member of the group
+    at insertNewGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:61:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:25:23)
+2025-05-16T15:50:17.685Z [ERROR] error: relation "groups_members" does not exist
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:73:18)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:5)
+2025-05-16T15:51:13.585Z [ERROR] Error: You are not a member of this group
+    at deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:76:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:5)
+2025-05-16T15:53:45.264Z [ERROR] error: column "group_name" does not exist
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:74:18)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:23)
+2025-05-16T15:55:12.844Z [ERROR] error: syntax error at or near "INNER"
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:75:18)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:23)
+2025-05-16T15:56:45.671Z [ERROR] Error: You are not a member of this group
+    at deleteGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:77:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async leaveGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:37:23)
+2025-05-16T15:57:30.750Z [ERROR] Error: You is already a member of the group
+    at insertNewGroupMember (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:61:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinGroup (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:25:23)
+2025-05-16T15:57:51.667Z [ERROR] error: bind message supplies 1 parameters, but prepared statement "" requires 0
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async selectGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:106:10)
+    at async getGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:49:20)
+2025-05-16T15:58:13.547Z [ERROR] error: bind message supplies 1 parameters, but prepared statement "" requires 0
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\pg\lib\client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeQuery (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/db/db.js:28:22)
+    at async selectGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/groupService.js:106:10)
+    at async getGroups (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/GroupController.js:49:20)
+2025-05-16T16:27:36.349Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:40:14)
+2025-05-16T16:28:43.231Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:29:24.174Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:29:40.102Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:30:05.088Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:30:40.374Z [ERROR] Error: Admin not found
+    at performAdminLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:78:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:31:34.494Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:49:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:42:14)
+2025-05-16T16:31:41.943Z [ERROR] ReferenceError: isAdmin is not defined
+    at signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:45:50)
+2025-05-16T16:32:32.069Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:49:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-16T16:34:34.662Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:49:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-16T16:34:39.595Z [ERROR] Error: Incorrect password
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:57:11)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-16T16:55:44.276Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:56:01.172Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:56:46.134Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:57:03.950Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:57:07.819Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:57:59.587Z [ERROR] TokenExpiredError: jwt expired
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:18:22)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+2025-05-16T16:58:18.696Z [ERROR] Error: User not found
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:49:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-16T17:57:33.885Z [ERROR] Error: Could not find /signin?admin=false
+    at notFound (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-16T17:57:41.765Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+    at get error [as error] (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/validators/authValidator.js:54:18)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:295:15
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+2025-05-16T17:58:12.973Z [ERROR] Error: Incorrect password
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:57:11)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-16T17:58:28.721Z [ERROR] Error: Incorrect password
+    at performLogin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/services/authService.js:57:11)
+    at async signin (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/controllers/AuthController.js:44:14)
+2025-05-20T08:50:05.767Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/oscar/Documents/react/projects/nerver-alone-api/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+    at processParams (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:582:12)
+    at next (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\cookie-parser\index.js:71:5)
+    at Layer.handleRequest (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:342:13)
+    at C:\Users\oscar\Documents\react\projects\nerver-alone-api\node_modules\router\index.js:297:9
+2025-05-21T13:42:15.633Z [ERROR] Error: Could not find /comments?reportId=1
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:60:12)
+2025-05-21T13:42:32.260Z [ERROR] Error: Could not find /comments
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:60:12)
+2025-05-21T13:42:32.337Z [ERROR] Error: Could not find /favicon.ico
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:42:47.267Z [ERROR] Error: Could not find /comments?reportId=2
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:60:12)
+2025-05-21T13:47:07.486Z [ERROR] Error: Could not find /comments
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:688:15
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:276:14)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+    at router (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:60:12)
+2025-05-21T13:51:32.626Z [ERROR] Error: Could not find /comments
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:51:45.888Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:52:44.203Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:54:52.731Z [ERROR] Error: Incorrect password
+    at performLogin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/services/authService.js:57:11)
+    at async signin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:53:14)
+2025-05-21T13:55:08.729Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Email must be a string"
+  }
+]
+    at get error [as error] (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-21T13:55:09.635Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Email must be a string"
+  }
+]
+    at get error [as error] (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-21T13:55:16.782Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Email must be a string"
+  }
+]
+    at get error [as error] (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodObject.parse (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSignupReqBody (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/validators/authValidator.js:45:18)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-21T13:55:40.693Z [ERROR] ReferenceError: user is not defined
+    at signup (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:26:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-05-21T13:56:01.834Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:57:07.906Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:57:19.870Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:57:21.779Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:57:56.836Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:58:05.084Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:58:13.446Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:58:39.023Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T13:59:00.130Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T13:59:55.303Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-21T14:00:04.698Z [ERROR] TypeError: Cannot destructure property 'adminId' of 'req.body' as it is undefined.
+    at createComment (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/reportCommentController.js:32:13)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:186:3)
+2025-05-21T14:01:25.907Z [ERROR] SyntaxError: Expected double-quoted property name in JSON at position 53
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-05-21T14:01:30.369Z [ERROR] SyntaxError: Expected double-quoted property name in JSON at position 53
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-05-22T17:44:46.413Z [ERROR] Error: No token, access denied
+    at authenticate (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:14:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-22T17:53:32.466Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-22T17:55:35.502Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-22T17:58:24.644Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:10:32.391Z [ERROR] Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\jsonwebtoken\sign.js:111:20)
+    at signin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:56:23)
+2025-05-23T09:10:39.449Z [ERROR] Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\jsonwebtoken\sign.js:111:20)
+    at signin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:56:23)
+2025-05-23T09:12:45.432Z [ERROR] Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\jsonwebtoken\sign.js:111:20)
+    at signin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:56:23)
+2025-05-23T09:13:31.031Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:13:47.630Z [ERROR] JsonWebTokenError: secret or public key must be provided
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\jsonwebtoken\verify.js:113:19
+    at getSecret (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\jsonwebtoken\verify.js:101:10)
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:35:22)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+2025-05-23T09:15:00.468Z [ERROR] Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\jsonwebtoken\sign.js:111:20)
+    at signin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:56:23)
+2025-05-23T09:15:06.505Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+    at get error [as error] (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/validators/authValidator.js:54:18)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-23T09:15:09.649Z [ERROR] ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+    at get error [as error] (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:587:31)
+    at ZodEffects.parse (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/node_modules/zod/lib/index.mjs:663:22)
+    at validateSigninReqBody (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/validators/authValidator.js:54:18)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+2025-05-23T09:15:20.405Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:16:10.542Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:16:10.581Z [ERROR] Error: Could not find /favicon.ico
+    at notFound (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/notFound.js:4:8)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:17:15.033Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:17:37.533Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:17:55.368Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:17:55.590Z [ERROR] Error: No token, access denied
+    at authorizeAdmin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/middleware/auth.js:31:17)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:582:12)
+    at next (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:291:5)
+    at cookieParser (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handleRequest (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:342:13)
+    at C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\router\index.js:297:9
+2025-05-23T09:18:09.375Z [ERROR] Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\Robin\Documents\GitHub\NewNewBoil.React\NeverAlone\node_modules\jsonwebtoken\sign.js:111:20)
+    at signin (file:///C:/Users/Robin/Documents/GitHub/NewNewBoil.React/NeverAlone/controllers/AuthController.js:56:23)

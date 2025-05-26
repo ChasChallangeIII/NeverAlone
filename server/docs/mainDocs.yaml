@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: Never Alone RESTful API
+  description: Never Alone is a smart safety solution designed to help individuals feel more secure in public spaces. By pressing a discreet IoT button, users trigger an incoming call simulation, making them appear occupied. They can later fill out a survey in the mobile app to describe why they felt unsafe. Anonymized data can be shared with municipalities to improve urban safety measures
+  version: 1.0.0
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - BearerAuth: []
+
+tags:
+  - name: Reports
+    description: Endpoints for managing reports
+  - name: Report comments
+    description: Handle report comments as admin and allow the user to see them
+  - name: Contacts
+    description: Endpoints for managing user contacts
+  - name: Auth
+    description: Endpoints for handling user authentication and account management
+  - name: Community
+    description: Endpoints for handling communityposts and comments
+  - name: Groups
+    description: Endpoints for handling groups
+
+paths: {}

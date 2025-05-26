@@ -1,0 +1,103 @@
+paths:
+  /api/groups/:
+    post:
+      tags:
+        - Groups
+      summary: Create a new group
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GroupInput"
+      responses:
+        "201":
+          description: Group created successfully
+        "400":
+          description: Body validation failed
+        "401":
+          description: Unauthenticated
+    get:
+      tags:
+        - Groups
+      summary: Get all groups
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+          description: Search by group name
+      responses:
+        "200":
+          description: List of groups
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GroupsResponse"
+        "401":
+          description: Unauthenticated
+
+  /api/groups/join/{groupid}:
+    patch:
+      tags:
+        - Groups
+      summary: Join a group
+      parameters:
+        - in: path
+          name: groupid
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successfully joined the group
+        "400":
+          description: You are already a member of this group
+        "401":
+          description: Unauthenticated
+
+  /api/groups/leave/{groupid}:
+    patch:
+      tags:
+        - Groups
+      summary: Leave a group
+      parameters:
+        - in: path
+          name: groupid
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successfully left the group
+        "400":
+          description: You are not a member of this group
+        "401":
+          description: Unauthenticated
+
+components:
+  schemas:
+    GroupInput:
+      type: object
+      required:
+        - groupName
+      properties:
+        groupName:
+          type: string
+          example: MyCoolGroup
+
+    Group:
+      type: object
+      properties:
+        group_name:
+          type: string
+        total_members:
+          type: string
+
+    GroupsResponse:
+      type: object
+      properties:
+        groups:
+          type: array
+          items:
+            $ref: "#/components/schemas/Group"
