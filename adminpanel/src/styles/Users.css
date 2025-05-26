@@ -1,0 +1,16 @@
+    .users-page {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    
+    .users-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+    
+    

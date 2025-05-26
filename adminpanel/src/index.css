@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; 
+}
+
+.sidebar, .sidebar-icons, .footer {
+  font-family: 'Poppins', sans-serif; 
+}
+
+
+.company-name {
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.toggle-button, .close-button {
+  font-family: 'Roboto', sans-serif; 
+}

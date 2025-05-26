@@ -1,0 +1,19 @@
+    .help-page {
+        padding: 2rem;
+        min-height: 100vh;
+    }
+    
+    .help-section {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .help-section h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .help-section p {
+        margin-bottom: 2rem;
+    }
+    
