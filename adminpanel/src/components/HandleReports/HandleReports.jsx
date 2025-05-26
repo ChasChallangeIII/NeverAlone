@@ -10,6 +10,8 @@ const Reports = () => {
     const dispatch = useDispatch();
     const { items, loading, error } = useSelector(state => state.reports);
     const [activeReport, setActiveReport] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const reportsPerPage = 10;
 
     useEffect(() => {
         dispatch(fetchReports());
@@ -25,6 +27,19 @@ const Reports = () => {
 
     const closeModal = () => {
         setActiveReport(null);
+    };
+
+    const indexOfLastReport = currentPage * reportsPerPage;
+    const indexOfFirstReport = indexOfLastReport - reportsPerPage;
+    const currentReports = items.slice(indexOfFirstReport, indexOfLastReport);
+    const totalPages = Math.ceil(items.length / reportsPerPage);
+
+    const handleNextPage = () => {
+        if (currentPage < totalPages) setCurrentPage(prev => prev + 1);
+    };
+
+    const handlePrevPage = () => {
+        if (currentPage > 1) setCurrentPage(prev => prev - 1);
     };
 
     if (loading) return <div><Spinner /></div>;
@@ -43,7 +58,7 @@ const Reports = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {items.map(report => {
+                    {currentReports.map(report => {
                         const status = report.status || 'pending';
 
                         return (
@@ -72,6 +87,15 @@ const Reports = () => {
                     })}
                 </tbody>
             </table>
+            <div className="pagination">
+                <button onClick={handlePrevPage} disabled={currentPage === 1}>
+                    Föregående
+                </button>
+                <span>Sida {currentPage} av {totalPages}</span>
+                <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+                    Nästa
+                </button>
+            </div>
 
             {activeReport && (
                 <Modal isOpen={!!activeReport} onClose={closeModal}>
