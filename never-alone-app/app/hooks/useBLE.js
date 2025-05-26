@@ -4,7 +4,8 @@ import { PermissionsAndroid, Platform } from 'react-native';
 import * as ExpoDevice from 'expo-device';
 import base64 from 'react-native-base64';
 import { BleManager } from 'react-native-ble-plx';
-import { useCallUI } from '../context/CallUIContext'; //  Make sure the path is correct
+import { useFakeCall } from '../context/FakeCallContext';
+import { useNavigation } from '@react-navigation/native';
 
 const DATA_SERVICE_UUID = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E";
 const COLOR_CHARACTERISTIC_UUID = "6E400003-B5A3-F393-E0A9-E50E24DCCA9E";
@@ -15,8 +16,8 @@ export default function useBLE() {
   const [allDevices, setAllDevices] = useState([]);
   const [connectedDevice, setConnectedDevice] = useState(null);
   const [color, setColor] = useState('white');
-
-  const { triggerCall } = useCallUI(); //  Used to trigger the fake call modal
+  const navigation = useNavigation();
+  const { handleFakeCall } = useFakeCall(); //  Used to trigger the fake call modal
 
   const requestAndroid31Permissions = async () => {
     const bluetoothScanPermission = await PermissionsAndroid.request(
@@ -126,7 +127,7 @@ export default function useBLE() {
             console.log('📬 Received from ESP32:', decoded);
 
             // Trigger fake call modal
-            triggerCall();
+            handleFakeCall(navigation);
           }
         }
       );
