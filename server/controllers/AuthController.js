@@ -16,7 +16,7 @@ export const signup = async (req, res, next) => {
     const newUser = await addUser(req.body);
 
     const token = jwt.sign({ ...newUser }, JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "1m",
     });
 
     const userId = newUser.id;
@@ -54,7 +54,7 @@ export const signin = async (req, res, next) => {
     }
 
     const token = jwt.sign({ ...user, isAdmin }, JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "1m",
     });
 
     const userId = user.id;

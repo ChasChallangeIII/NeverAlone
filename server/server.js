@@ -26,9 +26,9 @@ app.get("/", (_, res) => {
   res.redirect("/docs");
 });
 
+console.log(swaggerDocs);
+
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-
-
 
 app.use("/api", authenticate, ApiRouter);
 app.use("/admin", authorizeAdmin, AdminRouter);
