@@ -1,13 +1,9 @@
 import { StyleSheet, Pressable, View, Platform } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import PhoneCall from './PhoneCall';
 import { useTheme } from '../context/ThemeContext';
-import * as Notifications from 'expo-notifications';
-import * as Location from 'expo-location';
 import MyText from './textwrappers/MyText';
 import { useNavigation } from '@react-navigation/native';
-
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useFakeCall } from '../context/FakeCallContext';
 
@@ -16,54 +12,12 @@ import { useFakeCall } from '../context/FakeCallContext';
 
 
 const CallMeButton = ({ props }) => {
-    const [isModalShown, setIsModalShown] = useState(false)
     const { customTheme, isDark } = useTheme()
     const styles = createStyles(customTheme, isDark)
     const navigation = useNavigation()
-    const [feedback, setFeedback] = useState(false)
-    const { setFakeCallLatitude, setFakeCallLongitude } = useFakeCall()
+    const { handleFakeCall, feedback } = useFakeCall()
 
 
-    const saveLocationAndTime = async () => {
-        try {
-            let { status } = await Location.requestForegroundPermissionsAsync();
-            if (status !== "granted") {
-                alert(status);
-                return;
-            }
-            const location = await Location.getCurrentPositionAsync();
-            const {
-                coords: { latitude, longitude },
-                timestamp
-            } = location;
-
-            const isoTimeStamp = new Date(timestamp).toISOString()
-            setFakeCallLatitude(latitude)
-            setFakeCallLongitude(longitude)
-
-        } catch (error) {
-            console.warn(error);
-        }
-    };
-
-
-    const handleFakeCall = () => {
-        setFeedback(true)
-        setTimeout(() => {
-            setFeedback(false)
-        }, 2000);
-        setTimeout(() => {
-
-            navigation.navigate('IncomingCallScreen')
-            saveLocationAndTime()
-        }, 4000);
-
-        // sendCallNotification()
-        // playRingtone()
-
-        // setIsModalShown(true)
-
-    }
     return (
         <>
 
@@ -71,8 +25,7 @@ const CallMeButton = ({ props }) => {
 
                 {...props}
                 onPress={() => {
-                    handleFakeCall();
-                    // setIsModalShown(true)
+                    handleFakeCall(navigation);
                 }}
                 style={styles.button}
             >
@@ -88,8 +41,6 @@ const CallMeButton = ({ props }) => {
                 </View>)
             }
 
-
-            <PhoneCall visible={isModalShown} onClose={() => setIsModalShown(false)} />
         </>
     )
 }
