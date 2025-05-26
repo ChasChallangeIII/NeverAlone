@@ -32,7 +32,4 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 - Low-power Bluetooth connectivity
 - Haptic feedback for button press confirmation
 
-  ## **System architecture**
-  ![Diagram](https://raw.githubusercontent.com/ChasChallangeIII/NeverAlone/main/nerveralone.drawio.svg)
-
 
