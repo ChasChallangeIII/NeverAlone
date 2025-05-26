@@ -4,10 +4,9 @@ const API_URL = 'https://neveralone.onrender.com/admin/reports';
 
 
 
-
 export const fetchReports = createAsyncThunk('reports/fetchReports', async () => {
     const token = localStorage.getItem('token');
-    
+
     if (!token) {
         throw new Error('Ingen token, vänligen logga in igen.');
     }
@@ -21,13 +20,16 @@ export const fetchReports = createAsyncThunk('reports/fetchReports', async () =>
     });
 
     if (!response.ok) {
-            const errorText = await response.text();
-            console.error('API error (text):', errorText);
-            throw new Error(`Fel från API: ${response.status} - ${errorText}`);
+        const errorText = await response.text();
+        console.error('API error (text):', errorText);
+        throw new Error(`Fel från API: ${response.status} - ${errorText}`);
     }
 
     const data = await response.json();
-    return data.reports;
+
+    const sortedReports = data.reports.sort((a, b) => new Date(b.time) - new Date(a.time));
+
+    return sortedReports;
 });
 
 export const updateReportStatus = createAsyncThunk(
