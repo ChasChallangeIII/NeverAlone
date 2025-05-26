@@ -21,7 +21,7 @@ const CallMeButton = ({ props }) => {
     const styles = createStyles(customTheme, isDark)
     const navigation = useNavigation()
     const [feedback, setFeedback] = useState(false)
-    const { setFakeCallLocation } = useFakeCall()
+    const { setFakeCallLatitude, setFakeCallLongitude } = useFakeCall()
 
 
     const saveLocationAndTime = async () => {
@@ -38,12 +38,8 @@ const CallMeButton = ({ props }) => {
             } = location;
 
             const isoTimeStamp = new Date(timestamp).toISOString()
-            setFakeCallLocation({
-                location: {
-                    latitude: latitude,
-                    longitude: longitude
-                }
-            })
+            setFakeCallLatitude(latitude)
+            setFakeCallLongitude(longitude)
 
         } catch (error) {
             console.warn(error);

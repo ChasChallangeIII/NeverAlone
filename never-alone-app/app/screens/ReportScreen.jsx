@@ -16,7 +16,8 @@ const ReportScreen = () => {
     setMessage,
     cause,
     setCause,
-    fakeCallLocation,
+    fakeCallLatitude,
+    fakeCallLongitude,
   } = useFakeCall()
   const { user } = useUser()
   const { userToken } = useAuth()
@@ -46,14 +47,19 @@ const ReportScreen = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          profile: {
-            user_id: user.id,
-            location: fakeCallLocation,
-            cause: cause,
-            message: message
-          }
+          // user_id: user.id,
+          location: {
+            latitude: fakeCallLatitude,
+            longitude: fakeCallLongitude
+          },
+          cause: cause,
+          message: message
         })
       })
+      const data = await response.json(); // försök läsa svaret
+
+      console.log('Response status:', response.status);
+      console.log('Response data:', data);
       if (!response.ok) {
         throw new Error("Något gick fel när vi skulle skicka rapporten. Försök igen senare");
 
