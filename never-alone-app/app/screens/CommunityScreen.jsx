@@ -145,7 +145,8 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 20,
-    paddingHorizontal: 8
+    paddingHorizontal: 8,
+    paddingBottom: 90
   },
   modalContent: {
     flex: 1,

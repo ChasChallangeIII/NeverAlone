@@ -8,10 +8,9 @@ import { useUser } from '../context/UserContext'
 
 const SearchScreen = () => {
   const { customTheme, isDark } = useTheme()
-  const { username} = useUser()
+  const { user } = useUser()
+  const username = user?.username
   const styles = createStyles(customTheme)
-
-
 
   return (
     <SafeAreaView style={styles.screen} >
@@ -20,7 +19,7 @@ const SearchScreen = () => {
         backgroundColor={customTheme.colors.background}
       />
       <View style={styles.container}>
-      <BigText>Sök vänner</BigText>
+        <BigText>Sök vänner</BigText>
         <TextInput
           style={styles.searchBar}
           placeholder='sök..'
@@ -28,7 +27,7 @@ const SearchScreen = () => {
           returnKeyType='go'
         />
 
-        <BigText>Hej { username}, vad vill du göra idag?</BigText>
+        <BigText>Hej {username}, vad vill du göra idag?</BigText>
       </View>
     </SafeAreaView>
   )
@@ -40,14 +39,17 @@ const createStyles = (theme) => StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: theme.colors.background50,
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+
+
 
   },
   container: {
     padding: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    gap:20
+    gap: 20,
+
   },
 
   searchBar: {
@@ -61,7 +63,7 @@ const createStyles = (theme) => StyleSheet.create({
     backgroundColor: theme.colors.backgroundColor,
     width: 300,
     borderRadius: 50,
-    textAlignVertical:'top'
+    textAlignVertical: 'top'
 
   }
 })

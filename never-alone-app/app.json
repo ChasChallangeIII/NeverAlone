@@ -23,6 +23,14 @@
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
       ],
+      "expo-font",
+      "expo-secure-store",
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ],
       [
         "react-native-ble-plx",
         {
@@ -63,7 +71,7 @@
       ]
     },
     "web": {
-      "favicon": "./app/assets/images/favicon.png"
+      "favicon": "./app/assets/images/logo.png"
     },
     "extra": {
       "eas": {

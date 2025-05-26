@@ -1,20 +1,36 @@
-export const handleFakeCall = () => {
-  alert("Fake samtal på g");
-//   alertLocation();
-//Send info to Back-end
-};
-export const alertLocation = async () => {
-  try {
-    let { status } = await Location.requestForegroundPermissionsAsync();
-    if (status !== "granted") {
-      alert(status);
-      return;
-    }
-    const location = await Location.getCurrentPositionAsync();
-    const { latitude, longitude } = location;
+const playRingtone = async () => {
+    try {
+        await Audio.setAudioModeAsync({
+            allowsRecordingIOS: false,
+            staysActiveInBackground: true,
+            interruptionModeIOS: InterruptionModeIOS.DoNotMix,
+            playsInSilentModeIOS: true, // 🔈 Viktigt
+            shouldDuckAndroid: true,
+            interruptionModeAndroid: InterruptionModeAndroid.DoNotMix,
+            playThroughEarpieceAndroid: false,
+        });
 
-    alert(latitude);
-  } catch (error) {
-    alert(error);
-  }
-};
+
+        const { sound } = await Audio.Sound.createAsync(
+            require("../assets/sounds/original-phone-ringtone-36558.mp3"),
+            {
+                isLooping: true,
+                volume: 1.0,
+                shouldPlay: true,
+            }
+        );
+        ringtoneSound = sound
+        await sound.playAsync()
+    } catch (error) {
+        console.log("❌ Failed to play ringtone:", error);
+    }
+}
+
+ const stopRingtone = async () => {
+    try {
+        await ringtoneSound.stopAsync()
+        await ringtoneSound.unloadAsync()
+    } catch (error) {
+        console.warn("⚠️ Failed to stop ringtone:", error);
+    }
+}

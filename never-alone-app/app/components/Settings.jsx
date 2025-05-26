@@ -26,7 +26,7 @@ const Settings = () => {
   const [isBLEModalVisible, setIsBLEModalVisible] = useState(false);
 
   const { customTheme, toggleTheme, isDark } = useTheme();
-  const { clearUsername } = useUser();
+  const { user, clearUser, togglePrefersDark } = useUser()
   const { logOut } = useAuth();
 
   const {
@@ -39,7 +39,7 @@ const Settings = () => {
   } = useBLE();
 
   const handleSignOut = () => {
-    clearUsername();
+    clearUser();
     logOut();
   };
 
@@ -59,11 +59,19 @@ const Settings = () => {
 
   const styles = createStyles(customTheme, isDark);
 
-  return (
-    <View>
-      <Pressable style={styles.settingsButton} onPress={() => setIsShown(true)}>
-        <Image source={require('../assets/images/rim.jpg')} style={styles.image} />
-      </Pressable>
+    return (
+        <View>
+            <Pressable style={styles.settingsButton} onPress={() => setIsShown(true)}>
+                <MaterialIcons name="settings" size={30} color={customTheme.colors.text} />
+                {/* <Image
+                    source={{ uri: user.profileImage }}
+                    style={styles.image}
+                /> */}
+                {/* <Image
+                    source={require('../assets/images/rim.jpg')}
+                    style={styles.image}
+                /> */}
+            </Pressable>
 
       <Modal visible={isShown} presentationStyle="formSheet" animationType="slide" onRequestClose={() => setIsShown(false)}>
         <View style={styles.background}>
@@ -149,10 +157,10 @@ const createStyles = (theme, isDark) =>
       justifyContent: 'space-between'
     },
     input: {
-      width: 90,
-      color: theme.colors.text,
-      borderWidth: 1,
-      borderColor: theme.colors.text
+        width: 90,
+        color: theme.colors.text,
+        borderWidth: 1,
+        borderColor: theme.colors.text
     },
     settingsButton: {
       flexDirection: 'row',
