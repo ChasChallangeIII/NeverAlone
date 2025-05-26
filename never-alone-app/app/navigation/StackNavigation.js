@@ -6,6 +6,7 @@ import TabNavigation from "./TabNavigation";
 import { useAuth } from "../context/AuthContext";
 import OngoingCallScreen from "../screens/OngoingCallScreen";
 import IncomingCallScreen from "../screens/IncomingCallScreen";
+import ReportScreen from "../screens/ReportScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,14 @@ const StackNavigation = () => {
           <Stack.Screen
             name="OngoingCallScreen"
             component={OngoingCallScreen}
+            options={{
+              presentation: "modal",
+              animation: "fade_from_bottom",
+            }}
+          />
+          <Stack.Screen
+            name="ReportScreen"
+            component={ReportScreen}
             options={{
               presentation: "modal",
               animation: "fade_from_bottom",

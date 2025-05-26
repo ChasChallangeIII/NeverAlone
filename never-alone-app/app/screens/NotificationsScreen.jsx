@@ -3,63 +3,28 @@ import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
+import { useFakeCall } from '../context/FakeCallContext'
+import ReportNotification from '../components/ReportNotification'
 
 const NotificationsScreen = () => {
-    const { customTheme } = useTheme()
+  const { customTheme } = useTheme()
   const styles = createStyles(customTheme)
-  const notifications = [
-    {
-      "id": 1,
-      "username": "Rim",
-      "profileImage": "https://randomuser.me/api/portraits/women/21.jpg",
-      "date": "2025-05-13T08:30:00",
-      "message": "aktiverade fakesamtal-knappen"
-    },
-    {
-      "id": 2,
-      "username": "Marwa",
-      "profileImage": "https://randomuser.me/api/portraits/women/45.jpg",
-      "date": "2025-05-13T09:00:00",
-      "message": "aktiverade fakesamtal-knappen"
-    },
-    {
-      "id": 3,
-      "username": "Sara",
-      "profileImage": "https://randomuser.me/api/portraits/women/33.jpg",
-      "date": "2025-05-13T09:15:00",
-      "message": "aktiverade fakesamtal-knappen"
-    },
-    {
-      "id": 4,
-      "username": "Hana",
-      "profileImage": "https://randomuser.me/api/portraits/women/12.jpg",
-      "date": "2025-05-13T09:45:00",
-      "message": "aktiverade fakesamtal-knappen"
-    },
-    {
-      "id": 5,
-      "username": "Lina",
-      "profileImage": "https://randomuser.me/api/portraits/women/54.jpg",
-      "date": "2025-05-13T10:30:00",
-      "message": "aktiverade fakesamtal-knappen"
-    },
-    {
-      "id": 6,
-      "username": "Noura",
-      "profileImage": "https://randomuser.me/api/portraits/women/36.jpg",
-      "date": "2025-05-13T11:00:00",
-      "message": "aktiverade fakesamtal-knappen"
-    }
-  ]
+  const myNotifications = require("../data/notifications.json");
+
+  const { reportNotification } = useFakeCall()
 
 
   return (
     <SafeAreaView style={styles.screen}>
-         <View style={styles.container}>
-    
+      <View style={styles.container}>
+
+        {reportNotification && (<ReportNotification />)}
+
+
+
 
         <FlatList
-          data={notifications}
+          data={myNotifications}
           keyExtractor={item => item.id}
           contentContainerStyle={styles.notificatons}
           renderItem={({ item }) => (
@@ -70,13 +35,13 @@ const NotificationsScreen = () => {
 
               <View style={styles.notificationDetails}>
                 <Image
-                source={{ uri: item.profileImage }}
-                style={styles.profileImage}
+                  source={{ uri: item.profileImage }}
+                  style={styles.profileImage}
                 />
-                <MyText>{ item.message}</MyText>
+                <MyText>{`${item.username} ${item.message}`}</MyText>
 
               </View>
-              <MyText style={[{fontSize:10}, styles.date]}>{item.date}</MyText>
+              <MyText style={[{ fontSize: 10 }, styles.date]}>{item.date}</MyText>
 
             </View>
           )}
@@ -100,14 +65,14 @@ const createStyles = (theme) => StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 20,
-    paddingBottom: 90
+    paddingBottom: 120
 
   },
   notificatons: {
     gap: 20,
     alignItems: 'center',
-  
-    
+
+
   },
   notification: {
     gap: 5,
@@ -119,15 +84,16 @@ const createStyles = (theme) => StyleSheet.create({
     flexDirection: 'row',
     gap: 20,
     alignItems: 'center',
-    
+    width: '80%'
+
   },
   profileImage: {
     width: 40,
     height: 40,
     borderRadius: 40,
-    resizeMode:'cover'
+    resizeMode: 'cover'
   },
   date: {
-    textAlign:'right'
+    textAlign: 'right'
   }
 })

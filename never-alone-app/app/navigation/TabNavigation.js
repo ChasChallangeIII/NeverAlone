@@ -24,11 +24,13 @@ import { useNavigation } from "@react-navigation/native";
 import Settings from "../components/Settings";
 import LogoInHeader from "../components/LogoInHeader";
 import Entypo from "@expo/vector-icons/Entypo";
+import { useFakeCall } from "../context/FakeCallContext";
+import BigText from "../components/textwrappers/BigText";
 
 const Tab = createBottomTabNavigator();
 const TabNavigation = ({}) => {
   const { customTheme, isDark } = useTheme();
-  const navigation = useNavigation();
+  const { reportNotification } = useFakeCall();
 
   return (
     <>
@@ -44,11 +46,12 @@ const TabNavigation = ({}) => {
           },
           headerTitleAlign: "left",
           headerTintColor: customTheme.colors.text,
-          headerLeftContainerStyle: {},
+          headerRightContainerStyle: { paddingRight: 10 },
 
           headerStyle: {
             backgroundColor: customTheme.colors.background,
             height: Platform.OS === "ios" ? 120 : 100,
+            paddingRight: 40,
           },
           headerLeft: () => <LogoInHeader />,
           headerRight: () => <Settings />,
@@ -56,7 +59,6 @@ const TabNavigation = ({}) => {
             backgroundColor: customTheme.colors.background,
             overflow: "visible",
             position: "absolute",
-         
           },
           tabBarLabelStyle: {
             fontFamily: customTheme.fonts.regular.fontFamily,
@@ -82,9 +84,34 @@ const TabNavigation = ({}) => {
           name="Notifications"
           component={NotificationsScreen}
           options={{
-            tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="notifications" size={size} color={color} />
-            ),
+            tabBarIcon: ({ color, size }) =>
+              reportNotification ? (
+                <>
+                  <MaterialIcons
+                    name="notifications-active"
+                    size={size}
+                    color={color}
+                  />
+                  <BigText
+                    style={{
+                      position: "absolute",
+                      left: "90%",
+                      top: "-50%",
+                      width: 30,
+                      height: 30,
+                      backgroundColor: customTheme.colors.secondary400,
+                      padding: 10,
+                      borderRadius: 40,
+                      textAlign: "center",
+                      fontSize: 17,
+                    }}
+                  >
+                    1
+                  </BigText>
+                </>
+              ) : (
+                <MaterialIcons name="notifications" size={size} color={color} />
+              ),
             headerTitle: "Aviseringar",
           }}
         />
