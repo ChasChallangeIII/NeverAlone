@@ -26,6 +26,8 @@ import LogoInHeader from "../components/LogoInHeader";
 import Entypo from "@expo/vector-icons/Entypo";
 import { useFakeCall } from "../context/FakeCallContext";
 import BigText from "../components/textwrappers/BigText";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 const Tab = createBottomTabNavigator();
 const TabNavigation = ({}) => {
@@ -92,26 +94,17 @@ const TabNavigation = ({}) => {
                     size={size}
                     color={color}
                   />
-                  <BigText
-                    style={{
-                      position: "absolute",
-                      left: "90%",
-                      top: "-50%",
-                      width: 30,
-                      height: 30,
-                      backgroundColor: customTheme.colors.secondary400,
-                      padding: 10,
-                      borderRadius: 40,
-                      textAlign: "center",
-                      fontSize: 17,
-                    }}
-                  >
-                    1
-                  </BigText>
                 </>
               ) : (
                 <MaterialIcons name="notifications" size={size} color={color} />
               ),
+
+            tabBarBadge: reportNotification ? 1 : null,
+            tabBarBadgeStyle: {
+              backgroundColor: customTheme.colors.secondary400,
+              color: customTheme.colors.text,
+              left: "90%",
+            },
             headerTitle: "Aviseringar",
           }}
         />
@@ -128,16 +121,20 @@ const TabNavigation = ({}) => {
           component={CommunityScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="people" size={size} color={color} />
+              <MaterialCommunityIcons name="flower" size={size} color={color} />
             ),
           }}
         />
         <Tab.Screen
-          name="Rapport"
+          name="Friends"
           component={ReportScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <Entypo name="typing" size={size} color={color} />
+              <FontAwesome6
+                name="hand-holding-heart"
+                size={size}
+                color={color}
+              />
             ),
             headerTitle: "Rapportera händelse",
           }}
