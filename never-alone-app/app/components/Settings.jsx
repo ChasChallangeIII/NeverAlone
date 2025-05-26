@@ -20,6 +20,8 @@ import { useUser } from '../context/UserContext';
 import { useAuth } from '../context/AuthContext';
 import useBLE from '../hooks/useBLE';
 import DeviceModal from '../components/DeviceConnectionModal';
+import { MaterialIcons } from '@expo/vector-icons';
+
 
 const Settings = () => {
   const [isShown, setIsShown] = useState(false);

@@ -7,6 +7,8 @@ import { useUser } from '../context/UserContext'
 import { useTheme } from '../context/ThemeContext'
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useAuth } from '../context/AuthContext'
+import { ActivityIndicator } from 'react-native';
+
 
 
 const LoginScreen = () => {
