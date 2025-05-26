@@ -4,7 +4,7 @@
     "slug": "never-alone-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/images/logo.png",
+    "icon": "./app/assets/images/logo2.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
