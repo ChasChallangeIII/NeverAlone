@@ -28,6 +28,7 @@ import { useFakeCall } from "../context/FakeCallContext";
 import BigText from "../components/textwrappers/BigText";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import FriendsScreen from "../screens/FriendsScreen";
 
 const Tab = createBottomTabNavigator();
 const TabNavigation = ({}) => {
@@ -53,7 +54,7 @@ const TabNavigation = ({}) => {
           headerStyle: {
             backgroundColor: customTheme.colors.background,
             height: Platform.OS === "ios" ? 120 : 100,
-            paddingRight: 40,
+       
           },
           headerLeft: () => <LogoInHeader />,
           headerRight: () => <Settings />,
@@ -127,7 +128,7 @@ const TabNavigation = ({}) => {
         />
         <Tab.Screen
           name="Friends"
-          component={ReportScreen}
+          component={FriendsScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
               <FontAwesome6

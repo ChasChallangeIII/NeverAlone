@@ -1,102 +1,24 @@
-import { Button, Image, Modal, Platform, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
-import React, { useState } from 'react'
-import MyText from './textwrappers/MyText'
-import { Switch } from 'react-native'
-import BigText from './textwrappers/BigText'
+import { Platform, Pressable, StyleSheet, View } from 'react-native'
+import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import { useUser } from '../context/UserContext'
-import { useAuth } from '../context/AuthContext'
+import { useNavigation } from '@react-navigation/native'
 
 const Settings = () => {
-    const [isShown, setIsShown] = useState(false)
-    const { customTheme, toggleTheme, isDark } = useTheme()
-    const { user, clearUser, togglePrefersDark } = useUser()
-    const { logOut } = useAuth()
+    const { customTheme, isDark } = useTheme()
 
-    const handleSignOut = async () => {
-        clearUser()
-        logOut()
-    }
+    const navigation = useNavigation()
+
+
     const styles = createStyles(customTheme, isDark)
-    const toggleSwitch = (value) => {
-        toggleTheme()
 
-    }
-    const onClose = () => setIsShown(false)
+    const openModal = () => navigation.navigate('SettingsScreen')
 
     return (
         <View>
-            <Pressable style={styles.settingsButton} onPress={() => setIsShown(true)}>
+            <Pressable style={styles.settingsButton} onPress={openModal}>
                 <MaterialIcons name="settings" size={30} color={customTheme.colors.text} />
-                {/* <Image
-                    source={{ uri: user?.profileImage }}
-                    style={styles.image}
-                /> */}
-                {/* <Image
-                    source={require('../assets/images/rim.jpg')}
-                    style={styles.image}
-                /> */}
             </Pressable>
-
-            <Modal
-                visible={isShown}
-                presentationStyle='formSheet'
-                animationType='slide'
-                onRequestClose={onClose}
-
-            >
-                <View style={styles.background}>
-                    <BigText >Inställningar</BigText>
-
-                    <View style={styles.switchContainer}>
-                        <MyText>Mörktläge</MyText>
-                        <Switch
-                            value={isDark}
-                            onValueChange={toggleSwitch}
-                            trackColor={{
-                                false: 'default',
-                                true: customTheme.colors.primary
-                            }}
-                            thumbColor={
-                                isDark && Platform.OS === 'ios' ? customTheme.colors.primary100 :
-                                    isDark && Platform.OS === 'android' ? customTheme.colors.primary900 :
-                                        customTheme.colors.primary500
-                            }
-
-
-                        />
-                    </View>
-                    <View style={styles.switchContainer}>
-                        <MyText>Uppringarens namn</MyText>
-                        <TextInput
-                            placeholder='hunn'
-                            placeholderTextColor={customTheme.colors.text}
-                            style={styles.input}
-                        />
-                    </View>
-                    <Pressable
-                        style={styles.signoutButton}
-                        onPress={handleSignOut}
-                    >
-                        <MyText>
-                            Logga ut
-                        </MyText>
-
-                    </Pressable>
-                    <Pressable
-                        style={styles.close}
-                        onPress={onClose}>
-                        <AntDesign style={styles.closeIcon} name='back' />
-                        {/* <MyText>
-                            Tillbaka
-                        </MyText> */}
-
-                    </Pressable>
-
-                </View>
-            </Modal>
         </View>
     )
 }

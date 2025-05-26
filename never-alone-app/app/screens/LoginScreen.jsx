@@ -33,7 +33,7 @@ const LoginScreen = () => {
     }
 
     try {
-          setIsLoading(true)
+      setIsLoading(true)
 
       const response = await fetch('https://neveralone.onrender.com/auth/signin?admin=false', {
         method: 'POST',

@@ -9,7 +9,7 @@ import { useAuth } from '../context/AuthContext'
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 
-const ReportScreen = ({navigation}) => {
+const ReportScreen = ({ navigation }) => {
   const { customTheme, isDark } = useTheme()
   const styles = createStyles(customTheme, isDark)
   const {

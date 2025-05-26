@@ -1,61 +1,35 @@
 import { Button, FlatList, Image, Modal, Platform, Pressable, SafeAreaView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MyText from '../components/textwrappers/MyText'
 import { useTheme } from '../context/ThemeContext'
 import BigText from '../components/textwrappers/BigText'
 
 
-const CommunityScreen = () => {
+const CommunityScreen = ({navigation}) => {
   const { customTheme, isDark } = useTheme()
   const styles = createStyles(customTheme, isDark)
   const [isShown, setIsShown] = useState(false)
-  const openModal = () => setIsShown(true)
-  const closeModal = () => setIsShown(false)
+  const openModal = () => navigation.navigate('PostScreen')
+  const myposts = require('../data/posts.json')
 
-  const posts = [
-    {
-      "id": 1,
-      "username": "Rim",
-      "profileImage": "https://randomuser.me/api/portraits/women/21.jpg",
-      "text": "Hej, någon som bor i närheten av Ålidhem? Ska jobba sent imorgon och undrar om någon kan tänka sig följa mig en bit hem?",
-      "date": "2025-05-12T20:45:00"
-    },
-    {
-      "id": 2,
-      "username": "Marwa",
-      "profileImage": "https://randomuser.me/api/portraits/women/45.jpg",
-      "text": "Tips till er som känner er osäkra på bussen: ha Always-fakesamtal igång. Det gör faktiskt skillnad.",
-      "date": "2025-05-12T22:10:00"
-    },
-    {
-      "id": 3,
-      "username": "Sara",
-      "profileImage": "https://randomuser.me/api/portraits/women/33.jpg",
-      "text": "Jag hade en obehaglig situation vid stationen igår. Ville bara säga: ni är inte ensamma. Det är okej att känna oro. ❤️",
-      "date": "2025-05-13T07:30:00"
-    },
-    {
-      "id": 4,
-      "username": "Hana",
-      "profileImage": "https://randomuser.me/api/portraits/women/12.jpg",
-      "text": "Behöver någon att prata med just nu. Känner mig lite skakig efter en incident på vägen hem. Någon som är vaken?",
-      "date": "2025-05-13T00:20:00"
-    },
-    {
-      "id": 5,
-      "username": "Lina",
-      "profileImage": "https://randomuser.me/api/portraits/women/54.jpg",
-      "text": "Jag har bil ikväll efter 21. Hör av er om någon behöver skjuts från centrum till Ersboda eller nära.",
-      "date": "2025-05-13T10:15:00"
-    },
-    {
-      "id": 6,
-      "username": "Noura",
-      "profileImage": "https://randomuser.me/api/portraits/women/36.jpg",
-      "text": "Kör alltid nycklarna mellan fingrarna när jag går hem – tips jag fick från communityn här. Tack för att ni finns!",
-      "date": "2025-05-13T11:05:00"
+  const [posts, setPosts] = useState(myposts)
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response =
+          await fetch('https://neveralone.onrender.com/api/community/posts')
+        if (!response.ok) throw new Error('Något gick fel när vi skulle kontakta servern. Försök igen senare')
+        const data = await response.json()
+        console.log(data)
+        setPosts(data)
+
+      } catch (error) {
+        console.error(error.message);
+
+      }
     }
-  ]
+  }, [])
 
   return (
     < >
@@ -68,27 +42,6 @@ const CommunityScreen = () => {
             <MyText>Skriv ett inlägg...
             </MyText>
           </Pressable>
-
-
-          <Modal
-            visible={isShown}
-            onRequestClose={closeModal}
-            animationType='slide'
-            presentationStyle='pageSheet'
-          >
-            <View style={styles.modalContent}>
-              <BigText>Skriv ett inlägg här till communityt</BigText>
-              <TextInput
-                placeholder='Skriv ett inlägg...'
-                placeholderTextColor={isDark ? customTheme.colors.secondary50 : customTheme.colors.text}
-                style={styles.textArea}
-                multiline
-                returnKeyType='go'
-              />
-              <Button onPress={closeModal} title='avbryt' />
-            </View>
-
-          </Modal>
 
 
 
