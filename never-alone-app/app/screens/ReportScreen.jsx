@@ -39,9 +39,10 @@ const ReportScreen = () => {
         throw new Error('Du har inte fyllt i både fälten!')
       }
       setIsLoading(true)
-      const response = await fetch('https://neveralone.onrender.com/docs/#/Reports/post_api_reports', {
+      const response = await fetch('https://neveralone.onrender.com/api/reports', {
         method: 'POST',
         headers: {
+          'Authorization': `Bearer ${userToken}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -50,21 +51,19 @@ const ReportScreen = () => {
             location: fakeCallLocation,
             cause: cause,
             message: message
-          },
-          token: userToken
+          }
         })
       })
       if (!response.ok) {
         throw new Error("Något gick fel när vi skulle skicka rapporten. Försök igen senare");
 
       }
+      setIsLoading(false)
       clearInputs()
       setFeedback(true)
       setTimeout(() => {
         setFeedback(false)
-
-      }, 4000);
-      setIsLoading(false)
+      }, 8000);
     } catch (error) {
       setError(error.message);
       setIsLoading(false)
@@ -126,7 +125,7 @@ const ReportScreen = () => {
                 <MyText style={styles.error}>{error}</MyText>
               </View>
             )}
-            {!feedback && (
+            {feedback && (
               <View style={styles.feedbackView}>
                 <AntDesign name="heart" style={styles.heart} />
                 <MyText style={styles.feedback}>Tack för att du skickade! Ta hand om dig ♡</MyText>
@@ -167,7 +166,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     color: theme.colors.text,
     borderWidth: 1,
     borderColor: isDark ? theme.colors.secondary700 : theme.colors.primary100,
-    minHeight: 400,
+    minHeight: 100,
     backgroundColor: isDark ? theme.colors.primary100 : theme.colors.secondary100,
     padding: 20,
     borderRadius: 9,
@@ -189,11 +188,13 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     borderColor: theme.colors.primary500,
-    borderWidth: 1
+    borderWidth: 1,
+    flex: 1
   },
   error: {
     color: theme.colors.primary800,
-   
+    width: '90%'
+
   },
   icon: {
     fontSize: 60,

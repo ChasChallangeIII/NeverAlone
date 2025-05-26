@@ -38,7 +38,6 @@ const CallMeButton = ({ props }) => {
             } = location;
 
             const isoTimeStamp = new Date(timestamp).toISOString()
-            console.log(latitude, longitude, isoTimeStamp);
             setFakeCallLocation({
                 location: {
                     latitude: latitude,

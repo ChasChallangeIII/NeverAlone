@@ -1,4 +1,4 @@
-import { Button, ScrollView, Platform, SafeAreaView, StyleSheet, TextInput, View, StatusBar, Image, Pressable } from 'react-native'
+import { Button, ScrollView, Platform, SafeAreaView, StyleSheet, TextInput, View, StatusBar, Image, Pressable, ActivityIndicator } from 'react-native'
 import React, { useState } from 'react'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
@@ -11,11 +11,12 @@ import { useAuth } from '../context/AuthContext'
 
 const LoginScreen = () => {
   const { customTheme, isDark } = useTheme()
-  const { logIn, isLoading } = useAuth()
+  const { logIn } = useAuth()
   const { user, saveUser, error, clearError, setError } = useUser()
 
   const [inputUsername, setInputUsername] = useState('')
   const [inputPassword, setInputPassword] = useState('')
+  const [isLoading, setIsLoading] = useState(false);
 
   const onChangeInputUsername = (text) => {
     clearError()
@@ -26,13 +27,14 @@ const LoginScreen = () => {
     setInputPassword(text)
   }
   const handleSubmit = async () => {
-
     if (!inputUsername || !inputPassword) {
       setError('Du har inte fyllt i både fälten')
       return
     }
 
     try {
+          setIsLoading(true)
+
       const response = await fetch('https://neveralone.onrender.com/auth/signin?admin=false', {
         method: 'POST',
         headers: {
@@ -60,9 +62,13 @@ const LoginScreen = () => {
 
       await saveUser(profile)
       logIn(token)
+      setIsLoading(false)
+
 
     } catch (error) {
       setError(error.message)
+      setIsLoading(false)
+
     }
 
   }
@@ -77,7 +83,7 @@ const LoginScreen = () => {
           <Image source={
             isDark ?
               require('../assets/images/darkLogo2.png') :
-              require('../assets/images/logo.png')
+              require('../assets/images/logo2.png')
           }
             style={styles.logo} />
           <View

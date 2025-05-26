@@ -31,7 +31,7 @@ const Settings = () => {
             <Pressable style={styles.settingsButton} onPress={() => setIsShown(true)}>
                 <MaterialIcons name="settings" size={30} color={customTheme.colors.text} />
                 {/* <Image
-                    source={{ uri: user.profileImage }}
+                    source={{ uri: user?.profileImage }}
                     style={styles.image}
                 /> */}
                 {/* <Image
