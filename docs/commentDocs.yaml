@@ -1,12 +1,14 @@
 paths:
   /admin/comments:
     get:
+      tags:
+        - Report comments
       summary: "Hämta alla kommentarer"
       description: "Hämtar alla kommentarer som är sparade i databasen (kräver admin)"
       security:
         - bearerAuth: []
       responses:
-        '200':
+        "200":
           description: "Lista med alla kommentarer"
           content:
             application/json:
@@ -29,6 +31,8 @@ paths:
 
   /admin/comments/report/{reportId}:
     get:
+      tags:
+        - Report comments
       summary: "Hämta kommentarer för specifik rapport"
       description: "Hämtar alla kommentarer kopplade till en viss rapport (kräver admin)"
       security:
@@ -41,7 +45,7 @@ paths:
             type: "integer"
           description: "ID på rapporten"
       responses:
-        '200':
+        "200":
           description: "Kommentarer kopplade till rapporten"
           content:
             application/json:
@@ -64,6 +68,8 @@ paths:
 
   /admin/comments/{reportId}:
     post:
+      tags:
+        - Report comments
       summary: "Skapa en ny kommentar"
       description: "Lägg till en ny kommentar till en rapport (kräver admin)"
       security:
@@ -89,11 +95,13 @@ paths:
                 comment:
                   type: "string"
       responses:
-        '201':
+        "201":
           description: "Kommentar skapad framgångsrikt"
 
   /admin/comments/{id}:
     put:
+      tags:
+        - Report comments
       summary: "Uppdatera en kommentar"
       description: "Uppdatera en befintlig kommentar (kräver admin)"
       security:
@@ -116,10 +124,12 @@ paths:
                 comment:
                   type: "string"
       responses:
-        '200':
+        "200":
           description: "Kommentar uppdaterad framgångsrikt"
 
     delete:
+      tags:
+        - Report comments
       summary: "Ta bort en kommentar"
       description: "Ta bort en specifik kommentar genom ID (kräver admin)"
       security:
@@ -132,5 +142,5 @@ paths:
             type: "integer"
           description: "ID på kommentaren"
       responses:
-        '204':
+        "204":
           description: "Kommentar borttagen framgångsrikt"
