@@ -135,8 +135,6 @@ components:
         - cause
         - message
       properties:
-        user_id:
-          type: integer
         location:
           type: object
           required:
