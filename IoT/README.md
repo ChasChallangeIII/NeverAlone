@@ -6,7 +6,7 @@ This repository contains the firmware for the button, written in C++ and built u
 
 ---
 
-## 🔧 Features
+## Features
 
 - **One-Tap Activation** – Sends a BLE event to trigger safety features on the mobile app.
 - **Haptic Feedback** – Confirms successful activation via a vibration motor.
