@@ -11,7 +11,6 @@
 
 ```bash
 git clone https://github.com/ChasChallangeIII/NeverAlone
-cd server
 npm install
 ```
 
