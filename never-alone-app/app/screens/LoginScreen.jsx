@@ -1,15 +1,14 @@
-import { Button, ScrollView, Platform, SafeAreaView, StyleSheet, TextInput, View, StatusBar, Image, Pressable, ActivityIndicator } from 'react-native'
+import { ScrollView, Platform, SafeAreaView, StyleSheet, TextInput, View, StatusBar, Image, Pressable, ActivityIndicator } from 'react-native'
 import React, { useState } from 'react'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
-import { useNavigation } from '@react-navigation/native'
 import { useUser } from '../context/UserContext'
 import { useTheme } from '../context/ThemeContext'
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useAuth } from '../context/AuthContext'
 
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const { customTheme, isDark } = useTheme()
   const { logIn } = useAuth()
   const { user, saveUser, error, clearError, setError } = useUser()
@@ -72,6 +71,7 @@ const LoginScreen = () => {
     }
 
   }
+  const navigateToSignUp = () => navigation.navigate('SignUpScreen') 
 
 
   const styles = createStyles(customTheme)
@@ -121,6 +121,13 @@ const LoginScreen = () => {
                 Logga in
               </MyText>
             </Pressable>
+
+            {/* <MyText
+              onPress={navigateToSignUp}
+              style={styles.link}>
+              Inte medlem än? Klicka här för att skapa konto
+            </MyText> */}
+
             {isLoading && (
               <ActivityIndicator color={customTheme.colors.primary} />
             )}
@@ -190,6 +197,10 @@ const createStyles = (theme) => StyleSheet.create({
     borderRadius: 10,
     width: 200,
     alignItems: 'center'
+  },
+  link: {
+    textDecorationLine: 'underline',
+    textDecorationColor: <theme className="colors text"></theme>
   },
   errorView: {
     flexDirection: 'column',

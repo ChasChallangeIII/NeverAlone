@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useTheme } from "../context/ThemeContext"
 import { useUser } from "../context/UserContext"
 import { useAuth } from "../context/AuthContext"
@@ -11,9 +10,9 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 
 
 const SettingsScreen = ({navigation}) => {
-   const [isShown, setIsShown] = useState(false)
+
       const { customTheme, toggleTheme, isDark } = useTheme()
-      const { user, clearUser, togglePrefersDark } = useUser()
+      const { clearUser } = useUser()
       const { logOut } = useAuth()
   
       const handleSignOut = async () => {
@@ -36,7 +35,7 @@ const SettingsScreen = ({navigation}) => {
           <MyText>Mörktläge</MyText>
           <Switch
             value={isDark}
-            onValueChange={toggleSwitch}
+          onValueChange={toggleTheme}
             trackColor={{
               false: 'default',
               true: customTheme.colors.primary
@@ -50,14 +49,14 @@ const SettingsScreen = ({navigation}) => {
 
           />
         </View>
-        <View style={styles.switchContainer}>
+        {/* <View style={styles.switchContainer}>
           <MyText>Uppringarens namn</MyText>
           <TextInput
             placeholder='hunn'
             placeholderTextColor={customTheme.colors.text}
             style={styles.input}
           />
-        </View>
+        </View> */}
         <Pressable
           style={styles.signoutButton}
           onPress={handleSignOut}
@@ -71,9 +70,7 @@ const SettingsScreen = ({navigation}) => {
           style={styles.close}
           onPress={onClose}>
           <AntDesign style={styles.closeIcon} name='back' />
-          {/* <MyText>
-                            Tillbaka
-                        </MyText> */}
+
 
         </Pressable>
 

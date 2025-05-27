@@ -1,34 +1,19 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import HomeScreen from "../screens/HomeScreen";
-import React, { useState } from "react";
+import React from "react";
 import CommunityScreen from "../screens/CommunityScreen";
-import {
-  Button,
-  Image,
-  Modal,
-  Platform,
-  Pressable,
-  StatusBar,
-  Text,
-} from "react-native";
-import ReportScreen from "../screens/ReportScreen";
-import * as Location from "expo-location";
+import { Platform, StatusBar } from "react-native";
 import SearchScreen from "../screens/SearchScreen";
-
 import NotificationsScreen from "../screens/NotificationsScreen";
-import MyText from "../components/textwrappers/MyText";
 import CallMeButton from "../components/CallMeButton";
 import { useTheme } from "../context/ThemeContext";
-import { useNavigation } from "@react-navigation/native";
-import Settings from "../components/Settings";
 import LogoInHeader from "../components/LogoInHeader";
-import Entypo from "@expo/vector-icons/Entypo";
 import { useFakeCall } from "../context/FakeCallContext";
-import BigText from "../components/textwrappers/BigText";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import FriendsScreen from "../screens/FriendsScreen";
+import SettingsButton from "../components/SettingsButton";
 
 const Tab = createBottomTabNavigator();
 const TabNavigation = ({}) => {
@@ -54,10 +39,9 @@ const TabNavigation = ({}) => {
           headerStyle: {
             backgroundColor: customTheme.colors.background,
             height: Platform.OS === "ios" ? 120 : 100,
-       
           },
           headerLeft: () => <LogoInHeader />,
-          headerRight: () => <Settings />,
+          headerRight: () => <SettingsButton />,
           tabBarStyle: {
             backgroundColor: customTheme.colors.background,
             overflow: "visible",

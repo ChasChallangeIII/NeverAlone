@@ -9,6 +9,7 @@ import IncomingCallScreen from "../screens/IncomingCallScreen";
 import ReportScreen from "../screens/ReportScreen";
 import PostScreen from "../screens/PostScreen";
 import SettingsScreen from "../screens/SettingsScreen";
+import SignUpScreen from "../screens/SignUpScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -61,6 +62,14 @@ const StackNavigation = () => {
           <Stack.Screen
             name="SettingsScreen"
             component={SettingsScreen}
+            options={{
+              presentation: "modal",
+              animation: "fade_from_bottom",
+            }}
+          />
+          <Stack.Screen
+            name="SignUpScreen"
+            component={SignUpScreen}
             options={{
               presentation: "modal",
               animation: "fade_from_bottom",

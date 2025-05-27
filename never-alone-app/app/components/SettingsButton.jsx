@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext'
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native'
 
-const Settings = () => {
+const SettingsButton = () => {
     const { customTheme, isDark } = useTheme()
 
     const navigation = useNavigation()
@@ -23,7 +23,7 @@ const Settings = () => {
     )
 }
 
-export default Settings
+export default SettingsButton
 
 const createStyles = (theme, isDark) => StyleSheet.create({
     image: {
