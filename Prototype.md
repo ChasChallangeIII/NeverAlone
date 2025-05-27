@@ -80,9 +80,11 @@
 * [x] Physically connect a **tactile button** to the microcontroller and write code to read button presses reliably.
 * [ ] Implement **haptic feedback** by connecting and controlling a vibration motor triggered by the button press.
 * [x] Implement **basic serial logging** via the Arduino IDE to monitor button presses and system status.
+
 * [x] Integrate **Bluetooth communication** (e.g., using an HC-05/HC-06 module or ESP32 built-in Bluetooth).
 * [x] Program the device to send a **signal/message** via Bluetooth when the button is pressed.
 * [x] Develop a basic mobile app (or use a Bluetooth serial terminal app) to **receive and display** the signal, confirming communication.
+
 
 #### **Week 16 – Offline Functionality & Data Management**
 
