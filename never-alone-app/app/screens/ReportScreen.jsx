@@ -8,7 +8,8 @@ import { useUser } from '../context/UserContext'
 import { useAuth } from '../context/AuthContext'
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-const ReportScreen = () => {
+
+const ReportScreen = ({ navigation }) => {
   const { customTheme, isDark } = useTheme()
   const styles = createStyles(customTheme, isDark)
   const {
@@ -24,6 +25,7 @@ const ReportScreen = () => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [feedback, setFeedback] = useState(false)
+  const { setReportNotification } = useFakeCall()
 
 
   const onChangeMessageText = (text) => {
@@ -66,6 +68,7 @@ const ReportScreen = () => {
       }
       setIsLoading(false)
       clearInputs()
+      setReportNotification(false)
       setFeedback(true)
       setTimeout(() => {
         setFeedback(false)
@@ -77,6 +80,7 @@ const ReportScreen = () => {
     }
 
   }
+  const onClose = () => navigation.goBack()
 
   const clearInputs = () => {
     setMessage(null)
@@ -94,7 +98,8 @@ const ReportScreen = () => {
           keyboardVerticalOffset={100}
         >
           <View style={styles.container}>
-            <MyText>Vad har hänt? Berätta - vi finns här, läser och lyssnar! ♡</MyText>
+            <BigText>Vad har hänt? Berätta - vi finns här, läser och lyssnar! ♡</BigText>
+            <MyText>Rapportera händelsen här</MyText>
             <TextInput
               style={styles.messageTitle}
               multiline
@@ -137,6 +142,15 @@ const ReportScreen = () => {
                 <MyText style={styles.feedback}>Tack för att du skickade! Ta hand om dig ♡</MyText>
               </View>
             )}
+            <Pressable
+              style={styles.close}
+              onPress={onClose}>
+              <AntDesign style={styles.closeIcon} name='back' />
+              {/* <MyText>
+                            Tillbaka
+                        </MyText> */}
+
+            </Pressable>
           </View>
         </KeyboardAvoidingView>
       </ScrollView>
@@ -225,4 +239,14 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     fontSize: 60,
     color: theme.colors.primary
   },
+  close: {
+    position: 'absolute',
+    right: 0,
+    padding: 20,
+    color: theme.colors.text
+  },
+  closeIcon: {
+    color: theme.colors.text,
+    fontSize: 24
+  }
 })
