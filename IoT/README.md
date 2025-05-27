@@ -9,7 +9,6 @@ This repository contains the firmware for the button, written in C++ and built u
 ## 🔧 Features
 
 - **One-Tap Activation** – Sends a BLE event to trigger safety features on the mobile app.
-- **Offline Logging** – If no connection is available, logs the event locally for later transmission.
 - **Haptic Feedback** – Confirms successful activation via a vibration motor.
 - **Low Power Design** – Utilizes ESP32’s deep sleep mode for extended battery life.
 - **BLE Communication** – Efficient communication over Bluetooth Low Energy.
@@ -25,15 +24,51 @@ This repository contains the firmware for the button, written in C++ and built u
 | Vibration Motor       | 3V coin or cylindrical motor (PWM capable)   |
 | Power Supply          | LiPo battery or USB                          |
 | Resistor (optional)   | 10kΩ pull-down for button                    |
-| LED (optional)        | Debug/diagnostic light (optional)            |
-| Enclosure             | 3D printed or custom casing                  |
+
 
 ---
 
-## 📦 Installation
+## 📦 # NeverAlone IoT – Developer Setup Guide
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/ChasChallangeIII/NeverAlone-IoT
-cd NeverAlone-IoT
+git clone https://github.com/ChasChallangeIII/NeverAlone
+cd IoT
+
+## 🛠️ 2. Install PlatformIO
+
+### Visual Studio Code (Recommended)
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/)
+2. Open VS Code and go to the **Extensions** panel.
+3. Search for and install **PlatformIO IDE**.
+4. Restart VS Code once the installation is complete.
+
+# Wiring Instructions
+
+To assemble the **NeverAlone IoT Button**, connect the components as follows:
+
+---
+
+## Required Components
+
+| Component       | ESP32 GPIO Pin | Details                                                                 |
+|----------------|----------------|-------------------------------------------------------------------------|
+| Push Button     | GPIO 0         | Connect one leg to GPIO 0, the other to GND. Use a 10kΩ pull-down resistor if needed. |
+| Vibration Motor | GPIO 4         | Use a transistor or MOSFET if necessary. Connect the other leg to GND. |
+| Power Supply    | 3.3V / VIN     | Use USB or LiPo battery depending on your board.                       |
+| Common Ground   | GND            | Ensure all components share the same ground as the ESP32.              |
+| Buzzer          | Audio feedback (if needed) | GPIO 15   |
+---
+
+
+> **Note:** Always check your specific ESP32 dev board pinout before connecting components.
+
+##3. Build & Upload Firmware
+Connect your ESP32 device via USB, then run "platformio run" in the command line to Upload to the ESP32
+
+
+### Monitor Serial Output (Optional)
+To debug or view logs:
+
+platformio device monitor
