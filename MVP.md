@@ -99,9 +99,8 @@
 - [ ] Prepare **presentation materials** and **demo walkthrough**
 - [ ] Create a **backup demo (video or screenshots)** in case of live issues
 
-#### **Week 23 (Demo Week)**
-
-- [ ] Demo the system: button press → Bluetooth signal → mobile log with time and location
-- [ ] Highlight **technical achievements**, **challenges**, and **future plans**
-- [ ] Emphasize design pivot to **breadboard prototype** due to hardware delay
-- [ ] Showcase potential **MVP directions** for post-demo development
+#### **Week 23 (Demo Week)**  
+* [ ] Demo the system: button press → Bluetooth signal → mobile log with time and location  
+* [ ] Highlight **technical achievements**, **challenges**, and **future plans**  
+* [ ] Emphasize design pivot to **breadboard prototype** due to hardware delay  
+* [ ] Showcase potential **MVP directions** for post-demo development  

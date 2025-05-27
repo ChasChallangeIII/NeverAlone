@@ -1,0 +1,90 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "username": "Rim",
+            "profileImage": "https://randomuser.me/api/portraits/women/21.jpg",
+            "text": "Hej, någon som bor i närheten av Ålidhem? Ska jobba sent imorgon och undrar om någon kan tänka sig följa mig en bit hem?",
+            "date": "2025-05-12T20:45:00"
+        },
+        {
+            "id": 2,
+            "username": "Marwa",
+            "profileImage": "https://randomuser.me/api/portraits/women/45.jpg",
+            "text": "Tips till er som känner er osäkra på bussen: ha Always-fakesamtal igång. Det gör faktiskt skillnad.",
+            "date": "2025-05-12T22:10:00"
+        },
+        {
+            "id": 3,
+            "username": "Sara",
+            "profileImage": "https://randomuser.me/api/portraits/women/33.jpg",
+            "text": "Jag hade en obehaglig situation vid stationen igår. Ville bara säga: ni är inte ensamma. Det är okej att känna oro. ❤️",
+            "date": "2025-05-13T07:30:00"
+        },
+        {
+            "id": 4,
+            "username": "Hana",
+            "profileImage": "https://randomuser.me/api/portraits/women/12.jpg",
+            "text": "Behöver någon att prata med just nu. Känner mig lite skakig efter en incident på vägen hem. Någon som är vaken?",
+            "date": "2025-05-13T00:20:00"
+        },
+        {
+            "id": 5,
+            "username": "Lina",
+            "profileImage": "https://randomuser.me/api/portraits/women/54.jpg",
+            "text": "Jag har bil ikväll efter 21. Hör av er om någon behöver skjuts från centrum till Ersboda eller nära.",
+            "date": "2025-05-13T10:15:00"
+        },
+        {
+            "id": 6,
+            "username": "Noura",
+            "profileImage": "https://randomuser.me/api/portraits/women/36.jpg",
+            "text": "Kör alltid nycklarna mellan fingrarna när jag går hem – tips jag fick från communityn här. Tack för att ni finns!",
+            "date": "2025-05-13T11:05:00"
+        }
+    ],
+    "notifications": [
+        {
+            "id": 1,
+            "username": "Rim",
+            "profileImage": "https://randomuser.me/api/portraits/women/21.jpg",
+            "date": "2025-05-13T08:30:00",
+            "message": "aktiverade fakesamtal-knappen"
+        },
+        {
+            "id": 2,
+            "username": "Marwa",
+            "profileImage": "https://randomuser.me/api/portraits/women/45.jpg",
+            "date": "2025-05-13T09:00:00",
+            "message": "aktiverade fakesamtal-knappen"
+        },
+        {
+            "id": 3,
+            "username": "Sara",
+            "profileImage": "https://randomuser.me/api/portraits/women/33.jpg",
+            "date": "2025-05-13T09:15:00",
+            "message": "aktiverade fakesamtal-knappen"
+        },
+        {
+            "id": 4,
+            "username": "Hana",
+            "profileImage": "https://randomuser.me/api/portraits/women/12.jpg",
+            "date": "2025-05-13T09:45:00",
+            "message": "aktiverade fakesamtal-knappen"
+        },
+        {
+            "id": 5,
+            "username": "Lina",
+            "profileImage": "https://randomuser.me/api/portraits/women/54.jpg",
+            "date": "2025-05-13T10:30:00",
+            "message": "aktiverade fakesamtal-knappen"
+        },
+        {
+            "id": 6,
+            "username": "Noura",
+            "profileImage": "https://randomuser.me/api/portraits/women/36.jpg",
+            "date": "2025-05-13T11:00:00",
+            "message": "aktiverade fakesamtal-knappen"
+        }
+    ]
+}
