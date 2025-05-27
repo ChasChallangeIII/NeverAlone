@@ -12,6 +12,7 @@
 ```bash
 git clone https://github.com/ChasChallangeIII/NeverAlone
 npm install
+npm run dev
 ```
 
 ### 🛠️ Environment Variables
