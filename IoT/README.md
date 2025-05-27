@@ -15,7 +15,7 @@ This repository contains the firmware for the button, written in C++ and built u
 
 ---
 
-## 🧰 Hardware Requirements
+##  Hardware Requirements
 
 | Component             | Description                                  |
 |----------------------|----------------------------------------------|
@@ -28,7 +28,7 @@ This repository contains the firmware for the button, written in C++ and built u
 
 ---
 
-## 📦 # NeverAlone IoT – Developer Setup Guide
+##  # NeverAlone IoT – Developer Setup Guide
 
 ### 1. Clone the Repository
 
@@ -64,7 +64,7 @@ To assemble the **NeverAlone IoT Button**, connect the components as follows:
 
 > **Note:** Always check your specific ESP32 dev board pinout before connecting components.
 
-##3. Build & Upload Firmware
+## 3. Build & Upload Firmware
 Connect your ESP32 device via USB, then run "platformio run" in the command line to Upload to the ESP32
 
 
