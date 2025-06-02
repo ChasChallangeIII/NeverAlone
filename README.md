@@ -11,7 +11,6 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 - **IoT-Enabled Button** – Physical hardware integration for seamless interaction.
 - **Real-Time Data Sharing** – Municipalities and organizations can access statistical reports on unsafe areas.
 - **Customizable Notifications** – Users can set up emergency contacts for additional security.
-- **Offline Functionality** – The button works even without internet access, sending data once connected.
 
 ## **Tech Stack**
 ### **Frontend (Mobile App)**
@@ -30,11 +29,10 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 - Arduino / ESP32
 - C++ for embedded programming
 - Low-power Bluetooth connectivity
-- Haptic feedback for button press confirmation
 
 ---
 
-## 📦 **Gradle APK Installation Guide**
+## **Gradle APK Installation Guide**
 
 This guide explains how to generate and install an APK using Gradle in an Android project.
 
@@ -73,15 +71,15 @@ android/app/build/outputs/apk/release/app-release.apk
 
 ---
 
-## 📱 **Download APK**
+## **Download APK**
 
 Scan the QR code below or [click here to download the APK](https://drive.google.com/file/d/1-6ZUxQ8wZTmUFPNDRTfz4qZsRKQyMKzK/view?usp=drive_link):
 
 <img src="./Never-Alone-App-QR.jpg" alt="Download APK QR Code" width="300"/>
 
-## 🔗 **Other Project Modules**
+##  **Other Project Modules**
 
-- [📡 Server](https://github.com/ChasChallangeIII/NeverAlone/blob/main/server/README.md)
-- [🛠️ Admin Panel](https://github.com/ChasChallangeIII/NeverAlone/blob/main/adminpanel/README.md)
-- [📲 Mobile App](./never-alone-app/README.md)
-- [🔘 IoT Button](https://github.com/ChasChallangeIII/NeverAlone/blob/main/IoT/README.md)
+- [Admin Panel](https://github.com/ChasChallangeIII/NeverAlone/blob/main/adminpanel/README.md)
+- [Mobile App](./never-alone-app/README.md)
+- [IoT Button](https://github.com/ChasChallangeIII/NeverAlone/blob/main/IoT/README.md)
+- [Server](https://github.com/ChasChallangeIII/NeverAlone/blob/main/server/README.md)
