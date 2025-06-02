@@ -79,18 +79,18 @@
 
 #### **Week 19-20**
 
-- [ ] Finalize **ESP32 Bluetooth communication** with the mobile app
-- [ ] Coordinate with frontend team to ensure **message reception** from the ESP32
-- [ ] Format button press messages for easy parsing (e.g., "BTN_PRESS")
-- [ ] Begin implementing **mobile-side timestamp and geolocation capture**
-- [ ] Verify real-time data logging via mobile debugging tools
+- Finalize **ESP32 Bluetooth communication** with the mobile app
+- Coordinate with frontend team to ensure **message reception** from the ESP32
+- Format button press messages for easy parsing (e.g., "BTN_PRESS")
+- Begin implementing **mobile-side timestamp and geolocation capture**
+- Verify real-time data logging via mobile debugging tools
 
 #### **Week 21**
 
-- [ ] Implement **GPS and system time retrieval** on the mobile app
-- [ ] Store **button press events with timestamp and geolocation**
-- [ ] Test basic offline behavior (e.g., delayed connection or data queuing)
-- [ ] Refine UI to display event logs or confirmation of receipt
+- Implement **GPS and system time retrieval** on the mobile app
+- Store **button press events with timestamp and geolocation**
+- Test basic offline behavior (e.g., delayed connection or data queuing)
+- Refine UI to display event logs or confirmation of receipt
 
 #### **Week 22**
 
