@@ -35,7 +35,7 @@ This repository contains the firmware for the button, written in C++ and built u
 git clone https://github.com/ChasChallangeIII/NeverAlone
 cd IoT
 
-## 🛠️ 2. Install PlatformIO
+## 2. Install PlatformIO
 
 ### Visual Studio Code (Recommended)
 
