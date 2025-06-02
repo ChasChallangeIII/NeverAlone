@@ -77,8 +77,7 @@ android/app/build/outputs/apk/release/app-release.apk
 
 Scan the QR code below or [click here to download the APK](https://drive.google.com/file/d/1-6ZUxQ8wZTmUFPNDRTfz4qZsRKQyMKzK/view?usp=drive_link):
 
-![Download APK QR Code](./Never-Alone-App-QR.jpg)
----
+<img src="./Never-Alone-App-QR.jpg" alt="Download APK QR Code" width="300"/>
 
 ## 🔗 **Other Project Modules**
 
