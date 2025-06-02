@@ -105,6 +105,7 @@ Use this if you don’t need signing yet (e.g., for internal testing):
 - The APK will be generated at: android/app/build/outputs/apk/debug/app-debug.apk
 
 ### 4. Build a Release APK 
+Use this to generate a performance-optimized APK for stakeholder demos, internal distribution, or preparing for app store deployment:
 
 - ./gradlew assembleRelease
 - The signed APK will be generated at: android/app/build/outputs/apk/release/app-release.apk
