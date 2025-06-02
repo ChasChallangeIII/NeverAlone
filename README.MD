@@ -46,17 +46,17 @@ yarn install
 ### 3. Create Environment Variables
 Create a .env file in the root of the project and add the following:
 
-- **API_BASE_URL=https://your-api-url.com
-- **BLE_SERVICE_UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-- **BLE_CHARACTERISTIC_UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+- API_BASE_URL=https://your-api-url.com
+- BLE_SERVICE_UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+- BLE_CHARACTERISTIC_UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Replace with your actual backend endpoint and BLE service/characteristic UUIDs.
 
 ### 4. Running the App
 iOS
 
-- **npx pod-install
-- **npx react-native run-ios
+- npx pod-install
+- npx react-native run-ios
 
 Make sure you have Xcode installed and configured.
 
@@ -80,38 +80,38 @@ app/
 ### 1. Prerequisites
 Make sure you have the following installed:
 
-- **Android Studio with SDK & Build Tools
-- **Java Development Kit (JDK) – JDK 11 recommended
-- **React Native CLI (not Expo)
+- Android Studio with SDK & Build Tools
+- Java Development Kit (JDK) – JDK 11 recommended
+- React Native CLI (not Expo)
 
 Environment variables set:
 
-- **JAVA_HOME
-- **ANDROID_HOME
+- JAVA_HOME
+- ANDROID_HOME
 
 ### 1. Navigate to Your Project
-- **cd path/to/your/neveralone-app
+- cd path/to/your/neveralone-app
 
 ### 2. Prepare a Keystore (for signed APK)
 
 ### 3. Set Up Environment for Build
 Clean the build cache (optional but recommended):
 
-- **cd android
-- **./gradlew clean
+- cd android
+- ./gradlew clean
 
 ###  4. Build a Debug APK
 Use this if you don’t need signing yet (e.g., for internal testing):
 
-- **./gradlew assembleDebug
-- **The APK will be generated at: android/app/build/outputs/apk/debug/app-debug.apk
+- ./gradlew assembleDebug
+- The APK will be generated at: android/app/build/outputs/apk/debug/app-debug.apk
 
 ### Build a Release APK 
 
-- **./gradlew assembleRelease
-- **The signed APK will be generated at: android/app/build/outputs/apk/release/app-release.apk
+- ./gradlew assembleRelease
+- The signed APK will be generated at: android/app/build/outputs/apk/release/app-release.apk
 
 ### 6. Install the APK on a Device (Optional)
 Make sure USB debugging is enabled on your Android device and run:
-- **adb install app-release.apk
-- **Or drag the .apk file to your emulator or device.
+- adb install app-release.apk
+- Or drag the .apk file to your emulator or device.
