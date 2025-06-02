@@ -92,26 +92,24 @@ Environment variables set:
 ### 1. Navigate to Your Project
 - cd path/to/your/neveralone-app
 
-### 2. Prepare a Keystore (for signed APK)
-
-### 3. Set Up Environment for Build
+### 2. Set Up Environment for Build
 Clean the build cache (optional but recommended):
 
 - cd android
 - ./gradlew clean
 
-###  4. Build a Debug APK
+###  3. Build a Debug APK
 Use this if you don’t need signing yet (e.g., for internal testing):
 
 - ./gradlew assembleDebug
 - The APK will be generated at: android/app/build/outputs/apk/debug/app-debug.apk
 
-### Build a Release APK 
+### 4. Build a Release APK 
 
 - ./gradlew assembleRelease
 - The signed APK will be generated at: android/app/build/outputs/apk/release/app-release.apk
 
-### 6. Install the APK on a Device (Optional)
+### 5. Install the APK on a Device (Optional)
 Make sure USB debugging is enabled on your Android device and run:
 - adb install app-release.apk
 - Or drag the .apk file to your emulator or device.
