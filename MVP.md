@@ -108,5 +108,5 @@
 ### Future plans
 
 - Implement **Hauptic feedback** with a hauptic sensor for the discrete button
-- Implement basic offline behavior (e.g., delayed connection or data queuing)
+- Implement basic **offline behavior** (e.g., delayed connection or data queuing)
 
