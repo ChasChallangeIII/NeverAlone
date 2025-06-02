@@ -121,5 +121,5 @@ Make sure USB debugging is enabled on your Android device and run:
 If you are not a developer and want to try the app you can download an APK via this link: https://drive.google.com/file/d/1-6ZUxQ8wZTmUFPNDRTfz4qZsRKQyMKzK/view?usp=drive_link
 
 Or you can use this QR code
-![LSarVN](https://github.com/user-attachments/assets/e67b0e9c-bc0f-45f6-a219-ed1f61712bff)
+<img src="./Never-Alone-App-QR.jpg" alt="Download APK QR Code" width="300"/>
 
