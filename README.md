@@ -52,6 +52,7 @@ Use Gradle to build the APK from the command line:
 Before building the APK, you need to navigate to the android/ folder of the project:
 
 ```bash
+cd never-alone-app
 cd android
 ```
 
@@ -74,7 +75,7 @@ android/app/build/outputs/apk/release/app-release.apk
 
 ## 📱 **Download APK**
 
-Scan the QR code below to download the latest release APK:
+Scan the QR code below or [click here to download the APK](https://drive.google.com/file/d/1-6ZUxQ8wZTmUFPNDRTfz4qZsRKQyMKzK/view?usp=drive_link):
 
 ![Download APK QR Code](./Never-Alone-App-QR.jpg)
 ---
