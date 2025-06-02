@@ -94,13 +94,19 @@
 
 #### **Week 22**
 
-- [ ] Perform **end-to-end integration testing**
-- [ ] Fix bugs in **Bluetooth communication**, **data logging**, or **UI**
-- [ ] Prepare **presentation materials** and **demo walkthrough**
-- [ ] Create a **backup demo (video or screenshots)** in case of live issues
+- Perform **end-to-end integration testing**
+- Fix bugs in **Bluetooth communication**, **data logging**, or **UI**
+- Prepare **presentation materials** and **demo walkthrough**
+- Create a **backup demo (video or screenshots)** in case of live issues
 
 #### **Week 23 (Demo Week)**  
 * [ ] Demo the system: button press → Bluetooth signal → mobile log with time and location  
 * [ ] Highlight **technical achievements**, **challenges**, and **future plans**  
 * [ ] Emphasize design pivot to **breadboard prototype** due to hardware delay  
-* [ ] Showcase potential **MVP directions** for post-demo development  
+* [ ] Showcase potential **MVP directions** for post-demo development
+
+### Future plans
+
+- Implement **Hauptic feedback** with a hauptic sensor for the discrete button
+- Implement basic offline behavior (e.g., delayed connection or data queuing)
+
