@@ -46,3 +46,52 @@
 * [ ] Critically evaluate the prototype: Identify **strengths, weaknesses, and areas for improvement**.
 * [ ] Sketch potential **design refinements** (hardware casing, component choices, user interface) for the Minimum Viable Product (MVP).
 * [ ] Plan the next steps for developing the MVP based on the evaluation.
+
+#### **Week 17-18**
+
+- Improve **button press recognition** and **haptic feedback**
+- Implement **Bluetooth signal improvements**
+
+#### **Week 19-20**
+
+- Finalize **ESP32 Bluetooth communication** with the mobile app
+- Coordinate with frontend team to ensure **message reception** from the ESP32
+- Format button press messages for easy parsing (e.g., "BTN_PRESS")
+- Begin implementing **mobile-side timestamp and geolocation capture**
+- Verify real-time data logging via mobile debugging tools
+
+#### **Week 21**
+
+- Implement **GPS and system time retrieval** on the mobile app
+- Store **button press events with timestamp and geolocation**
+- Test basic offline behavior (e.g., delayed connection or data queuing)
+- Refine UI to display event logs or confirmation of receipt
+
+#### **Week 22**
+
+- Perform **end-to-end integration testing**
+- Fix bugs in **Bluetooth communication**, **data logging**, or **UI**
+- Prepare **presentation materials** and **demo walkthrough**
+- Create a **backup demo (video or screenshots)** in case of live issues
+
+#### **Week 23 (Demo Week)**  
+- Demo the system: button press → Bluetooth signal → mobile log with time and location  
+- Highlight **technical achievements**, **challenges**, and **future plans**  
+- Emphasize design pivot to **breadboard prototype** due to hardware delay  
+- Showcase potential **MVP directions** for post-demo development
+
+### Future Plans
+
+- Add haptic feedback for discreet tactile confirmation on button press.
+- Support basic offline behavior like delayed reconnection or data queuing.
+- Ensure BLE compatibility with iOS (CoreBluetooth compliant).
+- Optimize power consumption using ESP32’s deep sleep mode.
+- Miniaturize hardware with a custom PCB and integrated circuit.
+- Implement encrypted BLE communication for secure data transfer.
+- Support multi-press input (e.g., long press, double tap) for additional actions eg. calling the police directly or sharing location with Never Alone - community.
+- Enable firmware-over-the-air (OTA) updates via BLE or Wi-Fi.
+- Add battery monitoring and status reporting to the mobile app.
+- Design a water-resistant or rugged enclosure for outdoor use.
+
+
+
