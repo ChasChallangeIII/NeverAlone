@@ -32,45 +32,6 @@ Never Alone is a smart safety solution designed to help individuals feel more se
 
 ---
 
-## **Gradle APK Installation Guide**
-
-This guide explains how to generate and install an APK using Gradle in an Android project.
-
-### **Prerequisites**
-Before you begin, ensure you have the following installed:
-
-- Android Studio  
-- Android SDK  
-- Java Development Kit (JDK)  
-- Gradle (bundled with Android Studio)  
-
-### **Step 1: Build the APK**
-
-Use Gradle to build the APK from the command line:
-Before building the APK, you need to navigate to the android/ folder of the project:
-
-```bash
-cd never-alone-app
-cd android
-```
-
-#### **Option A: Build Debug APK**
-```bash
-./gradlew assembleDebug
-```
-
-#### **Option B: Build Release APK**
-```bash
-./gradlew assembleRelease
-```
-
-After building, you’ll find the APK in:
-```
-android/app/build/outputs/apk/release/app-release.apk
-```
-
----
-
 ## **Download APK**
 
 Scan the QR code below or [click here to download the APK](https://drive.google.com/file/d/1-6ZUxQ8wZTmUFPNDRTfz4qZsRKQyMKzK/view?usp=drive_link):
