@@ -72,7 +72,7 @@
     * [x] Build the complete circuit virtually based on the plan.
     * [x] Write and test the initial code for the virtual microcontroller.
     * [x] Simulate the core interactions (e.g., button press triggers a simulated output like an LED or vibration motor).
-    * [ ] Debug and refine the simulation until basic functionality is achieved.
+    * [x] Debug and refine the simulation until basic functionality is achieved.
 
 #### **Week 15 – Physical Build & Mobile App Communication**
 
@@ -95,7 +95,7 @@
 
 #### **Week 17 – Evaluation and MVP Preparation**
 
-* [ ] Thoroughly **document the code**, providing comments and explanations.
+* [x] Thoroughly **document the code**, providing comments and explanations.
 * [ ] Create clear **hardware schematics** (wiring diagrams).
 * [ ] Compile detailed **test results**, including successes, failures, and bug fixes.
 * [ ] Critically evaluate the prototype: Identify **strengths, weaknesses, and areas for improvement**.
