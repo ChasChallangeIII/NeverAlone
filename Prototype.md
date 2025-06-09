@@ -67,10 +67,10 @@
     * [x] Research suitable components, considering both virtual simulation and physical parts.
     * [x] Create a preliminary circuit diagram and outline the basic program logic.
     * [x] Inventory check: Confirm availability of necessary physical components at home for future stages.
-    * [ ] Order missing parts
+    * [x] Order missing parts
 * **Simulated Prototype Construction (e.g., Tinkercad,Wokwi):**
-    * [ ] Build the complete circuit virtually based on the plan.
-    * [ ] Write and test the initial code for the virtual microcontroller.
+    * [x] Build the complete circuit virtually based on the plan.
+    * [x] Write and test the initial code for the virtual microcontroller.
     * [x] Simulate the core interactions (e.g., button press triggers a simulated output like an LED or vibration motor).
     * [ ] Debug and refine the simulation until basic functionality is achieved.
 
