@@ -105,10 +105,17 @@
 - Emphasize design pivot to **breadboard prototype** due to hardware delay  
 - Showcase potential **MVP directions** for post-demo development
 
-### Future plans
+### Future Plans
 
-- Implement **Hauptic feedback** with a hauptic sensor for the discrete button
-- Implement basic **offline behavior** (e.g., delayed connection or data queuing)
-- Make it **compatible with iOS**
-- Implement low power design using deep sleep mode
+- Add haptic feedback for discreet tactile confirmation on button press.
+- Support basic offline behavior like delayed reconnection or data queuing.
+- Ensure BLE compatibility with iOS (CoreBluetooth compliant).
+- Optimize power consumption using ESP32’s deep sleep mode.
+- Miniaturize hardware with a custom PCB and integrated circuit.
+- Implement encrypted BLE communication for secure data transfer.
+- Support multi-press input (e.g., long press, double tap) for additional actions eg. calling the police directly or sharing location with Never Alone - community.
+- Enable firmware-over-the-air (OTA) updates via BLE or Wi-Fi.
+- Add battery monitoring and status reporting to the mobile app.
+- Design a water-resistant or rugged enclosure for outdoor use.
+
 
