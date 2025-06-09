@@ -100,14 +100,15 @@
 - Create a **backup demo (video or screenshots)** in case of live issues
 
 #### **Week 23 (Demo Week)**  
-* [ ] Demo the system: button press → Bluetooth signal → mobile log with time and location  
-* [ ] Highlight **technical achievements**, **challenges**, and **future plans**  
-* [ ] Emphasize design pivot to **breadboard prototype** due to hardware delay  
-* [ ] Showcase potential **MVP directions** for post-demo development
+* - Demo the system: button press → Bluetooth signal → mobile log with time and location  
+* - Highlight **technical achievements**, **challenges**, and **future plans**  
+* - Emphasize design pivot to **breadboard prototype** due to hardware delay  
+* - Showcase potential **MVP directions** for post-demo development
 
 ### Future plans
 
 - Implement **Hauptic feedback** with a hauptic sensor for the discrete button
 - Implement basic **offline behavior** (e.g., delayed connection or data queuing)
 - Make it **compatible with iOS**
+- Implement low power design using deep sleep mode
 
