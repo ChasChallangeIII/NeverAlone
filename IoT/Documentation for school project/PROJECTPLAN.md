@@ -7,14 +7,14 @@
 
 #### **Week 14 – Research, Planning & Simulated Build**
 
-* **Research & Planning:**
+#### **Research & Planning:**
  * [x] Define the essential features and functionality for the initial prototype.
  * [x] Research suitable components, considering both virtual simulation and physical parts.
  * [x] Create a preliminary circuit diagram and outline the basic program logic.
  * [x] Inventory check: Confirm availability of necessary physical components at home for future stages.
  * [x] Order missing parts
       
-* **Simulated Prototype Construction (e.g., Tinkercad,Wokwi):**
+#### **Simulated Prototype Construction (e.g., Tinkercad,Wokwi):**
  * [x] Build the complete circuit virtually based on the plan.
  * [x] Write and test the initial code for the virtual microcontroller.
  * [x] Simulate the core interactions (e.g., button press triggers a simulated output like an LED or vibration motor).
@@ -36,7 +36,6 @@
 * [ ] Simulate **various user scenarios** (e.g., frequent presses while disconnected, long disconnection periods) to test system robustness and buffer limits.
 
 #### **Week 17 – Evaluation and MVP Preparation**
-
 * [x] Thoroughly **document the code**, providing comments and explanations.
 * [ ] Create clear **hardware schematics** (wiring diagrams).
 * [ ] Compile detailed **test results**, including successes, failures, and bug fixes.
