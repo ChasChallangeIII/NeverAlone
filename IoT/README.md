@@ -59,6 +59,7 @@ To assemble the **NeverAlone IoT Button**, connect the components as follows:
 | LED             | GPIO 3         | Connect to GPIO 3. Make sure to use a resistor                         |        
 ---
 
+![image](https://github.com/user-attachments/assets/318ed66f-1fde-4682-9eca-87f3ef29200e)
 
 > **Note:** Always check your specific ESP32 dev board pinout before connecting components.
 
