@@ -25,4 +25,10 @@ This repository contains the firmware for the button, written in C++ and built u
 | LED                   | Optional (Used currently instead of haptic feedback)|
 
 ---
+## User Guide
 
+See [Developer Setup Guide](https://github.com/ChasChallangeIII/NeverAlone/blob/main/IoT/DeveloperSetupGuide.md) for information of how to setup the project with the IoT hardware.
+
+---
+
+Further documentation press [here](https://github.com/ChasChallangeIII/NeverAlone/tree/main/IoT/Documentation%20for%20school%20project)
