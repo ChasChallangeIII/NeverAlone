@@ -13,7 +13,7 @@ cd IoT
 1. Install [Visual Studio Code](https://code.visualstudio.com/)
 2. Open VS Code and go to the **Extensions** panel.
 3. Search for and install **PlatformIO IDE**.
-4. Restart VS Code once the installation is complete.
+4. Restart VS Code once the installation is complete and open the project with the IoT-folder as root.
 
 ## Wiring Instructions
 
@@ -35,10 +35,9 @@ To assemble the **NeverAlone IoT Button**, connect the components as follows:
 > **Note:** Always check your specific ESP32 dev board pinout before connecting components.
 
 ## 3. Build & Upload Firmware
-Connect your ESP32 device via USB, then run "platformio run" in the command line to Upload to the ESP32
+Connect your ESP32 device via USB, then press the upload button in the bottom toolbar to Upload to the ESP32. 
+For further information of how to use platformIO [click here](https://docs.platformio.org/en/latest/core/quickstart.html)
 
 
 ### Monitor Serial Output (Optional)
-To debug or view logs:
-
-platformio device monitor
+To debug or view logs press the Serial monitor button in the toolbar
