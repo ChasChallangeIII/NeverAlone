@@ -6,7 +6,7 @@ The project consists of three main components:
 ### 1. **IoT Button**
 - ESP32 using C++
 - BLE (Bluetooth Low Energy) communication
-- Sends "Short" or "Long" press signals
+- Sends "Short" or "Long" press signals (will later be used for various functionalities in the app)
 - Can store events offline if disconnected
 
 ### 2. **Mobile App (React Native)**
