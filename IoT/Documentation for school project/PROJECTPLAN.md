@@ -74,16 +74,16 @@
 * [x] Showcase potential **MVP directions** for post-demo development
 
 ### Future Plans
-* [] Add haptic feedback for discreet tactile confirmation on button press.
-* [] Support basic offline behavior like delayed reconnection or data queuing.
-* [] Ensure BLE compatibility with iOS (CoreBluetooth compliant).
-* [] Optimize power consumption using ESP32’s deep sleep mode.
-* [] Miniaturize hardware with a custom PCB and integrated circuit.
-* [] Implement encrypted BLE communication for secure data transfer.
-* [] Support multi-press input (e.g., long press, double tap) for additional actions eg. calling the police directly or sharing location with Never Alone - community.
-* [] Enable firmware-over-the-air (OTA) updates via BLE or Wi-Fi.
-* [] Add battery monitoring and status reporting to the mobile app.
-* [] Design a water-resistant or rugged enclosure for outdoor use.
+* [ ] Add haptic feedback for discreet tactile confirmation on button press.
+* [ ] Support basic offline behavior like delayed reconnection or data queuing.
+* [ ] Ensure BLE compatibility with iOS (CoreBluetooth compliant).
+* [ ] Optimize power consumption using ESP32’s deep sleep mode.
+* [ ] Miniaturize hardware with a custom PCB and integrated circuit.
+* [ ] Implement encrypted BLE communication for secure data transfer.
+* [ ] Support multi-press input (e.g., long press, double tap) for additional actions eg. calling the police directly or sharing location with Never Alone - community.
+* [ ] Enable firmware-over-the-air (OTA) updates via BLE or Wi-Fi.
+* [ ] Add battery monitoring and status reporting to the mobile app.
+* [ ] Design a water-resistant or rugged enclosure for outdoor use.
 
 
 
