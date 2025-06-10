@@ -10,7 +10,7 @@ This changelog documents major adjustments made to the hardware part of the proj
 - Adjustments were made to the prototype requirements to focus on core features:
   - Simulated call via BLE-triggered event
   - Basic feedback through LED instead of haptic motor
-  - Offline event storage implemented as a fallback
+  - Offline event storage implemented as a fallback (Functionality is in place in the IoT-button but full integration with the mobile app will have to be made)
 
 ### Reason
 - Hardware (battery, vibration motor and more) was not delivered in time, which prevented early testing and feature development.
