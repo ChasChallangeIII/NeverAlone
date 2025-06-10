@@ -19,7 +19,7 @@ While we did not implement automated or formal tests, we continuously tested the
 - No unit or integration tests were written.
 - BLE functionality was only tested on Android devices; iOS support was not verified.
 
-## 📝 Future Testing Plans
+## Future Testing Plans
 If continued, we would like to:
 - Write unit tests for embedded logic on the ESP32.
 - Test BLE stability under different conditions and platforms.
