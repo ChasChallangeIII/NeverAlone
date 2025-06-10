@@ -1,6 +1,6 @@
-# Changelog – NeverAlone
+# Changelog – NeverAlone IoT-Button
 
-This changelog documents major adjustments made to the project during development.
+This changelog documents major adjustments made to the hardware part of the project during development.
 
 ## [Unversioned] – Mid-Project Scope Change
 
