@@ -13,5 +13,4 @@ This includes:
 - Environment variables and setup
 - Route structure for reports, comments, users, and groups
 
-> All endpoints require Bearer token authentication unless otherwise noted.
 
