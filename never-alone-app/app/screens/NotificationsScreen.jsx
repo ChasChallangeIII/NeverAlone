@@ -2,9 +2,10 @@ import { FlatList, Image, Platform, SafeAreaView, StatusBar, StyleSheet, Text, V
 import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 import MyText from '../components/textwrappers/MyText'
-import BigText from '../components/textwrappers/BigText'
 import { useFakeCall } from '../context/FakeCallContext'
 import ReportNotification from '../components/ReportNotification'
+import { formatDistanceToNow } from 'date-fns'
+import { sv } from 'date-fns/locale'
 
 const NotificationsScreen = () => {
   const { customTheme } = useTheme()
@@ -41,7 +42,7 @@ const NotificationsScreen = () => {
                 <MyText>{`${item.username} ${item.message}`}</MyText>
 
               </View>
-              <MyText style={[{ fontSize: 10 }, styles.date]}>{item.date}</MyText>
+              <MyText style={[{ fontSize: 10 }, styles.date]}>{formatDistanceToNow(item.date, {addSuffix:true, locale:sv})}</MyText>
 
             </View>
           )}
