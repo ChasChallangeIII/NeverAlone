@@ -11,10 +11,11 @@ import { sv } from 'date-fns/locale'
 const CommunityScreen = ({ navigation }) => {
   const { customTheme, isDark } = useTheme()
   const styles = createStyles(customTheme, isDark)
-  const openModal = () => navigation.navigate('PostScreen')
+  const openModal = () => navigation.navigate('MakeAPostModal')
   const myposts = require('../data/posts.json')
 
   const [posts, setPosts] = useState(myposts)
+  const openPostModal = (item) => navigation.navigate('PostScreen', {item} )
 
   // useEffect(() => {
   //   const fetchPosts = async () => {
@@ -58,10 +59,13 @@ const CommunityScreen = ({ navigation }) => {
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
 
-              <View
+              <Pressable
                 style={styles.post}
                 accessible={true}
-                accessibilityLabel={`ett postinlägg skrivet av ${item.username}. ${formatDistanceToNow(item.date, { addSuffix: true, locale: sv })}`}
+                accessibilityRole='button'
+
+                accessibilityLabel={`ett postinlägg skrivet av ${item.username}. Tryck här för att läsa inlägget ${formatDistanceToNow(item.date, { addSuffix: true, locale: sv })}`}
+                onPress={()=>openPostModal(item)}
               >
                 <View style={
                   styles.postDetailsContainer
@@ -69,8 +73,6 @@ const CommunityScreen = ({ navigation }) => {
                   <Image
                     source={{ uri: item.profileImage }}
                     style={styles.profileImage}
-                    accessible={true}
-
                     accessibilityLabel={`${item.username}s profilbild `}
 
                   />
@@ -79,8 +81,6 @@ const CommunityScreen = ({ navigation }) => {
                   >
                     <BigText
                       style={{ fontSize: 16 }}
-                      accessible={true}
-
                     >{item.username}</BigText>
                     <MyText
                       style={{ fontSize: 10 }}
@@ -90,10 +90,9 @@ const CommunityScreen = ({ navigation }) => {
 
                 <MyText
                   style={styles.postText}
-                  accessible={true}
                 >{item.text}</MyText>
 
-              </View>
+              </Pressable>
 
             )}
           />

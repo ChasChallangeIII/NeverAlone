@@ -7,9 +7,10 @@ import { useAuth } from "../context/AuthContext";
 import OngoingCallScreen from "../screens/OngoingCallScreen";
 import IncomingCallScreen from "../screens/IncomingCallScreen";
 import ReportScreen from "../screens/ReportScreen";
-import PostScreen from "../screens/PostScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import SignUpScreen from "../screens/SignUpScreen";
+import MakeAPostModal from "../screens/MakeAPostModal";
+import PostScreen from "../screens/PostScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -52,11 +53,20 @@ const StackNavigation = () => {
             }}
           />
           <Stack.Screen
+            name="MakeAPostModal"
+            component={MakeAPostModal}
+            options={{
+              presentation: "modal",
+              animation: "fade_from_bottom",
+            }}
+          />
+          <Stack.Screen
             name="PostScreen"
             component={PostScreen}
             options={{
               presentation: "modal",
               animation: "fade_from_bottom",
+              
             }}
           />
           <Stack.Screen

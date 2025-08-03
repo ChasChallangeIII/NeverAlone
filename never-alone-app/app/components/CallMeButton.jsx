@@ -27,6 +27,7 @@ const CallMeButton = ({ props }) => {
                 onPress={() => {
                     handleFakeCall(navigation);
                 }}
+                accessibilityLabel='knapp för att få fakesamtal'
                 style={styles.button}
             >
                 <MaterialIcons name="phone" size={24} color={customTheme.colors.accent900} style={styles.icon} />
