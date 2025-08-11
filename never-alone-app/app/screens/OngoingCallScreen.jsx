@@ -13,98 +13,118 @@ import MyText from '../components/textwrappers/MyText';
 
 
 
-const OngoingCallScreen = ({navigation}) => {
-        const [elapsedTime, setElapsedTime] = useState(0)
-        const intervalIdRef = useRef(null)
-        const startTimeRef = useRef(null)
-        const { customTheme, isDark } = useTheme()
-        const styles = createStyles(customTheme, isDark)
-        const hangUp = () => {
+const OngoingCallScreen = ({ navigation }) => {
+    const [elapsedTime, setElapsedTime] = useState(0)
+    const intervalIdRef = useRef(null)
+    const startTimeRef = useRef(null)
+    const { customTheme, isDark } = useTheme()
+    const styles = createStyles(customTheme, isDark)
+    const hangUp = () => {
+        clearInterval(intervalIdRef.current)
+        setElapsedTime(0)
+        navigation.goBack()
+    }
+    useEffect(() => {
+        startTimeRef.current = Date.now()
+        intervalIdRef.current = setInterval(() => {
+            setElapsedTime(Date.now() - startTimeRef.current)
+        }, 1000);
+
+
+        return () => {
+
             clearInterval(intervalIdRef.current)
-            setElapsedTime(0)
-           navigation.goBack()
+
         }
-     useEffect(() => {
-            
-                setElapsedTime(0)
-                startTimeRef.current = Date.now() - elapsedTime
-                intervalIdRef.current = setInterval(() => {
-                    setElapsedTime(Date.now() - startTimeRef.current)
-                }, 1000);
-            
-    
-            return () => {
-    
-                clearInterval(intervalIdRef.current)
-    
-            }
-        }, [])
-    
-        const formatTime = () => {
-            // const hours = Math.floor(elapsedTime / (1000 * 60 * 60)%60)
-            const minutes = String(Math.floor(elapsedTime / (1000 * 60) % 60)).padStart(2, '0')
-            const seconds = String(Math.floor(elapsedTime / (1000) % 60)).padStart(2, '0')
-    
-    
-            return `${minutes}:${seconds}`
-        }
-  return (
-      <>
-          <StatusBar barStyle={'light-content'} />
-        
-              <View
-                  style={styles.modal}>
-                  <View style={styles.container1}>
-                      <Image
-                          style={styles.image}
-                          source={require('../assets/images/image.png')} />
-                      <MyText
-                          style={[styles.text, styles.name]}>
-                          hubby
-                      </MyText>
-                      <View>
-                          <MyText style={styles.text}>{formatTime()}</MyText>
-                      </View>
-                  </View>
-                  <View style={styles.container2}>
-                      <FontAwesome6
-                          name="microphone-slash"
-                          style={[styles.text, styles.phoneButtons]}
-                          size={Platform.OS === 'ios' ? 40 : 30} />
-                      <Ionicons
-                          name="keypad"
-                          size={Platform.OS === 'ios' ? 40 : 30}
-                          style={[styles.text, styles.phoneButtons]} />
-                      <Octicons
-                          style={[styles.text, styles.phoneButtons]}
-                          name="unmute"
-                          size={Platform.OS === 'ios' ? 40 : 30} />
-                      <View style={[styles.text, styles.phoneButtons, styles.secondRow]}>
-                          <MaterialIcons
-                              style={[styles.text, styles.phoneButtons]}
-                              name="add-call"
-                              size={Platform.OS === 'ios' ? 40 : 30} />
-                          <FontAwesome
-                              style={[styles.text, styles.phoneButtons, ]}
-                              name="video-camera"
-                          size={Platform.OS === 'ios' ? 40 : 30} />
-                      <Ionicons name="person-circle" style={[styles.text, styles.phoneButtons]} size={Platform.OS === 'ios' ? 40 : 30} />
-                      </View>
-                  </View>
+    }, [])
+
+    const formatTime = () => {
+        // const hours = Math.floor(elapsedTime / (1000 * 60 * 60)%60)
+        const minutes = String(Math.floor(elapsedTime / (1000 * 60) % 60)).padStart(2, '0')
+        const seconds = String(Math.floor(elapsedTime / (1000) % 60)).padStart(2, '0')
+
+
+        return `${minutes}:${seconds}`
+    }
+    const formatTimeForScreenReader = () => {
+        const minutes = Math.floor(elapsedTime / (1000 * 60) % 60)
+        const seconds = Math.floor(elapsedTime / (1000) % 60)
+
+
+        if (minutes === 1)
+            return `${minutes} minut och ${seconds}sekunder`
+        else if (minutes > 1)
+            return `${minutes} minuter och ${seconds}sekunder`
+        else
+            return `${seconds}sekunder`
+
+    }
+    return (
+        <>
+            <StatusBar barStyle={'light-content'} />
+
+            <View
+                style={styles.modal}>
+                <View style={styles.container1}>
+                    <Image
+                        style={styles.image}
+                        source={require('../assets/images/image.png')} />
+                    <MyText
+                        style={[styles.text, styles.name]}>
+                        hubby
+                    </MyText>
+                    <View>
+                        <MyText
+                            style={styles.text}
+                            accessibilityLabel={`tiden som gått under samtalet ${formatTimeForScreenReader()}`}
+                            accessibilityLiveRegion='assertive'
+                        >{formatTime()}</MyText>
+                    </View>
+                </View>
+                <View style={styles.container2}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility='no-hide-descendants'>
+                    <FontAwesome6
+                        name="microphone-slash"
+                        style={[styles.text, styles.phoneButtons]}
+                        size={Platform.OS === 'ios' ? 40 : 30}
+                    />
+                    <Ionicons
+                        name="keypad"
+                        size={Platform.OS === 'ios' ? 40 : 30}
+                        style={[styles.text, styles.phoneButtons]} />
+                    <Octicons
+                        style={[styles.text, styles.phoneButtons]}
+                        name="unmute"
+                        size={Platform.OS === 'ios' ? 40 : 30} />
+                    <View style={[styles.text, styles.phoneButtons, styles.secondRow]}>
+                        <MaterialIcons
+                            style={[styles.text, styles.phoneButtons]}
+                            name="add-call"
+                            size={Platform.OS === 'ios' ? 40 : 30} />
+                        <FontAwesome
+                            style={[styles.text, styles.phoneButtons,]}
+                            name="video-camera"
+                            size={Platform.OS === 'ios' ? 40 : 30} />
+                        <Ionicons name="person-circle" style={[styles.text, styles.phoneButtons]} size={Platform.OS === 'ios' ? 40 : 30} />
+                    </View>
+                </View>
 
 
 
-                  <Pressable onPress={hangUp}
+                <Pressable onPress={hangUp}
+                    accessibilityRole='button'
+                    accessibilityLabel='tryck här för att lägga på'
 
-                  >
-                      <MaterialCommunityIcons name="phone-hangup" size={Platform.OS === 'ios' ? 40 : 30} color={"white"} style={[styles.text, styles.hangUpButton]} />
+                >
+                    <MaterialCommunityIcons name="phone-hangup" size={Platform.OS === 'ios' ? 40 : 30} color={"white"} style={[styles.text, styles.hangUpButton]} />
 
-                  </Pressable>
+                </Pressable>
 
-              </View>
-        
-      </>
-  )
+            </View>
+
+        </>
+    )
 }
 
 export default OngoingCallScreen
@@ -116,13 +136,13 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         // paddingVertical: "0",
-        gap: Platform.OS==='ios'?80:30,
+        gap: Platform.OS === 'ios' ? 80 : 30,
     },
     container1: {
         justifyContent: 'flex-start',
         alignItems: 'center',
         gap: 10,
-        
+
     },
 
     container2: {
@@ -134,7 +154,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         paddingHorizontal: 30,
         alignItems: 'center',
         gap: 80,
-        
+
     },
     image: {
         width: 120,

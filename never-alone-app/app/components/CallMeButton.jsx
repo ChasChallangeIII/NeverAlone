@@ -7,10 +7,6 @@ import { useNavigation } from '@react-navigation/native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useFakeCall } from '../context/FakeCallContext';
 
-
-
-
-
 const CallMeButton = ({ props }) => {
     const { customTheme, isDark } = useTheme()
     const styles = createStyles(customTheme, isDark)
@@ -20,7 +16,6 @@ const CallMeButton = ({ props }) => {
 
     return (
         <>
-
             <Pressable
 
                 {...props}
@@ -28,6 +23,7 @@ const CallMeButton = ({ props }) => {
                     handleFakeCall(navigation);
                 }}
                 accessibilityLabel='knapp för att få fakesamtal'
+                accessibilityRole='button'
                 style={styles.button}
             >
                 <MaterialIcons name="phone" size={24} color={customTheme.colors.accent900} style={styles.icon} />

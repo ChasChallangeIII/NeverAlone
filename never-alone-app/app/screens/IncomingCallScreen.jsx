@@ -83,6 +83,8 @@ const IncomingCallScreen = ({ navigation }) => {
 
                         navigation.navigate('OngoingCallScreen')
                     }}
+                    accessibilityRole='button'
+                    accessibilityLabel='tryck här för att acceptera samtalet'
 
                 >
 
@@ -102,7 +104,8 @@ const IncomingCallScreen = ({ navigation }) => {
 
 
                     }}
-                    title={'Ignorera'}
+                    accessibilityLabel='tryck här för att ignorera samtalet'
+                    accessibilityRole='button'
                 >
 
                     <MaterialCommunityIcons name="phone-hangup" size={Platform.OS === 'ios' ? 40 : 30} color={"white"} style={[styles.text, styles.hangUpButton]} />

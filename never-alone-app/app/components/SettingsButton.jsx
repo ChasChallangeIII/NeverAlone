@@ -9,15 +9,21 @@ const SettingsButton = () => {
 
     const navigation = useNavigation()
 
-
     const styles = createStyles(customTheme, isDark)
 
     const openModal = () => navigation.navigate('SettingsScreen')
 
     return (
         <View>
-            <Pressable style={styles.settingsButton} onPress={openModal}>
-                <MaterialIcons name="settings" size={30} color={customTheme.colors.text} />
+            <Pressable
+                style={styles.settingsButton}
+                onPress={openModal}
+                accessibilityLabel='tryck här för att gå till inställningar'
+                accessibilityRole='button'  >
+                <MaterialIcons
+                    name="settings"
+                    size={30}
+                    color={customTheme.colors.text} />
             </Pressable>
         </View>
     )

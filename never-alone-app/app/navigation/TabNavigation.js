@@ -91,6 +91,9 @@ const TabNavigation = ({}) => {
               left: "90%",
             },
             headerTitle: "Aviseringar",
+            tabBarAccessibilityLabel: reportNotification
+              ? "Aviseringar, 1 oläst"
+              : "Aviseringar, inga nya",
           }}
         />
         <Tab.Screen
@@ -98,6 +101,7 @@ const TabNavigation = ({}) => {
           component={HomeScreen}
           options={{
             tabBarButton: (props) => <CallMeButton props={props} />,
+            tabBarAccessibilityLabel: "tryck här för att få ett falskt samtal",
           }}
         />
 
