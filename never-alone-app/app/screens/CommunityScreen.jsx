@@ -64,7 +64,7 @@ const CommunityScreen = ({ navigation }) => {
                 accessible={true}
                 accessibilityRole='button'
 
-                accessibilityLabel={`ett postinlägg skrivet av ${item.username}. Tryck här för att läsa inlägget ${formatDistanceToNow(item.date, { addSuffix: true, locale: sv })}`}
+                accessibilityLabel={`ett postinlägg skrivet av ${item.username}.${formatDistanceToNow(item.date, { addSuffix: true, locale: sv })} Tryck här för att läsa inlägget `}
                 onPress={()=>openPostModal(item)}
               >
                 <View style={

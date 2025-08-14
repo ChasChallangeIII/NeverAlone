@@ -4,6 +4,8 @@ import { useTheme } from '../context/ThemeContext'
 import MyText from './textwrappers/MyText'
 import BigText from './textwrappers/BigText'
 import { useNavigation } from '@react-navigation/native'
+import { formatDistanceToNow } from 'date-fns'
+import { sv } from 'date-fns/locale'
 
 const ReportNotification = () => {
     const { customTheme } = useTheme()
@@ -13,6 +15,9 @@ const ReportNotification = () => {
         <Pressable
             style={styles.notification}
             onPress={() => navigation.navigate('ReportScreen')}
+            accessibilityRole='button'
+            accessibilityLabel='Admingruppen frågar: Är du okej? Berätta vad som hände'
+            accessibilityHint='Tryck här för att rapportera vad som hände'
 
         >
 
@@ -21,10 +26,15 @@ const ReportNotification = () => {
                     source={require('../assets/images/logo2.png')}
                     style={styles.profileImage}
                 />
-                <BigText style={styles.text}>{`${'Admingruppen'} ${"- Är du okej? <3 berätta vad som hände"}`}</BigText >
+                <BigText style={styles.text}>
+                    {`Admingruppen - Är du okej? Berätta vad som hände.`}
+
+                </BigText >
 
             </View>
-            <MyText style={[{ fontSize: 10 }, styles.date]}>{new Date().toISOString()}
+            <MyText style={[{ fontSize: 10 }, styles.date]}>
+                {formatDistanceToNow(new Date().toISOString(), {addSuffix:true, locale:sv})}
+               
             </MyText>
 
         </Pressable>

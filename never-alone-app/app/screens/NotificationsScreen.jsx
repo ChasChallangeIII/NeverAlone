@@ -31,6 +31,8 @@ const NotificationsScreen = () => {
           renderItem={({ item }) => (
             <View
               style={styles.notification}
+              accessible={true}
+              accessibilityLabel={`${item.username} ${item.message} för ${formatDistanceToNow(item.date, { addSuffix: true, locale: sv })}`}
 
             >
 
@@ -42,7 +44,7 @@ const NotificationsScreen = () => {
                 <MyText>{`${item.username} ${item.message}`}</MyText>
 
               </View>
-              <MyText style={[{ fontSize: 10 }, styles.date]}>{formatDistanceToNow(item.date, {addSuffix:true, locale:sv})}</MyText>
+              <MyText style={[{ fontSize: 10 }, styles.date]}>{formatDistanceToNow(item.date, { addSuffix: true, locale: sv })}</MyText>
 
             </View>
           )}
