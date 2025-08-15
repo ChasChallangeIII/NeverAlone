@@ -6,12 +6,22 @@ import MyText from './textwrappers/MyText';
 import { useNavigation } from '@react-navigation/native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useFakeCall } from '../context/FakeCallContext';
+import { AccessibilityInfo } from 'react-native';
 
 const CallMeButton = ({ props }) => {
     const { customTheme, isDark } = useTheme()
     const styles = createStyles(customTheme, isDark)
     const navigation = useNavigation()
     const { handleFakeCall, feedback } = useFakeCall()
+
+    useEffect(() => {
+        if (feedback) {
+            setTimeout(() => {
+                AccessibilityInfo.announceForAccessibility('samtal kommer om 4 sekunder')
+            }, 300);
+        }
+
+    }, [feedback])
 
 
     return (
@@ -21,6 +31,7 @@ const CallMeButton = ({ props }) => {
                 {...props}
                 onPress={() => {
                     handleFakeCall(navigation);
+
                 }}
                 accessibilityLabel='knapp för att få fakesamtal'
                 accessibilityRole='button'
@@ -31,7 +42,10 @@ const CallMeButton = ({ props }) => {
             </Pressable>
 
             {feedback && (
-                <View style={styles.feedbackMessage}>
+                <View
+                    style={styles.feedbackMessage}
+
+                >
                     <AntDesign name="checkcircle" size={24} color={customTheme.colors.accent600} />
 
                     <MyText >Samtal kommer om 4 sekunder...</MyText>
