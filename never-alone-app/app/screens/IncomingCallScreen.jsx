@@ -60,7 +60,11 @@ const IncomingCallScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.modal}>
             {/* <View> */}
-            <View style={styles.caller}>
+            <View style={styles.caller}
+                accessible = {true}
+                accessibilityLabel='Hubby  ringer dig'
+
+            >
                 <Image
                     style={styles.image}
                     source={require('../assets/images/image.png')} />

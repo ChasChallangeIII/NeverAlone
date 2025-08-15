@@ -77,7 +77,6 @@ const OngoingCallScreen = ({ navigation }) => {
                         <MyText
                             style={styles.text}
                             accessibilityLabel={`tiden som gått under samtalet ${formatTimeForScreenReader()}`}
-                            accessibilityLiveRegion='polite'
                         >{formatTime()}</MyText>
                     </View>
                 </View>
