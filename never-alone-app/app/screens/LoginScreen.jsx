@@ -1,4 +1,4 @@
-import { ScrollView, Platform, SafeAreaView, StyleSheet, TextInput, View, StatusBar, Image, Pressable, ActivityIndicator } from 'react-native'
+import { ScrollView, Platform, SafeAreaView, StyleSheet, Text, TextInput, View, StatusBar, Image, Pressable, ActivityIndicator } from 'react-native'
 import React, { useState } from 'react'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
@@ -6,6 +6,8 @@ import { useUser } from '../context/UserContext'
 import { useTheme } from '../context/ThemeContext'
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useAuth } from '../context/AuthContext'
+import { AccessibilityInfo } from 'react-native'
+
 
 
 const LoginScreen = ({ navigation }) => {
@@ -28,11 +30,15 @@ const LoginScreen = ({ navigation }) => {
   const handleSubmit = async () => {
     if (!inputUsername || !inputPassword) {
       setError('Du har inte fyllt i både fälten')
+      setTimeout(() => {
+        AccessibilityInfo.announceForAccessibility('Du har inte fyllt i både fälten')
+      }, 200);
       return
     }
 
     try {
       setIsLoading(true)
+      AccessibilityInfo.announceForAccessibility('laddar...')
 
       const response = await fetch('https://neveralone.onrender.com/auth/signin?admin=false', {
         method: 'POST',
@@ -66,12 +72,14 @@ const LoginScreen = ({ navigation }) => {
 
     } catch (error) {
       setError(error.message)
+      AccessibilityInfo.announceForAccessibility(error.message)
+
       setIsLoading(false)
 
     }
 
   }
-  const navigateToSignUp = () => navigation.navigate('SignUpScreen') 
+  const navigateToSignUp = () => navigation.navigate('SignUpScreen')
 
 
   const styles = createStyles(customTheme)
@@ -89,37 +97,42 @@ const LoginScreen = ({ navigation }) => {
           <View
             style={styles.form}
           >
-            <BigText>Logga in</BigText>
+            <BigText accessibilityRole='header'>Logga in</BigText>
             <View style={styles.field}>
-              <MyText>Användarnamn</MyText>
+              <MyText
+                accessible={false}>Användarnamn</MyText>
               <TextInput
-                placeholder='användarnamn...'
                 placeholderTextColor={customTheme.colors.text}
                 style={styles.input}
                 returnKeyType='go'
                 value={inputUsername}
                 onChangeText={onChangeInputUsername}
+                accessibilityLabel='användarnamn'
+
               />
             </View>
             <View style={styles.field}>
-              <MyText>Lösenord</MyText>
+              <MyText accessible={false}>Lösenord</MyText>
               <TextInput
-                placeholder='******'
                 placeholderTextColor={customTheme.colors.text}
                 secureTextEntry
                 value={inputPassword}
                 onChangeText={onChangeInputPassword}
                 style={styles.input}
                 returnKeyType='go'
+                accessibilityLabel='Lösenord'
+                textContentType='password'
               />
             </View>
             <Pressable
               onPress={handleSubmit}
               style={styles.button}
+              accessibilityRole='button'
+              accessibilityHint='tryck här för att logga in'
             >
-              <MyText style={{ color: customTheme.colors.primary50 }}>
+              <Text style={{ color: customTheme.colors.primary50 }}>
                 Logga in
-              </MyText>
+              </Text>
             </Pressable>
 
             {/* <MyText
@@ -129,12 +142,24 @@ const LoginScreen = ({ navigation }) => {
             </MyText> */}
 
             {isLoading && (
-              <ActivityIndicator color={customTheme.colors.primary} />
+              <ActivityIndicator
+                color={customTheme.colors.primary}
+              // accessibilityLiveRegion='polite'
+              // accessibilityRole='alert'
+              // accessibilityLabel='laddar...'
+              />
             )}
             {error && (
-              <View style={styles.errorView}>
-                <AntDesign name="frowno" style={styles.icon} />
-                <MyText style={styles.error}>{error}</MyText>
+              <View
+                style={styles.errorView}
+              >
+                <AntDesign name="frowno" style={styles.icon} accessibilityElementsHidden />
+                <MyText
+                  style={styles.error}
+                  accessibilityLiveRegion='polite'
+                  accessibilityRole='alert'
+                  accessibilityLabel={error}
+                >{error}</MyText>
               </View>
 
             )}
@@ -200,7 +225,7 @@ const createStyles = (theme) => StyleSheet.create({
   },
   link: {
     textDecorationLine: 'underline',
-    textDecorationColor: <theme className="colors text"></theme>
+    textDecorationColor: theme.colors.text
   },
   errorView: {
     flexDirection: 'column',
