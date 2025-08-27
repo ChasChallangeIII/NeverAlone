@@ -57,13 +57,13 @@ const IncomingCallScreen = ({ navigation }) => {
         playRingtone()
         return () => stopRingtone()
     }, [])
+
+    
     return (
         <SafeAreaView style={styles.modal}>
-            {/* <View> */}
             <View style={styles.caller}
                 accessible = {true}
-                accessibilityLabel='Hubby  ringer dig'
-
+                accessibilityLabel='Hubby ringer dig'
             >
                 <Image
                     style={styles.image}

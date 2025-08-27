@@ -4,6 +4,7 @@ import { useTheme } from '../context/ThemeContext'
 import { StatusBar } from 'expo-status-bar'
 import BigText from '../components/textwrappers/BigText'
 import AntDesign from '@expo/vector-icons/AntDesign';
+import GoBackButton from '../components/goBackButton'
 
 
 const MakeAPostModal = ({ navigation }) => {
@@ -26,15 +27,8 @@ const MakeAPostModal = ({ navigation }) => {
                         returnKeyType='go'
                     />
                         <Button onPress={closeModal} title='avbryt' />
-                        <Pressable
-                            style={styles.close}
-                            onPress={closeModal}>
-                            <AntDesign style={styles.closeIcon} name='back' />
-                            {/* <MyText>
-                            Tillbaka
-                        </MyText> */}
+                        <GoBackButton />
 
-                        </Pressable>
                 </View>
 
                 </View>
@@ -104,24 +98,7 @@ const createStyles = (theme, isDark) => StyleSheet.create({
         alignItems: 'center',
         gap: 20
     },
-    postDetails: {
-
-    },
     postDate: {
         fontSize: 9
-    },
-    postText: {
-
-
-    },
-    close: {
-        position: 'absolute',
-        right: 0,
-        padding: 20,
-        color: theme.colors.text
-    },
-    closeIcon: {
-        color: theme.colors.text,
-        fontSize: 24
     }
 })

@@ -2,9 +2,10 @@ import { useTheme } from "../context/ThemeContext"
 import { useUser } from "../context/UserContext"
 import { useAuth } from "../context/AuthContext"
 import BigText from "../components/textwrappers/BigText"
-import { Pressable, TextInput, View, StyleSheet, Platform, Switch } from "react-native"
+import { Pressable, View, StyleSheet, Platform, Switch } from "react-native"
 import MyText from "../components/textwrappers/MyText"
 import AntDesign from '@expo/vector-icons/AntDesign';
+import GoBackButton from "../components/goBackButton"
 
 
 
@@ -20,12 +21,10 @@ const SettingsScreen = ({ navigation }) => {
     logOut()
   }
   const styles = createStyles(customTheme, isDark)
-  const onClose = () => navigation.goBack()
-
   return (
 
     <View style={styles.background}>
-      <BigText >Inställningar</BigText>
+      <BigText>Inställningar</BigText>
 
       <View style={styles.switchContainer}>
         <MyText nativeID='darkTheme'>Mörktläge</MyText>
@@ -65,16 +64,8 @@ const SettingsScreen = ({ navigation }) => {
         </MyText>
 
       </Pressable>
-      <Pressable
-        style={styles.close}
-        onPress={onClose}
-        accessibilityLabel='tryck här för att gå tillbaka till föregående sida'
-        accessibilityRole='button' 
-      >
-        <AntDesign style={styles.closeIcon} name='back' />
-
-
-      </Pressable>
+      <GoBackButton/>
+    
 
     </View>
 
@@ -115,17 +106,6 @@ const createStyles = (theme, isDark) => StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 5
-  },
-  close: {
-    position: 'absolute',
-    right: 0,
-    padding: 20,
-    color: theme.colors.text
-  },
-  closeIcon: {
-    color: theme.colors.text,
-    fontSize: 24
-
   },
   signoutButton: {
     marginTop: 'auto',
