@@ -1,10 +1,9 @@
-import { ActivityIndicator, Button, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, useWindowDimensions, View } from 'react-native'
+import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, ScrollView, StatusBar, StyleSheet, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
 import { useTheme } from '../context/ThemeContext'
 import { useFakeCall } from '../context/FakeCallContext'
-import { useUser } from '../context/UserContext'
 import { useAuth } from '../context/AuthContext'
 import AntDesign from '@expo/vector-icons/AntDesign';
 
@@ -20,7 +19,6 @@ const ReportScreen = ({ navigation }) => {
     fakeCallLatitude,
     fakeCallLongitude,
   } = useFakeCall()
-  const { user } = useUser()
   const { userToken } = useAuth()
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(false)

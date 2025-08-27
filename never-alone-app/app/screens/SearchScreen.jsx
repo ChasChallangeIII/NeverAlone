@@ -1,7 +1,5 @@
-import { SafeAreaView, StyleSheet, Text, View, TextInput, Platform, StatusBar } from 'react-native'
-import React, { useState } from 'react'
+import { SafeAreaView, StyleSheet, View, TextInput, Platform, StatusBar } from 'react-native'
 import { useTheme } from '../context/ThemeContext'
-import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
 import { useUser } from '../context/UserContext'
 

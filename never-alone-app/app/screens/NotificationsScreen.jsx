@@ -1,4 +1,4 @@
-import { FlatList, Image, Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { FlatList, Image, Platform, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native'
 import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 import MyText from '../components/textwrappers/MyText'

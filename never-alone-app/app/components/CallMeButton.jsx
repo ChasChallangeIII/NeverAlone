@@ -1,5 +1,5 @@
 import { StyleSheet, Pressable, View, Platform } from 'react-native'
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useTheme } from '../context/ThemeContext';
 import MyText from './textwrappers/MyText';

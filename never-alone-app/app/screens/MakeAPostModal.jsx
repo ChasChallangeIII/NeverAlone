@@ -1,9 +1,8 @@
-import { Button, Platform, Pressable, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Button, Platform, SafeAreaView, StyleSheet, TextInput, View } from 'react-native'
 import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 import { StatusBar } from 'expo-status-bar'
 import BigText from '../components/textwrappers/BigText'
-import AntDesign from '@expo/vector-icons/AntDesign';
 import GoBackButton from '../components/goBackButton'
 
 

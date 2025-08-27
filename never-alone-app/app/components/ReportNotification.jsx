@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, Text, View, Image, Pressable } from 'react-native'
+import { StyleSheet, View, Image, Pressable } from 'react-native'
 import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 import MyText from './textwrappers/MyText'

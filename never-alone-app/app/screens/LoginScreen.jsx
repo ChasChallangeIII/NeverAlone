@@ -13,7 +13,7 @@ import { AccessibilityInfo } from 'react-native'
 const LoginScreen = ({ navigation }) => {
   const { customTheme, isDark } = useTheme()
   const { logIn } = useAuth()
-  const { user, saveUser, error, clearError, setError } = useUser()
+  const { saveUser, error, clearError, setError } = useUser()
 
   const [inputUsername, setInputUsername] = useState('')
   const [inputPassword, setInputPassword] = useState('')

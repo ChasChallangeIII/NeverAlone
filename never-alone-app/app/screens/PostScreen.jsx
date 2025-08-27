@@ -5,7 +5,7 @@ import React from 'react'
 import MyText from '../components/textwrappers/MyText'
 import BigText from '../components/textwrappers/BigText'
 import { useTheme } from '../context/ThemeContext'
-import AntDesign from '@expo/vector-icons/AntDesign';
+import GoBackButton from '../components/goBackButton'
 
 const PostScreen = ({ navigation, route }) => {
     const { item } = route.params
@@ -48,14 +48,7 @@ const PostScreen = ({ navigation, route }) => {
                         {item.text}
                     </MyText>
                 </View>
-                <Pressable
-                    style={styles.close}
-                    onPress={onClose}
-                    accessibilityLabel='tryck här för att gå tillbaka till community-sidan'
-                    accessibilityRole='button'   
-                >
-                    <AntDesign style={styles.closeIcon} name='back' />
-                </Pressable>
+                <GoBackButton/>
             </View>
         </SafeAreaView>
     )

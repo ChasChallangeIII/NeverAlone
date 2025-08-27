@@ -4,13 +4,12 @@ import { useAuth } from "../context/AuthContext"
 import BigText from "../components/textwrappers/BigText"
 import { Pressable, View, StyleSheet, Platform, Switch } from "react-native"
 import MyText from "../components/textwrappers/MyText"
-import AntDesign from '@expo/vector-icons/AntDesign';
 import GoBackButton from "../components/goBackButton"
 
 
 
 
-const SettingsScreen = ({ navigation }) => {
+const SettingsScreen = () => {
 
   const { customTheme, toggleTheme, isDark } = useTheme()
   const { clearUser } = useUser()

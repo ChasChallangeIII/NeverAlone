@@ -1,4 +1,4 @@
-import { Button, Image, Modal, Platform, Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Image, Modal, Platform, Pressable,  StyleSheet, View } from 'react-native'
 import React, { useEffect, useRef, useState } from 'react'
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useTheme } from '../context/ThemeContext';
