@@ -38,7 +38,9 @@ const LoginScreen = ({ navigation }) => {
 
     try {
       setIsLoading(true)
-      AccessibilityInfo.announceForAccessibility('laddar...')
+      setTimeout(() => {
+        AccessibilityInfo.announceForAccessibility('Laddar. Inloggningen pågår')
+      }, 200);
 
       const response = await fetch('https://neveralone.onrender.com/auth/signin?admin=false', {
         method: 'POST',
@@ -156,9 +158,6 @@ const LoginScreen = ({ navigation }) => {
                 <AntDesign name="frowno" style={styles.icon} accessibilityElementsHidden />
                 <MyText
                   style={styles.error}
-                  accessibilityLiveRegion='polite'
-                  accessibilityRole='alert'
-                  accessibilityLabel={error}
                 >{error}</MyText>
               </View>
 
