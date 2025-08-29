@@ -36,6 +36,7 @@ const CallMeButton = ({ props }) => {
                 accessibilityLabel='knapp för att få fakesamtal'
                 accessibilityRole='button'
                 style={styles.button}
+                testID='callMeButton'
             >
                 <MaterialIcons name="phone" size={24} color={customTheme.colors.accent900} style={styles.icon} />
 
@@ -44,7 +45,7 @@ const CallMeButton = ({ props }) => {
             {feedback && (
                 <View
                     style={styles.feedbackMessage}
-
+                    testID='feedback'
                 >
                     <AntDesign name="checkcircle" size={24} color={customTheme.colors.accent600} />
 

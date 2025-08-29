@@ -6,7 +6,7 @@ import LoginScreen from "../screens/LoginScreen"
 
 import { fireEvent, render, waitFor } from '@testing-library/react-native';
 
-import { expect, it, jest } from '@jest/globals'
+import { describe, expect, it, jest } from '@jest/globals'
 
 import { AccessibilityInfo } from 'react-native';
 
