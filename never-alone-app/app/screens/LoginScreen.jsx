@@ -110,7 +110,7 @@ const LoginScreen = ({ navigation }) => {
                 value={inputUsername}
                 onChangeText={onChangeInputUsername}
                 accessibilityLabel='användarnamn'
-
+                testID='usernameInput'
               />
             </View>
             <View style={styles.field}>
@@ -124,6 +124,8 @@ const LoginScreen = ({ navigation }) => {
                 returnKeyType='go'
                 accessibilityLabel='Lösenord'
                 textContentType='password'
+                testID='passwordInput'
+
               />
             </View>
             <Pressable
@@ -131,6 +133,8 @@ const LoginScreen = ({ navigation }) => {
               style={styles.button}
               accessibilityRole='button'
               accessibilityHint='tryck här för att logga in'
+              testID='logInButton'
+
             >
               <Text style={{ color: customTheme.colors.primary50 }}>
                 Logga in
@@ -146,14 +150,15 @@ const LoginScreen = ({ navigation }) => {
             {isLoading && (
               <ActivityIndicator
                 color={customTheme.colors.primary}
-              // accessibilityLiveRegion='polite'
-              // accessibilityRole='alert'
+                // accessibilityLiveRegion='polite'
+                accessibilityRole='progressbar'
               // accessibilityLabel='laddar...'
               />
             )}
             {error && (
               <View
                 style={styles.errorView}
+                testID='errorMessage'
               >
                 <AntDesign name="frowno" style={styles.icon} accessibilityElementsHidden />
                 <MyText
