@@ -50,7 +50,7 @@ const TabNavigation = ({}) => {
           tabBarLabelStyle: {
             fontFamily: customTheme.fonts.regular.fontFamily,
           },
-          tabBarActiveTintColor: customTheme.colors.primary,
+          tabBarActiveTintColor: customTheme.colors.primary600,
           tabBarInactiveTintColor: customTheme.colors.text800,
 
           animation: "shift",

@@ -38,7 +38,16 @@ npm i
 ## Map structure
 ```md 
 never-alone-app/
-|──    assets
+├── app/
+|   ├── assets/ # fonts, Images and sounds
+|   ├── components
+|   ├── context
+|   ├── data
+|   ├── navigation
+|   ├── data
+|   ├── screens
+|   ├── services
+|   ├── themes
  ```
 
 ## a11y 
